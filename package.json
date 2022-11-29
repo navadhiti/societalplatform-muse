@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/montserrat-alternates": "^4.5.11",
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.16",
@@ -14,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
