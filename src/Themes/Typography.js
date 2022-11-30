@@ -3,14 +3,14 @@
  * @param {JsonObject} theme theme customization object
  */
  import { createTheme } from "@mui/material/styles";
- import PALETTE from "./Palette";
+ 
  import "@fontsource/montserrat-alternates"; 
 // Create a theme instance.
-// export const PALETTE = {
-//     PRIMARY: "#f8f9fa",
-//     SECONDARY: "#1f95f4",
-//     TERITIARY: "#F5f5f5",
-// };
+const PALETTE = {
+    PRIMARY: "#f8f9fa",
+    SECONDARY: "#1f95f4",
+    TERITIARY: "#F5f5f5",
+};
 const FONT = {
     FAMILY: {
         ASSISTANT: "Montserrat Alternates",
@@ -98,5 +98,28 @@ const theme = createTheme({
             cursor: "pointer",
             textDecoration: "none",
         },
-    },})
+    },   palette: {
+        primary: {
+            main: '##fdfdfd08',
+            contrastText: '#000'
+        },
+        secondary: {
+            main: '#485ec4'
+        },
+        color1: {
+            main: '#74788D'
+        }
+    },
+    components:{
+        MuiButton: {
+            variants: [
+                {
+                    props: { variant: 'contained' },
+                    style: { '&:hover':{boxShadow: '3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)'},border:'1px solid black',
+                     }
+                }
+            ]
+        },
+    }
+})
 export default theme;
