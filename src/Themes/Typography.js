@@ -73,26 +73,24 @@ const theme = createTheme({
       color: PALETTE.SENARY,
       lineHeight: '130%',
     },
+
     //for welcome screen data and stepper first page
     h6: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[20],
       lineHeight: '145%',
-      fontWeight: 600,
     },
     body: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[16],
       fontFamily: FONT.FAMILY.INTER,
       lineHeight: '145%',
-      fontWeight: 500,
     },
     link: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[20],
       lineHeight: '145%',
       color: '#178290',
-      fontWeight: 600,
       cursor: 'pointer',
       textDecoration: 'none',
     },
