@@ -12,6 +12,7 @@ const LandingSection = () => {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
+          wrap="nowrap"
         >
           <Grid item sx={{ mt: 15 }} xs={8} sm={5}>
             <Typography variant="h2">
@@ -31,8 +32,20 @@ const LandingSection = () => {
               new questions too.
             </Typography>
           </Grid>
-          <Grid item xs={8} sm={5}>
+          <Grid item xs={8} sm={6}>
             <img src={LandingImage} alt="img" />
+            {/* <Box
+        component="img"
+        sx={{
+          // height: 500,
+          // width: 500,
+          maxHeight: { xs: 233, md: 500 },
+          maxWidth: { xs: 350, md: 500 },
+        }}
+        alt="The house from the offer."
+        src={LandingImage}
+      /> */}
+            
           </Grid>
         </Grid>
         <Stack

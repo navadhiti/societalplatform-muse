@@ -68,7 +68,7 @@ const Header = (props) => {
     <>
       <React.Fragment>
         <CssBaseline />
-        <AppBar>
+        <AppBar elevation={0} className="AppBorder" color='inherit'>
           <Grid
             container
             spacing={0}
@@ -88,19 +88,20 @@ const Header = (props) => {
               spacing={0}
               justifyContent="center"
               alignItems="center"
-              sx={{ px: 5 }}
+              
             >
               <Grid item xs={12} sm={6} md={6} lg={6}>
                 <img src={logo} alt="img" />
               </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="flex-end">
+              <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="flex-end" >
                 <Stack
                   spacing={2}
                   direction="row"
                   justifyContent="flex-end"
                   alignItems="center"
+                  
                 >
-                  <Typography variant="body1">GET IN TOUCH</Typography>
+                  <Typography variant="body">GET IN TOUCH</Typography>
 
                   <Button variant="contained" elevation="3">
                     Read
