@@ -1,14 +1,12 @@
 import React from "react";
-import { Container, Typography } from "@mui/material";
-import Header from "../Components/Header";
-import Footer from "../Components/Footer";
+import { Container } from "@mui/material";
+import LandingSection from "../Components/LandingSection";
 
 const Home = () => {
     return (
         <div>
-            <Container fixed>
-                <Header />
-                <Footer />
+            <Container>
+                <LandingSection />
             </Container>
         </div>
     );

@@ -2,9 +2,11 @@
  * Typography used in theme
  * @param {JsonObject} theme theme customization object
  */
- import { createTheme } from "@mui/material/styles";
- 
- import "@fontsource/montserrat-alternates"; 
+
+import { createTheme } from "@mui/material/styles";
+
+import "@fontsource/montserrat-alternates";
+import "@fontsource/montserrat";
 // Create a theme instance.
 const PALETTE = {
     PRIMARY: "#f8f9fa",
@@ -14,7 +16,7 @@ const PALETTE = {
 const FONT = {
     FAMILY: {
         ASSISTANT: "Montserrat Alternates",
-        INTER: "Montserrat Alternates",
+        INTER: "Montserrat ",
     },
     SIZES: {
         12: "0.75rem",
@@ -28,7 +30,7 @@ const FONT = {
         64: "4rem",
     },
     WEIGHT: {
-        BOLD: 800,
+        BOLD: 900,
         SEMI_BOLD: 700,
         DEMI_BOLD: 600,
         MEDIUM: 500,
@@ -36,9 +38,8 @@ const FONT = {
         LIGHT: 300,
     },
 };
-const theme = createTheme({
-   
 
+const theme = createTheme({
     typography: {
         allVariants: {
             fontFamily: "Montserrat Alternates",
@@ -80,46 +81,61 @@ const theme = createTheme({
             fontSize: FONT.SIZES[20],
             lineHeight: "145%",
 
-            fontWeight: 600,
         },
-        body:{
-            fontWeight: FONT.WEIGHT.DEMI_BOLD,
+        body: {
+            fontWeight: FONT.WEIGHT.MEDIUM,
             fontSize: FONT.SIZES[16],
+            fontFamily:FONT.FAMILY.INTER,
             lineHeight: "145%",
 
-            fontWeight: 500,
+
+        },
+        body1: {
+            fontWeight: FONT.WEIGHT.DEMI_BOLD,
+            fontSize: FONT.SIZES[12],
+            fontFamily:FONT.FAMILY.INTER,
+            lineHeight: "145%",
+
         },
         link: {
             fontWeight: FONT.WEIGHT.DEMI_BOLD,
             fontSize: FONT.SIZES[20],
             lineHeight: "145%",
             color: "#178290",
-            fontWeight: 600,
             cursor: "pointer",
             textDecoration: "none",
         },
-    },   palette: {
+    },
+    palette: {
         primary: {
-            main: '##fdfdfd08',
-            contrastText: '#000'
+            main: "##fdfdfd08",
+            contrastText: "#000",
         },
         secondary: {
-            main: '#485ec4'
+            main: "#485ec4",
         },
         color1: {
-            main: '#74788D'
-        }
+            main: "#74788D",
+        },
     },
-    components:{
+    components: {
         MuiButton: {
             variants: [
                 {
-                    props: { variant: 'contained' },
-                    style: { '&:hover':{boxShadow: '3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)'},border:'1px solid black',
-                     }
-                }
-            ]
+                    props: { variant: "contained" },
+                    style: {
+                        "&:hover": {
+                            boxShadow:
+                                "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
+                        },
+                        border: "1px solid black",
+                        fontFamily:FONT.FAMILY.INTER,
+                        fontSize: FONT.SIZES[12],
+                        fontWeight:FONT.WEIGHT.SEMI_BOLD,
+                    },
+                },
+            ],
         },
-    }
-})
+    },
+});
 export default theme;

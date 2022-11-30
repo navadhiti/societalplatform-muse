@@ -74,6 +74,8 @@ const Header = (props) => {
                         spacing={0}
                         justifyContent="flex-start"
                         alignItems="center"
+                        className="p-5"
+                        sx={{ py: 2 }}
                     >
                         <Grid item xs={12} sm={12} md={6} lg={6}>
                             <NavigateBeforeIcon />
@@ -88,13 +90,13 @@ const Header = (props) => {
                             alignItems="center"
                             sx={{ px: 5 }}
                         >
-                            <Grid item xs={12} sm={12} md={6} lg={6}>
+                            <Grid item xs={12} sm={6} md={6} lg={6}>
                                 <img src={logo} alt="img" />
                             </Grid>
                             <Grid
                                 item
                                 xs={12}
-                                sm={12}
+                                sm={6}
                                 md={6}
                                 lg={6}
                                 justifyContent="flex-end"
@@ -130,12 +132,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                             )
                             .join("\n")}
                     </Box> */}
-                    <Typography >
-Hi
-                    </Typography>
-                    <Typography sx={{py:5}}>
-hello
-</Typography>
+                    
                 </Container>
                 <ScrollTop {...props}>
                     <Fab size="small" aria-label="scroll back to top">
