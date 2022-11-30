@@ -12,13 +12,15 @@ const Layout = () => {
     return (
         <>
         <ThemeProvider theme={theme}>
+        <Header/>
             <Container>
-                <Header/>
+                
                 <Routes>
                 <Route path="/" element={<Home />} />
             </Routes>
-            <Footer />
+            
             </Container>
+            <Footer />
             </ThemeProvider>
            
         </>

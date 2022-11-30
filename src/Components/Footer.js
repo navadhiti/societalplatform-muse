@@ -1,3 +1,4 @@
+
 import {
     Grid,
     AppBar,
@@ -10,26 +11,28 @@ import {
     Typography,
 } from "@mui/material";
 import React from "react";
-import logo from "../Assets/sp_muse_logo.png";
+import logo from "../Assets/Images/sp_muse_logo.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import { Box, Container } from "@mui/system";
 
 const Footer = () => {
     return (
         <>
-            <AppBar
-                // position="fixed"
+            {/* <AppBar
+                
                 color="primary"
-                sx={{ top: "auto", bottom: 0, py: 5 }}
-            >
-                <Toolbar>
+                
+            > */}
+                <Box sx={{ pt: 5,px:5,backgroundColor:"#F8F8F8" }}>
+                    <Toolbar>
                     <Grid
                         container
                         direction="row"
                         justifyContent="space-between"
                         alignItems="center"
-                        sx={{ px: 5 }}
+                        
                     >
                         <Grid item xs={12} sm={4} md={3} lg={3}>
                             <img src={logo} alt="img" />
@@ -92,8 +95,9 @@ const Footer = () => {
                             </List>
                         </Grid>
                     </Grid>
-                </Toolbar>
-            </AppBar>
+                    </Toolbar>
+                </Box>
+            
         </>
     );
 };

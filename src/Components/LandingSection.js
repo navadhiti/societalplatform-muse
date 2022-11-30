@@ -1,23 +1,24 @@
 import React from 'react';
-import { Grid, Box, Typography } from '@mui/material';
+import { Grid, Box, Typography, IconButton, Stack } from '@mui/material';
 import LandingImage from '../assets/Images/sp-muse-read-banner-04 2.png';
+import ButtonIcon from '../assets/Images/ArrowCircleDown.png';
 
 const LandingSection = () => {
   return (
     <div>
-      <Box>
+      <Box sx={{ mt: 7 }}>
         <Grid
           container
           direction="row"
           justifyContent="space-between"
           alignItems="center"
         >
-          <Grid item xs={8} sm={5}>
+          <Grid item sx={{ mt: 15 }} xs={8} sm={5}>
             <Typography variant="h2">
               Welcome to our
               <br /> annual publication
             </Typography>
-            <Typography variant="body">
+            <Typography variant="h6">
               Societal Muse is our annual publication that shows stories of
               "solving at scale" in action. These are stories of big bold bets,
               of reimagination, of perseverance, of coming together, of building
@@ -25,7 +26,7 @@ const LandingSection = () => {
               Societal Thinking.
             </Typography>
             <br />
-            <Typography variant="body">
+            <Typography variant="h6">
               Societal Muse oers new answers, new ways of doing and sometimes
               new questions too.
             </Typography>
@@ -34,6 +35,16 @@ const LandingSection = () => {
             <img src={LandingImage} alt="img" />
           </Grid>
         </Grid>
+        <Stack
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+          spacing={2}
+        >
+          <IconButton>
+            <img src={ButtonIcon} alt="img" />
+          </IconButton>
+        </Stack>
       </Box>
     </div>
   );
