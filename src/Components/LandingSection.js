@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Box, Typography, IconButton, Stack } from '@mui/material';
-import LandingImage from '../assets/Images/sp-muse-read-banner-04 2.png';
-import ButtonIcon from '../assets/Images/ArrowCircleDown.png';
+import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
+import ButtonIcon from '../Assets/Images/ArrowCircleDown.png';
 
 const LandingSection = () => {
   return (
