@@ -68,7 +68,8 @@ const Footer = () => {
                         >
                             <List sx={{ py: 2 }}>
                                 <ListItem disablePadding>
-                                    <ListItemText primary="info@societalplatform.org" />
+                                    {/* <ListItemText primary="info@societalplatform.org" /> */}
+                                    <Typography variant="body" sx={{mb:1}}>info@societalplatform.org</Typography>
                                 </ListItem>
                                 <ListItem disablePadding sx={{px:1,width:'90px',backgroundColor:"#f2f0ed"}}>
                                     {/* <ListItemIcon> */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Blurb from '../Components/Blurb';
 import LandingSection from '../Components/LandingSection';
 import Blurb from '../Components/Blurb';
 
