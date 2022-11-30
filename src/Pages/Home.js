@@ -3,6 +3,7 @@ import LandingSection from '../Components/LandingSection';
 import Blurb from '../Components/Blurb';
 
 const Home = () => {
+
   return (
     <div>
       <LandingSection />

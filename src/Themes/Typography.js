@@ -9,9 +9,9 @@ import '@fontsource/montserrat-alternates';
 import '@fontsource/montserrat';
 // Create a theme instance.
 const PALETTE = {
-  PRIMARY: '#f8f9fa',
-  SECONDARY: '#1f95f4',
-  TERITIARY: '#F5f5f5',
+    PRIMARY: "#f8f9fa",
+    SECONDARY: "#935FB0",
+    TERITIARY: "#F5f5f5",
 };
 const FONT = {
   FAMILY: {
