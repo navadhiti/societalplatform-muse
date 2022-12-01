@@ -8,12 +8,20 @@ import {
   CardMedia,
   CardContent,
   Avatar,
+  Button,
 } from '@mui/material';
 import Divider from '../Assets/Images/Divider.png';
 import logo from '../Assets/Images/Group 206.png';
 import AvatarImage from '../Assets/Images/Mask group.png';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 const OurCollaborators = () => {
+  const settings = {
+    infinite: true,
+    slidesToShow: 4,
+  };
   return (
     <div>
       <Box>
@@ -27,21 +35,26 @@ const OurCollaborators = () => {
           <Grid item xs={12} sm={12} md={6} lg={8} sx={{ textAlign: 'center' }}>
             <Typography variant="h2">Our Collaborators</Typography>
             <img src={Divider} alt="img" />
-            <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-              {/* {[0, 1, 2].map(() => ( */}
-              <div>
+            <Slider {...settings}>
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
                 <Card
+                  key={value}
                   sx={{
-                    maxWidth: 345,
+                    maxWidth: 250,
+                    textAlign: 'center',
+                    margin: '4rem auto',
+                    border: '1px solid black',
+                    borderRadius: '20px',
                   }}
                 >
                   <CardHeader avatar={<img src={logo} alt="img" />} />
                   <Avatar
-                    alt="Remy Sharp"
+                    alt="Img"
                     src={AvatarImage}
                     sx={{
                       width: 100,
                       height: 100,
+                      margin: '0 auto',
                     }}
                   />
                   <CardContent>
@@ -52,9 +65,14 @@ const OurCollaborators = () => {
                     <Typography>Co-founder & CEO</Typography>
                   </CardContent>
                 </Card>
-              </div>
-              {/* ))} */}
-            </div>
+              ))}
+            </Slider>
+            <Button variant="contained" elevation="3" sx={{ mt: 5 }}>
+              ALL CONTRIBUTORS
+            </Button>
+            <Button variant="contained" elevation="3" sx={{ mt: 5 }}>
+              REACH OUT
+            </Button>
           </Grid>
         </Grid>
       </Box>

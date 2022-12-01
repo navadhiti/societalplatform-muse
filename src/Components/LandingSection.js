@@ -1,12 +1,13 @@
 import React from 'react';
-import { Grid, Box, Typography, IconButton, Stack } from '@mui/material';
+import { Grid, Box, Typography, IconButton, Stack, Container } from '@mui/material';
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
 import ButtonIcon from '../Assets/Images/ArrowCircleDown.png';
 
 const LandingSection = () => {
   return (
     <div>
-      <Box sx={{ mt: 7 }}>
+      <Box sx={{ mt:2 ,py:5, }}>
+        <Container>
         <Grid
           container
           direction="row"
@@ -58,6 +59,7 @@ const LandingSection = () => {
             <img src={ButtonIcon} alt="img" />
           </IconButton>
         </Stack>
+        </Container>
       </Box>
     </div>
   );
