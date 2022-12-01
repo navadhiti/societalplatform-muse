@@ -57,12 +57,13 @@ const theme = createTheme({
         },
         h3: {
             fontWeight: FONT.WEIGHT.MEDIUM,
-            fontSize: FONT.SIZES[24],
+            fontSize: FONT.SIZES[44],
             color: PALETTE.SENARY,
             textTransform: "capitalize",
         },
         h4: {
             fontWeight: FONT.WEIGHT.DEMI_BOLD,
+            fontFamily: "Montserrat",
             fontSize: FONT.SIZES[24],
             color: PALETTE.SENARY,
         },
@@ -127,15 +128,6 @@ const theme = createTheme({
                         borderRadius: "10px",
                     },
                 },
-                {
-                    props: { variant: "share" },
-
-                    style: {
-                        fontSize: FONT.SIZES[10],
-                        border: "1px solid black",
-                        borderRadius: "50%",
-                    },
-                },
             ],
         },
         MuiAppBar: {
@@ -187,6 +179,17 @@ const theme = createTheme({
                 },
             ],
         },
+        MuiSpeedDial: {
+            styleOverrides: {
+                // props:{classes:"AppBorder"},
+                root: {
+                    backgroundColor: "transpent",
+                    boxShadow: "none",
+                    //    border:'1px solid',
+                },
+            },
+        },
+
         MuiIconButton: {
             styleOverrides: {
                 // props:{classes:"AppBorder"},
@@ -197,16 +200,6 @@ const theme = createTheme({
                         boxShadow:
                             "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
                     },
-                },
-            },
-        },
-        MuiSpeedDial: {
-            styleOverrides: {
-                // props:{classes:"AppBorder"},
-                root: {
-                   backgroundColor:'transpent',
-                   boxShadow:'none',
-                //    border:'1px solid',
                 },
             },
         },
