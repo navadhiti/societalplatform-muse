@@ -12,6 +12,7 @@ import {
   Grid,
   Button,
   Stack,
+  Slide,
 } from '@mui/material';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
@@ -64,6 +65,31 @@ ScrollTop.propTypes = {
   window: PropTypes.func,
 };
 
+
+function HideOnScroll(props) {
+    const { children, window } = props;
+    // Note that you normally won't need to set the window ref as useScrollTrigger
+    // will default to window.
+    // This is only being set here because the demo is in an iframe.
+    const trigger = useScrollTrigger({
+      target: window ? window() : undefined,
+    });
+  
+    return (
+      <Slide appear={false} direction="down" in={!trigger}>
+        {children}
+      </Slide>
+    );
+  }
+  
+  HideOnScroll.propTypes = {
+    children: PropTypes.element.isRequired,
+    /**
+     * Injected by the documentation to work in an iframe.
+     * You won't need it on your project.
+     */
+    window: PropTypes.func,
+  };
 const styles = {
     LandingBackground: {
      backgroundImage: `linear-gradient(to bottom, #ECE4EF, #ECE4EF)`,
@@ -78,19 +104,21 @@ const Header = (props) => {
         <AppBar elevation={0} className="AppBorder" color='inherit' style={styles.LandingBackground}>
           
           <Container>
+          <HideOnScroll {...props}>
           <Grid
             container
             spacing={0}
             justifyContent="flex-start"
             alignItems="center"
             className="p-5"
-            sx={{ py: 2 ,ml:-8,}}
+            sx={{ ml:-8,}}
           >
             <Grid item xs={12} sm={12} md={6} lg={6}>
               <NavigateBeforeIcon />
               <img src={frame} alt="img" />
             </Grid>
           </Grid>
+          </HideOnScroll>
             <Grid
               container
               spacing={0}

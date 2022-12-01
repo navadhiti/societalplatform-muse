@@ -17,7 +17,7 @@ const Blurb_1 = () => {
         <>
             <Container>
                 
-                <Box sx={{ py: 5 }} style={styles.paperContainer}>
+                <Box sx={{ py: 5,mt:5 }} style={styles.paperContainer}>
                     <Grid
                         container
                         spacing={0}
