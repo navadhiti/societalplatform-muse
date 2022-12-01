@@ -11,8 +11,9 @@ const Home = () => {
     <div>
       <LandingSection />
       <Blurb />
-      <Blurb_1 />
       <Stories />
+      <Blurb_1 />
+     
       <Values />
     </div>
   );
