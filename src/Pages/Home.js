@@ -4,11 +4,16 @@ import Blurb_1 from '../Components/Blurb1';
 import LandingSection from '../Components/LandingSection';
 import Stories from '../Components/Stories';
 import Values from '../Components/Values';
-
+const styles = {
+    LandingBackground: {
+    //  backgroundImage: `linear-gradient(to bottom, #ECE4EF, #fff)`,
+    backgroundColor:`#fff`,
+    }, 
+  };
 const Home = () => {
 
   return (
-    <div>
+    <div style={styles.LandingBackground}>
       <LandingSection />
       <Blurb />
       <Stories />

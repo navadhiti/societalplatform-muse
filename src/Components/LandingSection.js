@@ -3,10 +3,15 @@ import { Grid, Box, Typography, IconButton, Stack, Container } from '@mui/materi
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
 import ButtonIcon from '../Assets/Images/ArrowCircleDown.png';
 
+const styles = {
+  LandingBackground: {
+   backgroundImage: `linear-gradient(to bottom, #ECE4EF, #fff)`,
+  }, 
+};
 const LandingSection = () => {
   return (
     <div>
-      <Box sx={{ mt:2 ,py:5, }}>
+      <Box sx={{ mt:2 ,py:5, }} style={styles.LandingBackground}>
         <Container>
         <Grid
           container

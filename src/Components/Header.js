@@ -63,12 +63,19 @@ ScrollTop.propTypes = {
    */
   window: PropTypes.func,
 };
+
+const styles = {
+    LandingBackground: {
+     backgroundImage: `linear-gradient(to bottom, #ECE4EF, #ECE4EF)`,
+    // backgroundColor:`#fff`,
+    }, 
+  };
 const Header = (props) => {
   return (
     <>
       <React.Fragment>
         <CssBaseline />
-        <AppBar elevation={0} className="AppBorder" color='inherit'>
+        <AppBar elevation={0} className="AppBorder" color='inherit' style={styles.LandingBackground}>
           
           <Container>
           <Grid
