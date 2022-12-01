@@ -56,15 +56,15 @@ const theme = createTheme({
       marginBottom: '30px',
     },
     h3: {
-      fontWeight: FONT.WEIGHT.SEMI_BOLD,
-      fontSize: FONT.SIZES[24],
+      fontWeight: FONT.WEIGHT.MEDIUM,
+      fontSize: FONT.SIZES[44],
       color: PALETTE.SENARY,
       textTransform: 'capitalize',
     },
     h4: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontFamily: 'Montserrat',
-      fontSize: FONT.SIZES[20],
+      fontSize: FONT.SIZES[24],
       color: PALETTE.SENARY,
     },
     h5: {
