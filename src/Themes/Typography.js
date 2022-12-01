@@ -123,8 +123,17 @@ const theme = createTheme({
                         fontFamily: FONT.FAMILY.INTER,
                         fontSize: FONT.SIZES[12],
                         fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        
-                        borderRadius:'10px',
+
+                        borderRadius: "10px",
+                    },
+                },
+                {
+                    props: { variant: "share" },
+
+                    style: {
+                        fontSize: FONT.SIZES[10],
+                        border: "1px solid black",
+                        borderRadius: "50%",
                     },
                 },
             ],
@@ -134,7 +143,60 @@ const theme = createTheme({
                 // props:{classes:"AppBorder"},
                 root: {
                     borderBottom: "1px solid black",
-                    paddingBottom:'1rem',
+                    paddingBottom: "1rem",
+                },
+            },
+        },
+        MuiCard: {
+            variants: [
+                {
+                    props: { classes: "values" },
+                    style: {
+                        "&:hover": {
+                            boxShadow:
+                                "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
+                        },
+                        border: "1px solid black",
+                        fontFamily: FONT.FAMILY.INTER,
+                        fontSize: FONT.SIZES[16],
+                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
+                        boxShadow:
+                            "0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)",
+                        borderRadius: "10px",
+                        minHeight: "10rem",
+                        alignItems: "center",
+                        padding: "4.5rem 0",
+                        backgroundColor: "transparent",
+                        // margin:'2.8rem'
+                    },
+                },
+            ],
+        },
+        MuiBadge: {
+            variants: [
+                {
+                    props: { variant: "tag" },
+                    style: {
+                        fontFamily: FONT.FAMILY.INTER,
+                        fontSize: FONT.SIZES[10],
+                        fontWeight: FONT.WEIGHT.MEDIUM,
+                        backgroundColor: PALETTE.PRIMARY,
+                        padding: "0.3rem",
+                        margin: "0 0.5rem",
+                    },
+                },
+            ],
+        },
+        MuiIconButton: {
+            styleOverrides: {
+                // props:{classes:"AppBorder"},
+                root: {
+                    border: "1px solid black",
+                    borderRadius: "50%",
+                    "&:hover": {
+                        boxShadow:
+                            "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
+                    },
                 },
             },
         },

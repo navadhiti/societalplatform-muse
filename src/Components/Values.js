@@ -1,34 +1,83 @@
-import { Grid } from '@mui/material';
-import { Box } from '@mui/system';
-import React from 'react';
+import { Card, Container, Grid } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+
 
 const Values = () => {
-  return (
-    <>
-         <Grid
+    return (
+        <>
+            <Container >
+                <Grid
                     container
-                    spacing={0}
+                    spacing={6}
                     justifyContent="center"
                     alignItems="center"
-                    className="p-5"
-                    sx={{ py: 2 }}
+                    py={2}
+                    my={5}
                 >
                     <Grid
                         item
                         xs={12}
                         sm={6}
-                        md={4}
-                        lg={4}
+                        md={3}
+                        lg={3}
                         sx={{ textAlign: "center" }}
+                        // px={4}
                     >
                         <Box>
-                            Catalyse<br />
-                            Interactions
-
+                            <Card classes="values">
+                                Catalyse
+                                <br />
+                                Interactions
+                            </Card>
                         </Box>
                     </Grid>
-    </>
-  );
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={3}
+                        lg={3}
+                        sx={{ textAlign: "center" }}
+                    >
+                        <Card classes="values">
+                            
+                            Build Public
+                            <br />
+                            Interactions
+                        </Card>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={3}
+                        lg={3}
+                        sx={{ textAlign: "center" }}
+                    >
+                        <Card classes="values">
+                            Catalyse
+                            <br />
+                            Interactions
+                        </Card>
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        md={3}
+                        lg={3}
+                        sx={{ textAlign: "center" }}
+                    >
+                         <Card classes="values">
+                           Empower<br />
+                           with Data
+                        </Card>
+                    </Grid>
+                </Grid>
+            </Container>
+        </>
+    );
 };
 
 export default Values;
