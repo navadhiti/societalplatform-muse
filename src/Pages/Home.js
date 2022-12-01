@@ -16,9 +16,9 @@ const Home = () => {
     <div style={styles.LandingBackground}>
       <LandingSection />
       <Blurb />
-      <OurCollaborators />
       <Stories />
       <Blurb_1 />
+      <OurCollaborators />
       <Values />
     </div>
   );

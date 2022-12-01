@@ -20,7 +20,7 @@ const LandingSection = () => {
           alignItems="center"
           wrap="nowrap"
         >
-          <Grid item sx={{ mt: 15 }} xs={8} sm={5}>
+          <Grid item sx={{ mt: 15 }} xs={12} md={5}>
             <Typography variant="h2">
               Welcome to our
               <br /> annual publication
@@ -38,7 +38,7 @@ const LandingSection = () => {
               new questions too.
             </Typography>
           </Grid>
-          <Grid item xs={8} sm={6}>
+          <Grid item xs={12} md={6}>
             <img src={LandingImage} alt="img" />
             {/* <Box
         component="img"

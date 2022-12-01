@@ -27,6 +27,7 @@ import SpeedDialAction from "@mui/material/SpeedDialAction";
 import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
+import Slider from 'react-slick';
 
 const actions = [
     { icon: <FileCopyIcon />, name: "Copy" },
@@ -34,35 +35,62 @@ const actions = [
     { icon: <PrintIcon />, name: "Print" },
     { icon: <ShareIcon />, name: "Share" },
 ];
-
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: 'block',
+          background: 'red',
+          borderRadius: '50%',
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+  const styles = {
+    LandingBackground: {
+     backgroundImage: `linear-gradient(to bottom, #ECE4EF, #ECE4EF)`,
+    }, 
+  };
 const Stories = () => {
+    const settings = {
+        infinite: true,
+        slidesToShow: 4,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SampleNextArrow />,
+      };
     return (
         <>
-            <Box sx={{textAlign:'center'}}>
-                <Container textAlign="center">
+            <Box sx={{textAlign:'center'}}  py={6}
+                         style={styles.LandingBackground}>
+                {/* <Container textAlign="center"> */}
                     <Typography variant="h4" textAlign="center">
                         Stories of change
                     </Typography>
                     <img src={Divider} alt="img" />
                     <Grid
                         container
-                        spacing={6}
+                        spacing={0}
                         justifyContent="center"
                         alignItems="center"
-                        py={2}
-                        my={5}
+                       
                     >
                         <Grid
                             item
                             xs={12}
-                            sm={6}
-                            md={3}
-                            lg={3}
+                            sm={12}
+                            md={10}
+                            lg={10}
 
                             // px={4}
                         >
-                            <Card>
-                                <CardActionArea>
+                            <Slider {...settings}>
+                            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
+                            <Card sx={{m:2,p:2}} key={value}>
+                                <CardActionArea sx={{}}>
                                     <CardMedia
                                         component="img"
                                         height="140"
@@ -113,7 +141,6 @@ const Stories = () => {
                                                         bottom: "-2rem",
                                                         right: "-1rem",
                                                     }}
-                                                    direction="left"
                                                     icon={
                                                         <ShareIcon
                                                             sx={{
@@ -145,10 +172,17 @@ const Stories = () => {
                                     </CardContent>
                                 </CardActionArea>
                             </Card>
+                            ))}
+                            </Slider>
                         </Grid>
                        
                     </Grid>
-                </Container>
+                    <Box my={3}>
+                    <Button variant="contained"  
+                       >READ ARTICLES</Button>
+                    </Box>
+                    
+                {/* </Container> */}
             </Box>
         </>
     );

@@ -48,10 +48,10 @@ const OurCollaborators = () => {
           spacing={0}
           justifyContent="center"
           alignItems="center"
-          sx={{ py: 2 }}
+          sx={{ py: 5 }}
         >
-          <Grid item xs={12} sm={12} md={6} lg={8} sx={{ textAlign: 'center' }}>
-            <Typography variant="h2">Our Collaborators</Typography>
+          <Grid item xs={12} sm={12} md={10} lg={10} sx={{ textAlign: 'center' }}>
+            <Typography variant="h4">Our Collaborators</Typography>
             <img src={Divider} alt="img" />
             <Slider {...settings}>
               {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
@@ -60,7 +60,7 @@ const OurCollaborators = () => {
                   sx={{
                     maxWidth: 250,
                     textAlign: 'center',
-                    margin: '4rem auto',
+                    margin: '2rem auto',
                     border: '1px solid black',
                     borderRadius: '20px',
                     boxShadow:
@@ -92,6 +92,7 @@ const OurCollaborators = () => {
               justifyContent="center"
               alignItems="center"
               spacing={2}
+              my={2}
             >
               <Button variant="contained">ALL CONTRIBUTORS</Button>
               <Button variant="contained">REACH OUT</Button>

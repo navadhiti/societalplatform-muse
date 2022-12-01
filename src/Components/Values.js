@@ -6,9 +6,15 @@ import Divider from "../Assets/Images/Divider.png";
 
 const Values = () => {
     const [flipCard, setFlipCard] = useState(false);
-    const handleClick = (e) => {
+    const [id,setId]=useState();
+    const handleClick = (id) => {
+        // if(id !== id){
+            setFlipCard(!flipCard)
+        // }else{
+        //     setFlipCard(true)   
+        // }
         // e.preventDefault();
-        setFlipCard((prevState) => ({ isFlipped: !prevState.isFlipped }));
+        setId(id)
     };
 
     return (
@@ -25,7 +31,9 @@ const Values = () => {
                     alignItems="center"
                     py={2}
                 >
-                    <Grid
+                    {[0, 1, 2, 3,].map((value,index) => (
+                        
+                             <Grid
                         item
                         xs={12}
                         sm={6}
@@ -34,98 +42,18 @@ const Values = () => {
                         sx={{ textAlign: "center" }}
                         // px={4}
                     >
-                        {/* <Box>
-                            <Card classes="values">
-                                Catalyse
-                                <br />
-                                Interactions
-                            </Card>
-                        </Box> */}
                         <ReactCardFlip
-                            isFlipped={flipCard}
-                            flipDirection="vertical"
-                        >
-                            <Card classes="values" onClick={handleClick}>
-                                Catalyse
-                                <br />
-                                Interactions
-                            </Card>
-                            <Card classes="values" onClick={handleClick}>
-                                Energize co-creation by leveraging technology
-                                and orchestrating ecosystems where assets are
-                                accessible and shared, allowing for inclusive
-                                problem-solving
-                            </Card>
-                        </ReactCardFlip>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        md={3}
-                        lg={3}
-                        sx={{ textAlign: "center" }}
-                    >
-                        <ReactCardFlip
-                            isFlipped={flipCard}
-                            flipDirection="vertical"
-                        >
-                            <Card classes="values" onClick={handleClick}>
-                                Build Public
-                                <br />
-                                Interactions
-                            </Card>
-                            <Card classes="values" onClick={handleClick}>
-                                Energize co-creation by leveraging technology
-                                and orchestrating ecosystems where assets are
-                                accessible and shared, allowing for inclusive
-                                problem-solving
-                            </Card>
-                        </ReactCardFlip>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        md={3}
-                        lg={3}
-                        sx={{ textAlign: "center" }}
-                    >
-                        <ReactCardFlip
-                            isFlipped={flipCard}
-                            flipDirection="vertical"
-                        >
-                            <Card classes="values" onClick={handleClick}>
-                                Build Public
-                                <br />
-                                Interactions
-                            </Card>
-                            <Card py={5} classes="values" onClick={handleClick}>
-                                Energize co-creation by leveraging technology
-                                and orchestrating ecosystems where assets are
-                                accessible and shared, allowing for inclusive
-                                problem-solving
-                            </Card>
-                        </ReactCardFlip>
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={6}
-                        md={3}
-                        lg={3}
-                        sx={{ textAlign: "center" }}
-                    >
-                        <ReactCardFlip
-                            isFlipped={flipCard}
+                            isFlipped={id===index  && flipCard}
                             flipDirection="horizontal"
+                            id={index}
+
                         >
-                            <Card classes="values" onClick={handleClick}>
-                                Empower
+                            <Card classes="values" onMouseEnter={()=>{setId(index);setFlipCard(true)}}>
+                                Catalyse
                                 <br />
-                                with Data
+                                Interactions
                             </Card>
-                            <Card classes="values" onClick={handleClick}>
+                            <Card classes="values1"  onMouseOut={()=>{setId(null);setFlipCard(false)}}>
                                 Energize co-creation by leveraging technology
                                 and orchestrating ecosystems where assets are
                                 accessible and shared, allowing for inclusive
@@ -133,6 +61,9 @@ const Values = () => {
                             </Card>
                         </ReactCardFlip>
                     </Grid>
+                        )
+                    )}
+                    
                 </Grid>
             </Container>
         </>

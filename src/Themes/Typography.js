@@ -155,10 +155,33 @@ const theme = createTheme({
                         boxShadow:
                             "0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)",
                         borderRadius: "10px",
-                        minHeight: "10rem",
+                        minHeight: "12rem",
                         alignItems: "center",
                         padding: "4.5rem 0",
                         backgroundColor: "transparent",
+                        cursor:'pointer',
+                        // margin:'2.8rem'
+                    },
+                },
+                {
+                    props: { classes: "values1" },
+                    style: {
+                        "&:hover": {
+                            boxShadow:
+                                "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
+                        },
+                        border: "1px solid black",
+                        fontFamily: FONT.FAMILY.INTER,
+                        fontSize: FONT.SIZES[14],
+                        fontWeight: FONT.WEIGHT.MEDIUM,
+                        boxShadow:
+                            "0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)",
+                        borderRadius: "10px",
+                        minHeight: "12rem",
+                        alignItems: "center",
+                        padding: "1rem",
+                        backgroundColor: "#ECE4EF",
+                        cursor:'pointer',
                         // margin:'2.8rem'
                     },
                 },
@@ -190,19 +213,19 @@ const theme = createTheme({
             },
         },
 
-        MuiIconButton: {
-            styleOverrides: {
-                // props:{classes:"AppBorder"},
-                root: {
-                    border: "1px solid black",
-                    borderRadius: "50%",
-                    "&:hover": {
-                        boxShadow:
-                            "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
-                    },
-                },
-            },
-        },
+        // MuiIconButton: {
+        //     styleOverrides: {
+        //         // props:{classes:"AppBorder"},
+        //         root: {
+        //             border: "1px solid black",
+        //             borderRadius: "50%",
+        //             "&:hover": {
+        //                 boxShadow:
+        //                     "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
+        //             },
+        //         },
+        //     },
+        // },
     },
 });
 export default theme;
