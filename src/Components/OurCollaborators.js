@@ -5,10 +5,10 @@ import {
   Grid,
   Card,
   CardHeader,
-  CardMedia,
   CardContent,
   Avatar,
   Button,
+  Stack,
 } from '@mui/material';
 import Divider from '../Assets/Images/Divider.png';
 import logo from '../Assets/Images/Group 206.png';
@@ -17,10 +17,28 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'block',
+        background: 'red',
+        borderRadius: '50%',
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
 const OurCollaborators = () => {
   const settings = {
     infinite: true,
     slidesToShow: 4,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
   };
   return (
     <div>
@@ -45,6 +63,8 @@ const OurCollaborators = () => {
                     margin: '4rem auto',
                     border: '1px solid black',
                     borderRadius: '20px',
+                    boxShadow:
+                      '0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)',
                   }}
                 >
                   <CardHeader avatar={<img src={logo} alt="img" />} />
@@ -67,12 +87,15 @@ const OurCollaborators = () => {
                 </Card>
               ))}
             </Slider>
-            <Button variant="contained" elevation="3" sx={{ mt: 5 }}>
-              ALL CONTRIBUTORS
-            </Button>
-            <Button variant="contained" elevation="3" sx={{ mt: 5 }}>
-              REACH OUT
-            </Button>
+            <Stack
+              direction="row"
+              justifyContent="center"
+              alignItems="center"
+              spacing={2}
+            >
+              <Button variant="contained">ALL CONTRIBUTORS</Button>
+              <Button variant="contained">REACH OUT</Button>
+            </Stack>
           </Grid>
         </Grid>
       </Box>

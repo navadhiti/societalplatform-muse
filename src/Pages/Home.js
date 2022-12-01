@@ -11,9 +11,9 @@ const Home = () => {
     <div>
       <LandingSection />
       <Blurb />
-      <Blurb_1 />
       <OurCollaborators />
       <Stories />
+      <Blurb_1 />
       <Values />
     </div>
   );
