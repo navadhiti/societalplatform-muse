@@ -56,8 +56,8 @@ const theme = createTheme({
             marginBottom: "30px",
         },
         h3: {
-            fontWeight: FONT.WEIGHT.SEMI_BOLD,
-            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.MEDIUM,
+            fontSize: FONT.SIZES[44],
             color: PALETTE.SENARY,
             textTransform: "capitalize",
         },

@@ -28,7 +28,7 @@ const Values = () => {
                         </Box>
                     </Grid>
     </>
-  )
-}
+  );
+};
 
-export default Values
+export default Values;

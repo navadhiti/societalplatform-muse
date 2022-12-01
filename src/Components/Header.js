@@ -69,20 +69,21 @@ const Header = (props) => {
       <React.Fragment>
         <CssBaseline />
         <AppBar elevation={0} className="AppBorder" color='inherit'>
+          
+          <Container>
           <Grid
             container
             spacing={0}
             justifyContent="flex-start"
             alignItems="center"
             className="p-5"
-            sx={{ py: 2 }}
+            sx={{ py: 2 ,ml:-8,}}
           >
             <Grid item xs={12} sm={12} md={6} lg={6}>
               <NavigateBeforeIcon />
               <img src={frame} alt="img" />
             </Grid>
           </Grid>
-          <Toolbar>
             <Grid
               container
               spacing={0}
@@ -110,7 +111,8 @@ const Header = (props) => {
                 </Stack>
               </Grid>
             </Grid>
-          </Toolbar>
+          
+          </Container>
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
         <Container>
