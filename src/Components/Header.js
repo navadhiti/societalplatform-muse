@@ -139,7 +139,7 @@ const Header = (props) => {
                 >
                   <Typography variant="body">GET IN TOUCH</Typography>
 
-                  <Button variant="contained" elevation="3">
+                  <Button variant="contained">
                     Read
                   </Button>
                   <Button variant="contained">EXPERIENCE</Button>

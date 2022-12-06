@@ -124,7 +124,6 @@ const theme = createTheme({
             fontFamily: FONT.FAMILY.INTER,
             fontSize: FONT.SIZES[12],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
-
             borderRadius: '10px',
           },
         },

@@ -27,13 +27,15 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import Slider from 'react-slick';
 
 const actions = [
   { icon: <FileCopyIcon />, name: 'Copy' },
-  { icon: <SaveIcon />, name: 'Save' },
+  { icon: <TwitterIcon />, name: 'Save' },
   { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
+  { icon: <PictureAsPdfIcon />, name: 'PDF' },
 ];
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
