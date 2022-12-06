@@ -13,11 +13,11 @@ const Layout = () => {
         <>
             <ThemeProvider theme={theme}>
                 {/* <Container> */}
-                    <Header />
+                    {/* <Header /> */}
                     <Routes>
                         <Route path="/" element={<Home />} />
                     </Routes>
-                    <Footer />
+                    {/* <Footer /> */}
                 {/* </Container> */}
            
             </ThemeProvider>

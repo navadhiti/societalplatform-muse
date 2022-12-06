@@ -2,8 +2,10 @@ import React from 'react';
 import Blurb from '../Components/Blurb';
 import Blurb_1 from '../Components/Blurb1';
 import LandingSection from '../Components/LandingSection';
+import NewDesign from '../Components/newDesign';
 import OurCollaborators from '../Components/OurCollaborators';
 import Stories from '../Components/Stories';
+import TabSection from '../Components/TabSection';
 import Values from '../Components/Values';
 const styles = {
     LandingBackground: {
@@ -14,12 +16,14 @@ const styles = {
 const Home = () => {
   return (
     <div style={styles.LandingBackground}>
-      <LandingSection />
+      {/* <LandingSection />
       <Blurb />
       <Stories />
       <Blurb_1 />
       <OurCollaborators />
-      <Values />
+      <Values /> */}
+      {/* <NewDesign /> */}
+      <TabSection />
     </div>
   );
 };

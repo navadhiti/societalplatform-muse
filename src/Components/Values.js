@@ -48,7 +48,7 @@ const Values = () => {
                             id={index}
 
                         >
-                            <Card classes="values" onMouseEnter={()=>{setId(index);setFlipCard(true)}}>
+                            <Card classes="values"onClick={()=>handleClick}>
                                 Catalyse
                                 <br />
                                 Interactions

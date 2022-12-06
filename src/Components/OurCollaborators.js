@@ -50,7 +50,14 @@ const OurCollaborators = () => {
           alignItems="center"
           sx={{ py: 5 }}
         >
-          <Grid item xs={12} sm={12} md={10} lg={10} sx={{ textAlign: 'center' }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={10}
+            lg={10}
+            sx={{ textAlign: 'center' }}
+          >
             <Typography variant="h4">Our Collaborators</Typography>
             <img src={Divider} alt="img" />
             <Slider {...settings}>
@@ -58,7 +65,7 @@ const OurCollaborators = () => {
                 <Card
                   key={value}
                   sx={{
-                    maxWidth: 250,
+                    maxWidth: 300,
                     textAlign: 'center',
                     margin: '2rem auto',
                     border: '1px solid black',
