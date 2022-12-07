@@ -107,12 +107,88 @@ const TabSection = () => {
                                         sm={1}
                                         md={1}
                                         lg={1}
-                                        sx={{ textAlign: "center",mt:-3 }}
+                                        // sx={{ textAlign: "center",mt:-3 }}
+                                        sx={{ textAlign: "center",position:"fixed",top:'5.1rem',right:'11rem', }}
                                     >
                                         {" "}
                                         <img src={LandingImage} alt="img" />
                                     </Grid>
                                 </Grid>
+                                <Box py={5} px={9}>
+                                <Typography variant="h6" textAlign="center">
+                                    Societal Muse is our annual publication that
+                                    shows stories of{" "}
+                                    <span
+                                        style={{
+                                            fontWeight: 800,
+                                            fontSize: "1.375rem",
+                                        }}
+                                    >
+                                        solving at scale{" "}
+
+                                        <img src={Image12} alt="img" />
+                                    </span>{" "}
+                                    in action. These are stories of{" "}
+                                    <span
+                                        style={{
+                                            fontWeight: 800,
+                                            fontSize: "1.375rem",
+                                        }}
+                                    >
+                                        big bold bets,
+
+                                        <img src={Image12} alt="img" />
+                                    </span>
+                                    of{" "}
+                                    <span
+                                        style={{
+                                            background: ` url(${Divider}) bottom no-repeat`,
+                                            paddingBottom: "05px",
+                                            backgroundSize: "contain",
+                                        }}
+                                    >
+                                        reimagination
+                                    </span>
+                                    , of perseverance, of coming together, of{" "}
+                                    <span
+                                        style={{
+                                            fontWeight: 800,
+                                            fontSize: "1.375rem",
+                                        }}
+                                    >
+                                        building agency
+
+                                        <img src={Image12} alt="img" />
+                                    </span>
+                                    , through the eyes of practitioners and
+                                    supporters of{" "}
+                                    <u style={{ textDecorationStyle: "wavy" }}>
+                                        Societal Thinking.
+                                    </u>
+                                </Typography>
+                                <br />
+                                <Typography variant="h6">
+                                    Societal Muse oers{" "}
+                                    <span
+                                        style={{
+                                            fontWeight: 800,
+                                            fontSize: "1.375rem",
+                                        }}
+                                    >
+                                        new answers
+                                    </span>
+                                    , new ways of doing and sometimes{" "}
+                                    <span
+                                        style={{
+                                            fontWeight: 800,
+                                            fontSize: "1.375rem",
+                                        }}
+                                    >
+                                        new questions
+                                    </span>{" "}
+                                    too.
+                                </Typography>
+                                </Box>
                                 <Box py={5} px={9}>
                                 <Typography variant="h6" textAlign="center">
                                     Societal Muse is our annual publication that
