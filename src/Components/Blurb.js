@@ -13,7 +13,7 @@ const Blurb = () => {
     return (
         <>
             <Container>
-               Hi
+            
 
                 
             </Container>
