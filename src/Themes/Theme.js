@@ -33,7 +33,7 @@ const theme = createTheme({
     },
     h4: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
-      fontFamily: 'Campaign',
+      fontFamily: FONT.FAMILY.INTER,
       fontSize: FONT.SIZES[24],
       color: PALETTE.SENARY,
     },
