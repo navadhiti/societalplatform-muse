@@ -10,13 +10,6 @@ const styles = {
 const Home = () => {
   return (
     <div style={styles.LandingBackground}>
-      {/* <LandingSection />
-      <Blurb />
-      <Stories />
-      <Blurb_1 />
-      <OurCollaborators />
-      <Values /> */}
-      {/* <NewDesign /> */}
       <TabSection />
     </div>
   );
