@@ -8,7 +8,7 @@ import { createTheme } from '@mui/material/styles';
 
 import PALETTE from './Palette';
 import FONT from './Font';
-import Divider from '../Assets/Images/Divider.png'
+
 
 const theme = createTheme({
   typography: {
@@ -107,7 +107,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[12],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
 
-            borderRadius: '10px',
+            borderRadius: '25px',
           },
         },
       ],

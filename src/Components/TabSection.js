@@ -1,4 +1,12 @@
-import { Box, Button, Container, Grid, Tab, Tabs, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    Container,
+    Grid,
+    Tab,
+    Tabs,
+    Typography,
+} from "@mui/material";
 import React from "react";
 import Divider from "../Assets/Images/Divider.png";
 import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
@@ -14,6 +22,8 @@ import DATABASE from "../db.json";
 
 import PropTypes from "prop-types";
 import Blurb from "./Blurb";
+import Blurb_1 from "./Blurb1";
+import Blub2 from "./Blub2";
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
     const d = new Date(DATABASE.map((data) => data.id));
@@ -90,7 +100,6 @@ const TabSection = () => {
                                     borderRadius: "10px 0 0 10px",
                                 }}
                             >
-                                
                                 <Grid
                                     container
                                     spacing={0}
@@ -127,15 +136,20 @@ const TabSection = () => {
                                             marginLeft: "70%",
                                         }}
                                     >
-                                        <img src={LandingImage} alt="img"   sx={{
-                                            position: "fixed",
-                                            marginTop: "3rem",
-                                            marginLeft: "90%",
-                                        }}/>
+                                        <img
+                                            src={LandingImage}
+                                            alt="img"
+                                            sx={{
+                                                position: "fixed",
+                                                marginTop: "3rem",
+                                                marginLeft: "90%",
+                                            }}
+                                        />
                                     </Grid>
                                 </Grid>
-                               <Blurb />
-
+                                <Blurb />
+                                <Blurb_1 />
+                                <Blub2 />
                                 <Grid
                                     container
                                     spacing={0}
@@ -182,8 +196,9 @@ const TabSection = () => {
                                         writingMode: "vertical-rl",
                                         textOrientation: "mixed",
                                     }}
-                                >hi hello</Typography>
-                                
+                                >
+                                    hi hello
+                                </Typography>
                             </TabPanel>
                             <TabPanel
                                 value={value}
@@ -208,10 +223,14 @@ const TabSection = () => {
                             value={value}
                             onChange={handleChange}
                             aria-label="Vertical tabs example"
-                            sx={{ borderLeft: 1, borderColor: "divider",writingMode: "verticalRl",
-                                    textOrientation: "mixed",
-                                    color: "#fdfdfd",
-                                    transform: [{ rotate: "-90deg" }], }}
+                            sx={{
+                                borderLeft: 1,
+                                borderColor: "divider",
+                                writingMode: "verticalRl",
+                                textOrientation: "mixed",
+                                color: "#fdfdfd",
+                                transform: [{ rotate: "-90deg" }],
+                            }}
                         >
                             <Tab
                                 label="Item One"
@@ -246,12 +265,17 @@ const TabSection = () => {
                                     textOrientation: "mixed",
                                     color: "#fdfdfd",
                                 }}
-                            >  <Typography
-                            sx={{
-                                writingMode: "vertical-rl",
-                                textOrientation: "mixed",
-                            }}
-                        >hi hello</Typography></Tab>
+                            >
+                                {" "}
+                                <Typography
+                                    sx={{
+                                        writingMode: "vertical-rl",
+                                        textOrientation: "mixed",
+                                    }}
+                                >
+                                    hi hello
+                                </Typography>
+                            </Tab>
                             <Tab
                                 label="Item Four"
                                 {...a11yProps(3)}
