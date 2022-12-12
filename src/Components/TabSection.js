@@ -1,17 +1,15 @@
 import React from 'react';
 import {
   Box,
-  Button,
+  //   Button,
   Container,
   Grid,
-  Tab,
-  Tabs,
   Typography,
-  Drawer,
+  //   Drawer,
   List,
   ListItem,
   ListItemButton,
-  CssBaseline,
+  //   CssBaseline,
 } from '@mui/material';
 import Divider from '../Assets/Images/Divider.png';
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
@@ -54,15 +52,17 @@ TabPanel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
-  };
-}
+// function a11yProps(index) {
+//   return {
+//     id: `vertical-tab-${index}`,
+//     'aria-controls': `vertical-tabpanel-${index}`,
+//   };
+// }
 
 const TabSection = () => {
   const [value, setValue] = React.useState(0);
+
+  const drawerWidth = 240;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -248,7 +248,76 @@ const TabSection = () => {
             </TabPanel>
           </Box>
         </Grid>
-        <Grid item xs={1} sm={1} md={1} lg={1}></Grid>
+        <Grid item xs={1} sm={1} md={1} lg={1}>
+          <List>
+            {['HOME','ARTICLES','EXPIRIENCE','CONTACT','SHARE']}
+            <ListItem disablePadding>
+              <ListItem
+                sx={{
+                  backgroundColor: '#E2D1ED',
+                  borderBottomRightRadius: '50px',
+                  borderTopRightRadius: '50px',
+                  writingMode: 'tb',
+                  color:'#FFFFFF'
+                }}
+              >
+                HOME
+              </ListItem>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  backgroundColor: '#3E418A',
+                  borderBottomRightRadius: '50px',
+                  borderTopRightRadius: '50px',
+                  writingMode: 'tb',
+                  color:'#FFFFFF'
+                }}
+              >
+                ARTICLES
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  backgroundColor: '#DC8F6E',
+                  borderBottomRightRadius: '50px',
+                  borderTopRightRadius: '50px',
+                  writingMode: 'tb',
+                  color:'#FFFFFF'
+                }}
+              >
+                EXPIRIENCE
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  backgroundColor: '#22534F',
+                  borderBottomRightRadius: '50px',
+                  borderTopRightRadius: '50px',
+                  writingMode: 'tb',
+                  color:'#FFFFFF'
+                }}
+              >
+                CONTACT
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                sx={{
+                  backgroundColor: '#C4BCB9',
+                  borderBottomRightRadius: '50%',
+                  borderTopRightRadius: '50%',
+                  writingMode: 'tb',
+                  color:'#FFFFFF'
+                }}
+              >
+                SHARE
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Grid>
       </Grid>
     </Container>
   );
