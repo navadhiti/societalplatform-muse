@@ -6,18 +6,18 @@ import Header from "../Components/Header";
 import Home from "../Pages/Home";
 
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "../Themes/Typography";
+import theme from "../Themes/Theme";
 const Layout = () => {
     const navigate = useNavigate();
     return (
         <>
             <ThemeProvider theme={theme}>
                 {/* <Container> */}
-                    {/* <Header /> */}
+                    <Header />
                     <Routes>
                         <Route path="/" element={<Home />} />
                     </Routes>
-                    {/* <Footer /> */}
+                    <Footer />
                 {/* </Container> */}
            
             </ThemeProvider>

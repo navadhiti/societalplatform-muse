@@ -101,10 +101,10 @@ const Header = (props) => {
     <>
       <React.Fragment>
         <CssBaseline />
-        <AppBar elevation={0} className="AppBorder" color='inherit' style={styles.LandingBackground}>
+        <AppBar elevation={0} className="AppBorder" color='inherit' pt={3}>
           
           <Container>
-          <HideOnScroll {...props}>
+          {/* <HideOnScroll {...props}>
           <Grid
             container
             spacing={0}
@@ -118,32 +118,17 @@ const Header = (props) => {
               <img src={frame} alt="img" />
             </Grid>
           </Grid>
-          </HideOnScroll>
+          </HideOnScroll> */}
             <Grid
               container
               spacing={0}
-              justifyContent="center"
-              alignItems="center"
-              
+              alignItems="center"             
             >
-              <Grid item xs={12} sm={6} md={6} lg={6}>
-                <img src={logo} alt="img" />
+              <Grid item xs={12} sm={6} md={6} lg={3}>
+              <img src={frame} alt="img" />
               </Grid>
-              <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="flex-end" >
-                <Stack
-                  spacing={2}
-                  direction="row"
-                  justifyContent="flex-end"
-                  alignItems="center"
-                  
-                >
-                  <Typography variant="body">GET IN TOUCH</Typography>
-
-                  <Button variant="contained" elevation="3">
-                    Read
-                  </Button>
-                  <Button variant="contained">EXPERIENCE</Button>
-                </Stack>
+              <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="center" sx={{textAlign:"center"}}  alignItems="center"   >
+              <img src={logo} alt="img" />
               </Grid>
             </Grid>
           

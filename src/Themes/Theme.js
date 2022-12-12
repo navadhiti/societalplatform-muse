@@ -5,45 +5,15 @@
 
 import { createTheme } from '@mui/material/styles';
 
-import '@fontsource/montserrat-alternates';
-import '@fontsource/montserrat';
+
+import PALETTE from './Palette';
+import FONT from './Font';
 import Divider from '../Assets/Images/Divider.png'
-// Create a theme instance.
-const PALETTE = {
-  PRIMARY: '#f8f9fa',
-  SECONDARY: '#935FB0',
-  TERITIARY: '#F5f5f5',
-};
-const FONT = {
-  FAMILY: {
-    ASSISTANT: 'Montserrat Alternates',
-    INTER: 'Montserrat ',
-  },
-  SIZES: {
-    12: '0.75rem',
-    14: '0.9rem',
-    16: '1rem',
-    18: '1.125rem',
-    20: '1.25rem',
-    22: '1.375rem',
-    24: '1.5rem',
-    44: '2.75rem',
-    64: '4rem',
-  },
-  WEIGHT: {
-    BOLD: 900,
-    SEMI_BOLD: 700,
-    DEMI_BOLD: 600,
-    MEDIUM: 500,
-    REGULAR: 400,
-    LIGHT: 300,
-  },
-};
 
 const theme = createTheme({
   typography: {
     allVariants: {
-      fontFamily: 'Montserrat Alternates',
+      fontFamily: 'Campaign',
     },
     h1: {
       fontWeight: FONT.WEIGHT.BOLD,
@@ -64,7 +34,7 @@ const theme = createTheme({
     },
     h4: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
-      fontFamily: 'Montserrat',
+      fontFamily: 'Campaign',
       fontSize: FONT.SIZES[24],
       color: PALETTE.SENARY,
     },
@@ -136,8 +106,8 @@ const theme = createTheme({
       styleOverrides: {
         // props:{classes:"AppBorder"},
         root: {
-          borderBottom: '1px solid black',
-          paddingBottom: '1rem',
+          // borderBottom: '1px solid black',
+          paddingTop: '1rem',
         },
       },
     },
@@ -214,20 +184,36 @@ const theme = createTheme({
         },
       },
     },
-
-    // MuiIconButton: {
-    //     styleOverrides: {
-    //         // props:{classes:"AppBorder"},
-    //         root: {
-    //             border: "1px solid black",
-    //             borderRadius: "50%",
-    //             "&:hover": {
-    //                 boxShadow:
-    //                     "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
-    //             },
-    //         },
-    //     },
-    // },
+    MuiTab: {
+      variants: [
+        {
+          props: { classes: 'values' },
+          style: {
+            
+            backgroundColor: "#542385",
+            borderRadius: "0 100% 100% 0",
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            color: "#fdfdfd",
+            // margin:'2.8rem'
+          },
+        },
+      ],
+    },
+    MuiTabs: {
+      label: [
+        {
+          props: { variant: 'scrollable' },
+          style: {
+           
+            writingMode: "vertical-rl",
+            textOrientation: "mixed",
+            // margin:'2.8rem'
+          },
+        },
+      ],
+    },
+    
   },
 });
 export default theme;
