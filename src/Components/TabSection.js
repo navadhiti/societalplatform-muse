@@ -5,29 +5,23 @@ import {
   Container,
   Grid,
   Typography,
-  //   Drawer,
   List,
   ListItem,
   ListItemButton,
-  //   CssBaseline,
 } from '@mui/material';
-import Divider from '../Assets/Images/Divider.png';
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
 import Image from '../Assets/Images/sp-musebook-design.png';
 import Image1 from '../Assets/Images/image_4.png';
-import Image2 from '../Assets/Images/image 20.png';
-import Image3 from '../Assets/Images/image 14.png';
-import Image4 from '../Assets/Images/image_17.png';
-import Image5 from '../Assets/Images/image 19.png';
-
-import Image12 from '../Assets/Images/image_13.png';
-import DATABASE from '../db.json';
+// import Image2 from '../Assets/Images/image 20.png';
+// import Image3 from '../Assets/Images/image 14.png';
+// import Image4 from '../Assets/Images/image_17.png';
+// import Image5 from '../Assets/Images/image 19.png';
+import Blurb from './Blurb';
+// import Image12 from '../Assets/Images/image_13.png';
 
 import PropTypes from 'prop-types';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const d = new Date(DATABASE.map((data) => data.id));
-  console.log(d, 'data');
 
   return (
     <div
@@ -62,7 +56,33 @@ TabPanel.propTypes = {
 const TabSection = () => {
   const [value, setValue] = React.useState(0);
 
-  const drawerWidth = 240;
+  const buttonName = [
+    {
+      name: 'HOME',
+      backgroundColor: '#E2D1ED',
+      link: '',
+    },
+    {
+      name: 'ARTICLES',
+      backgroundColor: '#3E418A',
+      link: '',
+    },
+    {
+      name: 'EXPIRIENCE',
+      backgroundColor: '#DC8F6E',
+      link: '',
+    },
+    {
+      name: 'CONTACT',
+      backgroundColor: '#22534F',
+      link: '',
+    },
+    {
+      name: 'SHARE',
+      backgroundColor: '#C4BCB9',
+      link: '',
+    },
+  ];
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -77,21 +97,15 @@ const TabSection = () => {
         sx={{ pt: 0 }}
       >
         <Grid item xs={11} sm={11} md={11} lg={11} sx={{ textAlign: 'center' }}>
-          <Box
-            sx={
-              {
-                // height: 424,
-              }
-            }
-          >
+          <Box>
             <TabPanel
               value={value}
               index={0}
               style={{
                 backgroundColor: '#E5E5E5',
-                height: 510,
+                height: 700,
                 overflowY: 'auto',
-                borderRadius: '10px 0 0 10px',
+                borderRadius: '10px ',
               }}
             >
               <Grid
@@ -140,87 +154,7 @@ const TabSection = () => {
                   />
                 </Grid>
               </Grid>
-              <Box pt={13} px={18}>
-                <Typography variant="h6" textAlign="center">
-                  Societal Muse is our annual publication that shows stories of{' '}
-                  <span
-                    style={{
-                      fontWeight: 800,
-                      fontSize: '1.375rem',
-                    }}
-                  >
-                    solving at scale <img src={Image12} alt="img" width="5%" />
-                  </span>{' '}
-                  in action. These are stories of{' '}
-                  <span
-                    style={{
-                      fontWeight: 800,
-                      fontSize: '1.375rem',
-                    }}
-                  >
-                    big bold bets,
-                    <img src={Image2} alt="img" width="2%" />
-                    <img src={Image2} alt="img" width="2%" />
-                  </span>
-                  of{' '}
-                  <span
-                    style={{
-                      background: ` url(${Divider}) bottom no-repeat`,
-                      paddingBottom: '05px',
-                      backgroundSize: 'contain',
-                    }}
-                  >
-                    reimagination
-                  </span>
-                  , of perseverance, of coming together, of{' '}
-                  <span
-                    style={{
-                      fontWeight: 800,
-                      fontSize: '1.375rem',
-                    }}
-                  >
-                    building agency
-                    <img src={Image3} alt="img" width="5%" />
-                  </span>
-                  , through the eyes of practitioners and supporters of{' '}
-                  {/* <u style={{ textDecorationStyle: "wavy" }}> */}
-                  <span
-                    style={{
-                      background: ` url(${Divider}) bottom no-repeat`,
-                      paddingBottom: '05px',
-                      backgroundSize: 'contain',
-                    }}
-                  >
-                    Societal Thinking.
-                  </span>
-                  {/* </u> */}
-                </Typography>
-                <br />
-                <Typography variant="h6">
-                  Societal Muse oers{' '}
-                  <span
-                    style={{
-                      fontWeight: 800,
-                      fontSize: '1.375rem',
-                    }}
-                  >
-                    new answers
-                    <img src={Image4} alt="img" width="2%" />
-                    <img src={Image4} alt="img" width="2%" />
-                  </span>
-                  , new ways of doing and sometimes{' '}
-                  <span
-                    style={{
-                      fontWeight: 800,
-                      fontSize: '1.375rem',
-                    }}
-                  >
-                    new questions
-                    <img src={Image5} alt="img" width="5%" />
-                  </span>{' '}
-                  too.
-                </Typography>
-              </Box>
+              <Blurb />
 
               <Grid
                 container
@@ -249,16 +183,31 @@ const TabSection = () => {
           </Box>
         </Grid>
         <Grid item xs={1} sm={1} md={1} lg={1}>
-          <List>
-            {['HOME','ARTICLES','EXPIRIENCE','CONTACT','SHARE']}
-            <ListItem disablePadding>
+          <List sx={{ paddingTop: 0 ,width:"10%"}}>
+            {buttonName.map((item) => (
+              <ListItem disablePadding>
+                <ListItemButton
+                  sx={{
+                    backgroundColor: item.backgroundColor,
+                    borderRadius: '0% 100% 100% 0% / 45% 50% 50% 45%;',
+                    writingMode: 'tb',
+                    color: '#FFFFFF',
+                    height: 140,
+                    padding: '2rem 1.9rem 2.3rem 1.8rem',
+                  }}
+                >
+                  {item.name}
+                </ListItemButton>
+              </ListItem>
+            ))}
+            {/* <ListItem disablePadding>
               <ListItem
                 sx={{
                   backgroundColor: '#E2D1ED',
                   borderBottomRightRadius: '50px',
                   borderTopRightRadius: '50px',
                   writingMode: 'tb',
-                  color:'#FFFFFF'
+                  color: '#FFFFFF',
                 }}
               >
                 HOME
@@ -271,7 +220,7 @@ const TabSection = () => {
                   borderBottomRightRadius: '50px',
                   borderTopRightRadius: '50px',
                   writingMode: 'tb',
-                  color:'#FFFFFF'
+                  color: '#FFFFFF',
                 }}
               >
                 ARTICLES
@@ -284,7 +233,7 @@ const TabSection = () => {
                   borderBottomRightRadius: '50px',
                   borderTopRightRadius: '50px',
                   writingMode: 'tb',
-                  color:'#FFFFFF'
+                  color: '#FFFFFF',
                 }}
               >
                 EXPIRIENCE
@@ -297,7 +246,7 @@ const TabSection = () => {
                   borderBottomRightRadius: '50px',
                   borderTopRightRadius: '50px',
                   writingMode: 'tb',
-                  color:'#FFFFFF'
+                  color: '#FFFFFF',
                 }}
               >
                 CONTACT
@@ -310,12 +259,12 @@ const TabSection = () => {
                   borderBottomRightRadius: '50%',
                   borderTopRightRadius: '50%',
                   writingMode: 'tb',
-                  color:'#FFFFFF'
+                  color: '#FFFFFF',
                 }}
               >
                 SHARE
               </ListItemButton>
-            </ListItem>
+            </ListItem> */}
           </List>
         </Grid>
       </Grid>
