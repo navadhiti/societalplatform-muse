@@ -122,7 +122,8 @@ const Header = (props) => {
             <Grid
               container
               spacing={0}
-              alignItems="center"             
+              alignItems="center" 
+              justifyContent=""  
             >
               <Grid item xs={12} sm={6} md={6} lg={3}>
               <img src={frame} alt="img" />
