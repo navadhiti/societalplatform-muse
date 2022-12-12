@@ -20,7 +20,6 @@ import card1 from '../Assets/Images/Card.png';
 import card2 from '../Assets/Images/Card1.png';
 import card3 from '../Assets/Images/Card2.png';
 import Divider from '../Assets/Images/Divider.png';
-
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
@@ -28,9 +27,27 @@ import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
 import Slider from 'react-slick';
+import DataFromDB from '../db.json';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  FacebookShareCount,
+  FacebookIcon,
+} from 'react-share';
+
+console.log(DataFromDB);
+
+const facebookURL = 'https://www.navadhiti.com/';
 
 const actions = [
-  { icon: <FileCopyIcon />, name: 'Copy' },
+  {
+    icon: (
+      <FacebookShareButton url={facebookURL}>
+        <FacebookIcon round={true} />
+      </FacebookShareButton>
+    ),
+    name: 'Facebook',
+  },
   { icon: <SaveIcon />, name: 'Save' },
   { icon: <PrintIcon />, name: 'Print' },
   { icon: <ShareIcon />, name: 'Share' },
@@ -78,11 +95,10 @@ const Stories = () => {
             sm={12}
             md={10}
             lg={10}
-
             // px={4}
           >
             <Slider {...settings}>
-              {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((value) => (
+              {DataFromDB.map((data) => (
                 <Card
                   sx={{
                     m: 2,
@@ -91,7 +107,6 @@ const Stories = () => {
                     border: '1px solid black',
                     borderRadius: '20px',
                   }}
-                  key={value}
                 >
                   <CardMedia
                     component="img"
@@ -99,70 +114,68 @@ const Stories = () => {
                     image={card1}
                     alt="green iguana"
                   />
-                  <CardActionArea>
-                    <CardContent sx={{ justifyContent: 'left' }}>
-                      <Typography gutterBottom variant="body1" component="div">
-                        Edition 01,2022
-                        <Badge variant="tag">HEALTH</Badge>
-                      </Typography>
-                      <Typography variant="h4">All teach,all Learn</Typography>
-
-                      {/* <CardActions> */}
-                      <Stack
-                        direction="row"
-                        justifyContent="space-between"
-                        alignItems="center"
-                        spacing={2}
-                        p={2}
+                  {/* <CardActionArea> */}
+                  <CardContent sx={{ justifyContent: 'left' }}>
+                    <Typography gutterBottom variant="body1" component="div">
+                      Edition {new Date(data.date).toLocaleDateString('en-CA')}
+                      <Badge variant="tag">HEALTH</Badge>
+                    </Typography>
+                    <Typography variant="h4">All teach,all Learn</Typography>
+                    {/* <CardActions> */}
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      spacing={2}
+                      p={2}
+                    >
+                      <Button
+                        size="small"
+                        color="primary"
+                        variant="contained"
+                        px={3}
                       >
-                        <Button
-                          size="small"
-                          color="primary"
-                          variant="contained"
-                          px={3}
-                        >
-                          Read
-                        </Button>
-
-                        <Box
+                        Read
+                      </Button>
+                      <Box
+                        sx={{
+                          transform: 'translateZ(0px)',
+                          flexGrow: 1,
+                        }}
+                      >
+                        <SpeedDial
+                          ariaLabel="SpeedDial basic example"
                           sx={{
-                            transform: 'translateZ(0px)',
-                            flexGrow: 1,
+                            position: 'absolute',
+                            bottom: '-2rem',
+                            right: '-1rem',
                           }}
+                          icon={
+                            <ShareIcon
+                              sx={{
+                                width: '35px',
+                                height: '35px',
+                                border: '1px solid black',
+                                backgroundColor: '#fff',
+                                borderRadius: '50%',
+                                p: 1,
+                              }}
+                            />
+                          }
                         >
-                          <SpeedDial
-                            ariaLabel="SpeedDial basic example"
-                            sx={{
-                              position: 'absolute',
-                              bottom: '-2rem',
-                              right: '-1rem',
-                            }}
-                            icon={
-                              <ShareIcon
-                                sx={{
-                                  width: '35px',
-                                  height: '35px',
-                                  border: '1px solid black',
-                                  backgroundColor: '#fff',
-                                  borderRadius: '50%',
-                                  p: 1,
-                                }}
-                              />
-                            }
-                          >
-                            {actions.map((action) => (
-                              <SpeedDialAction
-                                key={action.name}
-                                icon={action.icon}
-                                tooltipTitle={action.name}
-                              />
-                            ))}
-                          </SpeedDial>
-                        </Box>
-                      </Stack>
-                      {/* </CardActions> */}
-                    </CardContent>
-                  </CardActionArea>
+                          {actions.map((action) => (
+                            <SpeedDialAction
+                              key={action.name}
+                              icon={action.icon}
+                              tooltipTitle={action.name}
+                            />
+                          ))}
+                        </SpeedDial>
+                      </Box>
+                    </Stack>
+                    {/* </CardActions> */}
+                  </CardContent>
+                  {/* </CardActionArea> */}
                 </Card>
               ))}
             </Slider>
@@ -171,11 +184,9 @@ const Stories = () => {
         <Box my={3}>
           <Button variant="contained">READ ARTICLES</Button>
         </Box>
-
         {/* </Container> */}
       </Box>
     </>
   );
 };
-
 export default Stories;

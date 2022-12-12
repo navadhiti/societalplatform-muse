@@ -5,10 +5,10 @@
 
 import { createTheme } from '@mui/material/styles';
 
-
 import PALETTE from './Palette';
 import FONT from './Font';
 
+// import Divider from '../Assets/Images/Divider.png'
 
 const theme = createTheme({
   typography: {
@@ -199,12 +199,11 @@ const theme = createTheme({
         {
           props: { classes: 'values' },
           style: {
-            
-            backgroundColor: "#542385",
-            borderRadius: "0 100% 100% 0",
-            writingMode: "vertical-rl",
-            textOrientation: "mixed",
-            color: "#fdfdfd",
+            backgroundColor: '#542385',
+            borderRadius: '0 100% 100% 0',
+            writingMode: 'vertical-rl',
+            textOrientation: 'mixed',
+            color: '#fdfdfd',
             // margin:'2.8rem'
           },
         },
@@ -215,15 +214,13 @@ const theme = createTheme({
         {
           props: { variant: 'scrollable' },
           style: {
-           
-            writingMode: "vertical-rl",
-            textOrientation: "mixed",
+            writingMode: 'vertical-rl',
+            textOrientation: 'mixed',
             // margin:'2.8rem'
           },
         },
       ],
     },
-    
   },
 });
 export default theme;

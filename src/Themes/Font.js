@@ -1,6 +1,6 @@
-import '@fontsource/montserrat-alternates';
-import '@fontsource/montserrat';
-import { Campaign } from 'react-adobe-fonts';
+// import '@fontsource/montserrat-alternates';
+// import '@fontsource/montserrat';
+// import { Campaign } from 'react-adobe-fonts';
 const FONT = {
     FAMILY: {
       ASSISTANT: 'montserrat',
