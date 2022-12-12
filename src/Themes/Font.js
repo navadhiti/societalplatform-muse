@@ -3,8 +3,8 @@ import '@fontsource/montserrat';
 import { Campaign } from 'react-adobe-fonts';
 const FONT = {
     FAMILY: {
-      ASSISTANT: 'Campaign',
-      INTER: 'Campaign ',
+      ASSISTANT: 'montserrat',
+      INTER: 'montserrat ',
     },
     SIZES: {
       12: '0.75rem',

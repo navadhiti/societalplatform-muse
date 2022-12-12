@@ -13,7 +13,7 @@ import Divider from '../Assets/Images/Divider.png'
 const theme = createTheme({
   typography: {
     allVariants: {
-      fontFamily: 'Campaign',
+      fontFamily: FONT.FAMILY.ASSISTANT,
     },
     h1: {
       fontWeight: FONT.WEIGHT.BOLD,
@@ -34,7 +34,7 @@ const theme = createTheme({
     },
     h4: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
-      fontFamily: 'Campaign',
+      fontFamily: FONT.FAMILY.INTER,
       fontSize: FONT.SIZES[24],
       color: PALETTE.SENARY,
     },
