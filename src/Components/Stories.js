@@ -1,5 +1,6 @@
-import { Grid } from '@mui/material';
 import React from 'react';
+import { Grid, Typography } from '@mui/material';
+import image_30 from '../Assets/Images/image 30.png';
 
 const Stories = () => {
   return (
@@ -12,7 +13,10 @@ const Stories = () => {
       >
         <Grid container spacing={2} columns={16}>
           <Grid item xs={8}>
-            <p>grid1</p>
+            <Typography variant="h2">
+              Our Stories
+              <img src={image_30} alt="img" />
+            </Typography>
           </Grid>
           <Grid item xs={8}>
             <p>grid2</p>

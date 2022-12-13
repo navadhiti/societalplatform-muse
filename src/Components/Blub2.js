@@ -17,7 +17,7 @@ const styles = {
 const Blub2 = () => {
     return (
         <>
-            <Box style={styles.paperContainer}>
+            <Container style={styles.paperContainer}>
                 <Grid
                     container
                     spacing={0}
@@ -97,7 +97,7 @@ const Blub2 = () => {
                         {/* <img src={Art} alt="img" width="100%" /> */}
                     </Grid>
                 </Grid>
-            </Box>
+            </Container>
         </>
     );
 };
