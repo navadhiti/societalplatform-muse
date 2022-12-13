@@ -73,7 +73,7 @@ const theme = createTheme({
     },
     link: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
-      fontSize: FONT.SIZES[20],
+      fontSize: FONT.SIZES[22],
       lineHeight: '145%',
       color: '#178290',
       cursor: 'pointer',
