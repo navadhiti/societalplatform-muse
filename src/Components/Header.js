@@ -103,7 +103,7 @@ const Header = (props) => {
         <CssBaseline />
         <AppBar elevation={0} className="AppBorder" color='inherit' pt={3}>
           
-          <Container>
+          <Box sx={{px:8}}>
           {/* <HideOnScroll {...props}>
           <Grid
             container
@@ -125,7 +125,7 @@ const Header = (props) => {
               alignItems="center" 
               justifyContent=""  
             >
-              <Grid item xs={12} sm={6} md={6} lg={3}>
+              <Grid item xs={12} sm={6} md={3} lg={3}>
               <img src={frame} alt="img" />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="center" sx={{textAlign:"center"}}  alignItems="center"   >
@@ -133,10 +133,10 @@ const Header = (props) => {
               </Grid>
             </Grid>
           
-          </Container>
+          </Box>
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
-        <Container>
+        <Box>
           {/* <Box sx={{ my: 2 }}>
                         {[...new Array(120)]
                             .map(
@@ -147,7 +147,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
                             )
                             .join("\n")}
                     </Box> */}
-        </Container>
+        </Box>
         <ScrollTop {...props}>
           <Fab size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />

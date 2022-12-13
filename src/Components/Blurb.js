@@ -50,7 +50,7 @@ const Blurb = () => {
                         <span
                             style={{
                                 background: ` url(${Divider}) bottom no-repeat`,
-                                paddingBottom: "05px",
+                                paddingBottom: "7px",
                                 backgroundSize: "contain",
                             }}
                         >
@@ -71,7 +71,7 @@ const Blurb = () => {
                         <span
                             style={{
                                 background: ` url(${Divider}) bottom no-repeat`,
-                                paddingBottom: "05px",
+                                paddingBottom: "9px",
                                 backgroundSize: "contain",
                             }}
                         >
