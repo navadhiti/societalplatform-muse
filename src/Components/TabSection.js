@@ -108,7 +108,7 @@ const TabSection = () => {
                 backgroundColor: '#E2D1ED',
                 height: '85vh',
                 overflowY: 'auto',
-                borderRadius: '10px ',
+                borderRadius: '25px ',
               }}
             >
               <Grid
@@ -127,7 +127,7 @@ const TabSection = () => {
                   sx={{
                     position: 'absolute',
                     marginTop: '-3.6rem',
-                    marginLeft: '0rem',
+                    marginLeft: '2rem',
                     zIndex: 9999,
                   }}
                 >
@@ -149,11 +149,7 @@ const TabSection = () => {
                   <img
                     src={LandingImage}
                     alt="img"
-                    sx={{
-                      position: 'fixed',
-                      marginTop: '3rem',
-                      marginLeft: '90%',
-                    }}
+                  
                   />
                 </Grid>
               </Grid>
