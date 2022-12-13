@@ -22,7 +22,7 @@ const Blurb = () => {
     return (
         <>
             <Container>
-                <Box pt={13} px={8}>
+                <Box pt={13} pb={5} px={8}>
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}

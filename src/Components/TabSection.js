@@ -104,7 +104,7 @@ const TabSection = () => {
               value={value}
               index={0}
               style={{
-                backgroundColor: '#E5E5E5',
+                backgroundColor: '#E2D1ED',
                 height: 700,
                 overflowY: 'auto',
                 borderRadius: '10px ',

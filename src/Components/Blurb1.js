@@ -24,7 +24,7 @@ const Blurb_1 = () => {
                     spacing={0}
                     justifyContent="start"
                     alignItems="start"
-                    sx={{ py: 5 }}
+                    sx={{ py: 10 }}
                 >
                     <Grid
                         item
