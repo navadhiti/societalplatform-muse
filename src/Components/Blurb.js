@@ -1,9 +1,6 @@
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Button, Container, Grid, Stack, Typography, Box } from "@mui/material";
+
 import React from "react";
-import Divider from "../Assets/Images/Divider.png";
-import Logo from "../Assets/Images/sm_logo.png";
-import Layer from "../Assets/Images/Layer.png";
 
 // const styles = {
 //     paperContainer: {
@@ -11,66 +8,103 @@ import Layer from "../Assets/Images/Layer.png";
 //         backgroundPosition: `top center`,
 //     },
 // };
+import Divider from "../Assets/Images/Divider.png";
+import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
+import Image from "../Assets/Images/sp-musebook-design.png";
+import Image1 from "../Assets/Images/image_4.png";
+import Image2 from "../Assets/Images/image 20.png";
+import Image3 from "../Assets/Images/image 14.png";
+import Image4 from "../Assets/Images/image_17.png";
+import Image12 from "../Assets/Images/image_13.png";
+import Image5 from "../Assets/Images/image 19.png";
 
 const Blurb = () => {
     return (
         <>
             <Container>
-                <Box py={5}>
-                    <Grid
-                        container
-                        spacing={0}
-                        justifyContent="center"
-                        alignItems="center"
-                        py={2}
-                        my={5}
-                    >
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={6}
-                            lg={8}
-                            textAlign="center"
+                <Box pt={13} pb={5} px={8}>
+                    <Typography variant="h3" textAlign="center">
+                        Societal Muse is our annual publication that shows
+                        stories of{" "}
+                        <span
+                            style={{
+                                fontWeight: 800,
+                                fontSize: "2rem",
+                            }}
                         >
-                            <Typography variant="h1">Societal Muse</Typography>
-                            <Typography variant="h5">
-                                Stories of change
-                            </Typography>
-                            <img src={Divider} alt="img" />
-                            <br />
-                            <Typography
-                                variant="h6"
-                                py={3}
-                            >
-                                Societal Muse is a platform to prompt reflection
-                                and inspired action. It brings alive Societal
-                                Thinking through the journeys of innovators
-                                solving wicked social problems. These journeys
-                                offer personal insight, ask questions and
-                                suggest a diversity of answers, and invite
-                                readers to reimagine solving social problems.
-                                Societal Muse is tied together with the core
-                                values of Societal Thinking.
-                            </Typography>
-                            <br />
-                            <Stack
-                                direction="row"
-                                justifyContent="center"
-                                alignItems="center"
-                                spacing={2}
-                            >
-                                <Button variant="contained" elevation="3">
-                                    Read
-                                </Button>
-                                <Button variant="contained" elevation="3">
-                                    EXPERIENCE
-                                </Button>
-                            </Stack>
-                        </Grid>
-                    </Grid>
+                            solving at scale{" "}
+                            <img src={Image12} alt="img" width="7%" />
+                        </span>{" "}
+                        in action. These are stories of{" "}
+                        <span
+                            style={{
+                                fontWeight: 800,
+                                fontSize: "2rem",
+                            }}
+                        >
+                            big bold bets,
+                            <img src={Image2} alt="img" width="5%" />
+                            <img src={Image2} alt="img" width="2%" />
+                        </span>
+                        of{" "}
+                        <span
+                            style={{
+                                background: ` url(${Divider}) bottom no-repeat`,
+                                paddingBottom: "05px",
+                                backgroundSize: "contain",
+                            }}
+                        >
+                            reimagination
+                        </span>
+                        , of perseverance, of coming together, of{" "}
+                        <span
+                            style={{
+                                fontWeight: 800,
+                                fontSize: "1.375rem",
+                            }}
+                        >
+                            building agency
+                            <img src={Image3} alt="img" width="5%" />
+                        </span>
+                        , through the eyes of practitioners and supporters of{" "}
+                        {/* <u style={{ textDecorationStyle: "wavy" }}> */}
+                        <span
+                            style={{
+                                background: ` url(${Divider}) bottom no-repeat`,
+                                paddingBottom: "05px",
+                                backgroundSize: "contain",
+                            }}
+                        >
+                            Societal Thinking.
+                        </span>
+                        {/* </u> */}
+                    </Typography>
+                    <br />
+                    <Typography variant="h3">
+                        Societal Muse oers{" "}
+                        <span
+                            style={{
+                                fontWeight: 800,
+                                fontSize: "1.375rem",
+                            }}
+                        >
+                            new answers
+                            <img src={Image4} alt="img" width="2%" />
+                            <img src={Image4} alt="img" width="2%" />
+                        </span>
+                        , new ways of doing and sometimes{" "}
+                        <span
+                            style={{
+                                fontWeight: 800,
+                                fontSize: "1.375rem",
+                            }}
+                        >
+                            new questions
+                            <img src={Image5} alt="img" width="5%" />
+                        </span>{" "}
+                        too.
+                    </Typography>
                 </Box>
-                
             </Container>
         </>
     );
