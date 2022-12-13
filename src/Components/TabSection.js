@@ -90,7 +90,8 @@ const TabSection = () => {
     setValue(newValue);
   };
   return (
-    <Container sx={{ mt: 0, mb: 5 }}>
+    <>
+    <Box sx={{ mt: 0, mb: 5,px:5 }}>
       <Grid
         container
         spacing={0}
@@ -105,7 +106,7 @@ const TabSection = () => {
               index={0}
               style={{
                 backgroundColor: '#E2D1ED',
-                height: 700,
+                height: '85vh',
                 overflowY: 'auto',
                 borderRadius: '10px ',
               }}
@@ -142,7 +143,7 @@ const TabSection = () => {
                   sx={{
                     position: 'absolute',
                     marginTop: '3rem',
-                    marginLeft: '70%',
+                    marginLeft: '76%',
                   }}
                 >
                   <img
@@ -197,7 +198,7 @@ const TabSection = () => {
                     borderRadius: '0% 100% 100% 0% / 45% 50% 50% 45%;',
                     writingMode: 'tb',
                     color: '#FFFFFF',
-                    height: 140,
+                    height: 124,
                     padding: '2rem 1.9rem 2.3rem 1.8rem',
                   }}
                 >
@@ -205,75 +206,14 @@ const TabSection = () => {
                 </ListItemButton>
               </ListItem>
             ))}
-            {/* <ListItem disablePadding>
-              <ListItem
-                sx={{
-                  backgroundColor: '#E2D1ED',
-                  borderBottomRightRadius: '50px',
-                  borderTopRightRadius: '50px',
-                  writingMode: 'tb',
-                  color: '#FFFFFF',
-                }}
-              >
-                HOME
-              </ListItem>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton
-                sx={{
-                  backgroundColor: '#3E418A',
-                  borderBottomRightRadius: '50px',
-                  borderTopRightRadius: '50px',
-                  writingMode: 'tb',
-                  color: '#FFFFFF',
-                }}
-              >
-                ARTICLES
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton
-                sx={{
-                  backgroundColor: '#DC8F6E',
-                  borderBottomRightRadius: '50px',
-                  borderTopRightRadius: '50px',
-                  writingMode: 'tb',
-                  color: '#FFFFFF',
-                }}
-              >
-                EXPIRIENCE
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton
-                sx={{
-                  backgroundColor: '#22534F',
-                  borderBottomRightRadius: '50px',
-                  borderTopRightRadius: '50px',
-                  writingMode: 'tb',
-                  color: '#FFFFFF',
-                }}
-              >
-                CONTACT
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton
-                sx={{
-                  backgroundColor: '#C4BCB9',
-                  borderBottomRightRadius: '50%',
-                  borderTopRightRadius: '50%',
-                  writingMode: 'tb',
-                  color: '#FFFFFF',
-                }}
-              >
-                SHARE
-              </ListItemButton>
-            </ListItem> */}
+           
           </List>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
+  
+    </>
+    
   );
 };
 
