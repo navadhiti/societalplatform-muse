@@ -22,6 +22,8 @@ import Blurb from './Blurb';
 import PropTypes from 'prop-types';
 import Blurb_1 from './Blurb1';
 import Blub2 from './Blub2';
+import Collaborators from './Collaborators';
+import Values from './Values';
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -156,7 +158,8 @@ const TabSection = () => {
               <Blurb />
               <Blurb_1 />
               <Blub2 />
-              
+              <Collaborators />
+              <Values />
 
               <Grid
                 container

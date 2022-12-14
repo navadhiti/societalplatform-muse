@@ -54,19 +54,19 @@ const theme = createTheme({
       marginBottom: '10px',
     },
     body: {
-      fontWeight: FONT.WEIGHT.DEMI_BOLD,
+      fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
       fontFamily: FONT.FAMILY.INTER,
     },
 
     body1: {
-      fontWeight: FONT.WEIGHT.BOLD,
+      fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.INTER,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     body2: {
-      fontWeight: FONT.WEIGHT.BOLD,
+      fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[12],
       fontFamily: FONT.FAMILY.INTER,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
@@ -126,18 +126,15 @@ const theme = createTheme({
         {
           props: { classes: 'values' },
           style: {
-            '&:hover': {
-              boxShadow:
-                '3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)',
-            },
+            
             border: '1px solid black',
             fontFamily: FONT.FAMILY.INTER,
             fontSize: FONT.SIZES[16],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
             boxShadow:
               '0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)',
-            borderRadius: '10px',
-            minHeight: '12rem',
+            borderRadius: '50px 50px 20px 20px',
+            minHeight: '25rem',
             alignItems: 'center',
             padding: '4.5rem 0',
             backgroundColor: 'transparent',
@@ -158,7 +155,7 @@ const theme = createTheme({
             fontWeight: FONT.WEIGHT.MEDIUM,
             boxShadow:
               '0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)',
-            borderRadius: '10px',
+            borderRadius: '50px 50px 10px 10px',
             minHeight: '12rem',
             alignItems: 'center',
             padding: '1rem',
