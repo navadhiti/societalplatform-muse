@@ -84,11 +84,12 @@ const Stories = () => {
                 {arr.map((el, index) => (
                   // console.log(el)
                   <ListItem
-                  // isHovering={isHovered[index]}
-                  // key={index}
-                  // style={
-                  //   index ? { calssName: 'red' } : { calssName: 'green' }
-                  // }
+                    key={index}
+                    // isHovering={isHovered[index]}
+                    // key={index}
+                    // style={
+                    //   index ? { calssName: 'red' } : { calssName: 'green' }
+                    // }
                   >
                     <Link
                       variant="h4"
@@ -116,7 +117,7 @@ const Stories = () => {
                         // hidden={hover[index]}
                         className="hoverable-show"
                         style={
-                          hover
+                          hover 
                             ? {
                                 background: ` url(${LinkUnderline}) bottom no-repeat`,
                                 paddingBottom: '7px',
