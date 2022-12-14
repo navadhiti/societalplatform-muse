@@ -1,192 +1,208 @@
+import React, { useState } from 'react';
 import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Chip,
-  Container,
   Grid,
-  IconButton,
-  Stack,
   Typography,
+  Container,
+  List,
+  ListItem,
+  Link,
 } from '@mui/material';
-import React from 'react';
-import ShareIcon from '@mui/icons-material/Share';
-import card1 from '../Assets/Images/Card.png';
-import card2 from '../Assets/Images/Card1.png';
-import card3 from '../Assets/Images/Card2.png';
-import Divider from '../Assets/Images/Divider.png';
-import SpeedDial from '@mui/material/SpeedDial';
-import SpeedDialIcon from '@mui/material/SpeedDialIcon';
-import SpeedDialAction from '@mui/material/SpeedDialAction';
-import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
-import SaveIcon from '@mui/icons-material/Save';
-import PrintIcon from '@mui/icons-material/Print';
-import Slider from 'react-slick';
-import DataFromDB from '../db.json';
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  FacebookShareCount,
-  FacebookIcon,
-} from 'react-share';
+import image_30 from '../Assets/Images/image 30.png';
+import Divider from '../Assets/Images/Vector 42.png';
+import StoryImg from '../Assets/Images/image 50.png';
+import LinkUnderline from '../Assets/Images/Vector 12.png';
+import ArrowImage from '../Assets/Images/image 27.png';
 
-console.log(DataFromDB);
-
-const facebookURL = 'https://www.navadhiti.com/';
-
-const actions = [
-  {
-    icon: (
-      <FacebookShareButton url={facebookURL}>
-        <FacebookIcon round={true} />
-      </FacebookShareButton>
-    ),
-    name: 'Facebook',
-  },
-  { icon: <SaveIcon />, name: 'Save' },
-  { icon: <PrintIcon />, name: 'Print' },
-  { icon: <ShareIcon />, name: 'Share' },
-];
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: 'block',
-        background: 'red',
-        borderRadius: '50%',
-      }}
-      onClick={onClick}
-    />
-  );
-}
-const styles = {
-  LandingBackground: {
-    backgroundImage: `linear-gradient(to bottom, #ECE4EF, #ECE4EF)`,
-  },
-};
 const Stories = () => {
-  const settings = {
-    infinite: true,
-    slidesToShow: 4,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SampleNextArrow />,
-    variableWidth: true,
+  const [arr, setArr] = useState([{ text: 'foo' }, { text: 'bar' }]);
+  const [hover, setHover] = useState(false);
+  const handleMouseEnter = (event, index) => {
+    console.log(event, 'event', index);
+    return { [index]: setHover(true) };
+    // setHover((c) => {
+    //   return {
+    //     ...c,
+    //     [index]: true,
+    //   };
+    // });
   };
+
+  const handleMouseLeave = (event, index) => {
+    return { [index]: setHover(false) };
+    // setHover((c) => {
+    //   return {
+    //     ...c,
+    //     [index]: false,
+    //   };
+    // });
+  };
+
+  // const handleMouseEnter = (event) => {
+  //   // console.log(arrText.text, '-----------');
+  //   // if (arrText.text === 'foo' && [index]) {
+  //   return setHover(true);
+  //   // }
+  // };
+  // const handleMouseLeave = (event) => {
+  //   return setHover(false);
+  // };
+
   return (
-    <>
-      <Box sx={{ textAlign: 'center' }} py={6} style={styles.LandingBackground}>
-        {/* <Container textAlign="center"> */}
-        <Typography variant="h4" textAlign="center">
-          Stories of change
-        </Typography>
-        <img src={Divider} alt="img" />
-        <Grid container spacing={0} justifyContent="center" alignItems="center">
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={10}
-            lg={10}
-            // px={4}
-          >
-            <Slider {...settings}>
-              {DataFromDB.map((data) => (
-                <Card
-                  sx={{
-                    m: 2,
-                    p: 2,
-                    maxWidth: 350,
-                    border: '1px solid black',
-                    borderRadius: '20px',
+    <div>
+      <Container>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid container spacing={2} columns={16}>
+            <Grid item xs={8}>
+              <Typography variant="h2">
+                Our{' '}
+                <span
+                  style={{
+                    background: ` url(${Divider}) bottom no-repeat`,
+                    paddingBottom: '7px',
+                    backgroundSize: 'contain',
                   }}
                 >
-                  <CardMedia
-                    component="img"
-                    height="240"
-                    image={card1}
-                    alt="green iguana"
-                  />
-                  {/* <CardActionArea> */}
-                  <CardContent sx={{ justifyContent: 'left' }}>
-                    <Typography gutterBottom variant="body1" component="div">
-                      Edition {new Date(data.date).toLocaleDateString('en-CA')}
-                      <Badge variant="tag">HEALTH</Badge>
-                    </Typography>
-                    <Typography variant="h4">All teach,all Learn</Typography>
-                    {/* <CardActions> */}
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                      spacing={2}
-                      p={2}
+                  Stories
+                </span>
+                <img src={image_30} alt="img" />
+              </Typography>
+              <img src={StoryImg} alt="img" style={{ marginTop: '70px' }} />
+            </Grid>
+            <Grid item xs={8} mt="60px">
+              <Typography variant="h5">
+                Lorem ipsum dolor sit amet consectetur. Sollicitudin vivamus eu
+                aenean interdum in proin id ut. Sit nisi eget enim sed dui sed.
+                Sed cras nibh vehicula at ac sed elit diam. Diam vel eu nunc eu
+                at odio.
+              </Typography>
+              <List>
+                {arr.map((el, index) => (
+                  // console.log(el)
+                  <ListItem
+                  // isHovering={isHovered[index]}
+                  // key={index}
+                  // style={
+                  //   index ? { calssName: 'red' } : { calssName: 'green' }
+                  // }
+                  >
+                    <Link
+                      variant="h4"
+                      className='hoverable-item"'
+                      style={
+                        hover
+                          ? { '&:hover': { color: 'white' } }
+                          : { color: 'black' }
+                      }
+                      href="#"
+                      underline="none"
+                      key={index}
                     >
-                      <Button
-                        size="small"
-                        color="primary"
-                        variant="contained"
-                        px={3}
-                      >
-                        Read
-                      </Button>
-                      <Box
-                        sx={{
-                          transform: 'translateZ(0px)',
-                          flexGrow: 1,
+                      <span
+                        // onMouseEnter={() => handleMouseEnter()}
+                        // onMouseLeave={() => handleMouseLeave()}
+                        key={index}
+                        onMouseEnter={(e) => {
+                          handleMouseEnter(e, index);
                         }}
+                        onMouseLeave={(e) => {
+                          handleMouseLeave(e, index);
+                        }}
+                        // className="flex gap-3"
+                        // hidden={hover[index]}
+                        className="hoverable-show"
+                        style={
+                          hover
+                            ? {
+                                background: ` url(${LinkUnderline}) bottom no-repeat`,
+                                paddingBottom: '7px',
+                                backgroundSize: 'contain',
+                              }
+                            : { color: 'black' }
+                        }
                       >
-                        <SpeedDial
-                          ariaLabel="SpeedDial basic example"
-                          sx={{
-                            position: 'absolute',
-                            bottom: '-2rem',
-                            right: '-1rem',
-                          }}
-                          icon={
-                            <ShareIcon
-                              sx={{
-                                width: '35px',
-                                height: '35px',
-                                border: '1px solid black',
-                                backgroundColor: '#fff',
-                                borderRadius: '50%',
-                                p: 1,
-                              }}
-                            />
-                          }
-                        >
-                          {actions.map((action) => (
-                            <SpeedDialAction
-                              key={action.name}
-                              icon={action.icon}
-                              tooltipTitle={action.name}
-                            />
-                          ))}
-                        </SpeedDial>
-                      </Box>
-                    </Stack>
-                    {/* </CardActions> */}
-                  </CardContent>
-                  {/* </CardActionArea> */}
-                </Card>
-              ))}
-            </Slider>
+                        {el.text}
+                      </span>
+                      <img
+                        style={{ marginLeft: '10px' }}
+                        src={ArrowImage}
+                        alt="img"
+                      />
+                    </Link>
+                  </ListItem>
+                ))}
+              </List>
+              {/* <List>
+                <ListItem>
+                  <Link
+                    variant="h4"
+                    sx={{
+                      '&:hover': {
+                        color: 'white',
+                      },
+                    }}
+                    href="#"
+                    underline="none"
+                  >
+                    <span
+                      style={{
+                        background: ` url(${LinkUnderline}) bottom no-repeat`,
+                        paddingBottom: '7px',
+                        backgroundSize: 'contain',
+                      }}
+                    >
+                      Reimagining
+                    </span>{' '}
+                    disaster resilience
+                  </Link>
+                  <img
+                    style={{ marginLeft: '10px' }}
+                    src={ArrowImage}
+                    alt="img"
+                  />
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    All teach, all learn
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    Solve small, dent big
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    Striking collaboration gold
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    When society, state and
+                    <br />
+                    markets work together
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    Build beyond
+                  </Link>
+                </ListItem>
+                <ListItem>
+                  <Link variant="h4" href="#" underline="none">
+                    The power of public goods
+                  </Link>
+                </ListItem>
+              </List> */}
+            </Grid>
           </Grid>
         </Grid>
-        <Box my={3}>
-          <Button variant="contained">READ ARTICLES</Button>
-        </Box>
-        {/* </Container> */}
-      </Box>
-    </>
+      </Container>
+    </div>
   );
 };
 export default Stories;
