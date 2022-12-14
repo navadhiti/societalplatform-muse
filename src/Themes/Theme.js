@@ -36,10 +36,10 @@ const theme = createTheme({
       textTransform: 'capitalize',
     },
     h4: {
-      fontWeight: FONT.WEIGHT.DEMI_BOLD,
+      fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.MEDIUM,
       fontSize: FONT.SIZES[24],
-      color: PALETTE.SENARY,
+      color: '#241C15',
     },
     h5: {
       fontFamily: FONT.FAMILY.ASSISTANT,
@@ -217,6 +217,16 @@ const theme = createTheme({
             writingMode: 'vertical-rl',
             textOrientation: 'mixed',
             // margin:'2.8rem'
+          },
+        },
+      ],
+    },
+    MuiLink: {
+      variants: [
+        {
+          props: { classes: 'hoverable-item' },
+          style: {
+            display: 'none',
           },
         },
       ],
