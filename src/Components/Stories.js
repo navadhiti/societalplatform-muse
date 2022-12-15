@@ -17,7 +17,6 @@ const Stories = () => {
   const [arr, setArr] = useState([{ text: 'foo' }, { text: 'bar' }]);
   const [hover, setHover] = useState(false);
   const handleMouseEnter = (event, index) => {
-    console.log(event, 'event', index);
     return { [index]: setHover(true) };
     // setHover((c) => {
     //   return {
