@@ -308,6 +308,16 @@ const theme = createTheme({
         },
       ],
     },
+    MuiCardContent:{
+      variants: [
+        {
+          props: { variant: 'card_content'},
+          style: {
+            transform: 'rotate(10deg)',
+          }
+        }
+      ]
+    },
     MuiBadge: {
       variants: [
         {

@@ -111,7 +111,7 @@ const TabSection = () => {
                   backgroundColor: '#E2D1ED',
                   height: '85vh',
                   overflowY: 'auto',
-                  borderRadius: '10px ',
+                  borderRadius: '30px ',
                 }}
               >
                 <Grid
@@ -163,10 +163,11 @@ const TabSection = () => {
               
               <Blurb />
               <Blurb_1 />
+              <Stories />
               <Blub2 />
               <Collaborators />
               <Values />
-                <Stories />
+               
 
                 <Grid
                   container
