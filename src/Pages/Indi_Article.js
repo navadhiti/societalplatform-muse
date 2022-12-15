@@ -3,8 +3,16 @@ import React from "react";
 import Divider from "../Assets/Images/Divider.png";
 
 const Indi_Article = () => {
+    const styles = {
+        LandingBackground: {
+            backgroundColor: "#fff",
+            // backgroundColor: `#fff`,
+        },
+    };
     return (
         <>
+         <div style={styles.LandingBackground}>
+            {/* <Container sx={{minHeight: '500px'}}></Container> */}
             <Box>
                 <Container>
                     <Grid
@@ -44,6 +52,8 @@ const Indi_Article = () => {
                     </Grid>
                 </Container>
             </Box>
+        </div>
+            
         </>
     );
 };

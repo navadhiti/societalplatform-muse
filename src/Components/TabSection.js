@@ -12,12 +12,7 @@ import {
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
 import Image from '../Assets/Images/sp-musebook-design.png';
 import Image1 from '../Assets/Images/image_4.png';
-// import Image2 from '../Assets/Images/image 20.png';
-// import Image3 from '../Assets/Images/image 14.png';
-// import Image4 from '../Assets/Images/image_17.png';
-// import Image5 from '../Assets/Images/image 19.png';
 import Blurb from './Blurb';
-// import Image12 from '../Assets/Images/image_13.png';
 
 import PropTypes from 'prop-types';
 import Blurb_1 from './Blurb1';
