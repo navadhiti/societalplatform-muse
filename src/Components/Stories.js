@@ -17,6 +17,7 @@ const Stories = () => {
   const [arr, setArr] = useState([{ text: 'foo' }, { text: 'bar' }]);
   const [hover, setHover] = useState(false);
   const handleMouseEnter = (event, index) => {
+    console.log(event, 'event', index);
     return { [index]: setHover(true) };
     // setHover((c) => {
     //   return {
@@ -79,66 +80,71 @@ const Stories = () => {
                 Sed cras nibh vehicula at ac sed elit diam. Diam vel eu nunc eu
                 at odio.
               </Typography>
-              <List>
-                {arr.map((el, index) => (
-                  // console.log(el)
-                  <ListItem
-                    key={index}
-                    // isHovering={isHovered[index]}
-                    // key={index}
-                    // style={
-                    //   index ? { calssName: 'red' } : { calssName: 'green' }
-                    // }
-                  >
-                    <Link
-                      variant="h4"
-                      className='hoverable-item"'
-                      style={
-                        hover
-                          ? { '&:hover': { color: 'white' } }
-                          : { color: 'black' }
-                      }
-                      href="#"
-                      underline="none"
-                      key={index}
-                    >
-                      <span
-                        // onMouseEnter={() => handleMouseEnter()}
-                        // onMouseLeave={() => handleMouseLeave()}
-                        key={index}
-                        onMouseEnter={(e) => {
-                          handleMouseEnter(e, index);
-                        }}
-                        onMouseLeave={(e) => {
-                          handleMouseLeave(e, index);
-                        }}
-                        // className="flex gap-3"
-                        // hidden={hover[index]}
-                        className="hoverable-show"
-                        style={
-                          hover 
-                            ? {
-                                background: ` url(${LinkUnderline}) bottom no-repeat`,
-                                paddingBottom: '7px',
-                                backgroundSize: 'contain',
-                              }
-                            : { color: 'black' }
-                        }
-                      >
-                        {el.text}
-                      </span>
-                      <img
-                        style={{ marginLeft: '10px' }}
-                        src={ArrowImage}
-                        alt="img"
-                      />
-                    </Link>
-                  </ListItem>
-                ))}
-              </List>
               {/* <List>
+                                {arr.map((el, index) => (
+                                    // console.log(el)
+                                    <ListItem
+                                    // isHovering={isHovered[index]}
+                                    // key={index}
+                                    // style={
+                                    //   index ? { calssName: 'red' } : { calssName: 'green' }
+                                    // }
+                                    >
+                                        <Link
+                                            variant="h4"
+                                            className='hoverable-item"'
+                                            style={
+                                                hover
+                                                    ? {
+                                                          "&:hover": {
+                                                              color: "white",
+                                                          },
+                                                      }
+                                                    : { color: "black" }
+                                            }
+                                            href="#"
+                                            underline="none"
+                                            key={index}
+                                        >
+                                            <span
+                                                // onMouseEnter={() => handleMouseEnter()}
+                                                // onMouseLeave={() => handleMouseLeave()}
+                                                key={index}
+                                                onMouseEnter={(e) => {
+                                                    handleMouseEnter(e, index);
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    handleMouseLeave(e, index);
+                                                }}
+                                                // className="flex gap-3"
+                                                // hidden={hover[index]}
+                                                className="hoverable-show"
+                                                style={
+                                                    hover
+                                                        ? {
+                                                              background: ` url(${LinkUnderline}) bottom no-repeat`,
+                                                              paddingBottom:
+                                                                  "7px",
+                                                              backgroundSize:
+                                                                  "contain",
+                                                          }
+                                                        : { color: "black" }
+                                                }
+                                            >
+                                                {el.text}
+                                            </span>
+                                            <img
+                                                style={{ marginLeft: "10px" }}
+                                                src={ArrowImage}
+                                                alt="img"
+                                            />
+                                        </Link>
+                                    </ListItem>
+                                ))}
+                            </List> */}
+              <List sx={{ pt: 9 }}>
                 <ListItem>
-                  <Link
+                  {/* <Link
                     variant="h4"
                     sx={{
                       '&:hover': {
@@ -150,7 +156,9 @@ const Stories = () => {
                   >
                     <span
                       style={{
+                        // '&:hover': {
                         background: ` url(${LinkUnderline}) bottom no-repeat`,
+                        // },
                         paddingBottom: '7px',
                         backgroundSize: 'contain',
                       }}
@@ -158,46 +166,58 @@ const Stories = () => {
                       Reimagining
                     </span>{' '}
                     disaster resilience
-                  </Link>
-                  <img
+                  </Link> */}
+
+                  <Typography variant="h4">
+                    <Typography variant="link"> Reimagining </Typography>
+                    disaster resilience
+                  </Typography>
+                  {/* <Typography variant="link"><img
                     style={{ marginLeft: '10px' }}
                     src={ArrowImage}
                     alt="img"
                   />
+                  </Typography> */}
                 </ListItem>
                 <ListItem>
-                  <Link variant="h4" href="#" underline="none">
-                    All teach, all learn
-                  </Link>
+                  <Typography variant="h4">
+                    All <Typography variant="link"> teach, </Typography>
+                    all learn
+                  </Typography>
+                </ListItem>
+
+                <ListItem>
+                  <Typography variant="h4">
+                    <Typography variant="link">Solve small, </Typography>
+                    dent big
+                  </Typography>
                 </ListItem>
                 <ListItem>
-                  <Link variant="h4" href="#" underline="none">
-                    Solve small, dent big
-                  </Link>
+                  <Typography variant="h4">
+                    Striking{' '}
+                    <Typography variant="link">collaboration </Typography>
+                    gold
+                  </Typography>
                 </ListItem>
                 <ListItem>
-                  <Link variant="h4" href="#" underline="none">
-                    Striking collaboration gold
-                  </Link>
-                </ListItem>
-                <ListItem>
-                  <Link variant="h4" href="#" underline="none">
+                  <Typography variant="h4">
                     When society, state and
-                    <br />
-                    markets work together
-                  </Link>
+                    <br /> markets{' '}
+                    <Typography variant="link">work together</Typography>
+                  </Typography>
                 </ListItem>
                 <ListItem>
-                  <Link variant="h4" href="#" underline="none">
-                    Build beyond
-                  </Link>
+                  <Typography variant="h4">
+                    Build <Typography variant="link">beyond</Typography>
+                  </Typography>
                 </ListItem>
                 <ListItem>
-                  <Link variant="h4" href="#" underline="none">
-                    The power of public goods
-                  </Link>
+                  <Typography variant="h4">
+                    The power of{' '}
+                    <Typography variant="link">public goods</Typography>
+                  </Typography>
                 </ListItem>
-              </List> */}
+              </List>
             </Grid>
           </Grid>
         </Grid>

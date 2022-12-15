@@ -8,7 +8,9 @@ import { createTheme } from '@mui/material/styles';
 import PALETTE from './Palette';
 import FONT from './Font';
 
-// import Divider from '../Assets/Images/Divider.png'
+import Line from '../Assets/Images/Vector 12.png';
+import ArrowImage from '../Assets/Images/image 27.png';
+
 
 const theme = createTheme({
   typography: {
@@ -72,12 +74,25 @@ const theme = createTheme({
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     link: {
-      fontWeight: FONT.WEIGHT.DEMI_BOLD,
-      fontSize: FONT.SIZES[22],
-      lineHeight: '145%',
-      color: '#178290',
-      cursor: 'pointer',
-      textDecoration: 'none',
+      '&:hover': {
+        background: ` url(${Line}) bottom no-repeat`,
+      },
+      fontWeight: FONT.WEIGHT.REGULAR,
+      fontFamily: FONT.FAMILY.MEDIUM,
+      fontSize: FONT.SIZES[24],
+      color: '#241C15',
+      
+    },
+    ArrowImage: {
+      '&:hover': {
+        background: ` url(${Line}) bottom no-repeat`,
+        backgroundSize: "contain",
+      },
+      fontWeight: FONT.WEIGHT.REGULAR,
+      fontFamily: FONT.FAMILY.MEDIUM,
+      fontSize: FONT.SIZES[24],
+      
+      
     },
   },
   palette: {
@@ -292,6 +307,16 @@ const theme = createTheme({
           },
         },
       ],
+    },
+    MuiCardContent:{
+      variants: [
+        {
+          props: { variant: 'card_content'},
+          style: {
+            transform: 'rotate(10deg)',
+          }
+        }
+      ]
     },
     MuiBadge: {
       variants: [

@@ -1,4 +1,4 @@
-import { Card, Container, Grid, Typography, Box } from '@mui/material';
+import { Card, CardContent, Grid, Typography, Box } from '@mui/material';
 
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
@@ -124,7 +124,9 @@ const Values = () => {
                     setFlipCard(true);
                   }}
                 >
-                  {item.title}
+                  <CardContent variant="card_content">
+                    <Typography variant="h4">{item.title}</Typography>
+                  </CardContent>
                 </Card>
                 <Card
                   classes={`${item.class1}`}
@@ -133,7 +135,9 @@ const Values = () => {
                     setFlipCard(false);
                   }}
                 >
-                  {item.blurb}
+                  <CardContent variant="card_content">
+                    <Typography>{item.blurb}</Typography>
+                  </CardContent>
                 </Card>
               </ReactCardFlip>
             </Grid>
