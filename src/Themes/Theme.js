@@ -141,40 +141,167 @@ const theme = createTheme({
         {
           props: { classes: 'values' },
           style: {
-            
             border: '1px solid black',
             fontFamily: FONT.FAMILY.INTER,
-            fontSize: FONT.SIZES[16],
+            fontSize: FONT.SIZES[24],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
-            boxShadow:
-              '0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)',
-            borderRadius: '50px 50px 20px 20px',
-            minHeight: '25rem',
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
             alignItems: 'center',
-            padding: '4.5rem 0',
+            padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
+            transform: 'rotate(-10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values_flip' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[14],
+            fontWeight: FONT.WEIGHT.MEDIUM,
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '1rem',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(-10deg)',
             // margin:'2.8rem'
           },
         },
         {
           props: { classes: 'values1' },
           style: {
-            '&:hover': {
-              boxShadow:
-                '3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)',
-            },
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.SEMI_BOLD,
+            borderRadius: '20px 20px 120px 120px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '5rem 0',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values1_flip' },
+          style: {
             border: '1px solid black',
             fontFamily: FONT.FAMILY.INTER,
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
-            boxShadow:
-              '0px 6px 0px -4px rgb(24 12 12 / 99%), 0px 2px 2px 0px rgb(0 0 0 / 98%), 0px 8px 0px 0px rgb(0 0 0 / 95%)',
-            borderRadius: '50px 50px 10px 10px',
-            minHeight: '12rem',
+            borderRadius: '20px 20px 120px 120px',
+            minHeight: '15rem',
             alignItems: 'center',
             padding: '1rem',
-            backgroundColor: '#ECE4EF',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values2' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.SEMI_BOLD,
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '5rem 0',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values2_flip' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[14],
+            fontWeight: FONT.WEIGHT.MEDIUM,
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '1rem',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values3' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.SEMI_BOLD,
+            borderRadius: '20px 20px 120px 120px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '5rem 0',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(-10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values3_flip' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[14],
+            fontWeight: FONT.WEIGHT.MEDIUM,
+            borderRadius: '20px 20px 120px 120px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '1rem',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            transform: 'rotate(-10deg)',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values4' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.SEMI_BOLD,
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '5rem 0',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            // margin:'2.8rem'
+          },
+        },
+        {
+          props: { classes: 'values4_flip' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[14],
+            fontWeight: FONT.WEIGHT.MEDIUM,
+            borderRadius: '120px 120px 20px 20px',
+            minHeight: '15rem',
+            alignItems: 'center',
+            padding: '1rem',
+            backgroundColor: 'transparent',
             cursor: 'pointer',
             // margin:'2.8rem'
           },
