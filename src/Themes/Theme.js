@@ -315,6 +315,12 @@ const theme = createTheme({
           style: {
             transform: 'rotate(10deg)',
           }
+        },
+        {
+          props: { variant: 'card_content1'},
+          style: {
+            transform: 'rotate(-10deg)',
+          }
         }
       ]
     },

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography, Container } from '@mui/material';
 import React from 'react';
 import Author1 from '../Assets/Images/Author1.png';
 import Author2 from '../Assets/Images/Author2.png';
@@ -69,6 +69,7 @@ const Collaborators = () => {
   return (
     <>
       <Box>
+        <Container>
         <Grid
           container
           spacing={0}
@@ -347,6 +348,7 @@ const Collaborators = () => {
             </Grid>
           </Grid>
         </Grid>
+        </Container>
       </Box>
     </>
   );
