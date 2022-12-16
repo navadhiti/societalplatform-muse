@@ -70,7 +70,7 @@ const theme = createTheme({
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     body2: {
-      fontWeight: FONT.WEIGHT.MEDIUM,
+      fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[12],
       fontFamily: FONT.FAMILY.INTER,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
@@ -345,6 +345,12 @@ const theme = createTheme({
           props: { variant: 'card_content'},
           style: {
             transform: 'rotate(10deg)',
+          }
+        },
+        {
+          props: { variant: 'card_content1'},
+          style: {
+            transform: 'rotate(-10deg)',
           }
         }
       ]
