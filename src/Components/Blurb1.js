@@ -18,7 +18,8 @@ import Sanjay from "../Assets/Images/sanjay.png";
 const Blurb_1 = () => {
     return (
         <>
-            <Container>
+            <Box py={8}> 
+            <Container >
                 <Grid
                     container
                     spacing={0}
@@ -36,12 +37,13 @@ const Blurb_1 = () => {
                     >
                         <Typography variant="body2">FOREWORD</Typography>
                         <Typography variant="h1" textAlign="Left">
-                            Embedded in eachstory, you will find
+                            Embedded in each <br /> story, you will find
                         </Typography>
                         <Typography variant="h1" textAlign="Left">
+                        <b>
                             a small simple{" "}
                             <img src={Image5} alt="img" width="10%" />
-                            idea.
+                            idea.</b>
                         </Typography>
                     </Grid>
                 </Grid>
@@ -98,7 +100,7 @@ const Blurb_1 = () => {
                             >
                                 {" "}
                                 <Typography variant="body1">
-                                    Sanjay Purohit
+                                   <b> Sanjay Purohit</b>
                                 </Typography>
                                 <Typography variant="body2">
                                     Chief Curator
@@ -119,6 +121,7 @@ const Blurb_1 = () => {
                     </Grid>
                 </Grid>
             </Container>
+            </Box>
         </>
     );
 };

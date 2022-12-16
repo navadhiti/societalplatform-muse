@@ -19,7 +19,7 @@ const theme = createTheme({
     },
     h1: {
       fontFamily: FONT.FAMILY.ASSISTANT,
-      fontWeight: FONT.WEIGHT.BOLD,
+      // fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
     },
@@ -33,9 +33,10 @@ const theme = createTheme({
     h3: {
       fontFamily: FONT.FAMILY.ASSISTANT,
       fontWeight: FONT.WEIGHT.MEDIUM,
-      fontSize: FONT.SIZES[30],
+      fontSize: FONT.SIZES[32],
       color: PALETTE.SENARY,
       textTransform: 'capitalize',
+      lineHeight: '48px',
     },
     h4: {
       fontWeight: FONT.WEIGHT.REGULAR,
@@ -63,7 +64,7 @@ const theme = createTheme({
     },
 
     body1: {
-      fontWeight: FONT.WEIGHT.DEMI_BOLD,
+      // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.INTER,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
@@ -75,15 +76,23 @@ const theme = createTheme({
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     link: {
-      '&:hover': {
-        background: ` url(${Line}) bottom no-repeat`,
-        cursor:'pointer',
-      },
-      fontWeight: FONT.WEIGHT.REGULAR,
-      fontFamily: FONT.FAMILY.MEDIUM,
-      fontSize: FONT.SIZES[24],
-      color: '#241C15',
+      // '&:hover': {
+      //   background: ` url(${Line}) bottom no-repeat`,
+      //   cursor:'pointer',
+      // },
+      // fontWeight: FONT.WEIGHT.REGULAR,
+      // fontFamily: FONT.FAMILY.MEDIUM,
+      // fontSize: FONT.SIZES[24],
+      // color: '#241C15',
+      background: ` url(${Line}) bottom no-repeat`,
+        
+        fontSize: FONT.SIZES[32],
       
+    },
+    Highlight: {
+      
+        background: ` url(${Line}) bottom no-repeat`,
+        fontWeight: FONT.WEIGHT.REGULAR,
     },
     ArrowImage: {
       '&:hover': {
