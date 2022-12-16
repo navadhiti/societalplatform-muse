@@ -119,7 +119,7 @@ const Layout = () => {
                                     value={value}
                                     index={0}
                                     style={{
-                                        // backgroundColor: "#E2D1ED",
+                                        backgroundColor: "#E2D1ED",
                                         height: "85vh",
                                         overflowY: "auto",
                                         borderRadius: "30px ",

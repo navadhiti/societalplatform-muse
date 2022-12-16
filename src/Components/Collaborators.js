@@ -78,7 +78,7 @@ const Collaborators = () => {
         >
           <Grid item xs={12} sm={12} md={5} lg={5} sx={{ textAlign: 'left' }}>
             <Typography variant="h1" textAlign="Left">
-              Our{' '}
+            <b>  Our{' '}
               <span
                 style={{
                   background: ` url(${Divider}) bottom no-repeat`,
@@ -88,6 +88,7 @@ const Collaborators = () => {
               >
                 collaborators
               </span>
+              </b>
             </Typography>
             <Typography variant="body1" py={5}>
               Lorem ipsum dolor sit amet consectetur. Vivamus eu aenean interdum

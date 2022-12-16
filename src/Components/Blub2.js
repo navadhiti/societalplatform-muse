@@ -17,6 +17,7 @@ const styles = {
 const Blub2 = () => {
     return (
         <>
+            <Box py={8} >
             <Container style={styles.paperContainer}>
                 <Grid
                     container
@@ -98,6 +99,7 @@ const Blub2 = () => {
                     </Grid>
                 </Grid>
             </Container>
+            </Box>
         </>
     );
 };
