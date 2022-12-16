@@ -59,6 +59,7 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
       fontFamily: FONT.FAMILY.INTER,
+      backgroundColor:'#E5E5E5'
     },
 
     body1: {
@@ -76,6 +77,7 @@ const theme = createTheme({
     link: {
       '&:hover': {
         background: ` url(${Line}) bottom no-repeat`,
+        cursor:'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.MEDIUM,
