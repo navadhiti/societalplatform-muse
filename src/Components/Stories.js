@@ -11,7 +11,7 @@ import image_30 from '../Assets/Images/image 30.png';
 import Divider from '../Assets/Images/Vector 42.png';
 import StoryImg from '../Assets/Images/image 50.png';
 import LinkUnderline from '../Assets/Images/Vector 12.png';
-import ArrowImage from '../Assets/Images/image 27.png';
+import ArrowImage from '../Assets/Images/RightArrow.png';
 
 const Stories = () => {
   const [arr, setArr] = useState([{ text: 'foo' }, { text: 'bar' }]);

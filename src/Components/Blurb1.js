@@ -4,7 +4,7 @@ import React from "react";
 import Divider from "../Assets/Images/Divider.png";
 import Logo from "../Assets/Images/sm_logo.png";
 import Layer from "../Assets/Images/Layer.png";
-import Image5 from "../Assets/Images/image 19.png";
+import Blub from "../Assets/Images/Blub.png";
 import Sanjay from "../Assets/Images/sanjay.png";
 
 
@@ -35,14 +35,14 @@ const Blurb_1 = () => {
                         lg={7}
                         sx={{ textAlign: "left" }}
                     >
-                        <Typography variant="body2">FOREWORD</Typography>
+                        <Typography variant="overline">FOREWORD</Typography>
                         <Typography variant="h1" textAlign="Left">
                             Embedded in each <br /> story, you will find
                         </Typography>
                         <Typography variant="h1" textAlign="Left">
                         <b>
                             a small simple{" "}
-                            <img src={Image5} alt="img" width="10%" />
+                            <img src={Blub} alt="img" width="10%" />
                             idea.</b>
                         </Typography>
                     </Grid>

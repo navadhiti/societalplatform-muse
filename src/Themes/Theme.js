@@ -9,7 +9,7 @@ import PALETTE from './Palette';
 import FONT from './Font';
 
 import Line from '../Assets/Images/Vector 12.png';
-import ArrowImage from '../Assets/Images/image 27.png';
+import ArrowImage from '../Assets/Images/RightArrow.png';
 
 
 const theme = createTheme({
@@ -89,21 +89,41 @@ const theme = createTheme({
         fontSize: FONT.SIZES[32],
       
     },
-    Highlight: {
-      
-        background: ` url(${Line}) bottom no-repeat`,
-        fontWeight: FONT.WEIGHT.REGULAR,
-    },
-    ArrowImage: {
+    subtitle1: {
       '&:hover': {
         background: ` url(${Line}) bottom no-repeat`,
-        backgroundSize: "contain",
+        cursor:'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.MEDIUM,
       fontSize: FONT.SIZES[24],
+      color: '#241C15',
       
+    },
+    subtitle2: {
+      '&:hover': {
+        background: ` url(${Line}) bottom no-repeat`,
+        cursor:'pointer',
+      },
+      fontWeight: FONT.WEIGHT.REGULAR,
+      fontFamily: FONT.FAMILY.MEDIUM,
+      fontSize: FONT.SIZES[24],
+      color: '#241C15',
       
+    },
+    caption: {
+      
+        background: ` url(${Line}) bottom no-repeat`,
+        fontWeight: FONT.WEIGHT.REGULAR,
+    },
+    overline: {
+      // '&:hover': {
+      //   background: ` url(${ArrowImage}) bottom right no-repeat`,
+      //   backgroundSize: "contain",
+      // },
+      fontWeight: FONT.WEIGHT.REGULAR,
+      fontFamily: FONT.FAMILY.MEDIUM,
+      fontSize: FONT.SIZES[16],
     },
   },
   palette: {

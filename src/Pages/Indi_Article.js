@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import Divider from "../Assets/Images/Divider.png";
+import Data from '../db.json';
 
 const Indi_Article = () => {
     const styles = {

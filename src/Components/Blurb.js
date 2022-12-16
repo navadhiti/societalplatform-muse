@@ -11,12 +11,13 @@ import React from "react";
 import Divider from "../Assets/Images/Divider.png";
 import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
 import Image from "../Assets/Images/sp-musebook-design.png";
-import Image1 from "../Assets/Images/image_4.png";
-import Image2 from "../Assets/Images/image 20.png";
-import Image3 from "../Assets/Images/image 14.png";
-import Image4 from "../Assets/Images/image_17.png";
-import Image12 from "../Assets/Images/image_13.png";
-import Image5 from "../Assets/Images/image 19.png";
+import Image1 from "../Assets/Images/graph.png";
+import Image2 from "../Assets/Images/Coin.png";
+import Image3 from "../Assets/Images/hand.png";
+import Image4 from "../Assets/Images/Blub.png";
+import Image5 from "../Assets/Images/Questionmark.png";
+// import Image6 from "../Assets/Images/image_13.png";
+
 
 const Blurb = () => {
     return (
@@ -28,13 +29,13 @@ const Blurb = () => {
                         stories of{" "}
                        <b>
                             solving at scale{" "}
-                            <img src={Image12} alt="img" width="7%" />
+                            <img src={Image1} alt="img" width="4%" />
                         </b>{" "}
                         in action. These are stories of{" "}
                       <b>
                             big bold bets,
-                            <img src={Image2} alt="img" width="3%" />
                             <img src={Image2} alt="img" width="2%" />
+                            <img src={Image2} alt="img" width="1.5%" />
                         </b>
                         of{" "}
                       
@@ -43,7 +44,7 @@ const Blurb = () => {
                         , of perseverance, of coming together, of{" "}
                         <Typography variant="link"><b>
                             building agency</b></Typography>
-                            <img src={Image3} alt="img" width="5%" />
+                            <img src={Image3} alt="img" width="4%" />
                         
                         , through the eyes of practitioners and supporters of{" "}
                         
@@ -57,13 +58,14 @@ const Blurb = () => {
                         Societal Muse Offers{" "}
                        <b>
                             new answers
-                            <img src={Image4} alt="img" width="3%" />
-                            <img src={Image4} alt="img" width="3%" />
+                            <img src={Image4} alt="img" width="4%" />
                         </b>
                         , new ways of doing and sometimes{" "}
                         <b>
                             new questions
-                            <img src={Image5} alt="img" width="6%" />
+                            <img src={Image5} alt="img" width="2%" />
+                            <img src={Image5} alt="img" width="2%" />
+
                         </b>{" "}
                         too.
                     </Typography>

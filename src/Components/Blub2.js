@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
-import Image5 from "../Assets/Images/image 19.png";
-import Sanjay from "../Assets/Images/sanjay.png";
+
 import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
 
