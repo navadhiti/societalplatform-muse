@@ -16,6 +16,8 @@ import Scribble from '../Assets/Images/scribble.png';
 import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
 
+import Data from '../db.json';
+
 const Indi_Article = () => {
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -55,8 +57,11 @@ const Indi_Article = () => {
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={7}>
-              <Typography variant="h1">
+            <Grid item xs={7} sx={{ textAlign: 'left' }}>
+              {Data.map((content) => (
+                <Typography variant="h1">{content.title.rendered}</Typography>
+              ))}
+              {/* <Typography variant="h1">
                 Can{' '}
                 <span
                   style={{
@@ -67,7 +72,9 @@ const Indi_Article = () => {
                 >
                   anyone
                 </span>{' '}
-                who keeps the street clean become a{' '}
+                who <br />
+                keeps the street
+                <br /> clean become a{' '}
                 <span
                   style={{
                     background: ` url(${ScribbleCircle}) bottom no-repeat`,
@@ -77,17 +84,15 @@ const Indi_Article = () => {
                 >
                   hero?
                 </span>
-              </Typography>
+              </Typography> */}
               <Grid
                 container
                 direction="row"
                 justifyContent="flex-start"
                 alignItems="center"
                 mt={6}
-                sx={{ textAlign: 'left' }}
               >
                 <Grid item xs={1}>
-                  {/* <Stack direction="row" spacing={2}> */}
                   <Avatar
                     alt="Remy Sharp"
                     src={Author}
@@ -98,29 +103,28 @@ const Indi_Article = () => {
                     }}
                   />
                 </Grid>
-                <Grid item xs={3}>
-                  <Typography>WORDS BY</Typography>
-                  <Typography>
+                <Grid item xs={3} ml={2}>
+                  <Typography variant="body2">WORDS BY</Typography>
+                  <Typography variant="body2">
                     Kuldeep Dantewadia <br />
                     Gautam Prakash
                   </Typography>
                   <Typography>Co-founders, Reap Benefit</Typography>
                 </Grid>
 
-                {/* </Stack> */}
-
                 <Grid item xs={6}>
-                  <Typography>
+                  {Data.map((content) => console.log(content.content.rendered))}
+                  {/* <Typography>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
                     laudantium,totam rem aperiam, eaque ipsa quae ab illo
                     inventore veritatis et quasi architecto beatae.{' '}
-                  </Typography>
+                  </Typography> */}
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={5}>
-              <img src={ArticleImage} alt="img" width="80%" />
+              <img src={ArticleImage} alt="img" width="100%" />
             </Grid>
           </Grid>
           {/* </Container> */}
