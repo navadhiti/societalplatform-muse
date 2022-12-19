@@ -15,6 +15,7 @@ const Values = () => {
         'Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving',
       class: 'values',
       class1: 'values_flip',
+      contentclass:'card_content',
     },
     {
       id: '2',
@@ -23,6 +24,7 @@ const Values = () => {
         'Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving',
       class: 'values1',
       class1: 'values1_flip',
+      contentclass:'card_content1',
     },
     {
       id: '3',
@@ -31,6 +33,7 @@ const Values = () => {
         'Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving',
       class: 'values2',
       class1: 'values2_flip',
+      contentclass:'card_content2',
     },
     {
       id: '4',
@@ -39,6 +42,7 @@ const Values = () => {
         'Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving',
       class: 'values3',
       class1: 'values3_flip',
+      contentclass:'card_content3',
     },
     {
       id: '5',
@@ -47,6 +51,7 @@ const Values = () => {
         'Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving',
       class: 'values4',
       class1: 'values4_flip',
+      contentclass:'card_content4',
     },
   ];
   const [flipCard, setFlipCard] = useState(false);
@@ -135,7 +140,7 @@ const Values = () => {
                     setFlipCard(false);
                   }}
                 >
-                  <CardContent variant="card_content">
+                  <CardContent variant={item.contentclass} >
                     <Typography>{item.blurb}</Typography>
                   </CardContent>
                 </Card>

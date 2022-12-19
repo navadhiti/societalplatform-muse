@@ -57,7 +57,7 @@ const Stories = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item xs={6} alignItems="center">
+                    <Grid item xs={12} sm={6} alignItems="center">
                         <Typography variant="h2" textAlign="left">
                             Our{" "}
                             <span
@@ -72,7 +72,7 @@ const Stories = () => {
                             <img src={Pen} alt="img" />
                         </Typography>
                     </Grid>
-                    <Grid item xs={6} mt="60px">
+                    <Grid item xs={12} sm={6} mt={{xs:1,sm:5}} >
                         <Typography variant="h5" textAlign="left">
                             Lorem ipsum dolor sit amet consectetur. Sollicitudin
                             vivamus eu aenean interdum in proin id ut. Sit nisi
@@ -87,10 +87,10 @@ const Stories = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item xs={6} alignItems="center">
-                        <img src={StoryImg} alt="img" />
+                    <Grid item xs={12} sm={6} alignItems="center">
+                        <img src={StoryImg} alt="img" width="100%" />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12} sm={6}>
                         {/* <List>
                             {arr.map((el, index) => (
                                 // console.log(el)

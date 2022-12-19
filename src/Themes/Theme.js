@@ -387,15 +387,33 @@ const theme = createTheme({
                 {
                     props: { variant: "card_content" },
                     style: {
-                        transform: "rotate(10deg)",
+                        transform: "rotate(12deg)",
                     },
                 },
                 {
                     props: { variant: "card_content1" },
                     style: {
-                        transform: "rotate(-10deg)",
+                        transform: "rotate(-7deg)",
                     },
                 },
+                {
+                  props: { variant: "card_content2" },
+                  style: {
+                      transform: "rotate(-10deg)",
+                  },
+              },
+              {
+                props: { variant: "card_content3" },
+                style: {
+                    transform: "rotate(12deg)",
+                },
+            },
+            {
+              props: { variant: "card_content4" },
+              style: {
+                  transform: "rotate(0deg)",
+              },
+          },
             ],
         },
         MuiBadge: {
