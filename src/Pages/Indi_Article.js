@@ -8,10 +8,14 @@ import {
   Link,
   Stack,
   Avatar,
+  Divider,
+  List,
+  ListItem,
+  ListItemButton,
 } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
-import ArticleImage from '../Assets/Images/articleImage.png';
+// import ArticleImage from '../Assets/Images/articleImage.png';
 // import Scribble from '../Assets/Images/scribble.png';
 // import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
@@ -59,7 +63,7 @@ const Indi_Article = () => {
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               {Data.map((content) => (
-                <Typography variant="h1">{content.title.rendered}</Typography>
+                <Typography variant='h1'>{content.title.rendered}</Typography>
               ))}
               {/* <Typography variant="h1">
                 Can{' '}
@@ -139,9 +143,20 @@ const Indi_Article = () => {
               ))}
             </Grid>
           </Grid>
+          <Divider sx={{ borderStyle: 'dotted' }} />
           <Grid container spacing={2}>
             <Grid item xs={4}>
-              <p>this is hanging sidebar</p>
+              <Typography> ARTICLE OUTLINE</Typography>
+              <List>
+                <ListItemButton>Small actions = big impact</ListItemButton>
+                <ListItemButton>Imagining a new world</ListItemButton>
+                <ListItemButton>Levers of change</ListItemButton>
+                <ListItemButton>
+                  Empowering the youth to see, sense and solve
+                </ListItemButton>
+                <ListItemButton>Denting BIG</ListItemButton>
+                <ListItemButton>It’s an iterative process</ListItemButton>
+              </List>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               {Data.map((content) => (

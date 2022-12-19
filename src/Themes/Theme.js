@@ -11,7 +11,6 @@ import FONT from './Font';
 import Line from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/image 27.png';
 
-
 const theme = createTheme({
   typography: {
     allVariants: {
@@ -60,7 +59,7 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
       fontFamily: FONT.FAMILY.INTER,
-      backgroundColor:'#E5E5E5'
+      backgroundColor: '#E5E5E5',
     },
 
     body1: {
@@ -85,25 +84,21 @@ const theme = createTheme({
       // fontSize: FONT.SIZES[24],
       // color: '#241C15',
       background: ` url(${Line}) bottom no-repeat`,
-        
-        fontSize: FONT.SIZES[32],
-      
+
+      fontSize: FONT.SIZES[32],
     },
     Highlight: {
-      
-        background: ` url(${Line}) bottom no-repeat`,
-        fontWeight: FONT.WEIGHT.REGULAR,
+      background: ` url(${Line}) bottom no-repeat`,
+      fontWeight: FONT.WEIGHT.REGULAR,
     },
     ArrowImage: {
       '&:hover': {
         background: ` url(${Line}) bottom no-repeat`,
-        backgroundSize: "contain",
+        backgroundSize: 'contain',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.MEDIUM,
       fontSize: FONT.SIZES[24],
-      
-      
     },
   },
   palette: {
@@ -138,6 +133,7 @@ const theme = createTheme({
         },
       ],
     },
+
     MuiAppBar: {
       styleOverrides: {
         // props:{classes:"AppBorder"},
@@ -319,21 +315,21 @@ const theme = createTheme({
         },
       ],
     },
-    MuiCardContent:{
+    MuiCardContent: {
       variants: [
         {
-          props: { variant: 'card_content'},
+          props: { variant: 'card_content' },
           style: {
             transform: 'rotate(10deg)',
-          }
+          },
         },
         {
-          props: { variant: 'card_content1'},
+          props: { variant: 'card_content1' },
           style: {
             transform: 'rotate(-10deg)',
-          }
-        }
-      ]
+          },
+        },
+      ],
     },
     MuiBadge: {
       variants: [
