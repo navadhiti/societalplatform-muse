@@ -25,7 +25,8 @@ const Blurb_1 = () => {
                     spacing={0}
                     justifyContent="start"
                     alignItems="start"
-                    sx={{ py: 10 }}
+                    
+                    py={10}
                 >
                     <Grid
                         item
@@ -33,7 +34,8 @@ const Blurb_1 = () => {
                         sm={12}
                         md={7}
                         lg={7}
-                        sx={{ textAlign: "left" }}
+                        
+                        textAlign="left"
                     >
                         <Typography variant="overline">FOREWORD</Typography>
                         <Typography variant="h1" textAlign="Left">
@@ -52,7 +54,8 @@ const Blurb_1 = () => {
                     spacing={0}
                     justifyContent="space-between"
                     alignItems="start"
-                    sx={{ pt: 0 }}
+                    
+                    pt={0}
                 >
                     <Grid
                         item
@@ -60,7 +63,8 @@ const Blurb_1 = () => {
                         sm={12}
                         md={4}
                         lg={4}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
+                        
                     >
                         <Typography variant="h4">
                             Small simple ideas are like children. They need to
@@ -73,7 +77,7 @@ const Blurb_1 = () => {
                         sm={12}
                         md={6}
                         lg={6}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
                     >
                         <Typography variant="body1">
                             Across the website you will meet many children.
@@ -88,7 +92,8 @@ const Blurb_1 = () => {
                             spacing={0}
                             justifyContent="space-between"
                             alignItems="start"
-                            sx={{ pt: 0 }}
+                            
+                            pt={0}
                         >
                             <Grid
                                 item
@@ -96,7 +101,9 @@ const Blurb_1 = () => {
                                 sm={12}
                                 md={4}
                                 lg={4}
-                                sx={{ textAlign: "left",py:9, }}
+                                
+                                textAlign="left"
+                                py={9}
                             >
                                 {" "}
                                 <Typography variant="body1">
@@ -112,7 +119,7 @@ const Blurb_1 = () => {
                                 sm={12}
                                 md={4}
                                 lg={4}
-                                sx={{ textAlign: "right" }}
+                                textAlign="right"
                             >
                                 <img src={Sanjay} alt="img" width="100%" />
 

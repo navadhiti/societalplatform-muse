@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/material";
 
 import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
@@ -23,7 +23,8 @@ const Blub2 = () => {
                     spacing={0}
                     justifyContent="start"
                     alignItems="start"
-                    sx={{ py: 5 }}
+                    
+                    py={5}
                 >
                     <Grid
                         item
@@ -31,7 +32,7 @@ const Blub2 = () => {
                         sm={12}
                         md={8}
                         lg={8}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
                     >
                         <Typography variant="h3" textAlign="Left">
                             What if you could apply Societal Thinking to
@@ -61,9 +62,10 @@ const Blub2 = () => {
                             </span>
                         </Typography>
                         <Box py={5}>
-                        <Button variant="contained">
-                        Experience
+                        <Button variant="text">
+                            Experience
                         </Button>
+                        
                         </Box >
                         
                     </Grid>
@@ -74,7 +76,7 @@ const Blub2 = () => {
                     spacing={0}
                     justifyContent="space-between"
                     alignItems="start"
-                    sx={{ pt: 0 }}
+                    pt={0}
                 >
                     <Grid
                         item
@@ -82,7 +84,7 @@ const Blub2 = () => {
                         sm={12}
                         md={4}
                         lg={4}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"                        
                     >
                      
                     </Grid>
@@ -92,7 +94,7 @@ const Blub2 = () => {
                         sm={12}
                         md={7}
                         lg={7}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
                     >
                         {/* <img src={Art} alt="img" width="100%" /> */}
                     </Grid>
