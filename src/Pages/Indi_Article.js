@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Box,
-  Container,
+  //   Container,
   Grid,
   Typography,
   Breadcrumbs,
@@ -12,8 +12,8 @@ import {
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
-import Scribble from '../Assets/Images/scribble.png';
-import ScribbleCircle from '../Assets/Images/scribble-circle.png';
+// import Scribble from '../Assets/Images/scribble.png';
+// import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
 
 import Data from '../db.json';
@@ -113,7 +113,13 @@ const Indi_Article = () => {
                 </Grid>
 
                 <Grid item xs={6}>
-                  {Data.map((content) => console.log(content.content.rendered))}
+                  {Data.map((content) => (
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: content.excerpt.rendered,
+                      }}
+                    ></div>
+                  ))}
                   {/* <Typography>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
@@ -124,7 +130,27 @@ const Indi_Article = () => {
               </Grid>
             </Grid>
             <Grid item xs={5}>
-              <img src={ArticleImage} alt="img" width="100%" />
+              {Data.map((content) => (
+                <img
+                  src={content._links['wp:featuredmedia'][0].href}
+                  alt="img"
+                  width="100%"
+                />
+              ))}
+            </Grid>
+          </Grid>
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <p>this is hanging sidebar</p>
+            </Grid>
+            <Grid item xs={7} sx={{ textAlign: 'left' }}>
+              {Data.map((content) => (
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: content.content.rendered,
+                  }}
+                ></div>
+              ))}
             </Grid>
           </Grid>
           {/* </Container> */}
