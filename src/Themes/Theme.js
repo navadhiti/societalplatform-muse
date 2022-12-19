@@ -72,7 +72,7 @@ const theme = createTheme({
             // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
         },
         body2: {
-            fontWeight: FONT.WEIGHT.DEMI_BOLD,
+            // fontWeight: FONT.WEIGHT.DEMI_BOLD,
             fontSize: FONT.SIZES[12],
             fontFamily: FONT.FAMILY.INTER,
             // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
