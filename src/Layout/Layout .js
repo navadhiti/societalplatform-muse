@@ -108,10 +108,10 @@ const Layout = () => {
                     >
                         <Grid
                             item
-                            xs={11}
-                            sm={11}
-                            md={11}
-                            lg={11}
+                            xs={12}
+                            sm={12}
+                            md={12}
+                            lg={12}
                             sx={{ textAlign: "center" }}
                         >
                             <Box>
@@ -205,7 +205,7 @@ const Layout = () => {
                                 </TabPanel>
                             </Box>
                         </Grid>
-                        <Grid item xs={1} sm={1} md={1} lg={1}>
+                        {/* <Grid item xs={1} sm={1} md={1} lg={1}>
                             <List sx={{ paddingTop: 0, width: "10%" }}>
                                 {buttonName.map((item) => (
                                     <ListItem disablePadding>
@@ -227,7 +227,7 @@ const Layout = () => {
                                     </ListItem>
                                 ))}
                             </List>
-                        </Grid>
+                        </Grid> */}
                     </Grid>
                 </Box>
 

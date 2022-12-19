@@ -1,9 +1,11 @@
 // import '@fontsource/montserrat-alternates';
 // import '@fontsource/montserrat';
-// import { Campaign } from 'react-adobe-fonts';
+// // import { Campaign } from 'react-adobe-fonts';
+// import CampaignMedium from'../Assets/fonts/CampaignMedium.eot';
+// import CampaignMedium1 from'../Assets/fonts/CampaignMedium.woff';
 const FONT = {
   FAMILY: {
-    ASSISTANT: 'montserrat',
+    ASSISTANT: 'CampaignMedium',
     INTER: 'montserrat ',
   },
   SIZES: {

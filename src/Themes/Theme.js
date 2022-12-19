@@ -9,7 +9,7 @@ import PALETTE from './Palette';
 import FONT from './Font';
 
 import Line from '../Assets/Images/Vector 12.png';
-import ArrowImage from '../Assets/Images/image 27.png';
+// import ArrowImage from '../Assets/Images/image 27.png';
 
 const theme = createTheme({
   typography: {

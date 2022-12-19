@@ -4,7 +4,7 @@ import React from "react";
 import Divider from "../Assets/Images/Divider.png";
 import Logo from "../Assets/Images/sm_logo.png";
 import Layer from "../Assets/Images/Layer.png";
-import Image5 from "../Assets/Images/image 19.png";
+import Blub from "../Assets/Images/Blub.png";
 import Sanjay from "../Assets/Images/sanjay.png";
 
 
@@ -25,7 +25,8 @@ const Blurb_1 = () => {
                     spacing={0}
                     justifyContent="start"
                     alignItems="start"
-                    sx={{ py: 10 }}
+                    
+                    py={10}
                 >
                     <Grid
                         item
@@ -33,16 +34,17 @@ const Blurb_1 = () => {
                         sm={12}
                         md={7}
                         lg={7}
-                        sx={{ textAlign: "left" }}
+                        
+                        textAlign="left"
                     >
-                        <Typography variant="body2">FOREWORD</Typography>
+                        <Typography variant="overline">FOREWORD</Typography>
                         <Typography variant="h1" textAlign="Left">
                             Embedded in each <br /> story, you will find
                         </Typography>
                         <Typography variant="h1" textAlign="Left">
                         <b>
                             a small simple{" "}
-                            <img src={Image5} alt="img" width="10%" />
+                            <img src={Blub} alt="img" width="10%" />
                             idea.</b>
                         </Typography>
                     </Grid>
@@ -52,7 +54,8 @@ const Blurb_1 = () => {
                     spacing={0}
                     justifyContent="space-between"
                     alignItems="start"
-                    sx={{ pt: 0 }}
+                    
+                    pt={0}
                 >
                     <Grid
                         item
@@ -60,7 +63,8 @@ const Blurb_1 = () => {
                         sm={12}
                         md={4}
                         lg={4}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
+                        
                     >
                         <Typography variant="h4">
                             Small simple ideas are like children. They need to
@@ -73,7 +77,7 @@ const Blurb_1 = () => {
                         sm={12}
                         md={6}
                         lg={6}
-                        sx={{ textAlign: "left" }}
+                        textAlign="left"
                     >
                         <Typography variant="body1">
                             Across the website you will meet many children.
@@ -88,7 +92,8 @@ const Blurb_1 = () => {
                             spacing={0}
                             justifyContent="space-between"
                             alignItems="start"
-                            sx={{ pt: 0 }}
+                            
+                            pt={0}
                         >
                             <Grid
                                 item
@@ -96,7 +101,9 @@ const Blurb_1 = () => {
                                 sm={12}
                                 md={4}
                                 lg={4}
-                                sx={{ textAlign: "left",py:9, }}
+                                
+                                textAlign="left"
+                                py={9}
                             >
                                 {" "}
                                 <Typography variant="body1">
@@ -112,7 +119,7 @@ const Blurb_1 = () => {
                                 sm={12}
                                 md={4}
                                 lg={4}
-                                sx={{ textAlign: "right" }}
+                                textAlign="right"
                             >
                                 <img src={Sanjay} alt="img" width="100%" />
 

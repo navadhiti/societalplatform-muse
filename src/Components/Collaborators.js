@@ -5,6 +5,7 @@ import {
   ImageList,
   Typography,
   Container,
+  ImageListItem,
 } from '@mui/material';
 import React from 'react';
 import Author1 from '../Assets/Images/Author1.png';
@@ -181,14 +182,15 @@ const Collaborators = () => {
                         border: 'solid 1px black',
                         borderRadius: '5px',
                         padding: '5px',
+                        margin:"0 auto"
                       }}
                     >
-                      <img src={Author1} alt="img" />
+                      <img src={itemData[0].img} alt="img" />{console.log(itemData[0].img,"author")}
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[0].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                        {itemData[0].subTitle}
                       </Typography>
                     </Box>
                   </Grid>
@@ -208,12 +210,12 @@ const Collaborators = () => {
                         my: 2,
                       }}
                     >
-                      <img src={Author2} alt="img" />
+                      <img src={itemData[1].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[1].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[1].title}
                       </Typography>
                     </Box>
                     <Box
@@ -223,12 +225,12 @@ const Collaborators = () => {
                         padding: '5px',
                       }}
                     >
-                      <img src={Author3} alt="img" />
+                      <img src={itemData[2].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[2].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[2].subTitle}
                       </Typography>
                     </Box>
                   </Grid>
@@ -249,12 +251,12 @@ const Collaborators = () => {
                         marginRight: '-10px',
                       }}
                     >
-                      <img src={Author4} alt="img" />
+                      <img src={itemData[3].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[3].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[3].subTitle}
                       </Typography>
                     </Box>
                     <Box
@@ -266,12 +268,12 @@ const Collaborators = () => {
                         marginRight: '-5px',
                       }}
                     >
-                      <img src={Author5} alt="img" />
+                      <img src={itemData[4].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[4].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[4].subTitle}
                       </Typography>
                     </Box>
                     <Box
@@ -282,12 +284,12 @@ const Collaborators = () => {
                         marginRight: '-10px',
                       }}
                     >
-                      <img src={Author6} alt="img" />
+                      <img src={itemData[5].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[5].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[5].subTitle}
                       </Typography>
                     </Box>
                   </Grid>
@@ -307,12 +309,12 @@ const Collaborators = () => {
                         marginRight: '-30px',
                       }}
                     >
-                      <img src={Author7} alt="img" />
+                      <img src={itemData[6].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[6].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[6].subTitle}
                       </Typography>
                     </Box>
                     <Box
@@ -324,12 +326,12 @@ const Collaborators = () => {
                         marginRight: '-10px',
                       }}
                     >
-                      <img src={Author8} alt="img" />
+                      <img src={itemData[7].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                        <b>{itemData[7].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[7].subTitle}
                       </Typography>
                     </Box>
                     <Box
@@ -340,12 +342,12 @@ const Collaborators = () => {
                         marginRight: '-30px',
                       }}
                     >
-                      <img src={Author9} alt="img" />
+                      <img src={itemData[8].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                      <b>{itemData[8].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[8].subTitle}
                       </Typography>
                     </Box>
                   </Grid>
@@ -359,12 +361,12 @@ const Collaborators = () => {
                         ml: '5px',
                       }}
                     >
-                      <img src={Author10} alt="img" />
+                      <img src={itemData[9].img} alt="img" />
                       <Typography variant="body1" textAlign="center">
-                        Sanjay Purohit
+                        <b>{itemData[9].title}</b>
                       </Typography>
                       <Typography variant="body2" textAlign="center">
-                        SP
+                      {itemData[9].title}
                       </Typography>
                     </Box>
                   </Grid>
