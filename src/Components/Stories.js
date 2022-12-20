@@ -72,7 +72,7 @@ const Stories = () => {
                             <img src={Pen} alt="img" />
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={6} mt={{xs:1,sm:5}} >
+                    <Grid item xs={12} sm={6} mt={{ xs: 1, sm: 5 }}>
                         <Typography variant="h5" textAlign="left">
                             Lorem ipsum dolor sit amet consectetur. Sollicitudin
                             vivamus eu aenean interdum in proin id ut. Sit nisi
@@ -87,136 +87,93 @@ const Stories = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item xs={12} sm={6} alignItems="center">
+                    <Grid
+                        item
+                        xs={12}
+                        sm={6}
+                        alignItems="center"
+                        display={{ xs: "none", sm: "block" }}
+                    >
                         <img src={StoryImg} alt="img" width="100%" />
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        {/* <List>
-                            {arr.map((el, index) => (
-                                // console.log(el)
-                                <ListItem
-                                // isHovering={isHovered[index]}
-                                // key={index}
-                                // style={
-                                //   index ? { calssName: 'red' } : { calssName: 'green' }
-                                // }
-                                >
-                                    <Link
-                                        variant="h4"
-                                        className='hoverable-item"'
-                                        style={
-                                            hover
-                                                ? {
-                                                      "&:hover": {
-                                                          color: "white",
-                                                      },
-                                                  }
-                                                : { color: "black" }
-                                        }
-                                        href="#"
-                                        underline="none"
-                                        key={index}
-                                    >
-                                        <span
-                                            // onMouseEnter={() => handleMouseEnter()}
-                                            // onMouseLeave={() => handleMouseLeave()}
-                                            key={index}
-                                            onMouseEnter={(e) => {
-                                                handleMouseEnter(e, index);
-                                            }}
-                                            onMouseLeave={(e) => {
-                                                handleMouseLeave(e, index);
-                                            }}
-                                            // className="flex gap-3"
-                                            // hidden={hover[index]}
-                                            className="hoverable-show"
-                                            style={
-                                                hover
-                                                    ? {
-                                                          background: ` url(${LinkUnderline}) bottom no-repeat`,
-                                                          paddingBottom: "7px",
-                                                          backgroundSize:
-                                                              "contain",
-                                                      }
-                                                    : { color: "black" }
-                                            }
-                                        >
-                                            {el.text}
-                                        </span>
-                                        <img
-                                            style={{ marginLeft: "10px" }}
-                                            src={ArrowImage}
-                                            alt="img"
-                                        />
-                                    </Link>
-                                </ListItem>
-                            ))}
-                        </List> */}
-                        <List sx={{ pt: 9 }}>
-                            <ListItem>
-                            <Typography variant="caption" mr={-9}>
-                                <Stack spacing={2} direction="row">
-                                    <Typography variant="subtitle1">
-                                        {" "}
-                                        Reimagining{" "}
-                                    </Typography>
-                                    <Typography variant="caption" mr={-9}>
-                                        disaster resilience{" "}
-                                    </Typography>
-                                </Stack>
+                        <List pt={{ xs: 2, md: 9 }}>
+                            <ListItem display={{ xs: "none", sm: "block" }}>
+                                <Typography variant="caption" mr={-9} display={{ xs: "none", sm: "block" }}>
+                                    <Stack spacing={2} direction="row">
+                                        <Typography variant="subtitle1">
+                                            {" "}
+                                            Reimagining{" "}
+                                        </Typography>
+                                        <Typography variant="caption" mr={-9}>
+                                            disaster resilience{" "}
+                                        </Typography>
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                             <ListItem>
                                 <Typography variant="caption">
-                                    All{" "}
-                                    <Typography variant="subtitle">
-                                        {" "}
-                                        teach,{" "}
-                                    </Typography>
-                                    all learn
+                                    <Stack spacing={2} direction="row">
+                                        All{" "}
+                                        <Typography variant="subtitle1">
+                                            {" "}
+                                            teach,{" "}
+                                        </Typography>
+                                        all learn
+                                    </Stack>
                                 </Typography>
                             </ListItem>
 
                             <ListItem>
-                                <Typography variant="h4">
-                                    <Typography variant="link">
-                                        Solve small,{" "}
-                                    </Typography>
-                                    dent big
+                                <Typography variant="caption">
+                                    <Stack spacing={2} direction="row">
+                                        <Typography variant="subtitle1">
+                                            Solve small,{" "}
+                                        </Typography>
+                                        dent big
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                             <ListItem>
-                                <Typography variant="h4">
-                                    Striking{" "}
-                                    <Typography variant="link">
-                                        collaboration{" "}
-                                    </Typography>
-                                    gold
+                                <Typography variant="caption">
+                                    <Stack spacing={2} direction="row">
+                                        Striking{" "}
+                                        <Typography variant="subtitle1">
+                                            collaboration{" "}
+                                        </Typography>
+                                        gold
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                             <ListItem>
-                                <Typography variant="h4">
-                                    When society, state and
-                                    <br /> markets{" "}
-                                    <Typography variant="link">
-                                        work together
-                                    </Typography>
+                                <Typography variant="caption">
+                                    <Stack spacing={2} direction="row">
+                                        When society, state and
+                                        <br /> markets{" "}
+                                        <Typography variant="subtitle1">
+                                            work together
+                                        </Typography>
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                             <ListItem>
-                                <Typography variant="h4">
-                                    Build{" "}
-                                    <Typography variant="link">
-                                        beyond
-                                    </Typography>
+                                <Typography variant="caption">
+                                    <Stack spacing={2} direction="row">
+                                        Build{" "}
+                                        <Typography variant="subtitle1">
+                                            beyond
+                                        </Typography>
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                             <ListItem>
-                                <Typography variant="h4">
-                                    The power of{" "}
-                                    <Typography variant="link">
-                                        public goods
-                                    </Typography>
+                                <Typography variant="caption">
+                                    <Stack spacing={0} direction="row">
+                                        The power of{" "}
+                                        <Typography variant="subtitle1">
+                                            public goods
+                                        </Typography>
+                                    </Stack>
                                 </Typography>
                             </ListItem>
                         </List>

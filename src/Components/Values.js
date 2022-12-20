@@ -67,13 +67,14 @@ const Values = () => {
   };
   return (
     <>
-      <Box py={8}>
+      <Box py={{xs:2,sm:2,md:8}}>
         <Grid
           container
           spacing={0}
           justifyContent="center"
           alignItems="start"
-          sx={{ py: 5, px: 5 }}
+          py={{xs:2,sm:2,md:5}}
+          px={{xs:2,sm:2,md:5}}
         >
           <Grid item xs={12} sm={12} md={7} lg={7}>
             <Typography variant="h1" textAlign="center">
@@ -91,7 +92,7 @@ const Values = () => {
                 <img src={values_1} alt="img" width="10%" mt={5} />
               </span>
             </Typography>
-            <Typography variant="body2" py={5} textAlign="center">
+            <Typography variant="body2" py={{xs:2,sm:2,md:3}} textAlign="center">
               Lorem ipsum dolor sit amet consectetur. Vivamus eu aenean interdum
               in proin id ut. Lorem ipsum dolor sit amet consectetur.
               Sollicitudin vivamus eu aenean interdum in proin id ut. Sit nisi
@@ -110,11 +111,17 @@ const Values = () => {
           {itemData.map((item) => (
             <Grid
               item
-              xs={12}
+              xs={11}
               sm={6}
               md={2}
               lg={2}
-              sx={{ textAlign: 'center' }}
+              sx={{ textAlign: 'center',
+              width: 343,
+              scrollSnapType: 'x mandatory',
+              '& > *': {
+                scrollSnapAlign: 'center',
+              },
+              '::-webkit-scrollbar': { display: 'none' }, }}
               // px={4}
             >
               <ReactCardFlip

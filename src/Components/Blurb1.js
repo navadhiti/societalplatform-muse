@@ -18,7 +18,7 @@ import Sanjay from "../Assets/Images/sanjay.png";
 const Blurb_1 = () => {
     return (
         <>
-            <Box py={8}> 
+            <Box py={{xs:4,sm:4,md:8}}> 
             <Container >
                 <Grid
                     container
@@ -26,7 +26,7 @@ const Blurb_1 = () => {
                     justifyContent="start"
                     alignItems="start"
                     
-                    py={10}
+                    py={{xs:2,md:10}}
                 >
                     <Grid
                         item
@@ -64,7 +64,7 @@ const Blurb_1 = () => {
                         md={4}
                         lg={4}
                         textAlign="left"
-                        
+                        pb={3}
                     >
                         <Typography variant="h4">
                             Small simple ideas are like children. They need to
@@ -97,13 +97,13 @@ const Blurb_1 = () => {
                         >
                             <Grid
                                 item
-                                xs={12}
-                                sm={12}
+                                xs={6}
+                                sm={6}
                                 md={4}
                                 lg={4}
                                 
                                 textAlign="left"
-                                py={9}
+                                py={{xs:2,md:9}}
                             >
                                 {" "}
                                 <Typography variant="body1">
@@ -115,8 +115,8 @@ const Blurb_1 = () => {
                             </Grid>
                             <Grid
                                 item
-                                xs={12}
-                                sm={12}
+                                xs={6}
+                                sm={6}
                                 md={4}
                                 lg={4}
                                 textAlign="right"
