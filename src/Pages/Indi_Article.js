@@ -10,10 +10,10 @@ import {
   Avatar,
   Divider,
   List,
-  ListItem,
   ListItemButton,
 } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import StickyBox from 'react-sticky-box';
 
 // import ArticleImage from '../Assets/Images/articleImage.png';
 // import Scribble from '../Assets/Images/scribble.png';
@@ -41,6 +41,8 @@ const Indi_Article = () => {
       // backgroundColor: `#fff`,
     },
   };
+
+  const [data] = Data;
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -63,7 +65,7 @@ const Indi_Article = () => {
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               {Data.map((content) => (
-                <Typography variant='h1'>{content.title.rendered}</Typography>
+                <Typography variant="h1">{content.title.rendered}</Typography>
               ))}
               {/* <Typography variant="h1">
                 Can{' '}
@@ -145,18 +147,29 @@ const Indi_Article = () => {
           </Grid>
           <Divider sx={{ borderStyle: 'dotted' }} />
           <Grid container spacing={2}>
-            <Grid item xs={4}>
-              <Typography> ARTICLE OUTLINE</Typography>
-              <List>
-                <ListItemButton>Small actions = big impact</ListItemButton>
-                <ListItemButton>Imagining a new world</ListItemButton>
-                <ListItemButton>Levers of change</ListItemButton>
-                <ListItemButton>
-                  Empowering the youth to see, sense and solve
-                </ListItemButton>
-                <ListItemButton>Denting BIG</ListItemButton>
-                <ListItemButton>It’s an iterative process</ListItemButton>
-              </List>
+            <Grid item xs={4} sx={{ textAlign: 'left' }}>
+              <StickyBox offsetTop={20} offsetBottom={20}>
+                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                <List>
+                  {data.content.rendered
+                    .match(/<h(.)>.*?<\/h\1>/g)
+                    .map((elem, index) => (
+                      <Link
+                        underline="none"
+                        variant="sticky-links"
+                        href="#"
+                        key={index}
+                      >
+                        {' '}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: elem,
+                          }}
+                        />
+                      </Link>
+                    ))}
+                </List>
+              </StickyBox>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               {Data.map((content) => (

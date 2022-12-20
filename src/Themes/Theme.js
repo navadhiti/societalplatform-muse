@@ -391,6 +391,15 @@ const theme = createTheme({
             display: 'none',
           },
         },
+        {
+          props: { variant: 'sticky-links' },
+          style: {
+            fontFamily: FONT.FAMILY.ASSISTANT,
+            fontWeight: FONT.WEIGHT.REGULAR,
+            fontSize: FONT.SIZES[18],
+            color: PALETTE.SENARY,
+          },
+        },
       ],
     },
   },

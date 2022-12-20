@@ -5,7 +5,7 @@
 // import CampaignMedium1 from'../Assets/fonts/CampaignMedium.woff';
 const FONT = {
   FAMILY: {
-    ASSISTANT: 'CampaignMedium',
+    ASSISTANT: 'montserrat',
     INTER: 'montserrat ',
   },
   SIZES: {
