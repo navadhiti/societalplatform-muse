@@ -332,301 +332,287 @@ const theme = createTheme({
       ],
     },
     components: {
-        MuiButton: {
-            variants: [
-                {
-                    props: { variant: "contained" },
-                    style: {
-                        "&:hover": {
-                            boxShadow:
-                                "3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)",
-                          
-                        },
-                        
-
-                        // border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[12],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        padding:'20px',
-                        borderRadius: "25px",
-                    },
-                },
-                // {
-                //     props: { variant: "text" },
-                //     style: {
-                //         "&:hover": {
-                //             background: ` url(${HoverButton1}) bottom no-repeat`,
-
-                //             backgroundSize: "contain",
-                //             // backgroundPosition: 212px 0px, 0px 116px, 0px 0px, 216px 116px;
-                //         },
-                //         background: ` url(${Button})  no-repeat`,
-                //         backgroundSize: "contain",
-
-                //         // border: "1px solid black",
-                //         fontFamily: FONT.FAMILY.INTER,
-                //         fontSize: FONT.SIZES[12],
-                //         fontWeight: FONT.WEIGHT.SEMI_BOLD,
-
-                //         borderRadius: "25px",
-                //         // border {
-                //         //   height: 100px;
-                //         //   width: 200px;
-                //         //   background: "linear-gradient('90deg, blue 50%, transparent 50%'), linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%)";
-                //         //   backgroundRepeat: 'repeat-x, repeat-x, repeat-y, repeat-y',
-                //         //   backgroundSize: '16px 4px, 16px 4px, 4px 16px, 4px 16px',
-                //         //   backgroundPosition: '0px 0px, 212px 116px, 0px 116px, 216px 0px',
-                //         //   padding: '10px',
-                //         //   transition: 'backgroundPosition 2s',
-                //         // }
-                //     },
-                // },
-            ],
-        },
-        MuiAppBar: {
-            styleOverrides: {
-                // props:{classes:"AppBorder"},
-                root: {
-                    // borderBottom: '1px solid black',
-                    paddingTop: "1rem",
-                },
-            },
-        },
-        MuiLink: {
-            variants: [
-                {
-                    props: { classes: "Link" },
-                    style: {
-                        borderBottom: "1px solid black",
-                        paddingTop: "1rem",
-                        backgroundColor: "red",
-                    },
-                },
-            ],
-        },
-        MuiCard: {
-            variants: [
-                {
-                    props: { classes: "values" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[24],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "5rem 0",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(-10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values_flip" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[14],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "1rem",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(-10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values1" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[24],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        borderRadius: "20px 20px 120px 120px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "5rem 0",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values1_flip" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[14],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        borderRadius: "20px 20px 120px 120px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "1rem",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values2" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[24],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "5rem 0",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values2_flip" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[14],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "1rem",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values3" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[24],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        borderRadius: "20px 20px 120px 120px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "5rem 0",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(-10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values3_flip" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[14],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        borderRadius: "20px 20px 120px 120px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "1rem",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        transform: "rotate(-10deg)",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values4" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[24],
-                        fontWeight: FONT.WEIGHT.SEMI_BOLD,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "5rem 0",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        // margin:'2.8rem'
-                    },
-                },
-                {
-                    props: { classes: "values4_flip" },
-                    style: {
-                        border: "1px solid black",
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[14],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        borderRadius: "120px 120px 20px 20px",
-                        minHeight: "15rem",
-                        alignItems: "center",
-                        padding: "1rem",
-                        backgroundColor: "transparent",
-                        cursor: "pointer",
-                        // margin:'2.8rem'
-                    },
-                },
-            ],
-        },
-        MuiCardContent: {
-            variants: [
-                {
-                    props: { variant: "card_content" },
-                    style: {
-                        transform: "rotate(12deg)",
-                    },
-                },
-                {
-                    props: { variant: "card_content1" },
-                    style: {
-                        transform: "rotate(-7deg)",
-                    },
-                },
-                {
-                  props: { variant: "card_content2" },
-                  style: {
-                      transform: "rotate(-10deg)",
-                  },
+      MuiButton: {
+        variants: [
+          {
+            props: { variant: 'contained' },
+            style: {
+              '&:hover': {
+                boxShadow:
+                  '3px 6px 0px -4px rgb(24 12 12 / 99%), 3px 2px 2px 0px rgb(0 0 0 / 98%), 3px 3px 0px 0px rgb(0 0 0 / 95%)',
               },
-              {
-                props: { variant: "card_content3" },
-                style: {
-                    transform: "rotate(12deg)",
-                },
+
+              // border: "1px solid black",
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[12],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              padding: '20px',
+              borderRadius: '25px',
             },
-            {
-              props: { variant: "card_content4" },
-              style: {
-                  transform: "rotate(0deg)",
-              },
           },
-            ],
+          // {
+          //     props: { variant: "text" },
+          //     style: {
+          //         "&:hover": {
+          //             background: ` url(${HoverButton1}) bottom no-repeat`,
+
+          //             backgroundSize: "contain",
+          //             // backgroundPosition: 212px 0px, 0px 116px, 0px 0px, 216px 116px;
+          //         },
+          //         background: ` url(${Button})  no-repeat`,
+          //         backgroundSize: "contain",
+
+          //         // border: "1px solid black",
+          //         fontFamily: FONT.FAMILY.INTER,
+          //         fontSize: FONT.SIZES[12],
+          //         fontWeight: FONT.WEIGHT.SEMI_BOLD,
+
+          //         borderRadius: "25px",
+          //         // border {
+          //         //   height: 100px;
+          //         //   width: 200px;
+          //         //   background: "linear-gradient('90deg, blue 50%, transparent 50%'), linear-gradient(90deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%), linear-gradient(0deg, blue 50%, transparent 50%)";
+          //         //   backgroundRepeat: 'repeat-x, repeat-x, repeat-y, repeat-y',
+          //         //   backgroundSize: '16px 4px, 16px 4px, 4px 16px, 4px 16px',
+          //         //   backgroundPosition: '0px 0px, 212px 116px, 0px 116px, 216px 0px',
+          //         //   padding: '10px',
+          //         //   transition: 'backgroundPosition 2s',
+          //         // }
+          //     },
+          // },
+        ],
+      },
+      MuiAppBar: {
+        styleOverrides: {
+          // props:{classes:"AppBorder"},
+          root: {
+            // borderBottom: '1px solid black',
+            paddingTop: '1rem',
+          },
         },
-        MuiBadge: {
-            variants: [
-                {
-                    props: { variant: "tag" },
-                    style: {
-                        fontFamily: FONT.FAMILY.INTER,
-                        fontSize: FONT.SIZES[10],
-                        fontWeight: FONT.WEIGHT.MEDIUM,
-                        backgroundColor: PALETTE.PRIMARY,
-                        padding: "0.3rem",
-                        margin: "0 0.5rem",
-                    },
-                },
-            ],
-        },
-      
+      },
+
+      MuiCard: {
+        variants: [
+          {
+            props: { classes: 'values' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(-10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values_flip' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[14],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '1rem',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(-10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values1' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              borderRadius: '20px 20px 120px 120px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values1_flip' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[14],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              borderRadius: '20px 20px 120px 120px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '1rem',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values2' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values2_flip' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[14],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '1rem',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values3' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              borderRadius: '20px 20px 120px 120px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(-10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values3_flip' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[14],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              borderRadius: '20px 20px 120px 120px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '1rem',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              transform: 'rotate(-10deg)',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values4' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              // margin:'2.8rem'
+            },
+          },
+          {
+            props: { classes: 'values4_flip' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[14],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              borderRadius: '120px 120px 20px 20px',
+              minHeight: '15rem',
+              alignItems: 'center',
+              padding: '1rem',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              // margin:'2.8rem'
+            },
+          },
+        ],
+      },
+      MuiCardContent: {
+        variants: [
+          {
+            props: { variant: 'card_content' },
+            style: {
+              transform: 'rotate(12deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content1' },
+            style: {
+              transform: 'rotate(-7deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content2' },
+            style: {
+              transform: 'rotate(-10deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content3' },
+            style: {
+              transform: 'rotate(12deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content4' },
+            style: {
+              transform: 'rotate(0deg)',
+            },
+          },
+        ],
+      },
+      MuiBadge: {
+        variants: [
+          {
+            props: { variant: 'tag' },
+            style: {
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[10],
+              fontWeight: FONT.WEIGHT.MEDIUM,
+              backgroundColor: PALETTE.PRIMARY,
+              padding: '0.3rem',
+              margin: '0 0.5rem',
+            },
+          },
+        ],
+      },
     },
     MuiSpeedDial: {
       styleOverrides: {
@@ -673,13 +659,20 @@ const theme = createTheme({
             display: 'none',
           },
         },
+      ],
+    },
+    MuiListItemButton: {
+      variants: [
         {
-          props: { variant: 'sticky-links' },
+          props: { classes: 'sticky-btn' },
           style: {
             fontFamily: FONT.FAMILY.ASSISTANT,
             fontWeight: FONT.WEIGHT.REGULAR,
             fontSize: FONT.SIZES[18],
             color: PALETTE.SENARY,
+            '&.MuiListItemButton-root': {
+              backgroundColor: 'none',
+            },
           },
         },
       ],

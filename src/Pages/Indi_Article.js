@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   //   Container,
@@ -15,14 +15,24 @@ import {
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StickyBox from 'react-sticky-box';
 
-// import ArticleImage from '../Assets/Images/articleImage.png';
+import ArticleImage from '../Assets/Images/articleImage.png';
 // import Scribble from '../Assets/Images/scribble.png';
 // import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
 
-import Data from '../db.json';
+// import Data from '../db.json';
 
 const Indi_Article = () => {
+  const [data, setData] = useState();
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((e) => setError(e));
+  }, []);
+
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
       HOME
@@ -42,7 +52,11 @@ const Indi_Article = () => {
     },
   };
 
-  const [data] = Data;
+  // const [Data] = data;
+
+  const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
+  console.log(extractedH2);
+
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -64,9 +78,12 @@ const Indi_Article = () => {
             alignItems="center"
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
-              {Data.map((content) => (
-                <Typography variant="h1">{content.title.rendered}</Typography>
-              ))}
+              <div
+                className="test"
+                dangerouslySetInnerHTML={{
+                  __html: data?.title.rendered,
+                }}
+              ></div>
               {/* <Typography variant="h1">
                 Can{' '}
                 <span
@@ -119,30 +136,35 @@ const Indi_Article = () => {
                 </Grid>
 
                 <Grid item xs={6}>
-                  {Data.map((content) => (
+                  {/* {Data.map((content) => (
                     <div
                       dangerouslySetInnerHTML={{
                         __html: content.excerpt.rendered,
                       }}
                     ></div>
-                  ))}
-                  {/* <Typography>
+                  ))} */}
+                  <Typography>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
                     laudantium,totam rem aperiam, eaque ipsa quae ab illo
                     inventore veritatis et quasi architecto beatae.{' '}
-                  </Typography> */}
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={5}>
-              {Data.map((content) => (
+              <img
+                style={{ width: '606px', height: '630px' }}
+                src={ArticleImage}
+                alt="img"
+              />
+              {/* {Data.map((content) => (
                 <img
                   src={content._links['wp:featuredmedia'][0].href}
                   alt="img"
                   width="100%"
                 />
-              ))}
+              ))} */}
             </Grid>
           </Grid>
           <Divider sx={{ borderStyle: 'dotted' }} />
@@ -151,34 +173,31 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
-                  {data.content.rendered
-                    .match(/<h(.)>.*?<\/h\1>/g)
-                    .map((elem, index) => (
-                      <Link
-                        underline="none"
-                        variant="sticky-links"
-                        href="#"
-                        key={index}
-                      >
-                        {' '}
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: elem,
-                          }}
-                        />
-                      </Link>
-                    ))}
+                  {/* <Link underline="none" href="#"> */}{' '}
+                  {/* <div
+                    dangerouslySetInnerHTML={{
+                      __html: extractedH2,
+                    }}
+                  /> */}
+                  {extractedH2?.map((elem) => (
+                    <ListItemButton >
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: elem,
+                        }}
+                      />
+                    </ListItemButton>
+                  ))}
+                  {/* </Link> */}
                 </List>
               </StickyBox>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
-              {Data.map((content) => (
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: content.content.rendered,
-                  }}
-                ></div>
-              ))}
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: data?.content.rendered,
+                }}
+              ></div>
             </Grid>
           </Grid>
           {/* </Container> */}
