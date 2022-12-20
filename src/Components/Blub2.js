@@ -9,7 +9,8 @@ const styles = {
             backgroundImage: `url(${Art})`,
             backgroundPosition: `bottom right`,
             backgroundRepeat:`no-repeat`,
-            height:'500px',
+            height:'700px',
+            backgroundSize: "contain",
         },
     };
 

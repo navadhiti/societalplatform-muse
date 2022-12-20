@@ -125,7 +125,7 @@ const Header = (props) => {
               alignItems="center" 
               justifyContent=""  
             >
-              <Grid item xs={12} sm={6} md={3} lg={3}>
+              <Grid item xs={12} sm={3} md={3} lg={3}>
               <img src={frame} alt="img" />
               </Grid>
               <Grid item xs={12} sm={6} md={6} lg={6} justifyContent="center" sx={{textAlign:"center"}}  alignItems="center"   >

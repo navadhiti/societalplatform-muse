@@ -19,6 +19,8 @@ import logo from "../Assets/Images/sp_muse_logo.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import girl from "../Assets/Images/Group_3.png";
 import Line from "../Assets/Images/Vector_44.png";
 import CircleIcon from "@mui/icons-material/Circle";
@@ -50,6 +52,7 @@ const Footer = () => {
                             of the Muse. For updates on Societal
                             <br /> Thinking, subscribe to our newsletter.
                         </Typography>
+                        <Box sx={{pt:4,pb:9}}>
                         <FormControl
                             sx={{ m: 1,borderRadius:'50px' }}
                             variant="outlined"
@@ -72,6 +75,7 @@ const Footer = () => {
                                 sx={{borderRadius:'50px'}}
                             />
                         </FormControl>
+                        </Box>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -96,9 +100,11 @@ const Footer = () => {
                                 }}
                             >
                                 {/* <ListItemIcon> */}
+                                <FacebookOutlinedIcon color="secondary" />
+                                <InstagramIcon color="secondary" />
                                 <TwitterIcon color="secondary" />
                                 <LinkedInIcon color="secondary" />
-                                <YouTubeIcon color="secondary" />
+                                
                                 {/* </ListItemIcon> */}
                             </ListItem>
                         </Grid>

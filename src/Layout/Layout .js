@@ -98,7 +98,7 @@ const Layout = () => {
                 {/* <Container> */}
                 <Header />
 
-                <Box sx={{ mt: 0, mb: 5, px: 5 }}>
+                <Box sx={{ mt: 0, mb: 5, px:{xs:0,sm:0,md:5} }}>
                     <Grid
                         container
                         spacing={0}
@@ -143,6 +143,7 @@ const Layout = () => {
                                                 marginTop: "-3.6rem",
                                                 marginLeft: "0rem",
                                                 zIndex: 9999,
+                                                display:{xs:"none",sm:"block"},
                                             }}
                                         >
                                             <img src={Image1} alt="img" />
@@ -158,6 +159,7 @@ const Layout = () => {
                                                 position: "absolute",
                                                 marginTop: "3rem",
                                                 marginLeft: "76%",
+                                                display:{xs:"none",sm:"block"},
                                             }}
                                         >
                                             <img
@@ -197,6 +199,7 @@ const Layout = () => {
                                                 ml: -9,
                                                 position: "absolute",
                                                 bottom: "-1rem",
+                                                display:{xs:"none",sm:"block"},
                                             }}
                                         >
                                             <img src={Image} alt="img" />
