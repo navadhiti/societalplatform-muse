@@ -133,6 +133,7 @@ const Layout = () => {
                                             overflowY: "auto",
                                             borderRadius: "30px 0 30px 30px ",
                                         }}
+                                        className="body"
                                     >
                                         <Grid
                                             container

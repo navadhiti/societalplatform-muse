@@ -15,10 +15,9 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StickyBox from 'react-sticky-box';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
-// import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
 
-import { StickyButton } from '../Themes/StyledComponent';
+import { StickyButton, Title } from '../Themes/StyledComponent';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -46,7 +45,6 @@ const Indi_Article = () => {
   const styles = {
     LandingBackground: {
       backgroundColor: '#fff',
-      // backgroundColor: `#fff`,
     },
   };
 
@@ -71,18 +69,13 @@ const Indi_Article = () => {
             alignItems="center"
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
-              <div
-                style={{
-                  fontFamily: 'montserrat',
-                  fontWeight: 440,
-                  fontSize: '48px',
-                  color: '#241C15',
-                }}
-                dangerouslySetInnerHTML={{
-                  __html: data?.title.rendered,
-                }}
-              ></div>
-
+              <Title>
+                <Typography variant='h1'
+                  dangerouslySetInnerHTML={{
+                    __html: data?.title.rendered,
+                  }}
+                ></Typography>
+              </Title>
               <Grid
                 container
                 direction="row"
@@ -133,16 +126,17 @@ const Indi_Article = () => {
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                {extractedH2?.map((elem) => (
-                  <StickyButton>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: elem,
-                      }}
-                    />
-                  </StickyButton>
-                ))}
-                {/* </Link> */}
+                <List>
+                  {extractedH2?.map((elem) => (
+                    <StickyButton>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: elem,
+                        }}
+                      />
+                    </StickyButton>
+                  ))}
+                </List>
               </StickyBox>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
