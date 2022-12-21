@@ -29,7 +29,7 @@ const theme = createTheme({
       fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[40],
-      color: PALETTE.SENARY,
+      color: PALETTE.BLACK,
       marginBottom: '30px',
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[24],
@@ -40,7 +40,7 @@ const theme = createTheme({
       fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[32],
-      color: PALETTE.SENARY,
+      color: PALETTE.BLACK,
       textTransform: 'capitalize',
       lineHeight: '58px',
       '@media (max-width:475px)': {
@@ -62,7 +62,7 @@ const theme = createTheme({
       fontFamily: FONT.FAMILY.ASSISTANT,
       fontWeight: FONT.WEIGHT.REGULAR,
       fontSize: FONT.SIZES[18],
-      color: PALETTE.SENARY,
+      color: PALETTE.BLACK,
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[12],
         lineHeight: '18px',
@@ -171,10 +171,9 @@ const theme = createTheme({
           fontFamily: 'Campaign',
           src: `url(${Campgain}) format("truetype")`,
         },
-        // body: {
-        //   fontFamily: 'Campaign',
-          
-        // },
+        body: {
+          color: '#241C15',
+        },
       },
     },
     MuiButton: {
@@ -190,7 +189,6 @@ const theme = createTheme({
             fontFamily: FONT.FAMILY.INTER,
             fontSize: FONT.SIZES[12],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
-
             borderRadius: '25px',
           },
         },
@@ -200,10 +198,31 @@ const theme = createTheme({
             fontFamily: FONT.FAMILY.CAMPAIGN,
             fontWeight: FONT.WEIGHT.REGULAR,
             fontSize: FONT.SIZES[18],
-            color: PALETTE.SENARY,
-            border:'1px solid black',
-            borderRadius:'50px 0px 0px 50px',
-            textAlign:"center",
+            color: ' #241c15',
+            border: '1px solid black',
+            borderRadius: '50px 0px 0px 50px',
+            textAlign: 'center',
+          },
+        },
+        {
+          props: { variant: 'audio-btn' },
+          style: {
+            fontFamily: FONT.FAMILY.ASSISTANT,
+            fontWeight: 600,
+            fontSize: FONT.SIZES[16],
+            width: '148px',
+            height: '60px',
+            border: '1.5px solid #241C15',
+            borderRadius: '100px',
+          },
+        },
+        {
+          props: { variant: 'icon-btn' },
+          style: {
+            border: '1.5px solid #241C15',
+            borderRadius: '50%',
+            width: '60px',
+            height: '60px',
           },
         },
       ],

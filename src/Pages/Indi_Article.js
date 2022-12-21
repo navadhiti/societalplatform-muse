@@ -10,13 +10,27 @@ import {
   Avatar,
   Divider,
   List,
-  // Input,
-  // InputAdornment,
+  SpeedDial,
   TextField,
+  Button,
+  SpeedDialAction,
 } from '@mui/material';
-import { Search } from '@mui/icons-material';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import {
+  PictureAsPdfOutlined,
+  PrintOutlined,
+  NavigateNext,
+  VolumeUp,
+  ShareOutlined,
+} from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from 'react-share';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Author from '../Assets/Images/Author7.png';
@@ -45,6 +59,34 @@ const Indi_Article = () => {
       SOLVE SMALL, DENT BIG
     </Link>,
   ];
+  const shareUrl =
+    'https://www.youtube.com/watch?v=RbQgF_vocLU&ab_channel=T-Series';
+  const actions = [
+    {
+      icon: (
+        <LinkedinShareButton url={shareUrl}>
+          <LinkedinIcon size={38} round={true} />
+        </LinkedinShareButton>
+      ),
+      name: 'LinkedIn',
+    },
+    {
+      icon: (
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={38} round={true} />
+        </FacebookShareButton>
+      ),
+      name: 'Facebook',
+    },
+    {
+      icon: (
+        <TwitterShareButton url={shareUrl}>
+          <TwitterIcon size={38} round={true} />
+        </TwitterShareButton>
+      ),
+      name: 'Twitter',
+    },
+  ];
 
   const styles = {
     LandingBackground: {
@@ -61,7 +103,7 @@ const Indi_Article = () => {
         <Box elevation={1}>
           <Stack spacing={2} mt="40px">
             <Breadcrumbs
-              separator={<NavigateNextIcon fontSize="small" />}
+              separator={<NavigateNext fontSize="small" />}
               aria-label="breadcrumb"
             >
               {breadcrumbs}
@@ -133,24 +175,55 @@ const Indi_Article = () => {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
+            mt={5}
           >
             <Grid item md={8}>
-              <TextField
-                placeholder="Search"
-                // InputProps={{
-                //   endAdornment: (
-                //     <InputAdornment position="end">
-                //       <img src={Search} alt="img" />
-                //     </InputAdornment>
-                //   ),
-                // }}
-
-                variant="outlined"
-              />
+              <TextField placeholder="Search" variant="outlined" />
             </Grid>
-            <Grid item md={4}></Grid>
+            <Grid item md={4}>
+              <Stack
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+              >
+                <Button variant="audio-btn">
+                  LISTEN
+                  <VolumeUp />
+                </Button>
+                <Button variant="icon-btn">
+                  <PictureAsPdfOutlined />
+                </Button>
+                <Button variant="icon-btn">
+                  <PrintOutlined />
+                </Button>
+                <Box
+                  sx={{
+                    transform: 'translateZ(0px)',
+                  }}
+                >
+                  <SpeedDial
+                    ariaLabel="SpeedDial basic example"
+                    sx={{
+                      position: 'absolute',
+                      bottom: '-2rem',
+                    }}
+                    icon={<ShareOutlined />}
+                  >
+                    {actions.map((action) => (
+                      <SpeedDialAction
+                        sx={{ border: '1px solid black', alignItems: 'center' }}
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                      />
+                    ))}
+                  </SpeedDial>
+                </Box>
+              </Stack>
+            </Grid>
           </Grid>
-          <Grid container spacing={2}>
+          <Grid container mt={10} spacing={2}>
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
