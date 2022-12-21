@@ -49,7 +49,7 @@ const theme = createTheme({
     },
     h4: {
       fontWeight: FONT.WEIGHT.REGULAR,
-      fontFamily: FONT.FAMILY.MEDIUM,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
       color: '#241C15',
       '@media (max-width:475px)': {
@@ -58,7 +58,7 @@ const theme = createTheme({
       },
     },
     h5: {
-      fontFamily: FONT.FAMILY.CAMPAIGN,
+      fontFamily: FONT.FAMILY.ASSISTANT,
       fontWeight: FONT.WEIGHT.REGULAR,
       fontSize: FONT.SIZES[18],
       color: PALETTE.SENARY,
@@ -70,13 +70,13 @@ const theme = createTheme({
     h6: {
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[16],
-      fontFamily: FONT.FAMILY.INTER,
+      fontFamily: FONT.FAMILY.ASSISTANT,
       marginBottom: '10px',
     },
     body: {
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
-      fontFamily: FONT.FAMILY.INTER,
+      fontFamily: FONT.FAMILY.ASSISTANT,
       backgroundColor: '#E5E5E5',
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[12],
@@ -87,7 +87,7 @@ const theme = createTheme({
     body1: {
       // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
-      fontFamily: FONT.FAMILY.INTER,
+      fontFamily: FONT.FAMILY.ASSISTANT,
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[10],
         lineHeight: '18px',
@@ -96,12 +96,13 @@ const theme = createTheme({
     body2: {
       fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[12],
-      fontFamily: FONT.FAMILY.INTER,
+      fontFamily: FONT.FAMILY.ASSISTANT,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     link: {
       background: ` url(${Line}) bottom no-repeat`,
       fontSize: FONT.SIZES[32],
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       lineHeight: '48px',
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[18],
@@ -114,7 +115,7 @@ const theme = createTheme({
         cursor: 'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
-      fontFamily: FONT.FAMILY.MEDIUM,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[18],
@@ -128,7 +129,7 @@ const theme = createTheme({
         cursor: 'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
-      fontFamily: FONT.FAMILY.MEDIUM,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[18],
@@ -137,7 +138,7 @@ const theme = createTheme({
     },
     subtitle2: {
       background: ` url(${Line}) bottom no-repeat`,
-      fontWeight: FONT.WEIGHT.REGULAR,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
     },
     overline: {
       // '&:hover': {
@@ -145,7 +146,7 @@ const theme = createTheme({
       //   backgroundSize: "contain",
       // },
       fontWeight: FONT.WEIGHT.REGULAR,
-      fontFamily: FONT.FAMILY.MEDIUM,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[16],
     },
   },
@@ -168,10 +169,10 @@ const theme = createTheme({
           fontFamily: 'Campaign',
           src: `url(${Campgain}) format("truetype")`,
         },
-        body: {
-          fontFamily: 'Campaign',
-          color: 'purple',
-        },
+        // body: {
+        //   fontFamily: 'Campaign',
+          
+        // },
       },
     },
     MuiButton: {
