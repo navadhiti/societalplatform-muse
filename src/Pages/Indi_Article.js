@@ -10,6 +10,7 @@ import {
   Avatar,
   Divider,
   List,
+  Button,
   ListItemButton,
 } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -19,6 +20,8 @@ import ArticleImage from '../Assets/Images/articleImage.png';
 // import Scribble from '../Assets/Images/scribble.png';
 // import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
+import FONT from '../Themes/Font';
+import PALETTE from '../Themes/Palette';
 
 // import Data from '../db.json';
 
@@ -178,20 +181,21 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
-                  {/* <Link underline="none" href="#"> */}{' '}
-                  {/* <div
-                    dangerouslySetInnerHTML={{
-                      __html: extractedH2,
-                    }}
-                  /> */}
                   {extractedH2?.map((elem) => (
-                    <ListItemButton>
+                    <Button
+                      sx={{
+                        fontFamily: FONT.FAMILY.ASSISTANT,
+                        fontWeight: FONT.WEIGHT.REGULAR,
+                        fontSize: FONT.SIZES[18],
+                        color: PALETTE.SENARY,
+                      }}
+                    >
                       <div
                         dangerouslySetInnerHTML={{
                           __html: elem,
                         }}
                       />
-                    </ListItemButton>
+                    </Button>
                   ))}
                   {/* </Link> */}
                 </List>
