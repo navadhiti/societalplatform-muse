@@ -1,12 +1,11 @@
 // import { Container } from '@mui/system';
 import React from "react";
 import { useNavigate, Route, Routes } from "react-router-dom";
-import StickyBox from 'react-sticky-box';
+import StickyBox from "react-sticky-box";
 import { useLocation } from "react-router";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Home from "../Pages/Home";
-
 
 // import Stories from '../Components/Stories';
 
@@ -22,7 +21,7 @@ import {
     List,
     ListItem,
     ListItemButton,
-    Stack
+    Stack,
 } from "@mui/material";
 import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
 import Image from "../Assets/Images/sp-musebook-design.png";
@@ -36,7 +35,10 @@ function TabPanel(props) {
     const { children, value, index, ...other } = props;
     const location = useLocation();
     const path = location.pathname;
-    console.log(path,"path")
+    console.log(path, "path");
+    const color = ((path== "/") ? PALETTE.PRIMARY : PALETTE.SECONDARY) ;
+    console.log(color,"color")
+    // const Color = PALETTE.PRIMARY;
     return (
         <div
             role="tabpanel"
@@ -46,16 +48,13 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3 }}>
+                <Box >
                     <Typography>{children}</Typography>
                 </Box>
             )}
         </div>
     );
-
-
 }
-
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -65,7 +64,7 @@ TabPanel.propTypes = {
 const Layout = () => {
     const navigate = useNavigate();
     const [value, setValue] = React.useState(0);
-    const buttonHeight=`calc(100%/5)`;
+    const buttonHeight = `calc(90vh/5)`;
     const buttonName = [
         {
             name: "HOME",
@@ -103,7 +102,7 @@ const Layout = () => {
                 {/* <Container> */}
                 <Header />
 
-                <Box sx={{ mt: 0, mb: 5, px:{xs:0,sm:0,md:5} }}>
+                <Box sx={{ mt: 0, mb: 5, px: { xs: 0, sm: 0, md: 5 } }}>
                     <Grid
                         container
                         spacing={0}
@@ -124,11 +123,10 @@ const Layout = () => {
                                     value={value}
                                     index={0}
                                     style={{
-                                        // backgroundColor: "#E2D1ED",
-                                        height: "85vh",
+                                        // backgroundColor: PALETTE.PRIMARY,
+                                        // height: "85vh",
                                         overflowY: "auto",
                                         borderRadius: "30px ",
-                                        
                                     }}
                                 >
                                     <Grid
@@ -136,6 +134,7 @@ const Layout = () => {
                                         spacing={0}
                                         justifyContent="space-between"
                                         alignItems="center"
+                                        // sx={{position: "relative",}}
                                     >
                                         <Grid
                                             item
@@ -146,10 +145,13 @@ const Layout = () => {
                                             // sx={{ textAlign: "center",mt:-25 }}
                                             sx={{
                                                 position: "absolute",
-                                                marginTop: "-3.6rem",
-                                                marginLeft: "0rem",
+                                                marginTop: "-1.6rem",
+                                                marginLeft: "2rem",
                                                 zIndex: 9999,
-                                                display:{xs:"none",sm:"block"},
+                                                display: {
+                                                    xs: "none",
+                                                    sm: "block",
+                                                },
                                             }}
                                         >
                                             <img src={Image1} alt="img" />
@@ -163,9 +165,12 @@ const Layout = () => {
                                             // sx={{ textAlign: "center",mt:-3 }}
                                             sx={{
                                                 position: "absolute",
-                                                marginTop: "3rem",
+                                                marginTop: "7rem",
                                                 marginLeft: "76%",
-                                                display:{xs:"none",sm:"block"},
+                                                display: {
+                                                    xs: "none",
+                                                    sm: "block",
+                                                },
                                             }}
                                         >
                                             <img
@@ -180,12 +185,16 @@ const Layout = () => {
                                         </Grid>
                                     </Grid>
 
-                                  
                                     <Routes>
                                         <Route path="/" element={<Home />} />
-                                        <Route path="/articles" element={<Indi_Article />} />
-                                        <Route path="/all-articles" element={<All_Articles />} />
-
+                                        <Route
+                                            path="/articles"
+                                            element={<Indi_Article />}
+                                        />
+                                        <Route
+                                            path="/all-articles"
+                                            element={<All_Articles />}
+                                        />
                                     </Routes>
                                     <Grid
                                         container
@@ -205,7 +214,10 @@ const Layout = () => {
                                                 ml: -9,
                                                 position: "absolute",
                                                 bottom: "-1rem",
-                                                display:{xs:"none",sm:"block"},
+                                                display: {
+                                                    xs: "none",
+                                                    sm: "block",
+                                                },
                                             }}
                                         >
                                             <img src={Image} alt="img" />
@@ -214,31 +226,31 @@ const Layout = () => {
                                 </TabPanel>
                             </Box>
                         </Grid>
-                        <Grid item xs={1} sm={1} md={1} lg={1}>
-                        <StickyBox offsetTop={20} offsetBottom={20}>
-                            <List sx={{ paddingTop: 0, width: "10%" }}>
-                                {buttonName.map((item) => (
-                                    <ListItem disablePadding>
-                                        <ListItemButton
-                                            sx={{
-                                                backgroundColor:
-                                                    item.backgroundColor,
-                                                borderRadius:
-                                                    "0% 100% 100% 0% / 45% 50% 50% 45%;",
-                                                writingMode: "tb",
-                                                color: "#FFFFFF",
-                                                height: 124,
-                                                padding:
-                                                    "2rem 1.9rem 2.3rem 1.8rem",
-                                            }}
-                                        >
-                                            {item.name}
-                                        </ListItemButton>
-                                    </ListItem>
-                                ))}
-                            </List>
-                            </StickyBox>
-                        </Grid>
+                        <StickyBox >
+                            <Grid item xs={1} sm={1} md={1} lg={1}>
+                                <List sx={{ paddingTop: 0, width: "10%" }}>
+                                    {buttonName.map((item) => (
+                                        <ListItem disablePadding>
+                                            <ListItemButton
+                                                sx={{
+                                                    backgroundColor:
+                                                        item.backgroundColor,
+                                                    borderRadius:
+                                                        "0% 100% 100% 0% / 45% 50% 50% 45%;",
+                                                    writingMode: "tb",
+                                                    color: "#FFFFFF",
+                                                    height: buttonHeight,
+                                                    padding:
+                                                        "2rem 1.9rem 2.3rem 1.8rem",
+                                                }}
+                                            >
+                                                {item.name}
+                                            </ListItemButton>
+                                        </ListItem>
+                                    ))}
+                                </List>
+                            </Grid>
+                        </StickyBox>
                     </Grid>
                 </Box>
 
