@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Home from "../Pages/Home";
 import { GRID11 } from "../Themes/StyledComponent";
-
+// import "../Assets/scrollbar.scss";
 // import Stories from '../Components/Stories';
 
 import { ThemeProvider } from "@mui/material/styles";
@@ -65,7 +65,8 @@ TabPanel.propTypes = {
 const Layout = () => {
     const navigate = useNavigate();
     const [value, setValue] = React.useState(0);
-    const buttonHeight = `calc(90vh/5)`;
+    const buttonHeight = `calc(85vh/5)`;
+    const padding= `calc(4.5vh) calc(3.5vh) calc(4.5vh) calc(2.5vh)`;
     const buttonName = [
         {
             name: "HOME",
@@ -126,9 +127,11 @@ const Layout = () => {
                                         index={0}
                                         style={{
                                             // backgroundColor: PALETTE.PRIMARY,
-                                            height: "85vh",
+                                            // height: "85vh",
+                                            // -webkit-scrollbar { width: 0 !important }
+                                            // @include scroll-bar(4px, 4px, 6px);
                                             overflowY: "auto",
-                                            borderRadius: "30px ",
+                                            borderRadius: "30px 0 30px 30px ",
                                         }}
                                         className="body"
                                     >
@@ -147,7 +150,7 @@ const Layout = () => {
                                                 lg={1}
                                                 // sx={{ textAlign: "center",mt:-25 }}
                                                 sx={{
-                                                    position: "absolute",
+                                                    position: "fixed",
                                                     marginTop: "-1.6rem",
                                                     marginLeft: "2rem",
                                                     zIndex: 9999,
@@ -167,7 +170,7 @@ const Layout = () => {
                                                 lg={1}
                                                 // sx={{ textAlign: "center",mt:-3 }}
                                                 sx={{
-                                                    position: "absolute",
+                                                    position: "fixed",
                                                     marginTop: "7rem",
                                                     marginLeft: "76%",
                                                     display: {
@@ -218,7 +221,7 @@ const Layout = () => {
                                                     textAlign: "center",
                                                     mt: 1,
                                                     ml: -9,
-                                                    position: "absolute",
+                                                    position: "fixed",
                                                     bottom: "-1rem",
                                                     display: {
                                                         xs: "none",
@@ -247,8 +250,8 @@ const Layout = () => {
                                                     writingMode: "tb",
                                                     color: "#FFFFFF",
                                                     height: buttonHeight,
-                                                    padding:
-                                                        "2rem 1.9rem 2.3rem 1.8rem",
+                                                    padding:padding,
+                                                    verticalAlign: "middle",
                                                 }}
                                             >
                                                 {item.name}

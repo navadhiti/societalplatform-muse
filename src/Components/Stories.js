@@ -7,6 +7,7 @@ import {
     ListItem,
     Link,
     Stack,
+    Box,
 } from "@mui/material";
 import Pen from "../Assets/Images/pen.png";
 import Divider from "../Assets/Images/Vector 42.png";
@@ -103,11 +104,12 @@ const Stories = () => {
                                     <Stack spacing={2} direction="row">
                                         <Typography variant="subtitle1">
                                             {" "}
-                                            Reimagining{" "}
-                                        </Typography>
-                                        <Typography variant="caption" mr={-9}>
+                                            Reimagining{" "} {" "}
+                                        </Typography> {" "}
+                                        {/* <Typography variant="caption" mr={-9}> */}
                                             disaster resilience{" "}
-                                        </Typography>
+                                        {/* </Typography> */}
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -120,6 +122,7 @@ const Stories = () => {
                                             teach,{" "}
                                         </Typography>
                                         all learn
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -131,6 +134,7 @@ const Stories = () => {
                                             Solve small,{" "}
                                         </Typography>
                                         dent big
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -142,6 +146,7 @@ const Stories = () => {
                                             collaboration{" "}
                                         </Typography>
                                         gold
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -150,9 +155,10 @@ const Stories = () => {
                                     <Stack spacing={2} direction="row">
                                         When society, state and
                                         <br /> markets{" "}
-                                        <Typography variant="subtitle1">
+                                        {/* <Typography variant="subtitle1">
                                             work together
-                                        </Typography>
+                                        </Typography> */}
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -163,6 +169,7 @@ const Stories = () => {
                                         <Typography variant="subtitle1">
                                             beyond
                                         </Typography>
+                                        <Box sx={{width:"3rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>
@@ -173,6 +180,7 @@ const Stories = () => {
                                         <Typography variant="subtitle1">
                                             public goods
                                         </Typography>
+                                        <Box sx={{width:"4rem"}}></Box>
                                     </Stack>
                                 </Typography>
                             </ListItem>

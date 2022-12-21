@@ -1,0 +1,19 @@
+@mixin scroll-bar($height, $width, $radius) {
+    &::-webkit-scrollbar {
+      width: $width;
+      height: $height;
+      // background-color: $scrollbar-bg;
+    }
+  
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      // background-color: $scrollbar-bg;
+      border-radius: $radius;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: gray;
+      border-radius: $radius;
+    }
+  }
