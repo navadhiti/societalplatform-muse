@@ -79,7 +79,12 @@ const Indi_Article = () => {
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               <div
-                className="test"
+                style={{
+                  fontFamily: 'montserrat',
+                  fontWeight: 440,
+                  fontSize: '48px',
+                  color: '#241C15',
+                }}
                 dangerouslySetInnerHTML={{
                   __html: data?.title.rendered,
                 }}
@@ -180,7 +185,7 @@ const Indi_Article = () => {
                     }}
                   /> */}
                   {extractedH2?.map((elem) => (
-                    <ListItemButton >
+                    <ListItemButton>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: elem,

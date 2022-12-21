@@ -6,18 +6,22 @@ import Art from "../Assets/Images/Artwork_3.png";
 
 const styles = {
         paperContainer: {
-            backgroundImage: `url(${Art})`,
-            backgroundPosition: `bottom right`,
-            backgroundRepeat:`no-repeat`,
-            height:'700px',
-            backgroundSize: "contain",
+            // backgroundImage: `url(${Art})`,
+            // backgroundPosition: `bottom right`,
+            // backgroundRepeat:`no-repeat`,
+            // height:'700px',
+            // "@media (max-width:550px)": {
+            //     height:'700px',
+            //     backgroundSize: "contain",
+            // },
+            
         },
     };
 
 const Blub2 = () => {
     return (
         <>
-            <Box py={8} >
+            <Box py={{xs:4,sm:4,md:8}} >
             <Container style={styles.paperContainer}>
                 <Grid
                     container
@@ -41,38 +45,36 @@ const Blub2 = () => {
                             make?
                         </Typography>
                         <Typography variant="h3" textAlign="Left" mt={2}>
-                            <span
-                                style={{
-                                    fontWeight: 800,
-                                    fontSize: "1.875rem",
-                                }}
-                            >
+                           <b>
                                 Play along
-                            </span>{" "}
+                            </b>{" "}
                             by bringing forth
                             <br /> your
-                            <span
-                                style={{
-                                    fontWeight: 800,
-                                    fontSize: "1.875rem",
-                                    background: ` url(${Divider}) bottom no-repeat`,
-                                }}
-                            >
-                                {" "}
-                                childlike curiosity.
-                            </span>
+                            <Typography variant="link"><b>
+                             {" "}
+                                childlike curiosity.</b></Typography>
+                              
                         </Typography>
                         <Box py={5}>
-                        <Button variant="text">
+                        <Button variant="contained">
                             Experience
                         </Button>
                         
                         </Box >
                         
                     </Grid>
-                    
+                    <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={4}
+                        lg={4}
+                        mt={{xs:2,md:20}}                   
+                    >
+                        <img src={Art} alt="img" width="100%" />
+                    </Grid>
                 </Grid>
-                <Grid
+                {/* <Grid
                     container
                     spacing={0}
                     justifyContent="space-between"
@@ -87,7 +89,7 @@ const Blub2 = () => {
                         lg={4}
                         textAlign="left"                        
                     >
-                     
+                      <img src={Art} alt="img" width="100%" />
                     </Grid>
                     <Grid
                         item
@@ -97,9 +99,9 @@ const Blub2 = () => {
                         lg={7}
                         textAlign="left"
                     >
-                        {/* <img src={Art} alt="img" width="100%" /> */}
+                        <img src={Art} alt="img" width="100%" />
                     </Grid>
-                </Grid>
+                </Grid> */}
             </Container>
             </Box>
         </>

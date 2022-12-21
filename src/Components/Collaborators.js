@@ -83,7 +83,7 @@ const Collaborators = () => {
             spacing={0}
             justifyContent="start"
             alignItems="start"
-            sx={{ py: 5 }}
+            py={{xs:4,sm:4,md:8}}
           >
             <Grid item xs={12} sm={12} md={5} lg={5} sx={{ textAlign: 'left' }}>
               <Typography variant="h1" textAlign="Left">
@@ -101,7 +101,7 @@ const Collaborators = () => {
                   </span>
                 </b>
               </Typography>
-              <Typography variant="body1" py={5}>
+              <Typography variant="body1" py={{xs:2,sm:2,md:5}}>
                 Lorem ipsum dolor sit amet consectetur. Vivamus eu aenean
                 interdum in proin id ut.
               </Typography>
@@ -111,7 +111,7 @@ const Collaborators = () => {
               spacing={0}
               justifyContent="flex-end"
               alignItems=""
-              sx={{ py: 5 }}
+              py={{xs:2,sm:2,md:5}}
             >
               <Grid
                 item
@@ -133,7 +133,8 @@ const Collaborators = () => {
                 lg={10}
                 sx={{ textAlign: 'left' }}
               >
-                {/* <ImageList variant="masonry" cols={5} gap={8}>
+                <Box display={{ xs: "block", md: "none" }}>
+                <ImageList variant="masonry" cols={2} gap={8} >
                             {itemData.map((item) => (
                                 <>
                                     <ImageListItem  sx={{border:'solid 1px black',
@@ -158,8 +159,9 @@ const Collaborators = () => {
                                   
                                 </>
                             ))}
-                        </ImageList> */}
-
+                        </ImageList>
+                        </Box>
+<Box    display={{ xs: "none", md: "block" }}>
                 <Grid
                   container
                   // spacing={2}
@@ -167,12 +169,13 @@ const Collaborators = () => {
                   columnSpacing={2}
                   justifyContent="center"
                   alignItems="center"
-                  sx={{ mt: -30 }}
+               
+                  mt={{xs:3,md:-30}}
                 >
                   <Grid
                     item
-                    xs={12}
-                    sm={12}
+                    xs={6}
+                    sm={6}
                     md={2}
                     lg={2}
                     sx={{ textAlign: 'left' }}
@@ -196,8 +199,8 @@ const Collaborators = () => {
                   </Grid>
                   <Grid
                     item
-                    xs={12}
-                    sm={12}
+                    xs={6}
+                    sm={6}
                     md={2}
                     lg={2}
                     sx={{ textAlign: 'left' }}
@@ -236,8 +239,8 @@ const Collaborators = () => {
                   </Grid>
                   <Grid
                     item
-                    xs={12}
-                    sm={12}
+                    xs={6}
+                    sm={6}
                     md={2}
                     lg={2}
                     sx={{ textAlign: 'left' }}
@@ -295,8 +298,8 @@ const Collaborators = () => {
                   </Grid>
                   <Grid
                     item
-                    xs={12}
-                    sm={12}
+                    xs={6}
+                    sm={6}
                     md={2}
                     lg={2}
                     sx={{ textAlign: 'left' }}
@@ -371,6 +374,7 @@ const Collaborators = () => {
                     </Box>
                   </Grid>
                 </Grid>
+                </Box>
               </Grid>
             </Grid>
           </Grid>
