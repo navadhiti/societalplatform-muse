@@ -23,7 +23,7 @@ const Blurb = () => {
         <>
             <Container>
                 <Box
-                    pt={{ xs: 13, sm: 13, md: 13 }}
+                    pt={{ xs: 13, sm: 13, md: 18 }}
                     pb={{ xs: 2, sm: 3, md: 5 }}
                     px={{ xs: 0, sm: 8 }}
                 >

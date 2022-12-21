@@ -4,13 +4,14 @@ import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/mate
 import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
 import { AnimatedButton } from "../Themes/StyledComponent";
+import { StyledContainer } from "../Themes/StyledComponent";
 
 const styles = {
         paperContainer: {
-            // backgroundImage: `url(${Art})`,
-            // backgroundPosition: `bottom right`,
-            // backgroundRepeat:`no-repeat`,
-            // height:'700px',
+            backgroundImage: `url(${Art})`,
+            backgroundPosition: `bottom right`,
+            backgroundRepeat:`no-repeat`,
+            height:'600px',
             // "@media (max-width:550px)": {
             //     height:'700px',
             //     backgroundSize: "contain",
@@ -22,7 +23,7 @@ const styles = {
 const Blub2 = () => {
     return (
         <>
-            <Box py={{xs:4,sm:4,md:8}} >
+            <Box py={{xs:4,sm:4,md:5}} >
             <Container style={styles.paperContainer}>
                 <Grid
                     container
@@ -68,7 +69,7 @@ const Blub2 = () => {
                         </Box >
                         
                     </Grid>
-                    <Grid
+                    {/* <Grid
                         item
                         xs={12}
                         sm={12}
@@ -77,7 +78,7 @@ const Blub2 = () => {
                         mt={{xs:2,md:20}}                   
                     >
                         <img src={Art} alt="img" width="100%" />
-                    </Grid>
+                    </Grid> */}
                 </Grid>
                 {/* <Grid
                     container

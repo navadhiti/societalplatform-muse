@@ -69,16 +69,16 @@ const Values = () => {
     };
     return (
         <>
-            <Box py={{ xs: 2, sm: 2, md: 8 }}>
+            <Box py={{ xs: 2, sm: 2, md: 5 }}>
                 <Grid
                     container
                     spacing={0}
                     justifyContent="center"
                     alignItems="start"
-                    py={{ xs: 2, sm: 2, md: 5 }}
+                    
                     px={{ xs: 2, sm: 2, md: 5 }}
                 >
-                    <Grid item xs={12} sm={12} md={7} lg={7}>
+                    <Grid item xs={12} sm={12} md={8} lg={7}>
                         <Typography variant="h1" textAlign="center">
                             Our{" "}
                             <span
@@ -99,9 +99,10 @@ const Values = () => {
                                 />
                             </span>
                         </Typography>
+                        <Box py={{ xs: 2, sm: 2, md: 5 }}>
                         <Typography
-                            variant="body2"
-                            py={{ xs: 2, sm: 2, md: 3 }}
+                            variant="body"
+                            
                             textAlign="center"
                         >
                             Lorem ipsum dolor sit amet consectetur. Vivamus eu
@@ -111,6 +112,7 @@ const Values = () => {
                             sed. Sed cras nibh vehicula at ac sed elit diam.
                             Diam vel eu nunc eu at odio.
                         </Typography>
+                        </Box>
                     </Grid>
                 </Grid>
                 <Grid
@@ -183,7 +185,7 @@ const Values = () => {
                             gap: 1,
                             py: 1,
                             overflow: "auto",
-                            width: { xs: "100%", md: "100%" },
+                            width: { xs: "300%", md: "100%" },
                             scrollSnapType: "x mandatory",
                             "& > *": {
                                 scrollSnapAlign: "center",
@@ -196,7 +198,7 @@ const Values = () => {
                                 isFlipped={id === item.id && flipCard}
                                 flipDirection="horizontal"
                                 id={item.id}
-                                sx={{ width: "100%" }}
+                                width={400}
                             >
                                 <Card
                                     classes={`${item.class}`}

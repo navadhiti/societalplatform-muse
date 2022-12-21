@@ -74,7 +74,7 @@ const Stories = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} mt={{ xs: 1, sm: 5 }}>
-                        <Typography variant="h5" textAlign="left">
+                        <Typography variant="body" textAlign="left">
                             Lorem ipsum dolor sit amet consectetur. Sollicitudin
                             vivamus eu aenean interdum in proin id ut. Sit nisi
                             eget enim sed dui sed. Sed cras nibh vehicula at ac
@@ -107,7 +107,7 @@ const Stories = () => {
                                             Reimagining{" "} {" "}
                                         </Typography> {" "}
                                         {/* <Typography variant="caption" mr={-9}> */}
-                                            disaster resilience{" "}
+                                        {" "} disaster resilience{" "}
                                         {/* </Typography> */}
                                         <Box sx={{width:"3rem"}}></Box>
                                     </Stack>

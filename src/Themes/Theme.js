@@ -20,6 +20,7 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
+      
       '@media (min-width: 320px) and (max-width:375px)': {
         fontSize: FONT.SIZES[24],
       },
@@ -41,7 +42,7 @@ const theme = createTheme({
       fontSize: FONT.SIZES[32],
       color: PALETTE.SENARY,
       textTransform: 'capitalize',
-      lineHeight: '48px',
+      lineHeight: '58px',
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[18],
         lineHeight: '25.2px',
@@ -77,7 +78,8 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
       fontFamily: FONT.FAMILY.ASSISTANT,
-      backgroundColor: '#E5E5E5',
+      lineHeight:"27px",
+      
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[12],
         lineHeight: '18px',
@@ -94,7 +96,7 @@ const theme = createTheme({
       },
     },
     body2: {
-      fontWeight: FONT.WEIGHT.DEMI_BOLD,
+      fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[12],
       fontFamily: FONT.FAMILY.ASSISTANT,
       // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',

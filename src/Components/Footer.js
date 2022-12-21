@@ -92,7 +92,7 @@ const Footer = () => {
                                 info@societalplatform.org
                             </Typography>
                             <ListItem
-                                disablePadding
+                                
                                 sx={{
                                     px: 1,
                                     width: "90px",

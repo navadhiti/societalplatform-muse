@@ -18,7 +18,7 @@ import Sanjay from "../Assets/Images/sanjay.png";
 const Blurb_1 = () => {
     return (
         <>
-            <Box py={{xs:4,sm:4,md:8}}> 
+            <Box py={{xs:4,sm:4,md:5}}> 
             <Container >
                 <Grid
                     container
@@ -79,7 +79,7 @@ const Blurb_1 = () => {
                         lg={6}
                         textAlign="left"
                     >
-                        <Typography variant="body1">
+                        <Typography variant="body">
                             Across the website you will meet many children.
                             Dressed up and posing as adults, they are here to
                             remind us that impact at scale can be achieved if we
