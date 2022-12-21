@@ -25,6 +25,8 @@ import {
 import StickyBox from 'react-sticky-box';
 import {
   FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
   FacebookIcon,
   LinkedinIcon,
   TwitterIcon,
@@ -57,11 +59,33 @@ const Indi_Article = () => {
       SOLVE SMALL, DENT BIG
     </Link>,
   ];
-
+  const shareUrl =
+    'https://www.youtube.com/watch?v=RbQgF_vocLU&ab_channel=T-Series';
   const actions = [
-    { icon: <LinkedinIcon size={38} round={true} />, name: 'LinkedIn' },
-    { icon: <FacebookIcon size={38} round={true} />, name: 'Facebook' },
-    { icon: <TwitterIcon size={38} round={true} />, name: 'Twitter' },
+    {
+      icon: (
+        <LinkedinShareButton url={shareUrl}>
+          <LinkedinIcon size={38} round={true} />
+        </LinkedinShareButton>
+      ),
+      name: 'LinkedIn',
+    },
+    {
+      icon: (
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={38} round={true} />
+        </FacebookShareButton>
+      ),
+      name: 'Facebook',
+    },
+    {
+      icon: (
+        <TwitterShareButton url={shareUrl}>
+          <TwitterIcon size={38} round={true} />
+        </TwitterShareButton>
+      ),
+      name: 'Twitter',
+    },
   ];
 
   const styles = {
@@ -188,7 +212,7 @@ const Indi_Article = () => {
                   >
                     {actions.map((action) => (
                       <SpeedDialAction
-                        sx={{ border: '1px solid black' }}
+                        sx={{ border: '1px solid black', alignItems: 'center' }}
                         key={action.name}
                         icon={action.icon}
                         tooltipTitle={action.name}
