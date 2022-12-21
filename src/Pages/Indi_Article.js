@@ -10,17 +10,15 @@ import {
   Avatar,
   Divider,
   List,
-  ListItemButton,
 } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StickyBox from 'react-sticky-box';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
-// import Scribble from '../Assets/Images/scribble.png';
 // import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Author from '../Assets/Images/Author7.png';
 
-// import Data from '../db.json';
+import { StickyButton } from '../Themes/StyledComponent';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -52,17 +50,12 @@ const Indi_Article = () => {
     },
   };
 
-  // const [Data] = data;
-
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
-  console.log(extractedH2);
 
   return (
     <>
       <div style={styles.LandingBackground}>
-        {/* <Container sx={{minHeight: '500px'}}></Container> */}
         <Box>
-          {/* <Container> */}
           <Stack spacing={2} mt="40px">
             <Breadcrumbs
               separator={<NavigateNextIcon fontSize="small" />}
@@ -89,30 +82,7 @@ const Indi_Article = () => {
                   __html: data?.title.rendered,
                 }}
               ></div>
-              {/* <Typography variant="h1">
-                Can{' '}
-                <span
-                  style={{
-                    background: ` url(${Scribble}) bottom no-repeat`,
-                    //   paddingBottom: 'px',
-                    backgroundSize: 'contain',
-                  }}
-                >
-                  anyone
-                </span>{' '}
-                who <br />
-                keeps the street
-                <br /> clean become a{' '}
-                <span
-                  style={{
-                    background: ` url(${ScribbleCircle}) bottom no-repeat`,
-                    paddingBottom: '7px',
-                    backgroundSize: 'contain',
-                  }}
-                >
-                  hero?
-                </span>
-              </Typography> */}
+
               <Grid
                 container
                 direction="row"
@@ -141,13 +111,6 @@ const Indi_Article = () => {
                 </Grid>
 
                 <Grid item xs={6}>
-                  {/* {Data.map((content) => (
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: content.excerpt.rendered,
-                      }}
-                    ></div>
-                  ))} */}
                   <Typography>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
@@ -163,13 +126,6 @@ const Indi_Article = () => {
                 src={ArticleImage}
                 alt="img"
               />
-              {/* {Data.map((content) => (
-                <img
-                  src={content._links['wp:featuredmedia'][0].href}
-                  alt="img"
-                  width="100%"
-                />
-              ))} */}
             </Grid>
           </Grid>
           <Divider sx={{ borderStyle: 'dotted' }} />
@@ -177,24 +133,16 @@ const Indi_Article = () => {
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                <List>
-                  {/* <Link underline="none" href="#"> */}{' '}
-                  {/* <div
-                    dangerouslySetInnerHTML={{
-                      __html: extractedH2,
-                    }}
-                  /> */}
-                  {extractedH2?.map((elem) => (
-                    <ListItemButton>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: elem,
-                        }}
-                      />
-                    </ListItemButton>
-                  ))}
-                  {/* </Link> */}
-                </List>
+                {extractedH2?.map((elem) => (
+                  <StickyButton>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: elem,
+                      }}
+                    />
+                  </StickyButton>
+                ))}
+                {/* </Link> */}
               </StickyBox>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
@@ -205,7 +153,6 @@ const Indi_Article = () => {
               ></div>
             </Grid>
           </Grid>
-          {/* </Container> */}
         </Box>
       </div>
     </>
