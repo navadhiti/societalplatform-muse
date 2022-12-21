@@ -6,6 +6,7 @@ import { useLocation } from "react-router";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Home from "../Pages/Home";
+import { GRID11 } from "../Themes/StyledComponent";
 
 // import Stories from '../Components/Stories';
 
@@ -36,8 +37,8 @@ function TabPanel(props) {
     const location = useLocation();
     const path = location.pathname;
     console.log(path, "path");
-    const color = ((path== "/") ? PALETTE.PRIMARY : PALETTE.SECONDARY) ;
-    console.log(color,"color")
+    const color = path == "/" ? PALETTE.PRIMARY : PALETTE.SECONDARY;
+    console.log(color, "color");
     // const Color = PALETTE.PRIMARY;
     return (
         <div
@@ -48,7 +49,7 @@ function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box >
+                <Box>
                     <Typography>{children}</Typography>
                 </Box>
             )}
@@ -110,123 +111,128 @@ const Layout = () => {
                         alignItems="start"
                         sx={{ pt: 0 }}
                     >
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={11}
-                            lg={11}
-                            sx={{ textAlign: "center" }}
-                        >
-                            <Box>
-                                <TabPanel
-                                    value={value}
-                                    index={0}
-                                    style={{
-                                        // backgroundColor: PALETTE.PRIMARY,
-                                        // height: "85vh",
-                                        overflowY: "auto",
-                                        borderRadius: "30px ",
-                                    }}
-                                >
-                                    <Grid
-                                        container
-                                        spacing={0}
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                        // sx={{position: "relative",}}
+                        {/* <GRID11> */}
+                            <Grid
+                                item
+                                xs={12}
+                                sm={12}
+                                md={11}
+                                lg={11}
+                                sx={{ textAlign: "center" }}
+                            >
+                                <Box>
+                                    <TabPanel
+                                        value={value}
+                                        index={0}
+                                        style={{
+                                            // backgroundColor: PALETTE.PRIMARY,
+                                            // height: "85vh",
+                                            overflowY: "auto",
+                                            borderRadius: "30px ",
+                                        }}
                                     >
                                         <Grid
-                                            item
-                                            xs={1}
-                                            sm={1}
-                                            md={1}
-                                            lg={1}
-                                            // sx={{ textAlign: "center",mt:-25 }}
-                                            sx={{
-                                                position: "absolute",
-                                                marginTop: "-1.6rem",
-                                                marginLeft: "2rem",
-                                                zIndex: 9999,
-                                                display: {
-                                                    xs: "none",
-                                                    sm: "block",
-                                                },
-                                            }}
+                                            container
+                                            spacing={0}
+                                            justifyContent="space-between"
+                                            alignItems="center"
+                                            // sx={{position: "relative",}}
                                         >
-                                            <img src={Image1} alt="img" />
-                                        </Grid>
-                                        <Grid
-                                            item
-                                            xs={1}
-                                            sm={1}
-                                            md={1}
-                                            lg={1}
-                                            // sx={{ textAlign: "center",mt:-3 }}
-                                            sx={{
-                                                position: "absolute",
-                                                marginTop: "7rem",
-                                                marginLeft: "76%",
-                                                display: {
-                                                    xs: "none",
-                                                    sm: "block",
-                                                },
-                                            }}
-                                        >
-                                            <img
-                                                src={LandingImage}
-                                                alt="img"
+                                            <Grid
+                                                item
+                                                xs={1}
+                                                sm={1}
+                                                md={1}
+                                                lg={1}
+                                                // sx={{ textAlign: "center",mt:-25 }}
                                                 sx={{
-                                                    position: "fixed",
-                                                    marginTop: "3rem",
-                                                    marginLeft: "90%",
+                                                    position: "absolute",
+                                                    marginTop: "-1.6rem",
+                                                    marginLeft: "2rem",
+                                                    zIndex: 9999,
+                                                    display: {
+                                                        xs: "none",
+                                                        sm: "block",
+                                                    },
                                                 }}
-                                            />
+                                            >
+                                                <img src={Image1} alt="img" />
+                                            </Grid>
+                                            <Grid
+                                                item
+                                                xs={1}
+                                                sm={1}
+                                                md={1}
+                                                lg={1}
+                                                // sx={{ textAlign: "center",mt:-3 }}
+                                                sx={{
+                                                    position: "absolute",
+                                                    marginTop: "7rem",
+                                                    marginLeft: "76%",
+                                                    display: {
+                                                        xs: "none",
+                                                        sm: "block",
+                                                    },
+                                                }}
+                                            >
+                                                <img
+                                                    src={LandingImage}
+                                                    alt="img"
+                                                    sx={{
+                                                        position: "fixed",
+                                                        marginTop: "3rem",
+                                                        marginLeft: "90%",
+                                                    }}
+                                                />
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
 
-                                    <Routes>
-                                        <Route path="/" element={<Home />} />
-                                        <Route
-                                            path="/articles"
-                                            element={<Indi_Article />}
-                                        />
-                                        <Route
-                                            path="/all-articles"
-                                            element={<All_Articles />}
-                                        />
-                                    </Routes>
-                                    <Grid
-                                        container
-                                        spacing={0}
-                                        justifyContent="space-between"
-                                        alignItems="center"
-                                    >
+                                        <Routes>
+                                            <Route
+                                                path="/"
+                                                element={<Home />}
+                                            />
+                                            <Route
+                                                path="/articles"
+                                                element={<Indi_Article />}
+                                            />
+                                            <Route
+                                                path="/all-articles"
+                                                element={<All_Articles />}
+                                            />
+                                        </Routes>
                                         <Grid
-                                            item
-                                            xs={1}
-                                            sm={1}
-                                            md={1}
-                                            lg={1}
-                                            sx={{
-                                                textAlign: "center",
-                                                mt: 1,
-                                                ml: -9,
-                                                position: "absolute",
-                                                bottom: "-1rem",
-                                                display: {
-                                                    xs: "none",
-                                                    sm: "block",
-                                                },
-                                            }}
+                                            container
+                                            spacing={0}
+                                            justifyContent="space-between"
+                                            alignItems="center"
                                         >
-                                            <img src={Image} alt="img" />
+                                            <Grid
+                                                item
+                                                xs={1}
+                                                sm={1}
+                                                md={1}
+                                                lg={1}
+                                                sx={{
+                                                    textAlign: "center",
+                                                    mt: 1,
+                                                    ml: -9,
+                                                    position: "absolute",
+                                                    bottom: "-1rem",
+                                                    display: {
+                                                        xs: "none",
+                                                        sm: "block",
+                                                    },
+                                                }}
+                                            >
+                                                <img src={Image} alt="img" />
+                                            </Grid>
                                         </Grid>
-                                    </Grid>
-                                </TabPanel>
-                            </Box>
-                        </Grid>
-                        <StickyBox >
+                                    </TabPanel>
+                                </Box>
+                            </Grid>
+                        {/* </GRID11> */}
+                        <StickyBox>
                             <Grid item xs={1} sm={1} md={1} lg={1}>
                                 <List sx={{ paddingTop: 0, width: "10%" }}>
                                     {buttonName.map((item) => (

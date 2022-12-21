@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { Button } from '@mui/material';
+import { Button, Grid } from '@mui/material';
 
 import FONT from '../Themes/Font';
 import PALETTE from '../Themes/Palette';
@@ -20,4 +20,7 @@ export const StickyButton = styled(Button)`
     font-size: 18px;
     color: ${PALETTE.SENARY};
   }
+`;
+export const GRID11 = styled(Grid)`
+  background-color:"red";
 `;
