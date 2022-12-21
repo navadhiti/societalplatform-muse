@@ -758,7 +758,7 @@ const theme = createTheme({
               fontSize: FONT.SIZES[10],
               fontWeight: FONT.WEIGHT.MEDIUM,
               backgroundColor: PALETTE.PRIMARY,
-              padding: '0.3rem',
+              padding: '0.6rem',
               margin: '0 0.5rem',
             },
           },

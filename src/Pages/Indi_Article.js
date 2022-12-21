@@ -36,6 +36,7 @@ import ArticleImage from '../Assets/Images/articleImage.png';
 import Author from '../Assets/Images/Author7.png';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
+import Stories_article from '../Components/Stories_article';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -248,6 +249,7 @@ const Indi_Article = () => {
               ></div>
             </Grid>
           </Grid>
+          <Stories_article />
         </Box>
       </div>
     </>

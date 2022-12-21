@@ -23,8 +23,8 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import PropTypes from "prop-types";
 import logo from "../Assets/Images/sp_muse_logo.png";
@@ -147,13 +147,14 @@ const Header = (props) => {
 
         setState({ ...state, [anchor]: open });
     };
-    const buttonHeight = `calc(85vh/5)`;
+    
 
     const list = (anchor) => (
         <Box
             sx={{
-                width: 300,
+                width: 400,
                 paddingRight: "10px",
+                mt: 20,
             }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
@@ -165,11 +166,11 @@ const Header = (props) => {
                         <ListItemButton
                             sx={{
                                 backgroundColor: item.backgroundColor,
-                                borderRadius: "0 45% 45% 0",
+                                borderRadius: "0 50px 50px 0",
                                 color: "#FFFFFF",
-                                fontWeight:"800",
-                                textAlign:"center",
-                                height: buttonHeight,
+                                fontWeight: "800",
+                                textAlign: "center",
+                                height: 100,
                             }}
                         >
                             {item.name}
@@ -177,27 +178,25 @@ const Header = (props) => {
                     </ListItem>
                 ))}
             </List>
-<Box py={3}>
-            <Typography variant="h5">
-                                info@societalplatform.org
-                            </Typography>
-                            <ListItem
-                                disablePadding
-                                sx={{
-                                    px: 1,
-                                    width: "90px",
-                                    backgroundColor: "#f2f0ed",
-                                }}
-                            >
-                                {/* <ListItemIcon> */}
-                                <FacebookOutlinedIcon color="secondary" />
-                                <InstagramIcon color="secondary" />
-                                <TwitterIcon color="secondary" />
-                                <LinkedInIcon color="secondary" />
-                                
-                                {/* </ListItemIcon> */}
-                            </ListItem>
-                            </Box>
+            <Box py={3} px={3}>
+                <Typography variant="h5">info@societalplatform.org</Typography>
+                <ListItem
+                    disablePadding
+                    sx={{
+                        px: 1,
+                        width: "90px",
+                        backgroundColor: "#f2f0ed",
+                    }}
+                >
+                    {/* <ListItemIcon> */}
+                    <FacebookOutlinedIcon color="secondary" />
+                    <InstagramIcon color="secondary" />
+                    <TwitterIcon color="secondary" />
+                    <LinkedInIcon color="secondary" />
+
+                    {/* </ListItemIcon> */}
+                </ListItem>
+            </Box>
         </Box>
     );
 
@@ -234,7 +233,7 @@ const Header = (props) => {
                                 <img src={logo} alt="img" />
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3}>
-                                <Box display={{xs:"block",sm:"none"}}>
+                                <Box display={{ xs: "block", sm: "none" }}>
                                     {["Menu"].map((anchor) => (
                                         <React.Fragment key={anchor}>
                                             <Button
