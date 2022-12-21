@@ -6,7 +6,8 @@
 const FONT = {
   FAMILY: {
     ASSISTANT: 'montserrat',
-    INTER: 'montserrat ',
+    CAMPAIGN: ['Campaign', 'montserrat'].join(',')
+
   },
   SIZES: {
     12: '0.75rem',

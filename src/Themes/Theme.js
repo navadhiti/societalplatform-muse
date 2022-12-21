@@ -10,14 +10,13 @@ import FONT from './Font';
 
 import Line from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/RightArrow.png';
+import Campgain from '../Assets/fonts/CampaignMedium.woff';
 
 const theme = createTheme({
   typography: {
-    allVariants: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
-    },
+    fontFamily: FONT.FAMILY.ASSISTANT,
     h1: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       // fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
@@ -26,7 +25,7 @@ const theme = createTheme({
       },
     },
     h2: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[40],
       color: PALETTE.SENARY,
@@ -37,7 +36,7 @@ const theme = createTheme({
       },
     },
     h3: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[32],
       color: PALETTE.SENARY,
@@ -59,7 +58,7 @@ const theme = createTheme({
       },
     },
     h5: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.REGULAR,
       fontSize: FONT.SIZES[18],
       color: PALETTE.SENARY,
@@ -163,6 +162,18 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        '@font-face': {
+          fontFamily: 'Campaign',
+          src: `url(${Campgain}) format("truetype")`,
+        },
+        body: {
+          fontFamily: 'Campaign',
+          color: 'purple',
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {
@@ -183,7 +194,7 @@ const theme = createTheme({
         {
           props: { variant: 'sticky-btn' },
           style: {
-            fontFamily: FONT.FAMILY.ASSISTANT,
+            fontFamily: FONT.FAMILY.CAMPAIGN,
             fontWeight: FONT.WEIGHT.REGULAR,
             fontSize: FONT.SIZES[18],
             color: PALETTE.SENARY,
@@ -781,12 +792,12 @@ const theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
-            '&.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
-              border:1,
-            },
-            borderRadius: '4px solid #241C15',
             width: '381px',
             height: '48px',
+            '.MuiOutlinedInput-root': {
+              borderRadius: '100px !important',
+              // border: '1.5px solid #241C15',
+            },
           },
         },
       ],
