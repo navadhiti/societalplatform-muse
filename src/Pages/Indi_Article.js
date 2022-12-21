@@ -10,7 +10,10 @@ import {
   Avatar,
   Divider,
   List,
+  TextField,
+  InputAdornment,
 } from '@mui/material';
+import { Search } from '@mui/icons-material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StickyBox from 'react-sticky-box';
 
@@ -45,6 +48,7 @@ const Indi_Article = () => {
   const styles = {
     LandingBackground: {
       backgroundColor: '#fff',
+      // boxShadow:' 0px 0px 30px 0px #b8c0c3;'
     },
   };
 
@@ -53,7 +57,7 @@ const Indi_Article = () => {
   return (
     <>
       <div style={styles.LandingBackground}>
-        <Box>
+        <Box elevation={1}>
           <Stack spacing={2} mt="40px">
             <Breadcrumbs
               separator={<NavigateNextIcon fontSize="small" />}
@@ -70,7 +74,8 @@ const Indi_Article = () => {
           >
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               <Title>
-                <Typography variant='h1'
+                <Typography
+                  variant="h1"
                   dangerouslySetInnerHTML={{
                     __html: data?.title.rendered,
                   }}
@@ -122,6 +127,27 @@ const Indi_Article = () => {
             </Grid>
           </Grid>
           <Divider sx={{ borderStyle: 'dotted' }} />
+          <Grid
+            container
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
+          >
+            <Grid item md={8}>
+              <TextField
+                placeholder="Search"
+                // InputProps={{
+                //   endAdornment: (
+                //     <InputAdornment position="end">
+                //       <img src={Search} alt="img" />
+                //     </InputAdornment>
+                //   ),
+                // }}
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item md={4}></Grid>
+          </Grid>
           <Grid container spacing={2}>
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>

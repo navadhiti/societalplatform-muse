@@ -776,6 +776,21 @@ const theme = createTheme({
         },
       ],
     },
+    MuiTextField: {
+      variants: [
+        {
+          props: { variant: 'outlined' },
+          style: {
+            '&.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
+              border:1,
+            },
+            borderRadius: '4px solid #241C15',
+            width: '381px',
+            height: '48px',
+          },
+        },
+      ],
+    },
   },
 });
 export default theme;
