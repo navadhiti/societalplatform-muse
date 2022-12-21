@@ -1,6 +1,7 @@
 // import { Container } from '@mui/system';
 import React from "react";
 import { useNavigate, Route, Routes } from "react-router-dom";
+import StickyBox from 'react-sticky-box';
 import { useLocation } from "react-router";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";
@@ -51,7 +52,10 @@ function TabPanel(props) {
             )}
         </div>
     );
+
+
 }
+
 
 TabPanel.propTypes = {
     children: PropTypes.node,
@@ -61,7 +65,7 @@ TabPanel.propTypes = {
 const Layout = () => {
     const navigate = useNavigate();
     const [value, setValue] = React.useState(0);
-
+    const buttonHeight=`calc(100%/5)`;
     const buttonName = [
         {
             name: "HOME",
@@ -111,8 +115,8 @@ const Layout = () => {
                             item
                             xs={12}
                             sm={12}
-                            md={12}
-                            lg={12}
+                            md={11}
+                            lg={11}
                             sx={{ textAlign: "center" }}
                         >
                             <Box>
@@ -124,6 +128,7 @@ const Layout = () => {
                                         height: "85vh",
                                         overflowY: "auto",
                                         borderRadius: "30px ",
+                                        
                                     }}
                                 >
                                     <Grid
@@ -209,7 +214,8 @@ const Layout = () => {
                                 </TabPanel>
                             </Box>
                         </Grid>
-                        {/* <Grid item xs={1} sm={1} md={1} lg={1}>
+                        <Grid item xs={1} sm={1} md={1} lg={1}>
+                        <StickyBox offsetTop={20} offsetBottom={20}>
                             <List sx={{ paddingTop: 0, width: "10%" }}>
                                 {buttonName.map((item) => (
                                     <ListItem disablePadding>
@@ -231,7 +237,8 @@ const Layout = () => {
                                     </ListItem>
                                 ))}
                             </List>
-                        </Grid> */}
+                            </StickyBox>
+                        </Grid>
                     </Grid>
                 </Box>
 
