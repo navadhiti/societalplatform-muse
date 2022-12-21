@@ -13,9 +13,15 @@ import {
   InputAdornment,
   TextField,
   Button,
+  IconButton,
 } from '@mui/material';
-import { Search } from '@mui/icons-material';
-import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import {
+  PictureAsPdfOutlined,
+  PrintOutlined,
+  NavigateNext,
+  VolumeUp,
+  ShareOutlined
+} from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
@@ -61,7 +67,7 @@ const Indi_Article = () => {
         <Box elevation={1}>
           <Stack spacing={2} mt="40px">
             <Breadcrumbs
-              separator={<NavigateNextIcon fontSize="small" />}
+              separator={<NavigateNext fontSize="small" />}
               aria-label="breadcrumb"
             >
               {breadcrumbs}
@@ -139,7 +145,23 @@ const Indi_Article = () => {
               <TextField placeholder="Search" variant="outlined" />
             </Grid>
             <Grid item md={4}>
-              <Button>LISTEN</Button>
+              <Stack
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+              >
+                <Button variant="audio-btn">
+                  LISTEN
+                  <VolumeUp />
+                </Button>
+                <Button variant="icon-btn">
+                  <PictureAsPdfOutlined />
+                </Button>
+                <Button variant="icon-btn">
+                  <PrintOutlined />
+                </Button>
+              </Stack>
             </Grid>
           </Grid>
           <Grid container mt={10} spacing={2}>
