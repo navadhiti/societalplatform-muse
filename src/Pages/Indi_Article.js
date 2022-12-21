@@ -10,9 +10,9 @@ import {
   Avatar,
   Divider,
   List,
-  // Input,
-  // InputAdornment,
+  InputAdornment,
   TextField,
+  Button,
 } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -133,24 +133,16 @@ const Indi_Article = () => {
             direction="row"
             justifyContent="space-between"
             alignItems="center"
+            mt={5}
           >
             <Grid item md={8}>
-              <TextField
-                placeholder="Search"
-                // InputProps={{
-                //   endAdornment: (
-                //     <InputAdornment position="end">
-                //       <img src={Search} alt="img" />
-                //     </InputAdornment>
-                //   ),
-                // }}
-
-                variant="outlined"
-              />
+              <TextField placeholder="Search" variant="outlined" />
             </Grid>
-            <Grid item md={4}></Grid>
+            <Grid item md={4}>
+              <Button>LISTEN</Button>
+            </Grid>
           </Grid>
-          <Grid container spacing={2}>
+          <Grid container mt={10} spacing={2}>
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
