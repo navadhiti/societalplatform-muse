@@ -3,6 +3,7 @@ import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/mate
 
 import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
+import { AnimatedButton } from "../Themes/StyledComponent";
 
 const styles = {
         paperContainer: {
@@ -56,9 +57,13 @@ const Blub2 = () => {
                               
                         </Typography>
                         <Box py={5}>
-                        <Button variant="contained">
+                            <AnimatedButton>
+                            <Button className="cta-btn">
+                            <span class="hover-frame  bounce infinite" data-num="1"></span><span class="hover-frame  bounce infinite" data-num="2"></span>
                             Experience
                         </Button>
+                            </AnimatedButton>
+                        
                         
                         </Box >
                         

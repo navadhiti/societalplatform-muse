@@ -152,11 +152,11 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '##fdfdfd08',
+      main: '#fdfdfd08',
       contrastText: '#000',
     },
     secondary: {
-      main: '#485ec4',
+      main: '#000',
     },
     color1: {
       main: '#74788D',
@@ -181,12 +181,15 @@ const theme = createTheme({
           },
         },
         {
-          props: { variant: 'sticky-btn' },
+          props: { variant: 'Menu-btn' },
           style: {
             fontFamily: FONT.FAMILY.ASSISTANT,
-            fontWeight: FONT.WEIGHT.REGULAR,
+            fontWeight: FONT.WEIGHT.BOLD,
             fontSize: FONT.SIZES[18],
             color: PALETTE.SENARY,
+            border:'1px solid black',
+            borderRadius:'50px 0px 0px 50px',
+            textAlign:"center",
           },
         },
       ],
