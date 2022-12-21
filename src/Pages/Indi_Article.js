@@ -9,7 +9,7 @@ import {
   Stack,
   Avatar,
   Divider,
-  List,
+  List
 } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import StickyBox from 'react-sticky-box';
@@ -46,7 +46,6 @@ const Indi_Article = () => {
   const styles = {
     LandingBackground: {
       backgroundColor: '#fff',
-      // backgroundColor: `#fff`,
     },
   };
 
@@ -133,6 +132,7 @@ const Indi_Article = () => {
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                <List>
                 {extractedH2?.map((elem) => (
                   <StickyButton>
                     <div
@@ -142,8 +142,9 @@ const Indi_Article = () => {
                     />
                   </StickyButton>
                 ))}
-                {/* </Link> */}
+                </List>
               </StickyBox>
+              
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               <div
