@@ -18,6 +18,9 @@ import Author7 from "../Assets/Images/Author7.png";
 import Author8 from "../Assets/Images/Author8.png";
 import Author9 from "../Assets/Images/Author9.png";
 import Author10 from "../Assets/Images/Author10.png";
+import backgroud from "../Assets/Images/Vector.png";
+import backgroud1 from "../Assets/Images/Vector (2).png";
+
 
 import Divider from "../Assets/Images/Divider.png";
 import { AnimatedButton } from "../Themes/StyledComponent";
@@ -77,7 +80,7 @@ const Collaborators = () => {
     ];
     return (
         <>
-            <Box  pt={{ xs: 4, sm: 4, md: 13 }}>
+            <Box pt={{ xs: 4, sm: 4, md: 13 }}>
                 <Container>
                     <Grid
                         container
@@ -113,8 +116,9 @@ const Collaborators = () => {
                                 variant="body"
                                 py={{ xs: 2, sm: 2, md: 18 }}
                             >
-                                Lorem ipsum dolor sit amet consectetur.<br /> Vivamus
-                                eu aenean interdum in proin id ut.
+                                Lorem ipsum dolor sit amet consectetur.
+                                <br /> Vivamus eu aenean interdum in proin id
+                                ut.
                             </Typography>
                         </Grid>
                         <Grid
@@ -132,13 +136,19 @@ const Collaborators = () => {
                                 lg={2}
                                 sx={{ textAlign: "left" }}
                             >
-                                
                                 <AnimatedButton>
-                            <Button className="cta-btn">
-                            <span class="hover-frame  bounce infinite" data-num="1"></span><span class="hover-frame  bounce infinite" data-num="2"></span>
-                            See All
-                        </Button>
-                            </AnimatedButton>
+                                    <Button className="cta-btn">
+                                        <span
+                                            class="hover-frame  bounce infinite"
+                                            data-num="1"
+                                        ></span>
+                                        <span
+                                            class="hover-frame  bounce infinite"
+                                            data-num="2"
+                                        ></span>
+                                        See All
+                                    </Button>
+                                </AnimatedButton>
                             </Grid>
                             <Grid
                                 item
@@ -207,15 +217,20 @@ const Collaborators = () => {
                                         >
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    margin: "0 auto",
+                                                    // border: "solid 1px black",
+                                                    // borderRadius: "5px",
+                                                    height: "250px",
+                                                    width: "150px",
+                                                    padding: "37px 10px 0px 11px",
+                                                    margin: "10px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
                                                 }}
                                             >
                                                 <img
                                                     src={itemData[0].img}
                                                     alt="img"
+                                                    sx={{ borderRadius: "5px" }}
                                                 />
                                                 {console.log(
                                                     itemData[0].img,
@@ -245,10 +260,15 @@ const Collaborators = () => {
                                         >
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    my: 2,
+                                                    my: 1,
+                                                    // border: "solid 1px black",
+                                                    // borderRadius: "5px",
+                                                    height: "200px",
+                                                    width: "150px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "37px 10px 0px 11px",
                                                 }}
                                             >
                                                 <img
@@ -270,9 +290,12 @@ const Collaborators = () => {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
+                                                    height: "250px",
+                                                    width: "150px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "37px 10px 0px 11px",
                                                 }}
                                             >
                                                 <img
@@ -303,11 +326,15 @@ const Collaborators = () => {
                                         >
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    my: 2,
+                                                    height: "230px",
+                                                    width: "200px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "20px 10px 0px 31px",
+                                                    // my: 1,
                                                     marginRight: "-10px",
+                                                    marginLeft:"-1rem"
                                                 }}
                                             >
                                                 <img
@@ -329,11 +356,15 @@ const Collaborators = () => {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    my: 2,
-                                                    marginRight: "-5px",
+                                                    height: "250px",
+                                                    width: "170px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "37px 10px 0px 15px",
+                                                    
+                                                    marginRight: "1.8rem",
+                                                    marginLeft:"-0.5rem"
                                                 }}
                                             >
                                                 <img
@@ -355,10 +386,14 @@ const Collaborators = () => {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    marginRight: "-10px",
+                                                    height: "230px",
+                                                    width: "200px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "37px 10px 0px 30px",
+                                                    marginRight: "-0rem",
+                                                    marginLeft:"-1rem",
                                                 }}
                                             >
                                                 <img
@@ -389,10 +424,16 @@ const Collaborators = () => {
                                         >
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
+                                                    height: "285px",
+                                                    width: "200px",
+                                                    margin: "0rem auto",
+                                                    background: ` url(${backgroud1}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "67px 10px 0px 11px",
                                                     marginRight: "-30px",
+                                                    marginLeft:"2rem",
+                                                    marginTop:"5rem",
+                                                    
                                                 }}
                                             >
                                                 <img
@@ -414,10 +455,14 @@ const Collaborators = () => {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    my: 2,
+                                                    height: "373px",
+                                                    width: "219px",
+                                                    margin: "0px auto",
+                                                    background: ` url(${backgroud1}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "7rem 10px 0px 2rem",
+                                                    marginLeft:"1rem",
+                                                    marginTop:"-8rem",
                                                     marginRight: "-10px",
                                                 }}
                                             >
@@ -440,10 +485,15 @@ const Collaborators = () => {
                                             </Box>
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
+                                                    height: "300px",
+                                                    width: "250px",
+                                                    margin: "30px auto",
+                                                    background: ` url(${backgroud1}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "4rem 10px 0px 2rem",
                                                     marginRight: "-30px",
+                                                    marginLeft:"1rem",
+                                                    marginTop:"-8rem",
                                                 }}
                                             >
                                                 <img
@@ -473,11 +523,14 @@ const Collaborators = () => {
                                         >
                                             <Box
                                                 sx={{
-                                                    border: "solid 1px black",
-                                                    borderRadius: "5px",
-                                                    padding: "5px",
-                                                    mt: "-10",
-                                                    ml: "5px",
+                                                    height: "250px",
+                                                    width: "150px",
+                                                    margin: "30px auto",
+                                                    background: ` url(${backgroud}) center no-repeat`,
+                                                    backgroundSize: "contain",
+                                                    padding: "37px 10px 0px 11px",
+                                                    marginLeft:"5rem",
+                                                    marginTop:"3.5rem",
                                                 }}
                                             >
                                                 <img
