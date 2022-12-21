@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Stack, Typography, Box } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography, Box,  } from "@mui/material";
 
 import React from "react";
 
@@ -27,6 +27,7 @@ const Blurb = () => {
                     pb={{ xs: 2, sm: 3, md: 5 }}
                     px={{ xs: 0, sm: 8 }}
                 >
+                    
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}
