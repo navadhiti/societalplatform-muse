@@ -1,10 +1,11 @@
 import { styled } from '@mui/system';
-import { Button, Grid } from '@mui/material';
+import { Button, Grid, Typography } from '@mui/material';
 
 import FONT from '../Themes/Font';
 import PALETTE from '../Themes/Palette';
 
 import Scribble from '../Assets/Images/scribble.png';
+import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 
 export const StickyButton = styled(Button)`
   border: none;
@@ -21,6 +22,17 @@ export const StickyButton = styled(Button)`
     color: ${PALETTE.SENARY};
   }
 `;
+
+export const Title = styled(Typography)`
+  span:first-of-type {
+    background: ${`url(${Scribble}) bottom no-repeat`};
+  }
+
+  span:nth-of-type(2) {
+    background: ${`url(${ScribbleCircle}) center no-repeat`};
+    background-size: contain;
+  }
+`;
 export const GRID11 = styled(Grid)`
-  background-color:"red";
+  background-color: 'red';
 `;

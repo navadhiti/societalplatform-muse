@@ -126,10 +126,11 @@ const Layout = () => {
                                         index={0}
                                         style={{
                                             // backgroundColor: PALETTE.PRIMARY,
-                                            // height: "85vh",
+                                            height: "85vh",
                                             overflowY: "auto",
                                             borderRadius: "30px ",
                                         }}
+                                        className="body"
                                     >
                                         <Grid
                                             container
