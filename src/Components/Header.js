@@ -234,7 +234,7 @@ const Header = (props) => {
                                 <img src={logo} alt="img" />
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3}>
-                                <Box>
+                                <Box display={{xs:"block",sm:"none"}}>
                                     {["Menu"].map((anchor) => (
                                         <React.Fragment key={anchor}>
                                             <Button

@@ -65,8 +65,8 @@ TabPanel.propTypes = {
 const Layout = () => {
     const navigate = useNavigate();
     const [value, setValue] = React.useState(0);
-    const buttonHeight = `calc(85vh/5)`;
-    const padding= `calc(4.5vh) calc(3.5vh) calc(4.5vh) calc(2.5vh)`;
+    const buttonHeight = `calc(90vh/5)`;
+    const padding= `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
     const buttonName = [
         {
             name: "HOME",

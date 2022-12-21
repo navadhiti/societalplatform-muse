@@ -10,19 +10,25 @@ import {
   Avatar,
   Divider,
   List,
-  InputAdornment,
+  SpeedDial,
   TextField,
   Button,
-  IconButton,
+  SpeedDialAction,
 } from '@mui/material';
 import {
   PictureAsPdfOutlined,
   PrintOutlined,
   NavigateNext,
   VolumeUp,
-  ShareOutlined
+  ShareOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+  TwitterIcon,
+} from 'react-share';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Author from '../Assets/Images/Author7.png';
@@ -50,6 +56,12 @@ const Indi_Article = () => {
     <Link underline="none" key="2" color="inherit" href="#">
       SOLVE SMALL, DENT BIG
     </Link>,
+  ];
+
+  const actions = [
+    { icon: <LinkedinIcon size={38} round={true} />, name: 'LinkedIn' },
+    { icon: <FacebookIcon size={38} round={true} />, name: 'Facebook' },
+    { icon: <TwitterIcon size={38} round={true} />, name: 'Twitter' },
   ];
 
   const styles = {
@@ -161,6 +173,29 @@ const Indi_Article = () => {
                 <Button variant="icon-btn">
                   <PrintOutlined />
                 </Button>
+                <Box
+                  sx={{
+                    transform: 'translateZ(0px)',
+                  }}
+                >
+                  <SpeedDial
+                    ariaLabel="SpeedDial basic example"
+                    sx={{
+                      position: 'absolute',
+                      bottom: '-2rem',
+                    }}
+                    icon={<ShareOutlined />}
+                  >
+                    {actions.map((action) => (
+                      <SpeedDialAction
+                        sx={{ border: '1px solid black' }}
+                        key={action.name}
+                        icon={action.icon}
+                        tooltipTitle={action.name}
+                      />
+                    ))}
+                  </SpeedDial>
+                </Box>
               </Stack>
             </Grid>
           </Grid>

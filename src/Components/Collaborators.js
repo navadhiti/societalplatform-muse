@@ -77,14 +77,14 @@ const Collaborators = () => {
     ];
     return (
         <>
-            <Box>
+            <Box  pt={{ xs: 4, sm: 4, md: 13 }}>
                 <Container>
                     <Grid
                         container
                         spacing={0}
                         justifyContent="start"
                         alignItems="start"
-                        py={{ xs: 4, sm: 4, md: 8 }}
+                        py={{ xs: 4, sm: 4, md: 5 }}
                     >
                         <Grid
                             item
@@ -110,10 +110,10 @@ const Collaborators = () => {
                                 </b>
                             </Typography>
                             <Typography
-                                variant="body1"
-                                py={{ xs: 2, sm: 2, md: 5 }}
+                                variant="body"
+                                py={{ xs: 2, sm: 2, md: 18 }}
                             >
-                                Lorem ipsum dolor sit amet consectetur. Vivamus
+                                Lorem ipsum dolor sit amet consectetur.<br /> Vivamus
                                 eu aenean interdum in proin id ut.
                             </Typography>
                         </Grid>
