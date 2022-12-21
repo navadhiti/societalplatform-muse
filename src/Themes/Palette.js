@@ -1,6 +1,8 @@
  const PALETTE = {
-    PRIMARY: '#f8f9fa',
-    SECONDARY: '#935FB0',
-    TERITIARY: '#F5f5f5',
+    PRIMARY: '#E2D1ED',
+    SECONDARY: '#3E418A',
+    TERITIARY: '#DC8F6E',
+    FORTH:'#22534F',
+    FIFTH:'#C4BCB9',
 };
 export default PALETTE;
