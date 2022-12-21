@@ -10,14 +10,13 @@ import FONT from './Font';
 
 import Line from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/RightArrow.png';
+import Campgain from '../Assets/fonts/CampaignMedium.woff';
 
 const theme = createTheme({
   typography: {
-    allVariants: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
-    },
+    fontFamily: FONT.FAMILY.ASSISTANT,
     h1: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       // fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
@@ -26,7 +25,7 @@ const theme = createTheme({
       },
     },
     h2: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[40],
       color: PALETTE.SENARY,
@@ -37,7 +36,7 @@ const theme = createTheme({
       },
     },
     h3: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[32],
       color: PALETTE.SENARY,
@@ -59,7 +58,7 @@ const theme = createTheme({
       },
     },
     h5: {
-      fontFamily: FONT.FAMILY.ASSISTANT,
+      fontFamily: FONT.FAMILY.CAMPAIGN,
       fontWeight: FONT.WEIGHT.REGULAR,
       fontSize: FONT.SIZES[18],
       color: PALETTE.SENARY,
@@ -163,6 +162,18 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        '@font-face': {
+          fontFamily: 'Campaign',
+          src: `url(${Campgain}) format("truetype")`,
+        },
+        body: {
+          fontFamily: 'Campaign',
+          color: 'purple',
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {
@@ -183,8 +194,8 @@ const theme = createTheme({
         {
           props: { variant: 'Menu-btn' },
           style: {
-            fontFamily: FONT.FAMILY.ASSISTANT,
-            fontWeight: FONT.WEIGHT.BOLD,
+            fontFamily: FONT.FAMILY.CAMPAIGN,
+            fontWeight: FONT.WEIGHT.REGULAR,
             fontSize: FONT.SIZES[18],
             color: PALETTE.SENARY,
             border:'1px solid black',
@@ -775,6 +786,21 @@ const theme = createTheme({
           props: { classes: 'hoverable-item' },
           style: {
             display: 'none',
+          },
+        },
+      ],
+    },
+    MuiTextField: {
+      variants: [
+        {
+          props: { variant: 'outlined' },
+          style: {
+            width: '381px',
+            height: '48px',
+            '.MuiOutlinedInput-root': {
+              borderRadius: '100px !important',
+              // border: '1.5px solid #241C15',
+            },
           },
         },
       ],
