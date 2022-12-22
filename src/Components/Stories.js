@@ -126,7 +126,6 @@ const Stories = () => {
                                     </Stack>
                                 </Typography>
                             </ListItem>
-
                             <ListItem>
                                 <Typography variant="caption">
                                     <Stack spacing={2} direction="row">
