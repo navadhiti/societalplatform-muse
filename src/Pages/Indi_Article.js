@@ -36,7 +36,6 @@ import ArticleImage from '../Assets/Images/articleImage.png';
 import Author from '../Assets/Images/Author7.png';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
-import Stories_article from '../Components/Stories_article';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -99,13 +98,21 @@ const Indi_Article = () => {
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
 
   // Text to Speech
-  const Speech = new SpeechSynthesisUtterance();
+  const msg = new SpeechSynthesisUtterance();
+  const ourText = 'Hello World';
 
-  const Content = 'hello world';
-  const speechHandler = (Speech) => {
-    Speech.text = Content;
-    window.speechSynthesis.speak(Speech);
+  const speechHandler = (msg) => {
+    msg.text = ourText;
+    window.speechSynthesis.speak(msg);
   };
+
+  // const Content = (
+  //   <div
+  //     dangerouslySetInnerHTML={{
+  //       __html: data?.content.rendered,
+  //     }}
+  //   ></div>
+  // );
 
   return (
     <>
@@ -197,10 +204,7 @@ const Indi_Article = () => {
                 alignItems="center"
                 spacing={2}
               >
-                <Button
-                  variant="audio-btn"
-                  onClick={() => speechHandler(Speech)}
-                >
+                <Button variant="audio-btn" onClick={() => speechHandler(msg)}>
                   LISTEN
                   <VolumeUp />
                 </Button>
@@ -244,13 +248,12 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
-                  {extractedH2?.map((elem, index) => (
+                  {extractedH2?.map((elem) => (
                     <StickyButton>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: elem,
                         }}
-                        key={index}
                       />
                     </StickyButton>
                   ))}
@@ -265,7 +268,6 @@ const Indi_Article = () => {
               ></div>
             </Grid>
           </Grid>
-          <Stories_article />
         </Box>
       </div>
     </>
