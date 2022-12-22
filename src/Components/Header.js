@@ -154,7 +154,7 @@ const Header = (props) => {
             sx={{
                 width: 400,
                 paddingRight: "10px",
-                mt: 20,
+                mt: 5,
             }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
@@ -233,7 +233,7 @@ const Header = (props) => {
                                 <img src={logo} alt="img" />
                             </Grid>
                             <Grid item xs={3} sm={3} md={3} lg={3}>
-                                <Box display={{ xs: "block", sm: "none" }}>
+                                <Box display={{ xs: "block", md: "none" }}>
                                     {["Menu"].map((anchor) => (
                                         <React.Fragment key={anchor}>
                                             <Button

@@ -33,7 +33,10 @@ import {
 } from 'react-share';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
+import Sanjay from '../Assets/Images/sanjay.png';
+
 import Author from '../Assets/Images/Author7.png';
+import AuthorName from '../Assets/Images/musing-banner.svg';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
@@ -56,7 +59,7 @@ const Indi_Article = () => {
   }, []);
 
   console.log(data);
-  console.log(author.name, 'author');
+  console.log(author?.description, 'author');
 
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -303,6 +306,41 @@ const Indi_Article = () => {
                   __html: data?.content.rendered,
                 }}
               ></div>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
+              <img src={Sanjay} width="80%" />
+            </Grid>
+            <Grid item xs={12} md={8} sx={{ textAlign: 'left' }}>
+              <Box
+                sx={{
+                  background: ` url(${AuthorName}) center left no-repeat`,
+                  mb: 3,
+                }}
+              >
+                <Typography variant="h4" sx={{}}>
+                  Sanjay Purohit
+                </Typography>
+              </Box>
+              <Typography
+                variant="body"
+                dangerouslySetInnerHTML={{
+                  __html: author?.description,
+                }}
+              ></Typography>
+              {/* <Typography
+                  variant="h4"
+                  dangerouslySetInnerHTML={{
+                    __html: author?.name,
+                  }}
+                ></Typography> */}
+              <Typography variant="h4" sx={{ pt: 5 }}>
+                Sanjay Purohit
+              </Typography>
+              <Typography variant="body" sx={{ pb: 2 }}>
+                Chief Curator
+              </Typography>
             </Grid>
           </Grid>
           <Stories_Aritcle />
