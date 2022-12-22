@@ -237,7 +237,7 @@ const Layout = () => {
                             </Grid>
                         {/* </GRID11> */}
                         <StickyBox>
-                            <Grid item xs={1} sm={1} md={1} lg={1} display= {{ xs: "none", sm: "block" }}>
+                            <Grid item xs={1} sm={1} md={1} lg={1} display= {{ xs: "none", md: "block" }}>
                                 <List sx={{ paddingTop: 0, width: "10%" }}>
                                     {buttonName.map((item) => (
                                         <ListItem disablePadding>

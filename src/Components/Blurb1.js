@@ -6,6 +6,7 @@ import Logo from "../Assets/Images/sm_logo.png";
 import Layer from "../Assets/Images/Layer.png";
 import Blub from "../Assets/Images/Blub.png";
 import Sanjay from "../Assets/Images/sanjay.png";
+import { Section } from "../Themes/StyledComponent";
 
 
 // const styles = {
@@ -18,7 +19,7 @@ import Sanjay from "../Assets/Images/sanjay.png";
 const Blurb_1 = () => {
     return (
         <>
-            <Box py={{xs:4,sm:4,md:5}}> 
+            <Section py={{xs:4,sm:4,md:5}}> 
             <Container >
                 <Grid
                     container
@@ -128,7 +129,7 @@ const Blurb_1 = () => {
                     </Grid>
                 </Grid>
             </Container>
-            </Box>
+            </Section>
         </>
     );
 };

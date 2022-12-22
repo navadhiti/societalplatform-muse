@@ -14,6 +14,7 @@ import Divider from "../Assets/Images/Vector 42.png";
 import StoryImg from "../Assets/Images/image 50.png";
 import LinkUnderline from "../Assets/Images/Vector 12.png";
 import ArrowImage from "../Assets/Images/RightArrow.png";
+import { Section } from "../Themes/StyledComponent";
 
 const Stories = () => {
     const [arr, setArr] = useState([{ text: "foo" }, { text: "bar" }]);
@@ -50,7 +51,7 @@ const Stories = () => {
     // };
 
     return (
-        <div>
+        <Section>
             <Container>
                 <Grid
                     container
@@ -187,7 +188,7 @@ const Stories = () => {
                     </Grid>
                 </Grid>
             </Container>
-        </div>
+        </Section>
     );
 };
 export default Stories;

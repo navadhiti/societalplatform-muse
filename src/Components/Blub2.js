@@ -3,7 +3,7 @@ import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/mate
 
 import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
-import { AnimatedButton } from "../Themes/StyledComponent";
+import { AnimatedButton, Section } from "../Themes/StyledComponent";
 import { StyledContainer } from "../Themes/StyledComponent";
 
 const styles = {
@@ -23,7 +23,7 @@ const styles = {
 const Blub2 = () => {
     return (
         <>
-            <Box py={{xs:4,sm:4,md:5}} >
+            <Section  >
             <Container style={styles.paperContainer}>
                 <Grid
                     container
@@ -31,7 +31,7 @@ const Blub2 = () => {
                     justifyContent="start"
                     alignItems="start"
                     
-                    py={5}
+                    
                 >
                     <Grid
                         item
@@ -109,7 +109,7 @@ const Blub2 = () => {
                     </Grid>
                 </Grid> */}
             </Container>
-            </Box>
+            </Section>
         </>
     );
 };

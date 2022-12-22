@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Stack, Typography, Box,  } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography, Box } from "@mui/material";
 
 import React from "react";
 
@@ -17,17 +17,17 @@ import Image3 from "../Assets/Images/hand.png";
 import Image4 from "../Assets/Images/Blub.png";
 import Image5 from "../Assets/Images/Questionmark.png";
 // import Image6 from "../Assets/Images/image_13.png";
+import { Section } from "../Themes/StyledComponent";
 
 const Blurb = () => {
     return (
         <>
-            <Container>
-                <Box
-                    pt={{ xs: 13, sm: 13, md: 18 }}
-                    pb={{ xs: 2, sm: 3, md: 5 }}
-                    px={{ xs: 0, sm: 8 }}
-                >
-                    
+            <Section
+            // pt={{ xs: 13, sm: 13, md: 18 }}
+            // pb={{ xs: 2, sm: 3, md: 5 }}
+            px={{ xs: 0, sm: 8 }}
+            >
+                <Container>
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}
@@ -67,8 +67,8 @@ const Blurb = () => {
                         </b>{" "}
                         too.
                     </Typography>
-                </Box>
-            </Container>
+                </Container>
+            </Section>
         </>
     );
 };

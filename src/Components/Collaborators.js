@@ -21,7 +21,6 @@ import Author10 from "../Assets/Images/Author10.png";
 import backgroud from "../Assets/Images/Vector.png";
 import backgroud1 from "../Assets/Images/Vector (2).png";
 
-
 import Divider from "../Assets/Images/Divider.png";
 import { AnimatedButton } from "../Themes/StyledComponent";
 
@@ -159,7 +158,7 @@ const Collaborators = () => {
                                 sx={{ textAlign: "left" }}
                             >
                                 <Box display={{ xs: "block", md: "none" }}>
-                                    <ImageList
+                                    {/* <ImageList
                                         variant="masonry"
                                         cols={2}
                                         gap={8}
@@ -195,7 +194,66 @@ const Collaborators = () => {
                                                 </ImageListItem>
                                             </>
                                         ))}
-                                    </ImageList>
+                                    </ImageList> */}
+                                    <Grid
+                                        container
+                                        // spacing={2}
+                                        rowSpacing={1}
+                                        columnSpacing={2}
+                                        justifyContent="center"
+                                        alignItems="center"
+                                        mt={{ xs: 3, md: -30 }}
+                                    >
+                                        {itemData.map((item) => (
+                                            <Grid
+                                                item
+                                                xs={6}
+                                                sm={6}
+                                                md={2}
+                                                lg={2}
+                                                sx={{ textAlign: "left" }}
+                                            >
+                                                <Box
+                                                    sx={{
+                                                        // border: "solid 1px black",
+                                                        // borderRadius: "5px",
+                                                        height: "250px",
+                                                        width: "150px",
+                                                        padding:
+                                                            "37px 10px 0px 11px",
+                                                        margin: "10px auto",
+                                                        background: ` url(${backgroud}) center no-repeat`,
+                                                        backgroundSize:
+                                                            "contain",
+                                                    }}
+                                                >
+                                                    <img
+                                                        src={item.img}
+                                                        alt="img"
+                                                        sx={{
+                                                            borderRadius: "5px",
+                                                        }}
+                                                    />
+                                                    {/* {console.log(
+                                                    itemData[0].img,
+                                                    "author"
+                                                )} */}
+                                                    <Typography
+                                                        variant="body1"
+                                                        textAlign="center"
+                                                    >
+                                                        <b>{item.title}</b>
+                                                    </Typography>
+                                                    <Typography
+                                                        variant="body2"
+                                                        textAlign="center"
+                                                    >
+                                                        {item.subTitle}
+                                                    </Typography>
+                                                </Box>
+                                            </Grid>
+                                        ))}
+                                    </Grid>
                                 </Box>
                                 <Box display={{ xs: "none", md: "block" }}>
                                     <Grid
@@ -221,7 +279,8 @@ const Collaborators = () => {
                                                     // borderRadius: "5px",
                                                     height: "250px",
                                                     width: "150px",
-                                                    padding: "37px 10px 0px 11px",
+                                                    padding:
+                                                        "37px 10px 0px 11px",
                                                     margin: "10px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
@@ -268,7 +327,8 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "37px 10px 0px 11px",
+                                                    padding:
+                                                        "37px 10px 0px 11px",
                                                 }}
                                             >
                                                 <img
@@ -295,7 +355,8 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "37px 10px 0px 11px",
+                                                    padding:
+                                                        "37px 10px 0px 11px",
                                                 }}
                                             >
                                                 <img
@@ -331,10 +392,11 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "20px 10px 0px 31px",
+                                                    padding:
+                                                        "20px 10px 0px 31px",
                                                     // my: 1,
                                                     marginRight: "-10px",
-                                                    marginLeft:"-1rem"
+                                                    marginLeft: "-1rem",
                                                 }}
                                             >
                                                 <img
@@ -361,10 +423,11 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "37px 10px 0px 15px",
-                                                    
+                                                    padding:
+                                                        "37px 10px 0px 15px",
+
                                                     marginRight: "1.8rem",
-                                                    marginLeft:"-0.5rem"
+                                                    marginLeft: "-0.5rem",
                                                 }}
                                             >
                                                 <img
@@ -391,9 +454,10 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "37px 10px 0px 30px",
+                                                    padding:
+                                                        "37px 10px 0px 30px",
                                                     marginRight: "-0rem",
-                                                    marginLeft:"-1rem",
+                                                    marginLeft: "-1rem",
                                                 }}
                                             >
                                                 <img
@@ -429,11 +493,11 @@ const Collaborators = () => {
                                                     margin: "0rem auto",
                                                     background: ` url(${backgroud1}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "67px 10px 0px 11px",
+                                                    padding:
+                                                        "67px 10px 0px 11px",
                                                     marginRight: "-30px",
-                                                    marginLeft:"2rem",
-                                                    marginTop:"5rem",
-                                                    
+                                                    marginLeft: "2rem",
+                                                    marginTop: "5rem",
                                                 }}
                                             >
                                                 <img
@@ -460,9 +524,10 @@ const Collaborators = () => {
                                                     margin: "0px auto",
                                                     background: ` url(${backgroud1}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "7rem 10px 0px 2rem",
-                                                    marginLeft:"1rem",
-                                                    marginTop:"-8rem",
+                                                    padding:
+                                                        "7rem 10px 0px 2rem",
+                                                    marginLeft: "1rem",
+                                                    marginTop: "-8rem",
                                                     marginRight: "-10px",
                                                 }}
                                             >
@@ -490,10 +555,11 @@ const Collaborators = () => {
                                                     margin: "30px auto",
                                                     background: ` url(${backgroud1}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "4rem 10px 0px 2rem",
+                                                    padding:
+                                                        "4rem 10px 0px 2rem",
                                                     marginRight: "-30px",
-                                                    marginLeft:"1rem",
-                                                    marginTop:"-8rem",
+                                                    marginLeft: "1rem",
+                                                    marginTop: "-8rem",
                                                 }}
                                             >
                                                 <img
@@ -528,9 +594,10 @@ const Collaborators = () => {
                                                     margin: "30px auto",
                                                     background: ` url(${backgroud}) center no-repeat`,
                                                     backgroundSize: "contain",
-                                                    padding: "37px 10px 0px 11px",
-                                                    marginLeft:"5rem",
-                                                    marginTop:"3.5rem",
+                                                    padding:
+                                                        "37px 10px 0px 11px",
+                                                    marginLeft: "5rem",
+                                                    marginTop: "3.5rem",
                                                 }}
                                             >
                                                 <img
