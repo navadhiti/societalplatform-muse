@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Box,
-  //   Container,
   Grid,
   Typography,
   Breadcrumbs,
@@ -10,6 +9,7 @@ import {
   Avatar,
   Divider,
   List,
+  ListItem,
   SpeedDial,
   TextField,
   Button,
@@ -37,6 +37,8 @@ import Author from '../Assets/Images/Author7.png';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
+import Stories_Aritcle from '../Components/Stories_article';
+
 const Indi_Article = () => {
   const [data, setData] = useState();
   const [error, setError] = useState('');
@@ -47,6 +49,8 @@ const Indi_Article = () => {
       .then((json) => setData(json))
       .catch((e) => setError(e));
   }, []);
+
+  console.log(data);
 
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -59,8 +63,9 @@ const Indi_Article = () => {
       SOLVE SMALL, DENT BIG
     </Link>,
   ];
-  const shareUrl =
-    'https://www.youtube.com/watch?v=RbQgF_vocLU&ab_channel=T-Series';
+
+  const shareUrl = 'http://localhost:3000/articles';
+
   const actions = [
     {
       icon: (
@@ -97,23 +102,6 @@ const Indi_Article = () => {
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
 
-  // Text to Speech
-  const msg = new SpeechSynthesisUtterance();
-  const ourText = 'Hello World';
-
-  const speechHandler = (msg) => {
-    msg.text = ourText;
-    window.speechSynthesis.speak(msg);
-  };
-
-  // const Content = (
-  //   <div
-  //     dangerouslySetInnerHTML={{
-  //       __html: data?.content.rendered,
-  //     }}
-  //   ></div>
-  // );
-
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -128,11 +116,11 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction="row"
+            direction={{ xs: 'row-reverse', md: 'row' }}
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={7} sx={{ textAlign: 'left' }}>
+            <Grid item xs={12} md={7} sx={{ textAlign: 'left' }}>
               <Title>
                 <Typography
                   variant="h1"
@@ -204,7 +192,7 @@ const Indi_Article = () => {
                 alignItems="center"
                 spacing={2}
               >
-                <Button variant="audio-btn" onClick={() => speechHandler(msg)}>
+                <Button variant="audio-btn">
                   LISTEN
                   <VolumeUp />
                 </Button>
@@ -223,7 +211,14 @@ const Indi_Article = () => {
                     ariaLabel="SpeedDial basic example"
                     sx={{
                       position: 'absolute',
-                      bottom: '-2rem',
+                      bottom: '-1.8rem',
+                      '& .MuiFab-primary': {
+                        // backgroundColor: 'gold',
+                        // color: 'blue',
+                        boxShadow: 'none',
+                        border: '1px solid black',
+                        
+                      },
                     }}
                     icon={<ShareOutlined />}
                   >
@@ -245,20 +240,24 @@ const Indi_Article = () => {
           </Grid>
           <Grid container mt={10} spacing={2}>
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
-              <StickyBox offsetTop={20} offsetBottom={20}>
-                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                <List>
-                  {extractedH2?.map((elem) => (
-                    <StickyButton>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: elem,
-                        }}
-                      />
-                    </StickyButton>
-                  ))}
-                </List>
-              </StickyBox>
+              <div style={{ position: 'relative', overflow: 'auto' }}>
+                <StickyBox offsetTop={20} offsetBottom={20}>
+                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                  <List>
+                    {extractedH2?.map((elem) => (
+                      <ListItem>
+                        <StickyButton>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: elem,
+                            }}
+                          />
+                        </StickyButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                </StickyBox>
+              </div>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               <div
@@ -268,6 +267,7 @@ const Indi_Article = () => {
               ></div>
             </Grid>
           </Grid>
+          <Stories_Aritcle />
         </Box>
       </div>
     </>
