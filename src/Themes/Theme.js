@@ -817,8 +817,6 @@ const theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
-            width: '381px',
-            height: '48px',
 
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
