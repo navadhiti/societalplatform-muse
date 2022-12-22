@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   Box,
-  //   Container,
   Grid,
   Typography,
   Breadcrumbs,
@@ -10,6 +9,7 @@ import {
   Avatar,
   Divider,
   List,
+  ListItem,
   SpeedDial,
   TextField,
   Button,
@@ -36,7 +36,8 @@ import ArticleImage from '../Assets/Images/articleImage.png';
 import Author from '../Assets/Images/Author7.png';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
-import Stories_article from '../Components/Stories_article';
+
+import Stories_Aritcle from '../Components/Stories_article';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -49,6 +50,8 @@ const Indi_Article = () => {
       .catch((e) => setError(e));
   }, []);
 
+  console.log(data);
+
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
       HOME
@@ -60,8 +63,9 @@ const Indi_Article = () => {
       SOLVE SMALL, DENT BIG
     </Link>,
   ];
-  const shareUrl =
-    'https://www.youtube.com/watch?v=RbQgF_vocLU&ab_channel=T-Series';
+
+  const shareUrl = 'http://localhost:3000/articles';
+
   const actions = [
     {
       icon: (
@@ -112,11 +116,11 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction="row"
+            direction={{ xs: 'row-reverse', md: 'row' }}
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={7} sx={{ textAlign: 'left' }}>
+            <Grid item xs={12} md={7} sx={{ textAlign: 'left' }}>
               <Title>
                 <Typography
                   variant="h1"
@@ -178,7 +182,7 @@ const Indi_Article = () => {
             alignItems="center"
             mt={5}
           >
-            <Grid item md={8}>
+            <Grid item md={8} sx={{ textAlign: 'start' }}>
               <TextField placeholder="Search" variant="outlined" />
             </Grid>
             <Grid item md={4}>
@@ -207,13 +211,23 @@ const Indi_Article = () => {
                     ariaLabel="SpeedDial basic example"
                     sx={{
                       position: 'absolute',
-                      bottom: '-2rem',
+                      bottom: '-1.8rem',
+                      '& .MuiFab-primary': {
+                        // backgroundColor: 'gold',
+                        // color: 'blue',
+                        boxShadow: 'none',
+                        border: '1px solid black',
+                        
+                      },
                     }}
                     icon={<ShareOutlined />}
                   >
                     {actions.map((action) => (
                       <SpeedDialAction
-                        sx={{ border: '1px solid black', alignItems: 'center' }}
+                        sx={{
+                          border: '1px solid black',
+                          alignContent: 'center',
+                        }}
                         key={action.name}
                         icon={action.icon}
                         tooltipTitle={action.name}
@@ -226,20 +240,24 @@ const Indi_Article = () => {
           </Grid>
           <Grid container mt={10} spacing={2}>
             <Grid item xs={4} sx={{ textAlign: 'left' }}>
-              <StickyBox offsetTop={20} offsetBottom={20}>
-                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                <List>
-                  {extractedH2?.map((elem) => (
-                    <StickyButton>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: elem,
-                        }}
-                      />
-                    </StickyButton>
-                  ))}
-                </List>
-              </StickyBox>
+              <div style={{ position: 'relative', overflow: 'auto' }}>
+                <StickyBox offsetTop={20} offsetBottom={20}>
+                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                  <List>
+                    {extractedH2?.map((elem) => (
+                      <ListItem>
+                        <StickyButton>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: elem,
+                            }}
+                          />
+                        </StickyButton>
+                      </ListItem>
+                    ))}
+                  </List>
+                </StickyBox>
+              </div>
             </Grid>
             <Grid item xs={7} sx={{ textAlign: 'left' }}>
               <div
@@ -249,7 +267,7 @@ const Indi_Article = () => {
               ></div>
             </Grid>
           </Grid>
-          <Stories_article />
+          <Stories_Aritcle />
         </Box>
       </div>
     </>
