@@ -97,6 +97,15 @@ const Indi_Article = () => {
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
 
+  // Text to Speech
+  const Speech = new SpeechSynthesisUtterance();
+
+  const Content = 'hello world';
+  const speechHandler = (Speech) => {
+    Speech.text = Content;
+    window.speechSynthesis.speak(Speech);
+  };
+
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -177,7 +186,7 @@ const Indi_Article = () => {
             alignItems="center"
             mt={5}
           >
-            <Grid item md={8}>
+            <Grid item md={8} sx={{ textAlign: 'start' }}>
               <TextField placeholder="Search" variant="outlined" />
             </Grid>
             <Grid item md={4}>
@@ -187,7 +196,10 @@ const Indi_Article = () => {
                 alignItems="center"
                 spacing={2}
               >
-                <Button variant="audio-btn">
+                <Button
+                  variant="audio-btn"
+                  onClick={() => speechHandler(Speech)}
+                >
                   LISTEN
                   <VolumeUp />
                 </Button>
@@ -212,7 +224,10 @@ const Indi_Article = () => {
                   >
                     {actions.map((action) => (
                       <SpeedDialAction
-                        sx={{ border: '1px solid black', alignItems: 'center' }}
+                        sx={{
+                          border: '1px solid black',
+                          alignContent: 'center',
+                        }}
                         key={action.name}
                         icon={action.icon}
                         tooltipTitle={action.name}
@@ -228,12 +243,13 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
-                  {extractedH2?.map((elem) => (
+                  {extractedH2?.map((elem, index) => (
                     <StickyButton>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: elem,
                         }}
+                        key={index}
                       />
                     </StickyButton>
                   ))}

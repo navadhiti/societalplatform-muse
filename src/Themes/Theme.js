@@ -20,7 +20,7 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.BOLD,
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
-      
+
       '@media (min-width: 320px) and (max-width:375px)': {
         fontSize: FONT.SIZES[24],
       },
@@ -78,8 +78,8 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[18],
       fontFamily: FONT.FAMILY.ASSISTANT,
-      lineHeight:"27px",
-      
+      lineHeight: '27px',
+
       '@media (max-width:475px)': {
         fontSize: FONT.SIZES[12],
         lineHeight: '18px',
@@ -819,6 +819,7 @@ const theme = createTheme({
           style: {
             width: '381px',
             height: '48px',
+
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
               // border: '1.5px solid #241C15',
