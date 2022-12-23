@@ -1,6 +1,6 @@
 // import { Container } from '@mui/system';
 import React from 'react';
-import { useNavigate, Route, Routes } from 'react-router-dom';
+import { useNavigate, Route, Routes , HashRouter as Router, ReactDOM} from 'react-router-dom';
 import StickyBox from 'react-sticky-box';
 import { useLocation } from 'react-router';
 import Footer from '../Components/Footer';
@@ -50,7 +50,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box>
-          <Typography>{children}</Typography>
+         {children}
         </Box>
       )}
     </div>
@@ -131,7 +131,7 @@ const Layout = () => {
                     // -webkit-scrollbar { width: 0 !important }
                     // @include scroll-bar(4px, 4px, 6px);
                     overflowY: 'auto',
-                    borderRadius: '30px 30px 30px 30px ',
+                    borderRadius: '30px 0 30px 30px ',
                   }}
                   className="body"
                 >
@@ -190,12 +190,13 @@ const Layout = () => {
                       />
                     </Grid>
                   </Grid>
-
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/articles" element={<Indi_Article />} />
                     <Route path="/all-articles" element={<All_Articles />} />
                   </Routes>
+                  {/* <Home />
+                  hi */}
                   <Grid
                     container
                     spacing={0}
@@ -227,7 +228,7 @@ const Layout = () => {
               </Box>
             </Grid>
             {/* </GRID11> */}
-            <StickyBox offsetTop={80} offsetBottom={-80}>
+            <StickyBox>
               <Grid
                 item
                 xs={1}
@@ -236,7 +237,7 @@ const Layout = () => {
                 lg={1}
                 display={{ xs: 'none', sm: 'block' }}
               >
-                <List sx={{ paddingTop: 0 }}>
+                <List sx={{ paddingTop: 0, width: '10%' }}>
                   {buttonName.map((item) => (
                     <ListItem disablePadding>
                       <ListItemButton
