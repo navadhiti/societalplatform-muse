@@ -131,7 +131,7 @@ const Layout = () => {
                     // -webkit-scrollbar { width: 0 !important }
                     // @include scroll-bar(4px, 4px, 6px);
                     overflowY: 'auto',
-                    borderRadius: '30px 0 30px 30px ',
+                    borderRadius: '30px 30px 30px 30px ',
                   }}
                   className="body"
                 >
@@ -227,7 +227,7 @@ const Layout = () => {
               </Box>
             </Grid>
             {/* </GRID11> */}
-            <StickyBox>
+            <StickyBox offsetTop={-80} offsetBottom={-80}>
               <Grid
                 item
                 xs={1}
@@ -236,7 +236,7 @@ const Layout = () => {
                 lg={1}
                 display={{ xs: 'none', sm: 'block' }}
               >
-                <List sx={{ paddingTop: 0, width: '10%' }}>
+                <List sx={{ paddingTop: 0 }}>
                   {buttonName.map((item) => (
                     <ListItem disablePadding>
                       <ListItemButton

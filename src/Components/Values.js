@@ -9,11 +9,32 @@ import {
 
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
+import Slider from 'react-slick';
 
 import Divider from "../Assets/Images/line.png";
 import values_1 from "../Assets/Images/values.png";
-
-const Values = () => {
+import { Section } from "../Themes/StyledComponent";
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: 'block',
+          background: 'red',
+          borderRadius: '50%',
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+const Values = () => { const settings = {
+    infinite: true,
+    slidesToShow: 4,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SampleNextArrow />,
+  };
     const itemData = [
         {
             id: "1",
@@ -69,7 +90,8 @@ const Values = () => {
     };
     return (
         <>
-            <Box py={{ xs: 2, sm: 2, md: 5 }}>
+            <Section>
+                <Box>
                 <Grid
                     container
                     spacing={0}
@@ -122,7 +144,7 @@ const Values = () => {
                     alignItems="center"
                     sx={{ py: 5 }}
                 >
-                    {itemData.map((item) => (
+                    {/* {itemData.map((item) => (
                         // <Box display={{ xs: "none", sm: "block" }}>
                             <Grid
                                 item
@@ -130,18 +152,19 @@ const Values = () => {
                                 sm={6}
                                 md={2}
                                 lg={2}
-                                sx={{
-                                    textAlign: "center",
-                                    width: 343,
-                                    scrollSnapType: "x mandatory",
-                                    "& > *": {
-                                        scrollSnapAlign: "center",
-                                    },
-                                    "::-webkit-scrollbar": { display: "none" },
-                                    display: { xs: "none", sm: "block" }
-                                }}
+                                // sx={{
+                                //     textAlign: "center",
+                                //     width: 343,
+                                //     scrollSnapType: "x mandatory",
+                                //     "& > *": {
+                                //         scrollSnapAlign: "center",
+                                //     },
+                                //     "::-webkit-scrollbar": { display: "none" },
+                                //     display: { xs: "none", sm: "block" }
+                                // }}
                                 // px={4}
                             >
+                            // <Slider {...settings}>
                                 <ReactCardFlip
                                     isFlipped={id === item.id && flipCard}
                                     flipDirection="horizontal"
@@ -176,16 +199,75 @@ const Values = () => {
                                         </CardContent>
                                     </Card>
                                 </ReactCardFlip>
+                                // </Slider>
+                            </Grid>
+                        // </Box>
+                    ))} */}
+                     {itemData.map((item) => (
+                        // <Box display={{ xs: "none", sm: "block" }}>
+                            <Grid
+                                item
+                                xs={11}
+                                sm={6}
+                                md={2}
+                                lg={2}
+                                // sx={{
+                                //     textAlign: "center",
+                                //     width: 343,
+                                //     scrollSnapType: "x mandatory",
+                                //     "& > *": {
+                                //         scrollSnapAlign: "center",
+                                //     },
+                                //     "::-webkit-scrollbar": { display: "none" },
+                                //     display: { xs: "none", sm: "block" }
+                                // }}
+                                // px={4}
+                            ><Slider {...settings}>
+                                <ReactCardFlip
+                                    isFlipped={id === item.id && flipCard}
+                                    flipDirection="horizontal"
+                                    id={item.id}
+                                >
+                                    <Card
+                                        classes={`${item.class}`}
+                                        onMouseEnter={() => {
+                                            setId(item.id);
+                                            setFlipCard(true);
+                                        }}
+                                    >
+                                        <CardContent variant="card_content">
+                                            <Typography variant="h4">
+                                                {item.title}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                    <Card
+                                        classes={`${item.class1}`}
+                                        onMouseOut={() => {
+                                            setId(null);
+                                            setFlipCard(false);
+                                        }}
+                                    >
+                                        <CardContent
+                                            variant={item.contentclass}
+                                        >
+                                            <Typography>
+                                                {item.blurb}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </ReactCardFlip>
+                                </Slider>
                             </Grid>
                         // </Box>
                     ))}
-                    <Box
+                    {/* <Box
                         sx={{
                             display: { xs: "flex", sm: "none" },
                             gap: 1,
                             py: 1,
                             overflow: "auto",
-                            width: { xs: "300%", md: "100%" },
+                            width: { xs: "300px" },
                             scrollSnapType: "x mandatory",
                             "& > *": {
                                 scrollSnapAlign: "center",
@@ -198,7 +280,7 @@ const Values = () => {
                                 isFlipped={id === item.id && flipCard}
                                 flipDirection="horizontal"
                                 id={item.id}
-                                width={400}
+                                width="300px"
                             >
                                 <Card
                                     classes={`${item.class}`}
@@ -226,9 +308,10 @@ const Values = () => {
                                 </Card>
                             </ReactCardFlip>
                         ))}
-                    </Box>
+                    </Box> */}
                 </Grid>
-            </Box>
+                </Box>
+            </Section>
         </>
     );
 };

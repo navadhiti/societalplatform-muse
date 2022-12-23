@@ -113,7 +113,7 @@ const theme = createTheme({
     },
     subtitle1: {
       '&:hover': {
-        background: ` url(${Line}) bottom no-repeat`,
+        background: ` url(${Line}) bottom no-repeat,`,
         cursor: 'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
@@ -126,7 +126,7 @@ const theme = createTheme({
     },
     caption: {
       '&:hover': {
-        background: ` url(${ArrowImage}) bottom right no-repeat`,
+        background: ` url(${ArrowImage}) bottom right no-repeat,url(${Line}) bottom no-repeat`,
 
         cursor: 'pointer',
       },
@@ -817,8 +817,6 @@ const theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
-            width: '381px',
-            height: '48px',
 
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',

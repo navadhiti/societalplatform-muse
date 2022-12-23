@@ -33,7 +33,10 @@ import {
 } from 'react-share';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
+import Sanjay from '../Assets/Images/sanjay.png';
+
 import Author from '../Assets/Images/Author7.png';
+import AuthorName from '../Assets/Images/musing-banner.svg';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
@@ -41,6 +44,7 @@ import Stories_Aritcle from '../Components/Stories_article';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
+  const [author, setAuthor] = useState();
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -48,9 +52,14 @@ const Indi_Article = () => {
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((e) => setError(e));
+    fetch('https://tm.navadhiti.com/wp-json/wp/v2/users/2')
+      .then((response) => response.json())
+      .then((json) => setAuthor(json))
+      .catch((e) => setError(e));
   }, []);
 
   console.log(data);
+  console.log(author?.description, 'author');
 
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -116,7 +125,7 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction={{ xs: 'row-reverse', md: 'row' }}
+            direction={{ xs: 'column-reverse', md: 'row' }}
             justifyContent="center"
             alignItems="center"
           >
@@ -131,32 +140,46 @@ const Indi_Article = () => {
               </Title>
               <Grid
                 container
-                direction="row"
+                direction={{ xs: 'column-reverse', md: 'row' }}
                 justifyContent="flex-start"
                 alignItems="center"
                 mt={6}
               >
-                <Grid item xs={1}>
-                  <Avatar
-                    alt="Remy Sharp"
-                    src={Author}
-                    sx={{
-                      width: 70,
-                      height: 70,
-                      border: '1px solid black',
-                    }}
-                  />
+                <Grid item xs={12} md={5}>
+                  <Grid
+                    container
+                    direction="row"
+                    justifyContent="flex-start"
+                    alignItems="center"
+                    // mt={6}
+                  >
+                    <Grid item xs={3}>
+                      {' '}
+                      <Avatar
+                        alt="Remy Sharp"
+                        src={Author}
+                        sx={{
+                          width: 70,
+                          height: 70,
+                          border: '1px solid black',
+                        }}
+                      />
+                    </Grid>
+                    <Grid item xs={9}>
+                      <Typography variant="body2">
+                        <b>WORDS BY</b>
+                      </Typography>
+                      <Typography variant="body2">
+                        <b>
+                          Kuldeep Dantewadia <br />
+                          Gautam Prakash
+                        </b>
+                      </Typography>
+                      <Typography>Co-founders, Reap Benefit</Typography>
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <Grid item xs={3} ml={2}>
-                  <Typography variant="body2">WORDS BY</Typography>
-                  <Typography variant="body2">
-                    Kuldeep Dantewadia <br />
-                    Gautam Prakash
-                  </Typography>
-                  <Typography>Co-founders, Reap Benefit</Typography>
-                </Grid>
-
-                <Grid item xs={6}>
+                <Grid item xs={12} md={6}>
                   <Typography>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
@@ -166,26 +189,35 @@ const Indi_Article = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={5}>
-              <img
-                style={{ width: '606px', height: '630px' }}
-                src={ArticleImage}
-                alt="img"
-              />
+            <Grid item xs={12} md={5}>
+              <Box display={{ xs: 'none', md: 'block' }}>
+                <img
+                  style={{ width: '606px', height: '630px' }}
+                  src={ArticleImage}
+                  alt="img"
+                />
+              </Box>
+              <Box display={{ xs: 'block', md: 'none' }}>
+                <img
+                  style={{ width: '350px', height: '500px' }}
+                  src={ArticleImage}
+                  alt="img"
+                />
+              </Box>
             </Grid>
           </Grid>
           <Divider sx={{ borderStyle: 'dotted' }} />
           <Grid
             container
             direction="row"
-            justifyContent="space-between"
+            justifyContent={{ xs: 'flex-start', md: 'space-between' }}
             alignItems="center"
             mt={5}
           >
-            <Grid item md={8} sx={{ textAlign: 'start' }}>
-              <TextField placeholder="Search" variant="outlined" />
+            <Grid item xs={4} md={8} sx={{ textAlign: 'start' }}>
+              <TextField label="Search" variant="outlined" />
             </Grid>
-            <Grid item md={4}>
+            <Grid item xs={6} md={4}>
               <Stack
                 direction="row"
                 justifyContent="center"
@@ -196,12 +228,16 @@ const Indi_Article = () => {
                   LISTEN
                   <VolumeUp />
                 </Button>
-                <Button variant="icon-btn">
-                  <PictureAsPdfOutlined />
-                </Button>
-                <Button variant="icon-btn">
-                  <PrintOutlined />
-                </Button>
+                <Box display={{ xs: 'none', md: 'block' }}>
+                  <Button variant="icon-btn">
+                    <PictureAsPdfOutlined />
+                  </Button>
+                </Box>
+                <Box display={{ xs: 'none', md: 'block' }}>
+                  <Button variant="icon-btn">
+                    <PrintOutlined />
+                  </Button>
+                </Box>
                 <Box
                   sx={{
                     transform: 'translateZ(0px)',
@@ -217,7 +253,6 @@ const Indi_Article = () => {
                         // color: 'blue',
                         boxShadow: 'none',
                         border: '1px solid black',
-                        
                       },
                     }}
                     icon={<ShareOutlined />}
@@ -239,7 +274,7 @@ const Indi_Article = () => {
             </Grid>
           </Grid>
           <Grid container mt={10} spacing={2}>
-            <Grid item xs={4} sx={{ textAlign: 'left' }}>
+            <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <div style={{ position: 'relative', overflow: 'auto' }}>
                 <StickyBox offsetTop={20} offsetBottom={20}>
                   <Typography variant="h5"> ARTICLE OUTLINE</Typography>
@@ -259,12 +294,53 @@ const Indi_Article = () => {
                 </StickyBox>
               </div>
             </Grid>
-            <Grid item xs={7} sx={{ textAlign: 'left' }}>
+            <Grid
+              item
+              xs={12}
+              md={7}
+              sx={{ textAlign: 'left' }}
+              px={{ xs: 4, md: 5 }}
+            >
               <div
                 dangerouslySetInnerHTML={{
                   __html: data?.content.rendered,
                 }}
               ></div>
+            </Grid>
+          </Grid>
+          <Grid container>
+            <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
+              <img src={Sanjay} width="80%" />
+            </Grid>
+            <Grid item xs={12} md={8} sx={{ textAlign: 'left' }}>
+              <Box
+                sx={{
+                  background: ` url(${AuthorName}) center left no-repeat`,
+                  mb: 3,
+                }}
+              >
+                <Typography variant="h4" sx={{}}>
+                  Sanjay Purohit
+                </Typography>
+              </Box>
+              <Typography
+                variant="body"
+                dangerouslySetInnerHTML={{
+                  __html: author?.description,
+                }}
+              ></Typography>
+              {/* <Typography
+                  variant="h4"
+                  dangerouslySetInnerHTML={{
+                    __html: author?.name,
+                  }}
+                ></Typography> */}
+              <Typography variant="h4" sx={{ pt: 5 }}>
+                Sanjay Purohit
+              </Typography>
+              <Typography variant="body" sx={{ pb: 2 }}>
+                Chief Curator
+              </Typography>
             </Grid>
           </Grid>
           <Stories_Aritcle />
