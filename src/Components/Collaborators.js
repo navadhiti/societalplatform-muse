@@ -20,6 +20,7 @@ import Author9 from "../Assets/Images/Author9.png";
 import Author10 from "../Assets/Images/Author10.png";
 import backgroud from "../Assets/Images/Vector.png";
 import backgroud1 from "../Assets/Images/Vector (2).png";
+import { Section } from "../Themes/StyledComponent";
 
 import Divider from "../Assets/Images/Divider.png";
 import { AnimatedButton } from "../Themes/StyledComponent";
@@ -79,7 +80,7 @@ const Collaborators = () => {
     ];
     return (
         <>
-            <Box pt={{ xs: 4, sm: 4, md: 13 }}>
+            <Section pt={{ xs: 4, sm: 4, md: 13 }}>
                 <Container>
                     <Grid
                         container
@@ -158,7 +159,7 @@ const Collaborators = () => {
                                 sx={{ textAlign: "left" }}
                             >
                                 <Box display={{ xs: "block", md: "none" }}>
-                                    {/* <ImageList
+                                    <ImageList
                                         variant="masonry"
                                         cols={2}
                                         gap={8}
@@ -194,8 +195,8 @@ const Collaborators = () => {
                                                 </ImageListItem>
                                             </>
                                         ))}
-                                    </ImageList> */}
-                                    <Grid
+                                    </ImageList>
+                                    {/* <Grid
                                         container
                                         // spacing={2}
                                         rowSpacing={1}
@@ -234,10 +235,7 @@ const Collaborators = () => {
                                                             borderRadius: "5px",
                                                         }}
                                                     />
-                                                    {/* {console.log(
-                                                    itemData[0].img,
-                                                    "author"
-                                                )} */}
+                                                   
                                                     <Typography
                                                         variant="body1"
                                                         textAlign="center"
@@ -253,7 +251,7 @@ const Collaborators = () => {
                                                 </Box>
                                             </Grid>
                                         ))}
-                                    </Grid>
+                                    </Grid> */}
                                 </Box>
                                 <Box display={{ xs: "none", md: "block" }}>
                                     <Grid
@@ -624,7 +622,7 @@ const Collaborators = () => {
                         </Grid>
                     </Grid>
                 </Container>
-            </Box>
+            </Section>
         </>
     );
 };

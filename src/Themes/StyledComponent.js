@@ -41,15 +41,15 @@ export const Section = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  '@media (min-width:550px) and (max-width:780px) ': {
+  @media (max-width: 768px) {
     padding: 2rem 0;
-    height: auto;
+    height: auto !important;
   }
-  '@media (max-width:550px)': {
-    padding: 2rem 0;
-    height: auto;
-  }
+  
+    @media (max-width:550px): {
+      padding: 2rem 0;
+      height: auto !important;
+    }
 `;
 export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame[data-num='1'] {
