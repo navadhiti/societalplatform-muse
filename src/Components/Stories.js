@@ -16,43 +16,45 @@ import LinkUnderline from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/RightArrow.png';
 import { Section } from '../Themes/StyledComponent';
 import card from '../Assets/Images/Card.png';
+import articleImage from '../Assets/Images/articleImage.png';
 import card1 from '../Assets/Images/Card1.png';
+
 import card2 from '../Assets/Images/Card2.png';
 
 const Stories = () => {
   const Stories = [
     {
-      id: '1',
+      id: '0',
       title: 'Reimagining disaster resilience',
-      image: card,
+      image: StoryImg,
+    },
+    {
+      id: '1',
+      title: 'All teach, all learn',
+      image: articleImage,
     },
     {
       id: '2',
-      title: 'All teach, all learn',
+      title: 'Solve small, dent big',
       image: card1,
     },
     {
       id: '3',
-      title: 'Solve small, dent big',
+      title: 'Striking collaboration gold',
       image: card2,
     },
     {
       id: '4',
-      title: 'Striking collaboration gold',
+      title: 'Build beyond',
       image: card,
     },
     {
       id: '5',
-      title: 'Build beyond',
+      title: 'The power of public goods',
       image: card1,
     },
-    {
-      id: '6',
-      title: 'The power of public goods',
-      image: card2,
-    },
   ];
-  const [arr, setArr] = useState([{ text: 'foo' }, { text: 'bar' }]);
+  const [id, setId] = useState(0);
   const [hover, setHover] = useState(false);
   const handleMouseEnter = (event, index) => {
     console.log(event, 'event', index);
@@ -123,6 +125,7 @@ const Stories = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
+          py={4}
         >
           <Grid
             item
@@ -131,24 +134,29 @@ const Stories = () => {
             alignItems="center"
             display={{ xs: 'none', sm: 'block' }}
           >
-            <img src={StoryImg} alt="img" width="100%" />
+            <img
+              src={Stories[id].image}
+              alt="img"
+              width="100%"
+              height="400px"
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <List pt={{ xs: 2, md: 9 }}>
               {Stories.map((item) => (
-             
-                 <ListItem id={item.id}>
-                 <Typography variant="caption">
-                   <Stack spacing={2} direction="row">
-                     {item.title}
-                     
-                     <Box sx={{ width: '5rem' }}></Box>
-                   </Stack>
-                 </Typography>
-               </ListItem>
-               
+                <ListItem
+                  id={item.id}
+                  onMouseEnter={() => setId(item.id)}
+                  //   onMouseOut={() => setId(0)}
+                >
+                  <Typography variant="caption">
+                    <Stack spacing={2} direction="row">
+                      {item.title}
+                      <Box sx={{ width: '5rem' }}></Box>
+                    </Stack>
+                  </Typography>
+                </ListItem>
               ))}
-            
             </List>
           </Grid>
         </Grid>

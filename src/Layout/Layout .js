@@ -227,7 +227,7 @@ const Layout = () => {
               </Box>
             </Grid>
             {/* </GRID11> */}
-            <StickyBox offsetTop={-80} offsetBottom={-80}>
+            <StickyBox offsetTop={80} offsetBottom={-80}>
               <Grid
                 item
                 xs={1}
