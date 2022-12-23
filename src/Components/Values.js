@@ -5,6 +5,7 @@ import {
     Typography,
     Box,
     Container,
+    Button,
 } from "@mui/material";
 
 import React, { useState } from "react";
@@ -17,15 +18,9 @@ import ReactCardFlip from "react-card-flip";
 import Divider from "../Assets/Images/line.png";
 import values_1 from "../Assets/Images/values.png";
 import { Section } from "../Themes/StyledComponent";
+import Carousel from "react-material-ui-carousel";
 
 const Values = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
     const itemData = [
         {
             id: "1",
@@ -79,6 +74,16 @@ const Values = () => {
         // e.preventDefault();
         setId(id);
     };
+    function Item(props) {
+        return (
+            <Box>
+                <Card classes={`${props.item.class}`}>
+                    <Typography variant="h4">{props.item.title}</Typography>
+                    <Typography>{props.item.blurb}</Typography>
+                </Card>
+            </Box>
+        );
+    }
     return (
         <>
             <Section>
@@ -102,7 +107,7 @@ const Values = () => {
                                 >
                                     Values{" "}
                                 </span>
-                                <span mt={5}>
+                                <span mt={0}>
                                     <img
                                         src={values_1}
                                         alt="img"
@@ -124,54 +129,63 @@ const Values = () => {
                             </Box>
                         </Grid>
                     </Grid>
-                    <Grid
-                        container
-                        spacing={2}
-                        justifyContent="center"
-                        alignItems="center"
-                        sx={{ py: 5 }}
-                    >
-                        {itemData.map((item) => (
-                            // <Box display={{ xs: "none", sm: "block" }}>
-                            <Grid item xs={11} sm={6} md={2} lg={2}>
-                                <ReactCardFlip
-                                    isFlipped={id === item.id && flipCard}
-                                    flipDirection="horizontal"
-                                    id={item.id}
-                                >
-                                    <Card
-                                        classes={`${item.class}`}
-                                        onMouseEnter={() => {
-                                            setId(item.id);
-                                            setFlipCard(true);
-                                        }}
+                    <Box display={{ xs: "none", md: "block" }}>
+                        <Grid
+                            container
+                            spacing={2}
+                            justifyContent="center"
+                            alignItems="center"
+                            sx={{ py: 5 }}
+                        >
+                            {itemData.map((item) => (
+                                // <Box display={{ xs: "none", sm: "block" }}>
+                                <Grid item xs={11} sm={6} md={2} lg={2}>
+                                    <ReactCardFlip
+                                        isFlipped={id === item.id && flipCard}
+                                        flipDirection="horizontal"
+                                        id={item.id}
                                     >
-                                        <CardContent variant="card_content">
-                                            <Typography variant="h4">
-                                                {item.title}
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                    <Card
-                                        classes={`${item.class1}`}
-                                        onMouseOut={() => {
-                                            setId(null);
-                                            setFlipCard(false);
-                                        }}
-                                    >
-                                        <CardContent
-                                            variant={item.contentclass}
+                                        <Card
+                                            classes={`${item.class}`}
+                                            onMouseEnter={() => {
+                                                setId(item.id);
+                                                setFlipCard(true);
+                                            }}
                                         >
-                                            <Typography>
-                                                {item.blurb}
-                                            </Typography>
-                                        </CardContent>
-                                    </Card>
-                                </ReactCardFlip>
-                            </Grid>
-                            // </Box>
-                        ))}
-                    </Grid>
+                                            <CardContent variant="card_content">
+                                                <Typography variant="h4">
+                                                    {item.title}
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                        <Card
+                                            classes={`${item.class1}`}
+                                            onMouseOut={() => {
+                                                setId(null);
+                                                setFlipCard(false);
+                                            }}
+                                        >
+                                            <CardContent
+                                                variant={item.contentclass}
+                                            >
+                                                <Typography>
+                                                    {item.blurb}
+                                                </Typography>
+                                            </CardContent>
+                                        </Card>
+                                    </ReactCardFlip>
+                                </Grid>
+                                // </Box>
+                            ))}
+                        </Grid>
+                    </Box>
+                    <Box display={{ xs: "block", md: "none" }}>
+                        <Carousel sx={{ p: 5 }}>
+                            {itemData.map((item, i) => (
+                                <Item key={i} item={item} />
+                            ))}
+                        </Carousel>
+                    </Box>
                 </Box>
             </Section>
         </>

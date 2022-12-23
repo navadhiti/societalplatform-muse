@@ -20,7 +20,6 @@ const Home = () => {
         <div style={styles.LandingBackground}>
             {/* <Container sx={{minHeight: '500px'}}></Container> */}
             <Blurb />
-            ngmms
             <Blurb_1 />
             <Stories />
             <Blub2 />

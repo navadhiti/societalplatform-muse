@@ -30,7 +30,7 @@ import SpeedDialAction from '@mui/material/SpeedDialAction';
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
 import SaveIcon from '@mui/icons-material/Save';
 import PrintIcon from '@mui/icons-material/Print';
-import Slider from 'react-slick';
+
 import { AnimatedButton } from '../Themes/StyledComponent';
 
 const actions = [

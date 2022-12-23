@@ -131,7 +131,7 @@ const Layout = () => {
                     // -webkit-scrollbar { width: 0 !important }
                     // @include scroll-bar(4px, 4px, 6px);
                     overflowY: 'auto',
-                    borderRadius: '30px 0 30px 30px ',
+                    borderRadius: '30px 30px 30px 30px ',
                   }}
                   className="body"
                 >
@@ -215,6 +215,7 @@ const Layout = () => {
                         ml: -9,
                         position: 'fixed',
                         bottom: '-1rem',
+                        left:'6rem',
                         display: {
                           xs: 'none',
                           sm: 'block',
@@ -228,7 +229,7 @@ const Layout = () => {
               </Box>
             </Grid>
             {/* </GRID11> */}
-            <StickyBox>
+            <StickyBox offsetTop={80} offsetBottom={-80} >
               <Grid
                 item
                 xs={1}

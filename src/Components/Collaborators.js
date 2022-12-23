@@ -23,6 +23,7 @@ import backgroud1 from "../Assets/Images/Vector (2).png";
 import { Section } from "../Themes/StyledComponent";
 
 import Divider from "../Assets/Images/Divider.png";
+import Pen from '../Assets/Images/img-pen.png';
 import { AnimatedButton } from "../Themes/StyledComponent";
 
 const Collaborators = () => {
@@ -93,8 +94,8 @@ const Collaborators = () => {
                             item
                             xs={12}
                             sm={12}
-                            md={5}
-                            lg={5}
+                            md={6}
+                            lg={6}
                             sx={{ textAlign: "left" }}
                         >
                             <Typography variant="h1" textAlign="Left">
@@ -110,6 +111,7 @@ const Collaborators = () => {
                                     >
                                         collaborators
                                     </span>
+                                    <img src={Pen} alt="img"  width="10%" />
                                 </b>
                             </Typography>
                             <Typography
@@ -160,7 +162,7 @@ const Collaborators = () => {
                             >
                                 <Box display={{ xs: "block", md: "none" }}>
                                     <ImageList
-                                        variant="masonry"
+                                        
                                         cols={2}
                                         gap={8}
                                     >
