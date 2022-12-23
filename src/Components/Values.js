@@ -10,9 +10,9 @@ import {
 import React, { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 // import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
+// import Slider from 'react-slick';
 
 import Divider from '../Assets/Images/line.png';
 import values_1 from '../Assets/Images/values.png';
@@ -88,72 +88,64 @@ const Values = () => {
   return (
     <>
       <Section>
-        <Box>
-          {/* <Grid
-            container
-            spacing={0}
-            justifyContent="center"
-            alignItems="start"
-            px={{ xs: 2, sm: 2, md: 5 }}
-          >
-            <Grid item xs={12} sm={12} md={8} lg={7}>
-              <Typography variant="h1" textAlign="center">
-                Our{' '}
-                <span
-                  style={{
-                    background: ` url(${Divider}) bottom no-repeat`,
-                    paddingBottom: '05px',
-                    backgroundSize: 'contain',
-                  }}
+       <Grid
+                    container
+                    spacing={2}
+                    justifyContent="center"
+                    alignItems="center"
+                    sx={{ py: 5 }}
                 >
-                  Values{' '}
-                </span>
-                <span mt={5}>
-                  <img src={values_1} alt="img" width="10%" mt={5} />
-                </span>
-              </Typography>
-              <Box py={{ xs: 2, sm: 2, md: 5 }}>
-                <Typography variant="body" textAlign="center">
-                  Lorem ipsum dolor sit amet consectetur. Vivamus eu aenean
-                  interdum in proin id ut. Lorem ipsum dolor sit amet
-                  consectetur. Sollicitudin vivamus eu aenean interdum in proin
-                  id ut. Sit nisi eget enim sed dui sed. Sed cras nibh vehicula
-                  at ac sed elit diam. Diam vel eu nunc eu at odio.
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid> */}
-
-          <div>
-            <h2> Single Item</h2>
-            <Slider {...settings}>
-              <div>
-              <Typography variant="body" textAlign="center">
-                  Lorem ipsum dolor sit amet consectetur. Vivamus eu aenean
-                  interdum in proin id ut. Lorem ipsum dolor sit amet
-                  consectetur. Sollicitudin vivamus eu aenean interdum in proin
-                  id ut. Sit nisi eget enim sed dui sed. Sed cras nibh vehicula
-                  at ac sed elit diam. Diam vel eu nunc eu at odio.
-                </Typography>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
-              <div>
-                <h3>5</h3>
-              </div>
-              <div>
-                <h3>6</h3>
-              </div>
-            </Slider>
-          </div>
-        </Box>
+                   
+                     {itemData.map((item) => (
+                        // <Box display={{ xs: "none", sm: "block" }}>
+                            <Grid
+                                item
+                                xs={11}
+                                sm={6}
+                                md={2}
+                                lg={2}
+                           
+                            >
+                                <ReactCardFlip
+                                    isFlipped={id === item.id && flipCard}
+                                    flipDirection="horizontal"
+                                    id={item.id}
+                                >
+                                    <Card
+                                        classes={`${item.class}`}
+                                        onMouseEnter={() => {
+                                            setId(item.id);
+                                            setFlipCard(true);
+                                        }}
+                                    >
+                                        <CardContent variant="card_content">
+                                            <Typography variant="h4">
+                                                {item.title}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                    <Card
+                                        classes={`${item.class1}`}
+                                        onMouseOut={() => {
+                                            setId(null);
+                                            setFlipCard(false);
+                                        }}
+                                    >
+                                        <CardContent
+                                            variant={item.contentclass}
+                                        >
+                                            <Typography>
+                                                {item.blurb}
+                                            </Typography>
+                                        </CardContent>
+                                    </Card>
+                                </ReactCardFlip>
+                                
+                            </Grid>
+                        // </Box>
+                    ))}
+                   
+                </Grid>
       </Section>
     </>
   );
