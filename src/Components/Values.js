@@ -19,61 +19,22 @@ import Divider from "../Assets/Images/line.png";
 import values_1 from "../Assets/Images/values.png";
 import { Section } from "../Themes/StyledComponent";
 import Carousel from "react-material-ui-carousel";
+import data from "../db.json";
+console.log(data.home.values,"data")
 
 const Values = () => {
-    const itemData = [
-        {
-            id: "1",
-            title: "Catalyse interactions",
-            blurb: "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-            class: "values",
-            class1: "values_flip",
-            contentclass: "card_content",
-        },
-        {
-            id: "2",
-            title: "Build public goods",
-            blurb: "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-            class: "values1",
-            class1: "values1_flip",
-            contentclass: "card_content1",
-        },
-        {
-            id: "3",
-            title: "Restore agency",
-            blurb: "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-            class: "values2",
-            class1: "values2_flip",
-            contentclass: "card_content2",
-        },
-        {
-            id: "4",
-            title: "Empower with data",
-            blurb: "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-            class: "values3",
-            class1: "values3_flip",
-            contentclass: "card_content3",
-        },
-        {
-            id: "5",
-            title: "Empower with data",
-            blurb: "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-            class: "values4",
-            class1: "values4_flip",
-            contentclass: "card_content4",
-        },
-    ];
+    const itemData = data.home.values;
     const [flipCard, setFlipCard] = useState(false);
     const [id, setId] = useState();
-    const handleClick = (id) => {
-        // if(id !== id){
-        setFlipCard(!flipCard);
-        // }else{
-        //     setFlipCard(true)
-        // }
-        // e.preventDefault();
-        setId(id);
-    };
+    // const handleClick = (id) => {
+    //     // if(id !== id){
+    //     setFlipCard(!flipCard);
+    //     // }else{
+    //     //     setFlipCard(true)
+    //     // }
+    //     // e.preventDefault();
+    //     setId(id);
+    // };
     function Item(props) {
         return (
             <Box>

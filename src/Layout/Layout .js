@@ -32,6 +32,11 @@ import PropTypes from 'prop-types';
 import Indi_Article from '../Pages/Indi_Article';
 import All_Articles from '../Pages/All_Articles';
 import PALETTE from '../Themes/Palette';
+import Authors from '../Pages/Authors';
+import data from "../db.json";
+console.log(data.menu,"data from db");
+console.log("data from db");
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   const location = useLocation();
@@ -64,36 +69,11 @@ TabPanel.propTypes = {
 };
 const Layout = () => {
   const navigate = useNavigate();
+  
   const [value, setValue] = React.useState(0);
   const buttonHeight = `calc(90vh/5)`;
   const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
-  const buttonName = [
-    {
-      name: 'HOME',
-      backgroundColor: '#E2D1ED',
-      link: '/',
-    },
-    {
-      name: 'ARTICLES',
-      backgroundColor: '#3E418A',
-      link: '/all-articles',
-    },
-    {
-      name: 'EXPIRIENCE',
-      backgroundColor: '#DC8F6E',
-      link: '',
-    },
-    {
-      name: 'CONTACT',
-      backgroundColor: '#22534F',
-      link: '',
-    },
-    {
-      name: 'SHARE',
-      backgroundColor: '#C4BCB9',
-      link: '',
-    },
-  ];
+  const buttonName = data.menu;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -194,6 +174,8 @@ const Layout = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/articles" element={<Indi_Article />} />
                     <Route path="/all-articles" element={<All_Articles />} />
+                    <Route path="/Author" element={<Authors />} />
+
                   </Routes>
                   {/* <Home />
                   hi */}
@@ -251,6 +233,9 @@ const Layout = () => {
                           padding: padding,
                           verticalAlign: 'middle',
                         }}
+                        onClick={
+                          navigate("/")
+                        }
                       >
                         {item.name}
                       </ListItemButton>

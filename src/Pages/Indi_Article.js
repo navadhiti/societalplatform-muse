@@ -35,7 +35,7 @@ import {
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Sanjay from '../Assets/Images/sanjay.png';
 
-import Author from '../Assets/Images/Author7.png';
+import Author from '../Assets/Images/Authors/Author7.png';
 import AuthorName from '../Assets/Images/musing-banner.svg';
 
 import { StickyButton, Title } from '../Themes/StyledComponent';
