@@ -1,7 +1,5 @@
 import React from "react";
 import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/material";
-
-import Divider from "../Assets/Images/Divider.png";
 import Art from "../Assets/Images/Artwork_3.png";
 import { AnimatedButton, Section } from "../Themes/StyledComponent";
 import { StyledContainer } from "../Themes/StyledComponent";
@@ -12,10 +10,7 @@ const styles = {
             backgroundPosition: `bottom right`,
             backgroundRepeat:`no-repeat`,
             height:'600px',
-            // "@media (max-width:550px)": {
-            //     height:'700px',
-            //     backgroundSize: "contain",
-            // },
+        
             
         },
     };
@@ -69,45 +64,8 @@ const Blub2 = () => {
                         </Box >
                         
                     </Grid>
-                    {/* <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={4}
-                        lg={4}
-                        mt={{xs:2,md:20}}                   
-                    >
-                        <img src={Art} alt="img" width="100%" />
-                    </Grid> */}
+                  
                 </Grid>
-                {/* <Grid
-                    container
-                    spacing={0}
-                    justifyContent="space-between"
-                    alignItems="start"
-                    pt={0}
-                >
-                    <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={4}
-                        lg={4}
-                        textAlign="left"                        
-                    >
-                      <img src={Art} alt="img" width="100%" />
-                    </Grid>
-                    <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={7}
-                        lg={7}
-                        textAlign="left"
-                    >
-                        <img src={Art} alt="img" width="100%" />
-                    </Grid>
-                </Grid> */}
             </Container>
             </Section>
         </>

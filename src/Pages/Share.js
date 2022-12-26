@@ -1,22 +1,21 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Article_landing from "../Components/Article Landing";
+import Share_Landing from "../Components/Share_Landing";
 
-const All_Articles = () => {
+const Share = () => {
     const styles = {
         LandingBackground: {
-            backgroundColor: "#DC8F6E",
+            backgroundColor: "#3E418A",
             color: "#fff",
-            // backgroundColor: `#fff`,
         },
     };
     return (
         <>
             <Box style={styles.LandingBackground}>
-                <Article_landing />
+                <Share_Landing />
             </Box>
         </>
     );
 };
 
-export default All_Articles;
+export default Share;

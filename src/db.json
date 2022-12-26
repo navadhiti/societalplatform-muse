@@ -8,32 +8,25 @@
     },
     {
       "name": "ARTICLES",
-      "backgroundColor": "#3E418A",
-      "link": "/"
+      "backgroundColor": "#DC8F6E",
+      "link": "/articles"
     },
     {
       "name": "EXPIRIENCE",
-      "backgroundColor": "#DC8F6E",
-      "link": "/"
-    },
-    {
-      "name": "CONTACT",
-      "backgroundColor": "#22534F",
-      "link": "/"
-    },
-    {
-      "name": "SHARE",
       "backgroundColor": "#C4BCB9",
       "link": "/"
     },
     {
-      "name": "HOME",
-      "backgroundColor": "#E2D1ED",
-      "link": "/"
-    }
-   
-    
-],
+      "name": "Authors",
+      "backgroundColor": "#22534F",
+      "link": "/author"
+    },
+    {
+      "name": "SHARE",
+      "backgroundColor": "#3E418A",
+      "link": "/share"
+    }    
+  ],
   
     "home":{
       "values":[

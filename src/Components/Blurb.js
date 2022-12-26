@@ -1,22 +1,11 @@
-import { Button, Container, Grid, Stack, Typography, Box } from "@mui/material";
+import {Container, Typography, } from "@mui/material";
 
 import React from "react";
-
-// const styles = {
-//     paperContainer: {
-//         backgroundImage: `url(${Layer})`,
-//         backgroundPosition: `top center`,
-//     },
-// };
-import Divider from "../Assets/Images/Divider.png";
-import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
-import Image from "../Assets/Images/sp-musebook-design.png";
 import Image1 from "../Assets/Images/graph.png";
 import Image2 from "../Assets/Images/Coin.png";
 import Image3 from "../Assets/Images/hand.png";
 import Image4 from "../Assets/Images/Blub.png";
 import Image5 from "../Assets/Images/Questionmark.png";
-// import Image6 from "../Assets/Images/image_13.png";
 import { Section } from "../Themes/StyledComponent";
 
 const Blurb = () => {

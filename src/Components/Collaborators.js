@@ -166,9 +166,9 @@ const Collaborators = () => {
                                         cols={2}
                                         gap={8}
                                     >
-                                        {itemData.map((item) => (
-                                            <>
-                                                <ImageListItem
+                                        {itemData.map((item,index) => (
+                                            
+                                                <ImageListItem  key={index}
                                                     sx={{
                                                         border: "solid 1px black",
                                                         borderRadius: "5px",
@@ -195,7 +195,7 @@ const Collaborators = () => {
                                                         {item.subTitle}
                                                     </Typography>
                                                 </ImageListItem>
-                                            </>
+                                            
                                         ))}
                                     </ImageList>
                                     {/* <Grid

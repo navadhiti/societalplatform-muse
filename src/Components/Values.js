@@ -4,37 +4,23 @@ import {
     Grid,
     Typography,
     Box,
-    Container,
-    Button,
 } from "@mui/material";
 
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
-// import Slider from 'react-slick';
-// import 'slick-carousel/slick/slick.css';
-// import 'slick-carousel/slick/slick-theme.css';
-// import Slider from 'react-slick';
 
 import Divider from "../Assets/Images/line.png";
 import values_1 from "../Assets/Images/values.png";
 import { Section } from "../Themes/StyledComponent";
 import Carousel from "react-material-ui-carousel";
 import data from "../db.json";
-console.log(data.home.values,"data")
+
 
 const Values = () => {
     const itemData = data.home.values;
     const [flipCard, setFlipCard] = useState(false);
     const [id, setId] = useState();
-    // const handleClick = (id) => {
-    //     // if(id !== id){
-    //     setFlipCard(!flipCard);
-    //     // }else{
-    //     //     setFlipCard(true)
-    //     // }
-    //     // e.preventDefault();
-    //     setId(id);
-    // };
+    
     function Item(props) {
         return (
             <Box>
@@ -98,9 +84,9 @@ const Values = () => {
                             alignItems="center"
                             sx={{ py: 5 }}
                         >
-                            {itemData.map((item) => (
-                                // <Box display={{ xs: "none", sm: "block" }}>
-                                <Grid item xs={11} sm={6} md={2} lg={2}>
+                            {itemData.map((item,index) => (
+                                
+                                <Grid item xs={11} sm={6} md={2} lg={2}  key={index}>
                                     <ReactCardFlip
                                         isFlipped={id === item.id && flipCard}
                                         flipDirection="horizontal"
@@ -136,14 +122,14 @@ const Values = () => {
                                         </Card>
                                     </ReactCardFlip>
                                 </Grid>
-                                // </Box>
+                                
                             ))}
                         </Grid>
                     </Box>
                     <Box display={{ xs: "block", md: "none" }}>
                         <Carousel sx={{ p: 5 }}>
-                            {itemData.map((item, i) => (
-                                <Item key={i} item={item} />
+                            {itemData.map((item, i,index) => (
+                                <Item key={i} item={item}  key={index}/>
                             ))}
                         </Carousel>
                     </Box>

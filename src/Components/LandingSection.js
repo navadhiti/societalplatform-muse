@@ -3,12 +3,10 @@ import {
   Grid,
   Box,
   Typography,
-  IconButton,
-  Stack,
   Container,
 } from '@mui/material';
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
-import ButtonIcon from '../Assets/Images/ArrowCircleDown.png';
+
 
 const styles = {
   LandingBackground: {

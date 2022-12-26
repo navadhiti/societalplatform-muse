@@ -1,5 +1,4 @@
-import { Container } from "@mui/material";
-import { height } from "@mui/system";
+
 import React from "react";
 import Blub2 from "../Components/Blub2";
 import Blurb from "../Components/Blurb";
@@ -10,13 +9,12 @@ import Values from "../Components/Values";
 const styles = {
     LandingBackground: {
         backgroundColor: "#E2D1ED",
-        // backgroundColor: `#fff`,
     },
 };
 const Home = () => {
     return (
         <div style={styles.LandingBackground}>
-            {/* <Container sx={{minHeight: '500px'}}></Container> */}
+            
             <Blurb />
             <Blurb_1 />
             <Stories />

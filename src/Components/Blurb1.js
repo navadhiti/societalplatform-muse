@@ -1,20 +1,8 @@
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import {Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import Divider from "../Assets/Images/Divider.png";
-import Logo from "../Assets/Images/sm_logo.png";
-import Layer from "../Assets/Images/Layer.png";
 import Blub from "../Assets/Images/Blub.png";
 import Sanjay from "../Assets/Images/sanjay.png";
 import { Section } from "../Themes/StyledComponent";
-
-
-// const styles = {
-//     paperContainer: {
-//         backgroundImage: `url(${Layer})`,
-//         backgroundPosition: `top center`,
-//     },
-// };
 
 const Blurb_1 = () => {
     return (

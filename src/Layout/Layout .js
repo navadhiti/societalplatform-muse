@@ -15,14 +15,10 @@ import theme from '../Themes/Theme';
 
 import {
   Box,
-  //   Button,
-  Container,
   Grid,
-  Typography,
   List,
   ListItem,
   ListItemButton,
-  Stack,
 } from '@mui/material';
 import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
 import Image from '../Assets/Images/sp-musebook-design.png';
@@ -34,17 +30,14 @@ import All_Articles from '../Pages/All_Articles';
 import PALETTE from '../Themes/Palette';
 import Authors from '../Pages/Authors';
 import data from "../db.json";
-console.log(data.menu,"data from db");
-console.log("data from db");
+import Share from '../Pages/Share';
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   const location = useLocation();
-  const path = location.pathname;
-  console.log(path, 'path');
-  const color = path == '/' ? PALETTE.PRIMARY : PALETTE.SECONDARY;
-  console.log(color, 'color');
-  // const Color = PALETTE.PRIMARY;
+  // const path = location.pathname;
+  
   return (
     <div
       role="tabpanel"
@@ -75,9 +68,7 @@ const Layout = () => {
   const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
   const buttonName = data.menu;
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -106,10 +97,6 @@ const Layout = () => {
                   value={value}
                   index={0}
                   style={{
-                    // backgroundColor: PALETTE.PRIMARY,
-                    // height: "85vh",
-                    // -webkit-scrollbar { width: 0 !important }
-                    // @include scroll-bar(4px, 4px, 6px);
                     overflowY: 'auto',
                     borderRadius: '30px 30px 30px 30px ',
                   }}
@@ -120,7 +107,6 @@ const Layout = () => {
                     spacing={0}
                     justifyContent="space-between"
                     alignItems="center"
-                    // sx={{position: "relative",}}
                   >
                     <Grid
                       item
@@ -128,7 +114,6 @@ const Layout = () => {
                       sm={1}
                       md={1}
                       lg={1}
-                      // sx={{ textAlign: "center",mt:-25 }}
                       sx={{
                         position: 'fixed',
                         marginTop: '-1.6rem',
@@ -148,7 +133,6 @@ const Layout = () => {
                       sm={1}
                       md={1}
                       lg={1}
-                      // sx={{ textAlign: "center",mt:-3 }}
                       sx={{
                         position: 'fixed',
                         marginTop: '7rem',
@@ -172,13 +156,13 @@ const Layout = () => {
                   </Grid>
                   <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/articles" element={<Indi_Article />} />
-                    <Route path="/all-articles" element={<All_Articles />} />
-                    <Route path="/Author" element={<Authors />} />
+                    <Route path="/indiviual-articles" element={<Indi_Article />} />
+                    <Route path="/articles" element={<All_Articles />} />
+                    <Route path="/author" element={<Authors />} />
+                    <Route path="/share" element={<Share />} />
+
 
                   </Routes>
-                  {/* <Home />
-                  hi */}
                   <Grid
                     container
                     spacing={0}
@@ -221,8 +205,8 @@ const Layout = () => {
                 display={{ xs: 'none', sm: 'block' }}
               >
                 <List sx={{ paddingTop: 0, width: '10%' }}>
-                  {buttonName.map((item) => (
-                    <ListItem disablePadding>
+                  {buttonName.map((item,index) => (
+                    <ListItem disablePadding key={index} >
                       <ListItemButton
                         sx={{
                           backgroundColor: item.backgroundColor,
@@ -232,9 +216,14 @@ const Layout = () => {
                           height: buttonHeight,
                           padding: padding,
                           verticalAlign: 'middle',
+                          '&:hover': {
+                            background:item.backgroundColor,
+                            cursor: 'pointer',
+                            opacity:'0.6',
+                          }
                         }}
-                        onClick={
-                          navigate("/")
+                        onClick={()=>
+                          navigate(item.link)
                         }
                       >
                         {item.name}
