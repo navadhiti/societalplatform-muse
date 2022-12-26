@@ -128,8 +128,8 @@ const Values = () => {
                     </Box>
                     <Box display={{ xs: "block", md: "none" }}>
                         <Carousel sx={{ p: 5 }}>
-                            {itemData.map((item, i,index) => (
-                                <Item key={i} item={item}  key={index}/>
+                            {itemData.map((item, i) => (
+                                <Item key={i} item={item} />
                             ))}
                         </Carousel>
                     </Box>
