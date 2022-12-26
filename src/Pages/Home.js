@@ -6,8 +6,6 @@ import Blurb from "../Components/Blurb";
 import Blurb_1 from "../Components/Blurb1";
 import Collaborators from "../Components/Collaborators";
 import Stories from "../Components/Stories";
-
-import TabSection from "../Components/TabSection";
 import Values from "../Components/Values";
 const styles = {
     LandingBackground: {

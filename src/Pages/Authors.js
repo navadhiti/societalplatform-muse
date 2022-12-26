@@ -1,11 +1,12 @@
-import { Box } from '@mui/material';
-import React from 'react';
-import Article_landing from '../Components/Article Landing';
 
-const All_Articles = () => {
+import { Box } from '@mui/material';
+import React from 'react'
+import Authors_Landing from '../Components/Authors_Landing';
+
+const Authors = () => {
     const styles = {
         LandingBackground: {
-            backgroundColor: "#3E418A",
+            backgroundColor: "#22534F",
             color:"#fff"
             // backgroundColor: `#fff`,
         },
@@ -13,10 +14,10 @@ const All_Articles = () => {
   return (
     <>
     <Box style={styles.LandingBackground}>
-<Article_landing />
-    </Box>
+        <Authors_Landing />
+        </Box>
     </>
   );
-};
+}
 
-export default All_Articles;
+export default Authors;

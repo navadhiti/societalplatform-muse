@@ -29,6 +29,8 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import PropTypes from 'prop-types';
 import logo from '../Assets/Images/sp_muse_logo.png';
 import frame from '../Assets/Images/Frame.png';
+import data from "../db.json";
+
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -105,33 +107,7 @@ const styles = {
     // backgroundColor:`#fff`,
   },
 };
-const buttonName = [
-  {
-    name: 'HOME',
-    backgroundColor: '#E2D1ED',
-    link: '/',
-  },
-  {
-    name: 'ARTICLES',
-    backgroundColor: '#3E418A',
-    link: '/all-articles',
-  },
-  {
-    name: 'EXPIRIENCE',
-    backgroundColor: '#DC8F6E',
-    link: '',
-  },
-  {
-    name: 'CONTACT',
-    backgroundColor: '#22534F',
-    link: '',
-  },
-  {
-    name: 'SHARE',
-    backgroundColor: '#C4BCB9',
-    link: '',
-  },
-];
+const buttonName = data.menu;
 const Header = (props) => {
   const [state, setState] = React.useState({
     left: false,

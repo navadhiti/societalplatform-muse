@@ -1,6 +1,6 @@
 // import { Container } from '@mui/system';
 import React from 'react';
-import { useNavigate, Route, Routes } from 'react-router-dom';
+import { useNavigate, Route, Routes , HashRouter as Router, ReactDOM} from 'react-router-dom';
 import StickyBox from 'react-sticky-box';
 import { useLocation } from 'react-router';
 import Footer from '../Components/Footer';
@@ -32,6 +32,11 @@ import PropTypes from 'prop-types';
 import Indi_Article from '../Pages/Indi_Article';
 import All_Articles from '../Pages/All_Articles';
 import PALETTE from '../Themes/Palette';
+import Authors from '../Pages/Authors';
+import data from "../db.json";
+console.log(data.menu,"data from db");
+console.log("data from db");
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
   const location = useLocation();
@@ -50,7 +55,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box>
-          <Typography>{children}</Typography>
+         {children}
         </Box>
       )}
     </div>
@@ -64,36 +69,11 @@ TabPanel.propTypes = {
 };
 const Layout = () => {
   const navigate = useNavigate();
+  
   const [value, setValue] = React.useState(0);
   const buttonHeight = `calc(90vh/5)`;
   const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
-  const buttonName = [
-    {
-      name: 'HOME',
-      backgroundColor: '#E2D1ED',
-      link: '/',
-    },
-    {
-      name: 'ARTICLES',
-      backgroundColor: '#3E418A',
-      link: '/all-articles',
-    },
-    {
-      name: 'EXPIRIENCE',
-      backgroundColor: '#DC8F6E',
-      link: '',
-    },
-    {
-      name: 'CONTACT',
-      backgroundColor: '#22534F',
-      link: '',
-    },
-    {
-      name: 'SHARE',
-      backgroundColor: '#C4BCB9',
-      link: '',
-    },
-  ];
+  const buttonName = data.menu;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -190,12 +170,15 @@ const Layout = () => {
                       />
                     </Grid>
                   </Grid>
-
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/articles" element={<Indi_Article />} />
                     <Route path="/all-articles" element={<All_Articles />} />
+                    <Route path="/Author" element={<Authors />} />
+
                   </Routes>
+                  {/* <Home />
+                  hi */}
                   <Grid
                     container
                     spacing={0}
@@ -214,6 +197,7 @@ const Layout = () => {
                         ml: -9,
                         position: 'fixed',
                         bottom: '-1rem',
+                        left:'6rem',
                         display: {
                           xs: 'none',
                           sm: 'block',
@@ -227,7 +211,7 @@ const Layout = () => {
               </Box>
             </Grid>
             {/* </GRID11> */}
-            <StickyBox offsetTop={80} offsetBottom={-80}>
+            <StickyBox offsetTop={80} offsetBottom={-80} >
               <Grid
                 item
                 xs={1}
@@ -236,7 +220,7 @@ const Layout = () => {
                 lg={1}
                 display={{ xs: 'none', sm: 'block' }}
               >
-                <List sx={{ paddingTop: 0 }}>
+                <List sx={{ paddingTop: 0, width: '10%' }}>
                   {buttonName.map((item) => (
                     <ListItem disablePadding>
                       <ListItemButton
@@ -249,6 +233,9 @@ const Layout = () => {
                           padding: padding,
                           verticalAlign: 'middle',
                         }}
+                        onClick={
+                          navigate("/")
+                        }
                       >
                         {item.name}
                       </ListItemButton>

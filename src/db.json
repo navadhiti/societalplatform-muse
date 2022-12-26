@@ -1,108 +1,257 @@
-[
-  {
-    "id": 22829,
-    "date": "2022-12-15T12:32:14",
-    "date_gmt": "2022-12-15T12:32:14",
-    "guid": {
-      "rendered": "http://localhost/societalplatform/wordpress/?p=22829"
+
+{
+  "menu": [
+    {
+      "name": "HOME",
+      "backgroundColor": "#E2D1ED",
+      "link": "/"
     },
-    "modified": "2022-12-15T12:58:19",
-    "modified_gmt": "2022-12-15T12:58:19",
-    "slug": "can-anyone-who-keeps-the-street-clean-become-a-hero",
-    "status": "publish",
-    "type": "post",
-    "link": "http://localhost/societalplatform/wordpress/can-anyone-who-keeps-the-street-clean-become-a-hero/",
-    "title": {
-      "rendered": "Can anyone who keeps the street clean become a hero?"
+    {
+      "name": "ARTICLES",
+      "backgroundColor": "#3E418A",
+      "link": "/"
     },
-    "content": {
-      "rendered": "<h2>The power of solving small &amp; denting big.</h2>\n<p>Choking air pollution, foaming lakes, open garbage dumps, uncovered drains, potholed and bumpy roads – when we look around and really see the world we live in, its various social issues appear complex and daunting. Where do we begin solving for a better world? Where do we find hope? Most importantly, who can solve these ever-changing problems as they arise?</p>\n<p>During the first COVID-induced lockdown in India, multitudes of citizens were suddenly cut off from their sources of livelihood, grappling with a lack of basic necessities. Alongside the alarming, something extraordinary unfolded – citizen-led food contributions with no mind to caste and class location, gender and so on! The first two weeks saw many requests for aid emerging from local communities through WhatsApp groups and citizens rising up to the challenge to solve these asks by themselves.<br />\nWhile a lot of action was happening on ground, some voices were not being heard and there was duplication of work. It was time to bridge the gap between demand and supply to enable communities to sustain themselves at a hyperlocal level. What would it take?</p>\n<p><img decoding=\"async\" loading=\"lazy\" class=\"size-medium wp-image-22839 aligncenter\" src=\"http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/Capture-1-300x165.png\" alt=\"\" width=\"704\" height=\"387\" srcset=\"https://timemedical.in/wp-content/uploads/2022/11/insta-04-free-img.jpg  300w, http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/Capture-1.png 704w\" sizes=\"(max-width: 300px) 100vw, 300px\" /></p>\n<h2>Small actions = Big impact</h2>\n<p>It took one small action. A group of 5 citizens put together this map which would show volunteers local settlements that might be hotspots and asks for aid. These asks could be registered through the map, a Google form or even by informing the local volunteer organisation.<br />\nCitizens, citizen groups, RWAs, civil society organisations and even the government had access to these requests and who fulfilled them. It was this one small action that made problem-solving efficient for 10 lakh different people fast and efficient. Accessible hyperlocal information became the seed of change – allowing individuals to see and solve local problems, fixing the duplication of asks across supporting agencies to the tune of ~Rs 10 lakh and shining a light on communities that had been invisible.</p>\n<p>It took one small action. A group of 5 citizens put together this map which would show volunteers local settlements that might be hotspots and asks for aid. These asks could be registered through the map, a Google form or even by informing the local volunteer organisation.<br />\nCitizens, citizen groups, RWAs, civil society organisations and even the government had access to these requests and who fulfilled them. It was this one small action that made problem-solving efficient for 10 lakh different people fast and efficient. Accessible hyperlocal information became the seed of change – allowing individuals to see and solve local problems, fixing the duplication of asks across supporting agencies to the tune of ~Rs 10 lakh and shining a light on communities that had been invisible.</p>\n<h2>Imagining a new world</h2>\n<p>Imagine a world where everyone can see, sense and solve the problems they face. It is a world of exponential solving where everyone – citizens, NGOs, government and private sector actors – can be a change leader.<br />\nBuilding this imagined world begins with acknowledging some realities of our current world that act as barriers to effective problem-solving by communities. Some of these are:<br />\nRecognising the problemOften, social issues we’re repeatedly exposed to become normalised to the point of not seeming like issues at all!Think about, for instance, the garbage scattered across roads. Unseemly and unsanitary as it is, it sometimes becomes a regular part of life for many communities. “This is how it is,”we come to think.<br />\nConnecting local problems to larger global onesGlobal problems such as climate change seem far more important than our local issues. However, all global issues boil down to many many local issues, distinct yet interconnected. For instance, the city Bengaluru in India loses about 160 million litres of water a day in leakages! The sheer amount of water wasted and the electricity needed to pump water together create enormous detrimental environmental impact. If communities understand that solving small can help solve bigger issues, will solving local problems become more worthwhile?<br />\nResponsibility and power to solveLiving in a world organised around different loci of power, i.e., government bodies, bureaucracy, social work organisations and so on, problem-solving frequently feels like someone else’s problem “someone will come and solve the problems for me.” At the same time, it is difficult for the few in power to give up control of decision-making for all.<br />\nThese realities mean that today, less than 1% of citizens are actively engaged in problem-solving in their neighbourhoods. And, it is these neighbourhoods that make cities, states and countries!</p>\n<h2>What our imagined world needs is all hands on deck.<br />\n<img decoding=\"async\" loading=\"lazy\" class=\"size-medium wp-image-22838 aligncenter\" src=\"http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/rb-1-300x273.png\" alt=\"\" width=\"704\" height=\"640\" srcset=\"https://timemedical.in/wp-content/uploads/2022/11/insta-01-free-img.jpg 300w, http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/rb-1.png 704w\" sizes=\"(max-width: 300px) 100vw, 300px\" /><br />\n<h2>Levers of change</h2>\n<p>We believe distributing the ownership of solving to communities and restoring their agency is the key to solving at scale and sustaining the change. For us, at Reap Benefit, scale is local actors solving local instances of global problems. Over the last 8 years, the team has learnt the power of restoring agency of communities by creating an enabling environment &#8211; be it key stakeholders coming together or creating capabilities to solve by leveraging technology.</p>\n<p>Three Key Levers of Change have emerged for us:<br />\nThe first, think local, solve global. Every global phenomena has a local manifestation. Every local solution to a global problem sparks a cycle of change. Local actions have the power to shape policies and create systemic change. We work with communities to spread this awareness of Think Local, Solve Global.<br />\nSecondly, activate the youth. The youth, for us, embody enthusiasm, vitality, hope and the possibilities of tomorrow. We enable a brigade of young change-leaders called ‘Solve Ninjas’. The youth’s desire to grow, supported by our team, has not just an immediate impact in their communities but also in the development of a long-term mindset of problem solving in them.<br />\nFinally, focus on the process and not the solution. One solution can be effective in some use cases and not in others. Coming up with local solutions should be a participatory process, involving multiple and diverse stakeholders. Once the agency of the community is activated and they have the tools to look at diverse solutions, they usually decide what works best for their circumstances. So, we don’t prescribe solutions, we only enable the way for communities to find solutions.</p>\n<h2>Empowering the youth to see, sense and solve</h2>\n<p>The core that we are trying to solve is how to build the ‘civic muscle’ in young people – a mixture of agency, ownership and the skill to solve problems supported by community. Civic muscle helps Solve Ninjas in tackling a range of issues as they crop up. We enable Civic muscle with –<br />\nDISSA framework called Discover Investigate Solve Share (DISS) functions as a hands-on problem solving framework, rooted in skills the youth may already have and some they may need to learn. When the youth discover a problem, investigate its root causes and solve it themselves, they build agency, gain ownership and take accountability. To highlight problems for the youth, we use a range of techniques to enable ‘discovery’ of the issue and translate it into actionable inspiration with inward-facing questions such as “How did you feel when you saw x issue?”. This enables the youth to recognise and verbalise their feelings towards the problem, driving them to solving.<br />\nTechnologyWe leverage technology to distribute leadership in a way that it’s easy for everyone to participate. So, we leverage channels and tools our youth are on such as WhatsApp, maps and chatbots. When we build new tools, we build them on top of popular channels. So, that most Ninja’s can access and add to a pool of crowdsourced information, request help, offer mentorship, connect and solve. We ensure that technology has to be simple to use at the front for the Ninja’s, all the complexities can be moved to the backend.<br />\nFail fast, learn fasterLocal problems need local solutions, sometimes new, sometimes adapted and sometimes adopted. But finding the right solution is a series of hits and trials. Developing the attitude of “Fail fast, learn faster” within our team and most importantly in our army of Solve Ninja’s has ensured rapid evolution of solutions.</p>\n<p><img decoding=\"async\" loading=\"lazy\" class=\"size-medium wp-image-22837 aligncenter\" src=\"http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/Rectangle-68-300x150.png\" alt=\"\" width=\"704\" height=\"351\" srcset=\"https://timemedical.in/wp-content/uploads/2022/11/insta-02-free-img.jpg 300w, http://localhost/societalplatform/wordpress/wp-content/uploads/2022/12/Rectangle-68.png 703w\" sizes=\"(max-width: 300px) 100vw, 300px\" /></p>\n<h2>Denting big</h2>\n<p>#SolveSmallDentBig – This is the simple mantra that thousands of our Solve Ninjas embody on a day-to-day basis. Solve Ninjas have worked on civic issues in their locality ranging from fixing foul-smelling blackspots, reporting infrastructural issues to their locally elected representatives, campaigning for lake rejuvenation and green cover protection, designing and implementing innovative solutions, creating air quality monitors to even starting their own social enterprises! For example, to date, Solve Ninjas have collectively saved 53M litres of water and diverted 635,040 kg of waste from landfills, while empowering communities across India.</p>\n<p>The small changes that the Solve Ninjas make in their communities, collectively adds up to a large impact. But, it also creates systemic change. We have witnessed those in power becoming more willing to engage these youth as partners, as they can see the change the empowered ninjas can bring.</p>\n<p>Elected representatives have begun seeking information and engaging more with citizens, policies have started looking at maintenance and sustenance, going beyond just implementation or problem-solving.<br />\nMoreover, once Ninjas solve a few issues, their agency gets restored and they start aspiring for more. They start seeing more problems and looking for bolder solutions. For example, Solve Ninja Shriya Shankar now runs Project Sitara, an organisation that provides education to young girls from underserved communities, Vibha Nadig’s Outlawed demystifies the legal system, Taanika Shankar founded Yugma, a collective of college unions from around the country committed to fighting ill-conceived legislation that affects the environment.<br />\nAs more and more young people join the Solve Ninja movement, networks of solvers are activated. These networks focus on certain issues but also work jointly to amplifying each other’s efforts, leading to an exponential #SolveSmallDentBig.</p>\n<h2>It’s an iterative process</h2>\n<p>Our journey hasn’t been linear, it was full to false starts, u-turns and pivots. Some lessons we learnt along the way that are close to our heart are –</p>\n<ol>\n<li><strong>Treat all problem solvers equal<br />\n</strong>We have a strong value system centred around equality across all socio-political, cultural and economic backgrounds. This ensures that there is greater and enthusiastic participation by everyone and it builds empathy in Ninja’s for people who are different from them.</li>\n<li><strong>Not building technology to perfection<br />\n</strong>Instead of building the perfect technology solution, it’s better to seek rapid evolution of technology. We leverage the feedback and data generated by the platform to drive improvements and innovation. More importantly, we build upon when possible and build fresh only if the need to build is proven.</li>\n<li><strong>Collaboration is the future<br />\n</strong>We assumed that children know how to work together. While they are superbly capable of solving with their own method and teams, solving big requires us to help build the muscle of collaboration in them.</li>\n</ol>\n<p>Reap Benefit is empowering young people to exercise agency and use their voice to solve problems in their community and, in turn, build invaluable leadership skills for a brighter future. With the Reap Benefit philosophy, the team has worked with 50,000+ Solve Ninjas across India and we hope to build a nation led by young leaders who eagerly solve problems at the grassroots level.</p>\n",
-      "protected": false
+    {
+      "name": "EXPIRIENCE",
+      "backgroundColor": "#DC8F6E",
+      "link": "/"
     },
-    "excerpt": {
-      "rendered": "<p>Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae. &nbsp; The power of solving small &amp; denting big. </p>\n",
-      "protected": false
+    {
+      "name": "CONTACT",
+      "backgroundColor": "#22534F",
+      "link": "/"
     },
-    "author": 1,
-    "featured_media": 22831,
-    "comment_status": "open",
-    "ping_status": "open",
-    "sticky": false,
-    "template": "",
-    "format": "standard",
-    "meta": [],
-    "categories": [1],
-    "tags": [],
-    "_links": {
-      "self": [
-        {
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/posts/22829"
-        }
-      ],
-      "collection": [
-        {
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/posts"
-        }
-      ],
-      "about": [
-        {
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/types/post"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/users/1"
-        }
-      ],
-      "replies": [
-        {
-          "embeddable": true,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/comments?post=22829"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 5,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/posts/22829/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 22841,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/posts/22829/revisions/22841"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://tm.navadhiti.com/wp-content/uploads/2022/12/articleImage.png"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/media?parent=22829"
-        }
-      ],
-      "wp:term": [
-        {
-          "taxonomy": "category",
-          "embeddable": true,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/categories?post=22829"
-        },
-        {
-          "taxonomy": "post_tag",
-          "embeddable": true,
-          "href": "http://localhost/societalplatform/wordpress/wp-json/wp/v2/tags?post=22829"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
+    {
+      "name": "SHARE",
+      "backgroundColor": "#C4BCB9",
+      "link": "/"
+    },
+    {
+      "name": "HOME",
+      "backgroundColor": "#E2D1ED",
+      "link": "/"
     }
+   
+    
+],
+  
+    "home":{
+      "values":[
+        {
+          "id": "1",
+          "title": "Catalyse interactions",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values",
+          "class1": "values_flip",
+          "contentclass": "card_content"
+      },
+      {
+          "id": "2",
+          "title": "Build public goods",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values1",
+          "class1": "values1_flip",
+          "contentclass": "card_content1"
+      },
+      {
+          "id": "3",
+          "title": "Restore agency",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values2",
+          "class1": "values2_flip",
+          "contentclass": "card_content2"
+      },
+      {
+          "id": "4",
+          "title": "Empower with data",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values3",
+          "class1": "values3_flip",
+          "contentclass": "card_content3"
+      },
+      {
+          "id": "5",
+          "title": "Empower with data",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values4",
+          "class1": "values4_flip",
+          "contentclass": "card_content4"
+      }
+      ],
+      "partners": [
+          "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.jpg","14.jpg","15.jpg","16.png","17.jpg"
+      ],
+      "testimonials": [
+          {
+              "index":"0",
+              "img":"assets/img/testimonial/aditya.png",
+              "content":"I was thoroughly impressed with the collaborative approach they took to design the workshop by involving the district administration from the design stage itself. I particularly appreciate the level of detail to which Barefoot Edu pursued this project.",
+              "author":"Aditya Dahiya",
+              "designation":" Deputy Commissioner, Karnal"
+          },
+          {
+              "index":"1",
+              "img":"assets/img/testimonial/siddharth.png",
+              "content":"Barefoot plans and implements every intervention thoroughly, with love. This entails looking at a problem from all sides and finding solutions, even unconventional ones. By working on a sustainable agriculture curriculum with them, I learned how to take the curriculum from a need of the community to sessions for students led by members of the community. It's rare as an intern to get that ownership, support and field experience.",
+              "author":"Siddharth Parambi",
+              "designation":" Intern"
+          },
+          {
+              "index":"2",
+              "img":"assets/img/testimonial/shabana.png",
+              "content":"Barefoot has shaken us with its activities. Earlier we used to study on the blackboard, reading and writing but now we learn practically and the biggest benefit has been that we have learnt things like how to handle children when they are crying, to keep the child’s feelings in mind at all times.",
+              "author":"Shabana",
+              "designation":" Trainee, ECCE course"
+          }
+      ],
+      "our_values": [
+          {   
+              "index": "0",
+              "title": "Trust",
+              "excerpt": "Trust engenders trust"
+          },
+          {
+              "index": "1",
+              "title": "Commitment",
+              "excerpt": "To words, actions and people"
+          },
+          {
+              "index": "2",
+              "title": "Openness",
+              "excerpt": "The situations on ground will challenge your core values multiple times and mould you as person. Any change, mistake or obstacle, no matter the magnitude, can be overcome or circumvented through open conversation. You have our unconditional support."
+          },
+          {
+              "index": "3",
+              "title": "Common ground",
+              "excerpt": "Different perspectives are key to inclusive interventions but fundamentalism brings work to a standstill. Find common ground to get the job done"
+          },
+          {
+              "index": "4",
+              "title": "Open Communication",
+              "excerpt": "We foster an environment for oneself, team members, seniors and stakeholders where ideas, challenges, feedback and expectations can be shared freely and respectfully Inter Dependence: We operate from a place of trust (not doubt) in each other. We build trust by sharing and inquiring. We create a two way street of trust with the intention of trusting and the expectation of being trusted upon Taking Ownership: We take responsibility for our commitments, we value the opportunities presented to us professionally and personally. We own up to our work, our achievements, our decisions and also to our mistakes. Sense of Possibility: We set bold, ambitious goals and expectations in order to meet our vision. We approach our work and new ideas with openness and optimism. We strive towards setting and achieving high standards for ourselves. We commit to add value to any work that we perform. Diversity & Inclusion: We respect diverse ideas, mindsets, people and contexts. We strive towards understanding this diversity and engage with it. We strive to make the organisation an inclusive space where people feel safe to express this diversity. We carry this respect for diversity to our stakeholders."
+          }
+      ]
+  },
+  "about": {
+      "our_aim": [
+          {
+              "number": "01",
+              "title": "Problem",
+              "blurb": "Innovation in education takes years to enter schools at scale and millions of under resourced children are just not learning"
+          },
+          {
+              "number": "02",
+              "title": "Our Vision",
+              "blurb": "Every child has a strong foundation to Think, Feel, Dream and Act"
+          },
+          {
+              "number": "03",
+              "title": "Our Mission",
+              "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!"
+          }
+          
+      ],
+      "team": [
+          {
+              "img": "jonathan-new.jpg",
+              "name": "Jonathan Mendonca",
+              "linkedin": "https://www.linkedin.com/in/jonathanfrankmendonca/",
+              "designation": "Cofounder & Director Strategy "
+          },
+          {
+              "img": "saumya-new.jpg",
+              "name": "Saumya Aggarwal",
+              "linkedin": "https://www.linkedin.com/in/saumya-aggarwal-barefoot/",
+              "designation": "Cofounder & Director Program Design "
+          },
+          {
+              "img": "subhankar.jpg",
+              "name": "Subhankar Paul",
+              "linkedin": "https://www.linkedin.com/in/subhankar-paul-9b42b229/",
+              "designation": "Cofounder & Director Operations"
+          },
+          {
+              "img": "aditi.jpg",
+              "name": "Aditi Bhargava",
+              "linkedin": "https://www.linkedin.com/in/aditi-bhargava-965a19116/",
+              "designation": "Program Manager, Jaipur"
+          },
+          {
+              "img": "prahlad.jpeg",
+              "name": "Prahlad Chakma",
+              "linkedin": "https://www.linkedin.com/mwlite/in/prahlad-chakma-16584232",
+              "designation": "Program Manager, Mumbai"
+          },
+          {
+              "img": "sangita.jpg",
+              "name": "Sangita Bissa",
+              "linkedin": "https://www.linkedin.com/in/sangita-bissa-58b743184/",
+              "designation": "Program Manager, Training and Design"
+          },
+          {
+              "img": "sana.jpg",
+              "name": "Sana Shaik",
+              "designation": "Program Officer, Mumbai"
+          },
+          {
+              "img": "poonam.jpg",
+              "name": "Poonam Sharma",
+              "designation": "Program Officer, Karnal"
+          },
+          {
+              "img": "vikash.jpg",
+              "name": "Vikash Sharma",
+              "designation": "Program Officer, Karnal"
+          }
+          
+      ]
+  },
+  "services": {
+      "service": [
+          {
+              
+              "img": "assets/img/services/service-3.jpg",
+              "title": "School Transformation ",
+              "description": "We help low fee private schools undergo a 3 year school transformation aimed at making them 100% compliant with the NEP. <br>We believe that piecemeal solutions like teacher training and infrastructure development are independently inadequate to confront the learning crisis but can do wonders when combined. In fact, for these improvements to be effective and sustainable, the entire system must transform its methods of functioning. We focus on 5 domains of school development: early childhood education, teaching and learning, leadership & management, co-curricular development and community engagement. This form of wholesome and direct implementation helps keep us sensitive to the challenges that schools face at the grassroots while we scale impact through leadership building.<br><b>Programs: Lantern School Transformation | The Right Pitch | Preparing Pre-schools for Learning</b>"
+          },
+          {
+              "img": "assets/img/services/service-21.jpg",
+              "title": "Leadership Building",
+              "pb_25": "pb-25",
+              "description": "Barefoot Edu Foundation believes that for any intervention to be truly sustainable, it must be led by the local community from inception. This means truly respecting the term ‘co-creation’.<br> We recognise that many School leaders, teachers, and anganwadi workers passionately serve their communities and lead change in many imperceptible ways. Our unique approach treats them as micro-entrepreneurs and custodians of community knowledge. We build their leadership capacity in entrepreneurship and school management so that their voice, values, and goals shape education at the grassroots. Their efforts have the vocabulary of the community, are contextualised and are able to navigate the on ground realities. This makes their interventions scalable with significantly less capacity building.<br><b>Programs: Rehnuma | Project Sakhi | The Changemaker Fellowship</b>"
+          }
+      ],
+      "services_img": [
+          "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"
+      ]
+  },
+  "program": {
+      "rehnuma": {
+          "blurb": "Progressive School Leaders’ Incubator",
+          "description": "Low fee private schools are able to achieve similar, if not better outcomes than government schools at 1/3rd the cost. In their attempt to deliver quality education, they face a number of challenges ranging from erratic fee payment and insufficient resources to teacher attrition and lack of access to quality training. In wake of COVID 19, these schools are hit with a new wave of challenges- how to survive a financial crisis when parent income is affected, how to teach children in the absence of technology, how to maintain physical distancing norms in small classrooms, how to support community livelihood creation; the list is endless. Principals and School leaders are now required to be social entrepreneurs running the most complex organisations: SCHOOLS!",
+          "excerpt": "Rehnuma is an incubator for extremely motivated school leaders looking to provide the highest quality of education to their under-resourced communities; despite the challenges.",
+          "howWillYouGrow": [
+              "Skills: Entrepreneurship, School Administration, Financial Management",
+              "Access to Resources",
+              "Annual School Plan",
+              "Access to Networks (Volunteers, NGOs, conferences)",
+              "Media visibility"
+          ],
+          "whatWeOffer": [
+              "Capacity Building Workshops",
+              "On Site Support and Check-in calls",
+              "School assessment and development",
+              "Leadership Retreats",
+              "Events (pitching, networking, conferences, exposure visits)"
+          ],
+          "whoCanApply": "<ul class='cust-li'><li>School Leaders (Principals and Trustees) of Low-fee private schools</li><li>Serving under resourced communities Located in Urban Maharashtra</li></ul>",
+          "selectionProcess": [
+              { "stage": 1, "blurb": "Expression of interest" },
+              { "stage": 2, "blurb": "Application form" },
+              { "stage": 3, "blurb": "Telephonic interview" },
+              { "stage": 4, "blurb": "Video interview" }
+          ]
+      }
   }
-]
+  
+}

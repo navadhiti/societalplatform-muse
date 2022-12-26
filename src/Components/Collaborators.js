@@ -8,21 +8,22 @@ import {
     ImageListItem,
 } from "@mui/material";
 import React from "react";
-import Author1 from "../Assets/Images/Author1.png";
-import Author2 from "../Assets/Images/Author2.png";
-import Author3 from "../Assets/Images/Author3.png";
-import Author4 from "../Assets/Images/Author4.png";
-import Author5 from "../Assets/Images/Author5.png";
-import Author6 from "../Assets/Images/Author6.png";
-import Author7 from "../Assets/Images/Author7.png";
-import Author8 from "../Assets/Images/Author8.png";
-import Author9 from "../Assets/Images/Author9.png";
-import Author10 from "../Assets/Images/Author10.png";
+import Author1 from "../Assets/Images/Authors/Author1.png";
+import Author2 from "../Assets/Images/Authors/Author2.png";
+import Author3 from "../Assets/Images/Authors/Author3.png";
+import Author4 from "../Assets/Images/Authors/Author4.png";
+import Author5 from "../Assets/Images/Authors/Author5.png";
+import Author6 from "../Assets/Images/Authors/Author6.png";
+import Author7 from "../Assets/Images/Authors/Author7.png";
+import Author8 from "../Assets/Images/Authors/Author8.png";
+import Author9 from "../Assets/Images/Authors/Author9.png";
+import Author10 from "../Assets/Images/Authors/Author10.png";
 import backgroud from "../Assets/Images/Vector.png";
 import backgroud1 from "../Assets/Images/Vector (2).png";
 import { Section } from "../Themes/StyledComponent";
 
 import Divider from "../Assets/Images/Divider.png";
+import Pen from '../Assets/Images/img-pen.png';
 import { AnimatedButton } from "../Themes/StyledComponent";
 
 const Collaborators = () => {
@@ -93,8 +94,8 @@ const Collaborators = () => {
                             item
                             xs={12}
                             sm={12}
-                            md={5}
-                            lg={5}
+                            md={6}
+                            lg={6}
                             sx={{ textAlign: "left" }}
                         >
                             <Typography variant="h1" textAlign="Left">
@@ -110,6 +111,7 @@ const Collaborators = () => {
                                     >
                                         collaborators
                                     </span>
+                                    <img src={Pen} alt="img"  width="10%" />
                                 </b>
                             </Typography>
                             <Typography
@@ -124,7 +126,7 @@ const Collaborators = () => {
                         <Grid
                             container
                             spacing={0}
-                            justifyContent="flex-end"
+                            justifyContent={{xs:"column-reverse",md:"flex-end"}}
                             alignItems=""
                             py={{ xs: 2, sm: 2, md: 5 }}
                         >
@@ -160,7 +162,7 @@ const Collaborators = () => {
                             >
                                 <Box display={{ xs: "block", md: "none" }}>
                                     <ImageList
-                                        variant="masonry"
+                                        
                                         cols={2}
                                         gap={8}
                                     >
