@@ -1,4 +1,3 @@
-
 {
   "menu": [
     {
@@ -25,233 +24,246 @@
       "name": "SHARE",
       "backgroundColor": "#C4BCB9",
       "link": "/"
-    },
-    {
-      "name": "HOME",
-      "backgroundColor": "#E2D1ED",
-      "link": "/"
     }
-   
-    
-],
-  
-    "home":{
-      "values":[
-        {
-          "id": "1",
-          "title": "Catalyse interactions",
-          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-          "class": "values",
-          "class1": "values_flip",
-          "contentclass": "card_content"
+  ],
+
+  "home": {
+    "values": [
+      {
+        "id": "1",
+        "title": "Catalyse interactions",
+        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+        "class": "values",
+        "class1": "values_flip",
+        "contentclass": "card_content"
       },
       {
-          "id": "2",
-          "title": "Build public goods",
-          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-          "class": "values1",
-          "class1": "values1_flip",
-          "contentclass": "card_content1"
+        "id": "2",
+        "title": "Build public goods",
+        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+        "class": "values1",
+        "class1": "values1_flip",
+        "contentclass": "card_content1"
       },
       {
-          "id": "3",
-          "title": "Restore agency",
-          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-          "class": "values2",
-          "class1": "values2_flip",
-          "contentclass": "card_content2"
+        "id": "3",
+        "title": "Restore agency",
+        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+        "class": "values2",
+        "class1": "values2_flip",
+        "contentclass": "card_content2"
       },
       {
-          "id": "4",
-          "title": "Empower with data",
-          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-          "class": "values3",
-          "class1": "values3_flip",
-          "contentclass": "card_content3"
+        "id": "4",
+        "title": "Empower with data",
+        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+        "class": "values3",
+        "class1": "values3_flip",
+        "contentclass": "card_content3"
       },
       {
-          "id": "5",
-          "title": "Empower with data",
-          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-          "class": "values4",
-          "class1": "values4_flip",
-          "contentclass": "card_content4"
+        "id": "5",
+        "title": "Empower with data",
+        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+        "class": "values4",
+        "class1": "values4_flip",
+        "contentclass": "card_content4"
       }
-      ],
-      "partners": [
-          "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.jpg","14.jpg","15.jpg","16.png","17.jpg"
-      ],
-      "testimonials": [
-          {
-              "index":"0",
-              "img":"assets/img/testimonial/aditya.png",
-              "content":"I was thoroughly impressed with the collaborative approach they took to design the workshop by involving the district administration from the design stage itself. I particularly appreciate the level of detail to which Barefoot Edu pursued this project.",
-              "author":"Aditya Dahiya",
-              "designation":" Deputy Commissioner, Karnal"
-          },
-          {
-              "index":"1",
-              "img":"assets/img/testimonial/siddharth.png",
-              "content":"Barefoot plans and implements every intervention thoroughly, with love. This entails looking at a problem from all sides and finding solutions, even unconventional ones. By working on a sustainable agriculture curriculum with them, I learned how to take the curriculum from a need of the community to sessions for students led by members of the community. It's rare as an intern to get that ownership, support and field experience.",
-              "author":"Siddharth Parambi",
-              "designation":" Intern"
-          },
-          {
-              "index":"2",
-              "img":"assets/img/testimonial/shabana.png",
-              "content":"Barefoot has shaken us with its activities. Earlier we used to study on the blackboard, reading and writing but now we learn practically and the biggest benefit has been that we have learnt things like how to handle children when they are crying, to keep the child’s feelings in mind at all times.",
-              "author":"Shabana",
-              "designation":" Trainee, ECCE course"
-          }
-      ],
-      "our_values": [
-          {   
-              "index": "0",
-              "title": "Trust",
-              "excerpt": "Trust engenders trust"
-          },
-          {
-              "index": "1",
-              "title": "Commitment",
-              "excerpt": "To words, actions and people"
-          },
-          {
-              "index": "2",
-              "title": "Openness",
-              "excerpt": "The situations on ground will challenge your core values multiple times and mould you as person. Any change, mistake or obstacle, no matter the magnitude, can be overcome or circumvented through open conversation. You have our unconditional support."
-          },
-          {
-              "index": "3",
-              "title": "Common ground",
-              "excerpt": "Different perspectives are key to inclusive interventions but fundamentalism brings work to a standstill. Find common ground to get the job done"
-          },
-          {
-              "index": "4",
-              "title": "Open Communication",
-              "excerpt": "We foster an environment for oneself, team members, seniors and stakeholders where ideas, challenges, feedback and expectations can be shared freely and respectfully Inter Dependence: We operate from a place of trust (not doubt) in each other. We build trust by sharing and inquiring. We create a two way street of trust with the intention of trusting and the expectation of being trusted upon Taking Ownership: We take responsibility for our commitments, we value the opportunities presented to us professionally and personally. We own up to our work, our achievements, our decisions and also to our mistakes. Sense of Possibility: We set bold, ambitious goals and expectations in order to meet our vision. We approach our work and new ideas with openness and optimism. We strive towards setting and achieving high standards for ourselves. We commit to add value to any work that we perform. Diversity & Inclusion: We respect diverse ideas, mindsets, people and contexts. We strive towards understanding this diversity and engage with it. We strive to make the organisation an inclusive space where people feel safe to express this diversity. We carry this respect for diversity to our stakeholders."
-          }
-      ]
+    ],
+    "partners": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png",
+      "7.png",
+      "8.png",
+      "9.png",
+      "10.png",
+      "11.png",
+      "12.png",
+      "13.jpg",
+      "14.jpg",
+      "15.jpg",
+      "16.png",
+      "17.jpg"
+    ],
+    "testimonials": [
+      {
+        "index": "0",
+        "img": "assets/img/testimonial/aditya.png",
+        "content": "I was thoroughly impressed with the collaborative approach they took to design the workshop by involving the district administration from the design stage itself. I particularly appreciate the level of detail to which Barefoot Edu pursued this project.",
+        "author": "Aditya Dahiya",
+        "designation": " Deputy Commissioner, Karnal"
+      },
+      {
+        "index": "1",
+        "img": "assets/img/testimonial/siddharth.png",
+        "content": "Barefoot plans and implements every intervention thoroughly, with love. This entails looking at a problem from all sides and finding solutions, even unconventional ones. By working on a sustainable agriculture curriculum with them, I learned how to take the curriculum from a need of the community to sessions for students led by members of the community. It's rare as an intern to get that ownership, support and field experience.",
+        "author": "Siddharth Parambi",
+        "designation": " Intern"
+      },
+      {
+        "index": "2",
+        "img": "assets/img/testimonial/shabana.png",
+        "content": "Barefoot has shaken us with its activities. Earlier we used to study on the blackboard, reading and writing but now we learn practically and the biggest benefit has been that we have learnt things like how to handle children when they are crying, to keep the child’s feelings in mind at all times.",
+        "author": "Shabana",
+        "designation": " Trainee, ECCE course"
+      }
+    ],
+    "our_values": [
+      {
+        "index": "0",
+        "title": "Trust",
+        "excerpt": "Trust engenders trust"
+      },
+      {
+        "index": "1",
+        "title": "Commitment",
+        "excerpt": "To words, actions and people"
+      },
+      {
+        "index": "2",
+        "title": "Openness",
+        "excerpt": "The situations on ground will challenge your core values multiple times and mould you as person. Any change, mistake or obstacle, no matter the magnitude, can be overcome or circumvented through open conversation. You have our unconditional support."
+      },
+      {
+        "index": "3",
+        "title": "Common ground",
+        "excerpt": "Different perspectives are key to inclusive interventions but fundamentalism brings work to a standstill. Find common ground to get the job done"
+      },
+      {
+        "index": "4",
+        "title": "Open Communication",
+        "excerpt": "We foster an environment for oneself, team members, seniors and stakeholders where ideas, challenges, feedback and expectations can be shared freely and respectfully Inter Dependence: We operate from a place of trust (not doubt) in each other. We build trust by sharing and inquiring. We create a two way street of trust with the intention of trusting and the expectation of being trusted upon Taking Ownership: We take responsibility for our commitments, we value the opportunities presented to us professionally and personally. We own up to our work, our achievements, our decisions and also to our mistakes. Sense of Possibility: We set bold, ambitious goals and expectations in order to meet our vision. We approach our work and new ideas with openness and optimism. We strive towards setting and achieving high standards for ourselves. We commit to add value to any work that we perform. Diversity & Inclusion: We respect diverse ideas, mindsets, people and contexts. We strive towards understanding this diversity and engage with it. We strive to make the organisation an inclusive space where people feel safe to express this diversity. We carry this respect for diversity to our stakeholders."
+      }
+    ]
   },
   "about": {
-      "our_aim": [
-          {
-              "number": "01",
-              "title": "Problem",
-              "blurb": "Innovation in education takes years to enter schools at scale and millions of under resourced children are just not learning"
-          },
-          {
-              "number": "02",
-              "title": "Our Vision",
-              "blurb": "Every child has a strong foundation to Think, Feel, Dream and Act"
-          },
-          {
-              "number": "03",
-              "title": "Our Mission",
-              "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!"
-          }
-          
-      ],
-      "team": [
-          {
-              "img": "jonathan-new.jpg",
-              "name": "Jonathan Mendonca",
-              "linkedin": "https://www.linkedin.com/in/jonathanfrankmendonca/",
-              "designation": "Cofounder & Director Strategy "
-          },
-          {
-              "img": "saumya-new.jpg",
-              "name": "Saumya Aggarwal",
-              "linkedin": "https://www.linkedin.com/in/saumya-aggarwal-barefoot/",
-              "designation": "Cofounder & Director Program Design "
-          },
-          {
-              "img": "subhankar.jpg",
-              "name": "Subhankar Paul",
-              "linkedin": "https://www.linkedin.com/in/subhankar-paul-9b42b229/",
-              "designation": "Cofounder & Director Operations"
-          },
-          {
-              "img": "aditi.jpg",
-              "name": "Aditi Bhargava",
-              "linkedin": "https://www.linkedin.com/in/aditi-bhargava-965a19116/",
-              "designation": "Program Manager, Jaipur"
-          },
-          {
-              "img": "prahlad.jpeg",
-              "name": "Prahlad Chakma",
-              "linkedin": "https://www.linkedin.com/mwlite/in/prahlad-chakma-16584232",
-              "designation": "Program Manager, Mumbai"
-          },
-          {
-              "img": "sangita.jpg",
-              "name": "Sangita Bissa",
-              "linkedin": "https://www.linkedin.com/in/sangita-bissa-58b743184/",
-              "designation": "Program Manager, Training and Design"
-          },
-          {
-              "img": "sana.jpg",
-              "name": "Sana Shaik",
-              "designation": "Program Officer, Mumbai"
-          },
-          {
-              "img": "poonam.jpg",
-              "name": "Poonam Sharma",
-              "designation": "Program Officer, Karnal"
-          },
-          {
-              "img": "vikash.jpg",
-              "name": "Vikash Sharma",
-              "designation": "Program Officer, Karnal"
-          }
-          
-      ]
+    "our_aim": [
+      {
+        "number": "01",
+        "title": "Problem",
+        "blurb": "Innovation in education takes years to enter schools at scale and millions of under resourced children are just not learning"
+      },
+      {
+        "number": "02",
+        "title": "Our Vision",
+        "blurb": "Every child has a strong foundation to Think, Feel, Dream and Act"
+      },
+      {
+        "number": "03",
+        "title": "Our Mission",
+        "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!"
+      }
+    ],
+    "team": [
+      {
+        "img": "jonathan-new.jpg",
+        "name": "Jonathan Mendonca",
+        "linkedin": "https://www.linkedin.com/in/jonathanfrankmendonca/",
+        "designation": "Cofounder & Director Strategy "
+      },
+      {
+        "img": "saumya-new.jpg",
+        "name": "Saumya Aggarwal",
+        "linkedin": "https://www.linkedin.com/in/saumya-aggarwal-barefoot/",
+        "designation": "Cofounder & Director Program Design "
+      },
+      {
+        "img": "subhankar.jpg",
+        "name": "Subhankar Paul",
+        "linkedin": "https://www.linkedin.com/in/subhankar-paul-9b42b229/",
+        "designation": "Cofounder & Director Operations"
+      },
+      {
+        "img": "aditi.jpg",
+        "name": "Aditi Bhargava",
+        "linkedin": "https://www.linkedin.com/in/aditi-bhargava-965a19116/",
+        "designation": "Program Manager, Jaipur"
+      },
+      {
+        "img": "prahlad.jpeg",
+        "name": "Prahlad Chakma",
+        "linkedin": "https://www.linkedin.com/mwlite/in/prahlad-chakma-16584232",
+        "designation": "Program Manager, Mumbai"
+      },
+      {
+        "img": "sangita.jpg",
+        "name": "Sangita Bissa",
+        "linkedin": "https://www.linkedin.com/in/sangita-bissa-58b743184/",
+        "designation": "Program Manager, Training and Design"
+      },
+      {
+        "img": "sana.jpg",
+        "name": "Sana Shaik",
+        "designation": "Program Officer, Mumbai"
+      },
+      {
+        "img": "poonam.jpg",
+        "name": "Poonam Sharma",
+        "designation": "Program Officer, Karnal"
+      },
+      {
+        "img": "vikash.jpg",
+        "name": "Vikash Sharma",
+        "designation": "Program Officer, Karnal"
+      }
+    ]
   },
   "services": {
-      "service": [
-          {
-              
-              "img": "assets/img/services/service-3.jpg",
-              "title": "School Transformation ",
-              "description": "We help low fee private schools undergo a 3 year school transformation aimed at making them 100% compliant with the NEP. <br>We believe that piecemeal solutions like teacher training and infrastructure development are independently inadequate to confront the learning crisis but can do wonders when combined. In fact, for these improvements to be effective and sustainable, the entire system must transform its methods of functioning. We focus on 5 domains of school development: early childhood education, teaching and learning, leadership & management, co-curricular development and community engagement. This form of wholesome and direct implementation helps keep us sensitive to the challenges that schools face at the grassroots while we scale impact through leadership building.<br><b>Programs: Lantern School Transformation | The Right Pitch | Preparing Pre-schools for Learning</b>"
-          },
-          {
-              "img": "assets/img/services/service-21.jpg",
-              "title": "Leadership Building",
-              "pb_25": "pb-25",
-              "description": "Barefoot Edu Foundation believes that for any intervention to be truly sustainable, it must be led by the local community from inception. This means truly respecting the term ‘co-creation’.<br> We recognise that many School leaders, teachers, and anganwadi workers passionately serve their communities and lead change in many imperceptible ways. Our unique approach treats them as micro-entrepreneurs and custodians of community knowledge. We build their leadership capacity in entrepreneurship and school management so that their voice, values, and goals shape education at the grassroots. Their efforts have the vocabulary of the community, are contextualised and are able to navigate the on ground realities. This makes their interventions scalable with significantly less capacity building.<br><b>Programs: Rehnuma | Project Sakhi | The Changemaker Fellowship</b>"
-          }
-      ],
-      "services_img": [
-          "01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"
-      ]
+    "service": [
+      {
+        "img": "assets/img/services/service-3.jpg",
+        "title": "School Transformation ",
+        "description": "We help low fee private schools undergo a 3 year school transformation aimed at making them 100% compliant with the NEP. <br>We believe that piecemeal solutions like teacher training and infrastructure development are independently inadequate to confront the learning crisis but can do wonders when combined. In fact, for these improvements to be effective and sustainable, the entire system must transform its methods of functioning. We focus on 5 domains of school development: early childhood education, teaching and learning, leadership & management, co-curricular development and community engagement. This form of wholesome and direct implementation helps keep us sensitive to the challenges that schools face at the grassroots while we scale impact through leadership building.<br><b>Programs: Lantern School Transformation | The Right Pitch | Preparing Pre-schools for Learning</b>"
+      },
+      {
+        "img": "assets/img/services/service-21.jpg",
+        "title": "Leadership Building",
+        "pb_25": "pb-25",
+        "description": "Barefoot Edu Foundation believes that for any intervention to be truly sustainable, it must be led by the local community from inception. This means truly respecting the term ‘co-creation’.<br> We recognise that many School leaders, teachers, and anganwadi workers passionately serve their communities and lead change in many imperceptible ways. Our unique approach treats them as micro-entrepreneurs and custodians of community knowledge. We build their leadership capacity in entrepreneurship and school management so that their voice, values, and goals shape education at the grassroots. Their efforts have the vocabulary of the community, are contextualised and are able to navigate the on ground realities. This makes their interventions scalable with significantly less capacity building.<br><b>Programs: Rehnuma | Project Sakhi | The Changemaker Fellowship</b>"
+      }
+    ],
+    "services_img": [
+      "01.jpg",
+      "02.jpg",
+      "03.jpg",
+      "04.jpg",
+      "05.jpg",
+      "06.jpg",
+      "07.jpg",
+      "08.jpg",
+      "09.jpg"
+    ]
   },
   "program": {
-      "rehnuma": {
-          "blurb": "Progressive School Leaders’ Incubator",
-          "description": "Low fee private schools are able to achieve similar, if not better outcomes than government schools at 1/3rd the cost. In their attempt to deliver quality education, they face a number of challenges ranging from erratic fee payment and insufficient resources to teacher attrition and lack of access to quality training. In wake of COVID 19, these schools are hit with a new wave of challenges- how to survive a financial crisis when parent income is affected, how to teach children in the absence of technology, how to maintain physical distancing norms in small classrooms, how to support community livelihood creation; the list is endless. Principals and School leaders are now required to be social entrepreneurs running the most complex organisations: SCHOOLS!",
-          "excerpt": "Rehnuma is an incubator for extremely motivated school leaders looking to provide the highest quality of education to their under-resourced communities; despite the challenges.",
-          "howWillYouGrow": [
-              "Skills: Entrepreneurship, School Administration, Financial Management",
-              "Access to Resources",
-              "Annual School Plan",
-              "Access to Networks (Volunteers, NGOs, conferences)",
-              "Media visibility"
-          ],
-          "whatWeOffer": [
-              "Capacity Building Workshops",
-              "On Site Support and Check-in calls",
-              "School assessment and development",
-              "Leadership Retreats",
-              "Events (pitching, networking, conferences, exposure visits)"
-          ],
-          "whoCanApply": "<ul class='cust-li'><li>School Leaders (Principals and Trustees) of Low-fee private schools</li><li>Serving under resourced communities Located in Urban Maharashtra</li></ul>",
-          "selectionProcess": [
-              { "stage": 1, "blurb": "Expression of interest" },
-              { "stage": 2, "blurb": "Application form" },
-              { "stage": 3, "blurb": "Telephonic interview" },
-              { "stage": 4, "blurb": "Video interview" }
-          ]
-      }
+    "rehnuma": {
+      "blurb": "Progressive School Leaders’ Incubator",
+      "description": "Low fee private schools are able to achieve similar, if not better outcomes than government schools at 1/3rd the cost. In their attempt to deliver quality education, they face a number of challenges ranging from erratic fee payment and insufficient resources to teacher attrition and lack of access to quality training. In wake of COVID 19, these schools are hit with a new wave of challenges- how to survive a financial crisis when parent income is affected, how to teach children in the absence of technology, how to maintain physical distancing norms in small classrooms, how to support community livelihood creation; the list is endless. Principals and School leaders are now required to be social entrepreneurs running the most complex organisations: SCHOOLS!",
+      "excerpt": "Rehnuma is an incubator for extremely motivated school leaders looking to provide the highest quality of education to their under-resourced communities; despite the challenges.",
+      "howWillYouGrow": [
+        "Skills: Entrepreneurship, School Administration, Financial Management",
+        "Access to Resources",
+        "Annual School Plan",
+        "Access to Networks (Volunteers, NGOs, conferences)",
+        "Media visibility"
+      ],
+      "whatWeOffer": [
+        "Capacity Building Workshops",
+        "On Site Support and Check-in calls",
+        "School assessment and development",
+        "Leadership Retreats",
+        "Events (pitching, networking, conferences, exposure visits)"
+      ],
+      "whoCanApply": "<ul class='cust-li'><li>School Leaders (Principals and Trustees) of Low-fee private schools</li><li>Serving under resourced communities Located in Urban Maharashtra</li></ul>",
+      "selectionProcess": [
+        { "stage": 1, "blurb": "Expression of interest" },
+        { "stage": 2, "blurb": "Application form" },
+        { "stage": 3, "blurb": "Telephonic interview" },
+        { "stage": 4, "blurb": "Video interview" }
+      ]
+    }
   }
-  
 }

@@ -1,6 +1,6 @@
 // import { Container } from '@mui/system';
 import React from 'react';
-import { useNavigate, Route, Routes , HashRouter as Router, ReactDOM} from 'react-router-dom';
+import { useNavigate, Route, Routes , ReactDOM} from 'react-router-dom';
 import StickyBox from 'react-sticky-box';
 import { useLocation } from 'react-router';
 import Footer from '../Components/Footer';

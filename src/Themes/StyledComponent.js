@@ -13,7 +13,8 @@ export const StickyButton = styled(Button)`
   background: none;
 
   &:hover {
-    background: ${`url(${Scribble}) bottom no-repeat`};
+    background: ${`url(${Scribble}) bottom center no-repeat`};
+    padding-bottom:5px;
   }
 
   h2 {
@@ -22,6 +23,8 @@ export const StickyButton = styled(Button)`
     font-size: 18px;
     // color: ${PALETTE.BLACK};
     color: #241c15;
+    // margin-bottom: -20px;
+    height:0.5rem;
   }
 `;
 
@@ -45,11 +48,11 @@ export const Section = styled(Box)`
     padding: 2rem 0;
     height: auto !important;
   }
-  
-    @media (max-width:550px): {
-      padding: 2rem 0;
-      height: auto !important;
-    }
+
+  @media (max-width: 550px) : {
+    padding: 2rem 0;
+    height: auto !important;
+  }
 `;
 export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame[data-num='1'] {

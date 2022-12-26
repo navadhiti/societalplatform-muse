@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Box,
   Grid,
@@ -14,6 +14,7 @@ import {
   TextField,
   Button,
   SpeedDialAction,
+  Autocomplete,
 } from '@mui/material';
 import {
   PictureAsPdfOutlined,
@@ -31,6 +32,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from 'react-share';
+import parse from 'html-react-parser';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Sanjay from '../Assets/Images/sanjay.png';
@@ -41,6 +43,7 @@ import AuthorName from '../Assets/Images/musing-banner.svg';
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
 import Stories_Aritcle from '../Components/Stories_article';
+import { logDOM } from '@testing-library/react';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -58,8 +61,8 @@ const Indi_Article = () => {
       .catch((e) => setError(e));
   }, []);
 
-  console.log(data);
-  console.log(author?.description, 'author');
+  // console.log(data);
+  // console.log(author?.description, 'author');
 
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -110,6 +113,15 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
+
+  // onclick button section scroll function
+  const string = extractedH2?.map((item) => parse(item));
+
+  console.log(string?.map((title) => console.log(title.props.children)));
+  const myRef = useRef(null);
+  const onBtnClick = () => {
+    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
 
   return (
     <>
@@ -215,7 +227,15 @@ const Indi_Article = () => {
             mt={5}
           >
             <Grid item xs={4} md={8} sx={{ textAlign: 'start' }}>
-              <TextField label="Search" variant="outlined" />
+              <Autocomplete
+                disableClearable
+                freeSolo
+                id="combo-box-demo"
+                options={extractedH2}
+                renderInput={(params) => (
+                  <TextField label="Search" {...params} />
+                )}
+              />
             </Grid>
             <Grid item xs={6} md={4}>
               <Stack
@@ -275,24 +295,22 @@ const Indi_Article = () => {
           </Grid>
           <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
-              <div style={{ position: 'relative', overflow: 'auto' }}>
-                <StickyBox offsetTop={20} offsetBottom={20}>
-                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                  <List>
-                    {extractedH2?.map((elem) => (
-                      <ListItem>
-                        <StickyButton>
-                          <div
-                            dangerouslySetInnerHTML={{
-                              __html: elem,
-                            }}
-                          />
-                        </StickyButton>
-                      </ListItem>
-                    ))}
-                  </List>
-                </StickyBox>
-              </div>
+              <StickyBox offsetTop={20} offsetBottom={20}>
+                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                <List>
+                  {extractedH2?.map((elem) => (
+                    <ListItem>
+                      <StickyButton onClick={onBtnClick}>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: elem,
+                          }}
+                        />
+                      </StickyButton>
+                    </ListItem>
+                  ))}
+                </List>
+              </StickyBox>
             </Grid>
             <Grid
               item
@@ -306,11 +324,12 @@ const Indi_Article = () => {
                   __html: data?.content.rendered,
                 }}
               ></div>
+              <div ref={myRef}>Element to scroll to</div>
             </Grid>
           </Grid>
           <Grid container>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
-              <img src={Sanjay} width="80%" />
+              <img src={Sanjay} width="80%" alt="img" />
             </Grid>
             <Grid item xs={12} md={8} sx={{ textAlign: 'left' }}>
               <Box
