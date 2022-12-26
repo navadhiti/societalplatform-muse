@@ -817,9 +817,12 @@ const theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
-
+            '& .MuiOutlinedInput-notchedOutline': {
+              border: '1.5px solid #241C15',
+            },
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
+              width: '23.813rem',
               // border: '1.5px solid #241C15',
             },
           },
