@@ -7,7 +7,15 @@ import {
     CardMedia,
     SpeedDial,
     Typography,
+    Button,
 } from "@mui/material";
+import {
+    useNavigate,
+    Route,
+    Routes,
+    HashRouter as Router,
+    ReactDOM,
+} from "react-router-dom";
 import React from "react";
 import ShareIcon from "@mui/icons-material/Share";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
@@ -15,12 +23,12 @@ import FileCopyIcon from "@mui/icons-material/FileCopyOutlined";
 import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
 import card1 from "../Assets/Images/Card.png";
+import SaveAltIcon from "@mui/icons-material/SaveAlt";
 const styles = {
     LandingBackground: {
         backgroundImage: `linear-gradient(to bottom, #ECE4EF, #ECE4EF)`,
     },
 };
-
 
 const actions = [
     { icon: <FileCopyIcon />, name: "Copy" },
@@ -30,10 +38,13 @@ const actions = [
 ];
 
 const Story_card = ({ value, image, tag, title, blurb, edition }) => {
-   
+    const navigate = useNavigate();
+
     return (
         <>
-            <Card sx={{ m: 2, p: 2, borderRadius: "25px" }} key={value}>
+            <Card sx={{ m: 2, p: 2, borderRadius: "25px" }} key={value}  onClick={() =>
+                                                            navigate("/indiviual-articles")
+                                                        }>
                 <CardActionArea sx={{ borderRadius: "25px" }}>
                     <CardMedia
                         component="img"
@@ -45,13 +56,14 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                         <Chip
                             color="secondary"
                             label={tag}
-                            sx={{color:"#fff",fontWeight:800}}
-                            
+                            sx={{ color: "#fff", fontWeight: 800 }}
                         ></Chip>
 
                         {/* <Chip variant="tag">HEALTH</Chip> */}
 
-                        <Typography variant="h4" sx={{minHeight:"3rem"}}>{title}</Typography>
+                        <Typography variant="h4" sx={{ minHeight: "3rem" }}>
+                            {title}
+                        </Typography>
                         <Typography
                             gutterBottom
                             variant="body"
@@ -68,6 +80,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                         >
                             {edition}
                         </Typography>
+                        {/* <Button variant="outlined" endIcon={<SaveAltIcon />} sx={{borderRadius:"25px"}}>Download</Button> */}
 
                         {/* <CardActions> */}
 

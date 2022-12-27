@@ -3,10 +3,14 @@ import {
     Grid,
     Typography,
     Container,
+    Stack,
+    IconButton,
 } from "@mui/material";
 import { Section } from "../Themes/StyledComponent";
 import Divider from "../Assets/Images/underline-white.png";
 import art from "../Assets/Images/Artwork.png";
+import ButtonIcon from "../Assets/Images/Down_arrow.png";
+
 
 const Share_Landing = () => {
     return (
@@ -69,6 +73,17 @@ const Share_Landing = () => {
                             <img src={art} />
                         </Grid>
                     </Grid>
+                    <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="flex-end"
+                        spacing={5}
+                        pt={15}
+                    >
+                        <IconButton sx={{borderRadius:"50%",border:"2px solid white",width:"50px",height:"50px"}}>
+                            <img src={ButtonIcon} alt="img" />
+                        </IconButton>
+                    </Stack>
                 </Container>
             </Section>
         </>

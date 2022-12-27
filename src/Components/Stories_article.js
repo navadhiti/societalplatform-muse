@@ -27,6 +27,7 @@ import PrintIcon from "@mui/icons-material/Print";
 import { AnimatedButton } from "../Themes/StyledComponent";
 import data from "../db.json";
 import Story_card from "./Story_card";
+
 console.log(data.Article.Stories,"data");
 
 const itemData = data.Article.Stories;

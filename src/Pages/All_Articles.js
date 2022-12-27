@@ -21,12 +21,9 @@ const All_Articles = () => {
         LandingBackground: {
             backgroundColor: "#DC8F6E",
             color: "#fff",
-            // backgroundColor: `#fff`,
         },
         LandingBackground1: {
             backgroundColor: "#EDEBEA",
-            // color: "#fff",
-            // backgroundColor: `#fff`,
         },
     };
     return (

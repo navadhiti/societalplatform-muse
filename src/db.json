@@ -74,28 +74,98 @@
       "partners": [
           "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "10.png", "11.png", "12.png", "13.jpg","14.jpg","15.jpg","16.png","17.jpg"
       ],
-      "testimonials": [
+      "Authors": [
           {
               "index":"0",
-              "img":"assets/img/testimonial/aditya.png",
-              "content":"I was thoroughly impressed with the collaborative approach they took to design the workshop by involving the district administration from the design stage itself. I particularly appreciate the level of detail to which Barefoot Edu pursued this project.",
-              "author":"Aditya Dahiya",
-              "designation":" Deputy Commissioner, Karnal"
+              "img":"Assets/Images/Authors/Author1.png",
+              "author":"Sanjay Purohit",
+              "designation":"SP",
+              "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "linked":"",
+              "facebook":""
           },
           {
               "index":"1",
               "img":"assets/img/testimonial/siddharth.png",
-              "content":"Barefoot plans and implements every intervention thoroughly, with love. This entails looking at a problem from all sides and finding solutions, even unconventional ones. By working on a sustainable agriculture curriculum with them, I learned how to take the curriculum from a need of the community to sessions for students led by members of the community. It's rare as an intern to get that ownership, support and field experience.",
-              "author":"Siddharth Parambi",
-              "designation":" Intern"
+              "author":"Dr. Sunil Anand",
+              "designation":" ECHO",
+              "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "linked":"",
+              "facebook":""
           },
           {
               "index":"2",
               "img":"assets/img/testimonial/shabana.png",
-              "content":"Barefoot has shaken us with its activities. Earlier we used to study on the blackboard, reading and writing but now we learn practically and the biggest benefit has been that we have learnt things like how to handle children when they are crying, to keep the child’s feelings in mind at all times.",
-              "author":"Shabana",
-              "designation":" Trainee, ECCE course"
-          }
+              "author":"Viraaj Tyagi",
+              "designation":"E.GOV",
+              "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "linked":"",
+              "facebook":""
+          },
+         
+          {
+            "index":"3",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Viraaj Tyagi",
+            "designation":"E.GOV",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"4",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Sharmi Surianarian",
+            "designation":"HARAMBEE",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"5",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Khushboo Awasthi",
+            "designation":"SHIKSHALOKAM",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"6",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Sascha Hasselmeyer",
+            "designation":"CITYMART",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"7",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Kuldeep & Gautam",
+            "designation":"Reap benefit",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"8",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Dr. Manu Gupta",
+            "designation":"SEEDS",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        },
+        {
+            "index":"9",
+            "img":"assets/img/testimonial/shabana.png",
+            "author":"Donald Gips",
+            "designation":"SKOLL FOUNdATION",
+            "blurb": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "linked":"",
+            "facebook":""
+        }
       ],
       "our_values": [
           {   

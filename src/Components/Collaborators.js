@@ -41,6 +41,7 @@ const Collaborators = () => {
         {
             img: Author3,
             title: "Viraaj Tyagi",
+            
             subTitle: "E.GOV",
         },
         {

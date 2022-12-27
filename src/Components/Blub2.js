@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Container, Grid, Link, Stack, Typography } from "@mui/material";
 import Art from "../Assets/Images/Artwork_3.png";
-import { AnimatedButton, Section } from "../Themes/StyledComponent";
+import { AnimatedButton,Section } from "../Themes/StyledComponent";
 import { StyledContainer } from "../Themes/StyledComponent";
 
 const styles = {
