@@ -1,7 +1,7 @@
 {
   "name": "societal-muse",
   "version": "0.1.0",
-  "homepage": "https://navadhiti.github.io/societalplatform-muse/react-gh-pages",
+  "homepage": "https://navadhiti.github.io/societalplatform-muse",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

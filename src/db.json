@@ -7,35 +7,35 @@
     },
     {
       "name": "ARTICLES",
-      "backgroundColor": "#3E418A",
-      "link": "/"
+      "backgroundColor": "#DC8F6E",
+      "link": "/articles"
     },
     {
       "name": "EXPIRIENCE",
-      "backgroundColor": "#DC8F6E",
-      "link": "/"
+      "backgroundColor": "#C4BCB9",
+      "link": "/indiviual-articles"
     },
     {
-      "name": "CONTACT",
+      "name": "Authors",
       "backgroundColor": "#22534F",
-      "link": "/"
+      "link": "/author"
     },
     {
       "name": "SHARE",
-      "backgroundColor": "#C4BCB9",
-      "link": "/"
-    }
+      "backgroundColor": "#3E418A",
+      "link": "/share"
+    }    
   ],
-
-  "home": {
-    "values": [
-      {
-        "id": "1",
-        "title": "Catalyse interactions",
-        "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
-        "class": "values",
-        "class1": "values_flip",
-        "contentclass": "card_content"
+  
+    "home":{
+      "values":[
+        {
+          "id": "1",
+          "title": "Catalyse interactions",
+          "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
+          "class": "values",
+          "class1": "values_flip",
+          "contentclass": "card_content"
       },
       {
         "id": "2",

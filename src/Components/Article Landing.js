@@ -8,7 +8,9 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import Divider from "../Assets/Images/Divider.png";
+// import Divider from "../Assets/Images/Divider.png";
+import Divider from "../Assets/Images/underline-white.png";
+
 import Logo from "../Assets/Images/sm_logo.png";
 import Layer from "../Assets/Images/Layer.png";
 import Blub from "../Assets/Images/Blub.png";

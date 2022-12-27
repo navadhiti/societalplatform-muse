@@ -1,19 +1,15 @@
 import React from "react";
 import {
     Grid,
-    AppBar,
     List,
     ListItem,
-    ListItemButton,
-    ListItemText,
-    Toolbar,
-    ListItemIcon,
     Typography,
     FormControl,
     InputLabel,
     OutlinedInput,
     InputAdornment,
     IconButton,
+    Box
 } from "@mui/material";
 import logo from "../Assets/Images/sp_muse_logo.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -21,11 +17,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import girl from "../Assets/Images/Group_3.png";
-import Line from "../Assets/Images/Vector_44.png";
-import CircleIcon from "@mui/icons-material/Circle";
 
-import { Box, Container } from "@mui/system";
 
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 

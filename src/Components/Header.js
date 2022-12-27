@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Container,
   Typography,
   AppBar,
   Toolbar,
@@ -16,9 +15,10 @@ import {
   List,
   ListItem,
   ListItemButton,
-  ListItemText,
   Drawer,
 } from '@mui/material';
+import { useNavigate,} from 'react-router-dom';
+
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -109,6 +109,8 @@ const styles = {
 };
 const buttonName = data.menu;
 const Header = (props) => {
+  const navigate = useNavigate();
+
   const [state, setState] = React.useState({
     left: false,
   });
@@ -143,8 +145,8 @@ const Header = (props) => {
         spacing={2}
       >
         <List>
-          {buttonName.map((item) => (
-            <ListItem disablePadding>
+          {buttonName.map((item,index) => (
+            <ListItem disablePadding  key={index}>
               <ListItemButton
                 sx={{
                   backgroundColor: item.backgroundColor,
@@ -155,6 +157,9 @@ const Header = (props) => {
                   height: 100,
                   justifyContent: 'center',
                 }}
+                onClick={()=>
+                  navigate(item.link)
+                }
               >
                 {item.name}
               </ListItemButton>

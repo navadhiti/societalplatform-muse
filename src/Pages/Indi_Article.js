@@ -48,6 +48,8 @@ import { logDOM } from '@testing-library/react';
 const Indi_Article = () => {
   const [data, setData] = useState();
   const [author, setAuthor] = useState();
+  // const [id, setId] = useState();
+
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -61,8 +63,19 @@ const Indi_Article = () => {
       .catch((e) => setError(e));
   }, []);
 
-  // console.log(data);
-  // console.log(author?.description, 'author');
+  // const filteredValue = data?.content.rendered
+  //   .match(/<h(.)>.*?<\/h\1>/gs)
+  //   .map((val, i) => {
+  //     return val.replace('<h2>', `<h2 id="${i}" key="${i}">`);
+  //   });
+
+  const filteredValue = data?.content.rendered
+    .match(/<h(.)>.*?<\/h\1>/gs)
+    .map((x, i) => i);
+
+  const result = data?.content.rendered.replace(/<h2>/g, function () {
+    return `<h2 id="${filteredValue.shift()}">`;
+  });
 
   const breadcrumbs = [
     <Link underline="none" key="1" color="inherit" href="/">
@@ -112,15 +125,23 @@ const Indi_Article = () => {
     },
   };
 
-  const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/g);
+  const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
 
   // onclick button section scroll function
   const string = extractedH2?.map((item) => parse(item));
 
-  console.log(string?.map((title) => console.log(title.props.children)));
+  // console.log(string?.map((title) => console.log(title.props.children)));
   const myRef = useRef(null);
-  const onBtnClick = () => {
-    myRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const onBtnClick = (id) => {
+    const element = document.getElementById(id);
+    const headerOffset = 145;
+    const elementPosition = element.getBoundingClientRect().top + 100;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    console.log(offsetPosition)
+    element.scrollIntoView({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -298,13 +319,15 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
-                  {extractedH2?.map((elem) => (
+                  {extractedH2?.map((elem, i) => (
                     <ListItem>
-                      <StickyButton onClick={onBtnClick}>
+                      <StickyButton onClick={() => onBtnClick(i)}>
                         <div
                           dangerouslySetInnerHTML={{
                             __html: elem,
                           }}
+                          // id={i}
+                          ref={myRef}
                         />
                       </StickyButton>
                     </ListItem>
@@ -321,10 +344,11 @@ const Indi_Article = () => {
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: data?.content.rendered,
+                  __html: result,
                 }}
+                ref={myRef}
               ></div>
-              <div ref={myRef}>Element to scroll to</div>
+              {/* <div ref={myRef}>Element to scroll to</div> */}
             </Grid>
           </Grid>
           <Grid container>
