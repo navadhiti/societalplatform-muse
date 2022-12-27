@@ -1,5 +1,5 @@
 import {
-    Badge,
+    Chip,
     Box,
     Button,
     Card,
@@ -25,6 +25,12 @@ import SaveIcon from "@mui/icons-material/Save";
 import PrintIcon from "@mui/icons-material/Print";
 
 import { AnimatedButton } from "../Themes/StyledComponent";
+import data from "../db.json";
+import Story_card from "./Story_card";
+console.log(data.Article.Stories,"data");
+
+const itemData = data.Article.Stories;
+console.log(data.Article.Stories,"data");
 
 const actions = [
     { icon: <FileCopyIcon />, name: "Copy" },
@@ -88,96 +94,21 @@ const Stories_article = () => {
                     alignItems="center"
                 >
                     {/* <Slider {...settings}> */}
-                    {[0, 1, 2].map((value) => (
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={3}
-                            lg={3}
+                       
+                      {itemData.map((item,index) => (
+                    
+                    <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={3}
+                        lg={3}
 
-                            // px={4}
-                        >
-                            <Card
-                                sx={{ m: 2, p: 2, borderRadius: "25px" }}
-                                key={value}
-                            >
-                                <CardActionArea sx={{ borderRadius: "25px" }}>
-                                    <CardMedia
-                                        component="img"
-                                        height="240"
-                                        image={card1}
-                                        alt="green iguana"
-                                    />
-                                    <CardContent>
-                                        <Badge
-                                            color="secondary"
-                                            badgeContent="HEALTH"
-                                            variant="tag"
-                                        ></Badge>
-
-                                        {/* <Badge variant="tag">HEALTH</Badge> */}
-
-                                        <Typography variant="h4">
-                                            All teach,all Learn
-                                        </Typography>
-                                        <Typography
-                                            gutterBottom
-                                            variant="body1"
-                                            component="div"
-                                            pt={3}
-                                        >
-                                            Edition 01,2022
-                                        </Typography>
-
-                                        {/* <CardActions> */}
-
-                                        <Box
-                                            sx={{
-                                                transform: "translateZ(0px)",
-                                                flexGrow: 1,
-                                            }}
-                                        >
-                                            <SpeedDial
-                                                ariaLabel="SpeedDial basic example"
-                                                direction="down"
-                                                sx={{
-                                                    position: "absolute",
-                                                    bottom: "-2rem",
-                                                    right: "-1rem",
-                                                }}
-                                                icon={
-                                                    <ShareIcon
-                                                        sx={{
-                                                            width: "35px",
-                                                            height: "35px",
-                                                            border: "1px solid black",
-                                                            backgroundColor:
-                                                                "#fff",
-                                                            borderRadius: "50%",
-                                                            p: 1,
-                                                        }}
-                                                    />
-                                                }
-                                            >
-                                                {actions.map((action) => (
-                                                    <SpeedDialAction
-                                                        key={action.name}
-                                                        icon={action.icon}
-                                                        tooltipTitle={
-                                                            action.name
-                                                        }
-                                                    />
-                                                ))}
-                                            </SpeedDial>
-                                        </Box>
-
-                                        {/* </CardActions> */}
-                                    </CardContent>
-                                </CardActionArea>
-                            </Card>
-                        </Grid>
-                    ))}
+                        // px={4}
+                    >
+                       <Story_card tag={item.tag} title={item.title} edition={item.date} />
+                    </Grid>
+                ))}
                     {/* </Slider> */}
                 </Grid>
                 <AnimatedButton>

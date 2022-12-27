@@ -14,7 +14,7 @@
     {
       "name": "EXPIRIENCE",
       "backgroundColor": "#C4BCB9",
-      "link": "/"
+      "link": "/experince"
     },
     {
       "name": "Authors",
@@ -125,23 +125,65 @@
           }
       ]
   },
-  "about": {
-      "our_aim": [
+  "Article": {
+      "Stories": [
           {
-              "number": "01",
-              "title": "Problem",
-              "blurb": "Innovation in education takes years to enter schools at scale and millions of under resourced children are just not learning"
+              "id": "01",
+              "title": "Reimagining disaster resilience",
+              "tag":"Health",
+              "blurb": "Innovation in education takes years to enter schools at scale and millions of under resourced children are just not learning",
+              "date":"01,2022"
           },
           {
-              "number": "02",
-              "title": "Our Vision",
-              "blurb": "Every child has a strong foundation to Think, Feel, Dream and Act"
+              "id": "02",
+              "title": "All teach, all learn",
+              "tag":"Health",
+              "blurb": "Every child has a strong foundation to Think, Feel, Dream and Act",
+              "date":"01,2022"
+              
           },
           {
-              "number": "03",
-              "title": "Our Mission",
-              "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!"
-          }
+              "id": "03",
+              "title": "Solve small, dent big",
+              "tag":"Health",
+              "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
+              "date":"01,2022"
+
+          },
+          {
+            "id": "04",
+            "title": "Striking collaboration gold",
+            "tag":"Health",
+            "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
+            "date":"01,2022"
+
+        },
+        {
+            "id": "05",
+            "title": "When society, state and markets work together",
+            "tag":"Health",
+            "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
+            "date":"01,2022"
+
+        },
+        {
+            "id": "06",
+            "title": "Build beyond",
+            "tag":"Health",
+            "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
+            "date":"01,2022"
+
+        },
+        {
+            "id": "07",
+            "title": "The power of public goods",
+            "tag":"Health",
+            "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
+            "date":"01,2022"
+
+        }
+
+
           
       ],
       "team": [
