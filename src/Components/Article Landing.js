@@ -18,8 +18,7 @@ import Book from "../Assets/Images/sp-muse-read.png";
 import { Section } from "../Themes/StyledComponent";
 // import ButtonIcon from "../Assets/Images/ArrowCircleDown.png";Down_arrow.png
 import ButtonIcon from "../Assets/Images/Down_arrow.png";
-
-
+import { Link, animateScroll as scroll } from "react-scroll";
 
 // const styles = {
 //     paperContainer: {
@@ -97,9 +96,25 @@ const Article_landing = () => {
                         spacing={5}
                         pt={15}
                     >
-                        <IconButton sx={{borderRadius:"50%",border:"2px solid white",width:"50px",height:"50px"}}>
-                            <img src={ButtonIcon} alt="img" />
-                        </IconButton>
+                        <Link
+                            activeClass="active"
+                            to="cards"
+                            spy={true}
+                            smooth={true}
+                            offset={-90}
+                            duration={500}
+                        >
+                            <IconButton
+                                sx={{
+                                    borderRadius: "50%",
+                                    border: "2px solid white",
+                                    width: "50px",
+                                    height: "50px",
+                                }}
+                            >
+                                <img src={ButtonIcon} alt="img" />
+                            </IconButton>
+                        </Link>
                     </Stack>
                 </Container>
             </Section>
