@@ -16,6 +16,8 @@ import {
     HashRouter as Router,
     ReactDOM,
 } from "react-router-dom";
+import { useLocation } from "react-router";
+
 import React from "react";
 import ShareIcon from "@mui/icons-material/Share";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
@@ -31,7 +33,6 @@ const styles = {
 };
 
 const actions = [
-    { icon: <FileCopyIcon />, name: "Copy" },
     { icon: <SaveIcon />, name: "Save" },
     { icon: <PrintIcon />, name: "Print" },
     { icon: <ShareIcon />, name: "Share" },
@@ -39,17 +40,19 @@ const actions = [
 
 const Story_card = ({ value, image, tag, title, blurb, edition }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const path = location.pathname;
+    console.log(path, "currect path");
 
     return (
         <>
             <Card
-                sx={{ m: 2, p: 2, borderRadius: "25px" }}
+                sx={{ m: 2, p: 2, borderRadius: "25px",minHeight:"35rem" }}
                 key={value}
-                onClick={() =>{
-                                                          
+                onClick={() => {
                     navigate("/indiviual-articles");
                     window.scrollTo(0, 0);
-                } }
+                }}
             >
                 <CardActionArea sx={{ borderRadius: "25px" }}>
                     <CardMedia
@@ -70,14 +73,18 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                         <Typography variant="h4" sx={{ minHeight: "3rem" }}>
                             {title}
                         </Typography>
-                        <Typography
-                            gutterBottom
-                            variant="body"
-                            component="div"
-                            pt={3}
-                        >
-                            {blurb}
-                        </Typography>
+                        {path == "/articles" ? (
+                            <Typography
+                                gutterBottom
+                                variant="body"
+                                component="div"
+                                pt={3}
+                            >
+                                {blurb}
+                            </Typography>
+                        ) : (
+                            ""
+                        )}
                         <Typography
                             gutterBottom
                             variant="body1"
@@ -86,7 +93,18 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                         >
                             {edition}
                         </Typography>
-                        {/* <Button variant="outlined" endIcon={<SaveAltIcon />} sx={{borderRadius:"25px"}}>Download</Button> */}
+                        {/* <Button variant="outlined" endIcon={<SaveAltIcon />} sx={{borderRadius:"25px"}}>Download</Button>  */}
+                        {/* {path == "/share" ? (
+                            <Button
+                                variant="outlined"
+                                endIcon={<SaveAltIcon />}
+                                sx={{ borderRadius: "25px" }}
+                            >
+                                Download
+                            </Button>
+                        ) : (
+                            ""
+                        )} */}
 
                         {/* <CardActions> */}
 
@@ -103,7 +121,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                     position: "absolute",
                                     bottom: "7rem",
                                     right: "-1rem",
-                                    boxShadow:"none"
+                                    boxShadow: "none",
                                 }}
                                 icon={
                                     <ShareIcon
@@ -114,7 +132,8 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                             backgroundColor: "#fff",
                                             borderRadius: "50%",
                                             p: 1,
-                                            boxShadow:"0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)",
+                                            boxShadow:
+                                                "0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)",
                                         }}
                                     />
                                 }
