@@ -4,7 +4,7 @@ import {
   Grid,
   Typography,
   Breadcrumbs,
-  Link,
+  // Link,
   Stack,
   Avatar,
   Divider,
@@ -24,6 +24,7 @@ import {
   ShareOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 import {
   FacebookShareButton,
@@ -315,22 +316,31 @@ const Indi_Article = () => {
           </Grid>
           <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
-              {/* <StickyBox offsetTop={20} offsetBottom={20}> */}
-              <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-              <List>
-                {extractedH2?.map((elem, i) => (
-                  <ListItem>
-                    <StickyButton onClick={() => onBtnClick(i)}>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: elem,
-                        }}
-                      />
-                    </StickyButton>
-                  </ListItem>
-                ))}
-              </List>
-              {/* </StickyBox> */}
+              <StickyBox offsetTop={20} offsetBottom={20}>
+                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                <List>
+                  {extractedH2?.map((elem, i) => (
+                    <ListItem>
+                      <StickyButton onClick={() => onBtnClick(i)}>
+                        <Link
+                          activeClass="active"
+                          to={i}
+                          spy={true}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: elem,
+                            }}
+                          />
+                        </Link>
+                      </StickyButton>
+                    </ListItem>
+                  ))}
+                </List>
+              </StickyBox>
             </Grid>
             <Grid
               item
