@@ -71,7 +71,7 @@ const Author_details = () => {
                                     <Typography variant="body">
                                         {item.blurb}
                                     </Typography><br />
-                                    <AnimatedButton>
+                                    {/* <AnimatedButton>
                                         <Button className="cta-btn">
                                             <span
                                                 class="hover-frame  bounce infinite"
@@ -83,7 +83,8 @@ const Author_details = () => {
                                             ></span>
                                             Read Articles
                                         </Button>
-                                    </AnimatedButton>
+                                    </AnimatedButton> */}
+                                    <MuseButton title="Read Articles" />
                                 </Grid>
                             </Grid>
                         ))}
