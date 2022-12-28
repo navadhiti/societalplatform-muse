@@ -1,6 +1,7 @@
 import { InsertEmoticon } from "@mui/icons-material";
 import { Button } from "@mui/material";
-import React,{useNavigate} from "react";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { AnimatedButton } from "../Themes/StyledComponent";
 
 const MuseButton = ({title,link}) => {
@@ -18,7 +19,7 @@ const MuseButton = ({title,link}) => {
                         class="hover-frame  bounce infinite"
                         data-num="2"
                     ></span>
-                    {title}Hi Hi
+                    {title}
                 </Button>
             </AnimatedButton>
         </>
