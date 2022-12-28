@@ -16,7 +16,7 @@ const Author_details = () => {
         <>
             <Box>
                 <Container>
-                    <Box py={5}>
+                    <Box py={5} id="Author">
                         {author.map((item, index) => (
                             <Grid
                                 container

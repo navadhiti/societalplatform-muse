@@ -42,9 +42,11 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
 
     return (
         <>
-            <Card sx={{ m: 2, p: 2, borderRadius: "25px" }} key={value}  onClick={() =>
-                                                            navigate("/indiviual-articles")
-                                                        }>
+            <Card
+                sx={{ m: 2, p: 2, borderRadius: "25px" }}
+                key={value}
+                onClick={() => navigate("/indiviual-articles")}
+            >
                 <CardActionArea sx={{ borderRadius: "25px" }}>
                     <CardMedia
                         component="img"
@@ -54,7 +56,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                     />
                     <CardContent>
                         <Chip
-                            color="secondary"
+                            color="success"
                             label={tag}
                             sx={{ color: "#fff", fontWeight: 800 }}
                         ></Chip>
@@ -95,8 +97,9 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                 direction="down"
                                 sx={{
                                     position: "absolute",
-                                    bottom: "-2rem",
+                                    bottom: "7rem",
                                     right: "-1rem",
+                                    boxShadow:"none"
                                 }}
                                 icon={
                                     <ShareIcon
@@ -107,6 +110,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                             backgroundColor: "#fff",
                                             borderRadius: "50%",
                                             p: 1,
+                                            boxShadow:"0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)",
                                         }}
                                     />
                                 }

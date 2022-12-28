@@ -154,14 +154,14 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#935fb0',
+      main: '#fdfdfd',
       contrastText: '#000',
     },
     secondary: {
       main: '#000',
     },
-    color1: {
-      main: '#74788D',
+    success: {
+      main: '#935fb0',
     },
   },
   components: {

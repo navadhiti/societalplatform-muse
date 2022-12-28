@@ -87,7 +87,7 @@ const Layout = () => {
             ) : (
                 <>
                     <ThemeProvider theme={theme}>
-                        {/* <Container> */}
+                        
                         <Header />
 
                         <Box sx={{ mt: 0, mb: 5, px: { xs: 0, sm: 0, md: 5 } }}>
@@ -98,7 +98,7 @@ const Layout = () => {
                                 alignItems="start"
                                 sx={{ pt: 0 }}
                             >
-                                {/* <GRID11> */}
+                                
                                 <Grid
                                     item
                                     xs={12}
@@ -233,7 +233,7 @@ const Layout = () => {
                                         </TabPanel>
                                     </Box>
                                 </Grid>
-                                {/* </GRID11> */}
+                                
                                 <StickyBox offsetTop={80} offsetBottom={-80}>
                                     <Grid
                                         item
@@ -270,8 +270,12 @@ const Layout = () => {
                                                                 opacity: "0.6",
                                                             },
                                                         }}
-                                                        onClick={() =>
-                                                            navigate(item.link)
+                                                        onClick={() =>{
+                                                          
+                                                            navigate(item.link);
+                                                            window.scrollTo(0, 0);
+                                                        }
+                                                             
                                                         }
                                                     >
                                                         {item.name}
@@ -285,7 +289,7 @@ const Layout = () => {
                         </Box>
 
                         <Footer />
-                        {/* </Container> */}
+                        
                     </ThemeProvider>
                 </>
             )}

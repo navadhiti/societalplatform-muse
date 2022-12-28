@@ -25,11 +25,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const Footer = () => {
     return (
         <>
-            {/* <AppBar
-                
-                color="primary"
-                
-            > */}
+           
             <Box sx={{ backgroundColor: "#F8F8F8", px: 5 }}>
                 <Grid
                     container

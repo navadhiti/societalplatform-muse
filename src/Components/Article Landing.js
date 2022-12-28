@@ -98,7 +98,7 @@ const Article_landing = () => {
                     >
                         <Link
                             activeClass="active"
-                            to="cards"
+                            to="article_cards"
                             spy={true}
                             smooth={true}
                             offset={-90}

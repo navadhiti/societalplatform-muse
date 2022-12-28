@@ -4,12 +4,11 @@ import { Section } from "../Themes/StyledComponent";
 import Story_card from "./Story_card";
 import data from "../db.json";
 
-const All_Articles_card = () => {
+const Share_card = () => {
     const itemData = data.Article.Stories;
-
-    return (
-        <>
-            <Box id="article_cards">
+  return (
+    <>
+    <Box id="share_cards">
                 <Container>
                     {/* <Grid
                         container
@@ -146,8 +145,8 @@ const All_Articles_card = () => {
                     </Grid>
                 </Container>
             </Box>
-        </>
-    );
-};
+    </>
+  )
+}
 
-export default All_Articles_card;
+export default Share_card;

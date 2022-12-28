@@ -54,6 +54,26 @@ export const Section = styled(Box)`
     height: auto !important;
   }
 `;
+export const Section1 = styled(Box)`
+  padding: 4rem 0;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+    height: 500px !important;
+    display: flex;
+  align-items: center;
+  }
+
+  @media (max-width: 550px) : {
+    padding: 2rem 0;
+    height: 500px !important;
+    display: flex;
+  align-items: center;
+  }
+`;
 export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame[data-num='1'] {
     position: absolute;
