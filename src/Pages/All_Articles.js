@@ -8,6 +8,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import All_Articles_card from "../Components/All_Articles_card";
 
 const All_Articles = () => {
     const [age, setAge] = React.useState("");
@@ -32,140 +33,7 @@ const All_Articles = () => {
                 <Article_landing />
             </Box>
             <Box style={styles.LandingBackground1} py={5}>
-                <Container>
-                    {/* <Grid
-                        container
-                        spacing={0}
-                        justifyContent="space-evenly"
-                        alignItems="center"
-                        py={5}
-                        px={5}
-                    >
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                            fullwidth
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                    </Grid> */}
-                    
-                    <Typography variant="h6" sx={{ textAlign: "left" }} mb={-1}>
-                        <b> EDITION 01</b>
-                    </Typography>
-                    <Typography variant="h3" textAlign="Left">
-                        Response. Responsibility. Resilience.
-                    </Typography>
-                    <Grid
-                        container
-                        spacing={0}
-                        justifyContent="space-evenly"
-                        alignItems="center"
-                        py={5}
-                        px={5}
-                    >
-                        {/* <Slider {...settings}> */}
-
-                        {itemData.map((item, index) => (
-                            <Grid
-                                item
-                                xs={12}
-                                sm={12}
-                                md={4}
-                                lg={4}
-                                spacing={0}
-                            >
-                                <Story_card
-                                    tag={item.tag}
-                                    title={item.title}
-                                    edition={item.date}
-                                />
-                            </Grid>
-                        ))}
-                        {/* </Slider> */}
-                    </Grid>
-                </Container>
+                <All_Articles_card />
             </Box>
         </>
     );
