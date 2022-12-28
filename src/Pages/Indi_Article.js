@@ -24,6 +24,7 @@ import {
   ShareOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
+
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -290,8 +291,6 @@ const Indi_Article = () => {
                       position: 'absolute',
                       bottom: '-1.8rem',
                       '& .MuiFab-primary': {
-                        // backgroundColor: 'gold',
-                        // color: 'blue',
                         boxShadow: 'none',
                         border: '1px solid black',
                       },
@@ -316,23 +315,22 @@ const Indi_Article = () => {
           </Grid>
           <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
-              <StickyBox offsetTop={20} offsetBottom={20}>
-                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-                <List>
-                  {extractedH2?.map((elem, i) => (
-                    <ListItem>
-                      <StickyButton onClick={() => onBtnClick(i)}>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: elem,
-                          }}
-                          ref={myRef}
-                        />
-                      </StickyButton>
-                    </ListItem>
-                  ))}
-                </List>
-              </StickyBox>
+              {/* <StickyBox offsetTop={20} offsetBottom={20}> */}
+              <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+              <List>
+                {extractedH2?.map((elem, i) => (
+                  <ListItem>
+                    <StickyButton onClick={() => onBtnClick(i)}>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: elem,
+                        }}
+                      />
+                    </StickyButton>
+                  </ListItem>
+                ))}
+              </List>
+              {/* </StickyBox> */}
             </Grid>
             <Grid
               item

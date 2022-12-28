@@ -5,6 +5,7 @@ import FONT from '../Themes/Font';
 import PALETTE from '../Themes/Palette';
 
 import Scribble from '../Assets/Images/scribble.png';
+import Scribble2 from '../Assets/Images/Vector 67.png';
 import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Art from '../Assets/Images/Artwork_3.png';
 
@@ -14,7 +15,7 @@ export const StickyButton = styled(Button)`
   text-transform: none;
 
   &:hover {
-    background: ${`url(${Scribble}) bottom center no-repeat`};
+    background: ${`url(${Scribble2}) bottom center no-repeat`};
   }
 
   h2 {
