@@ -1,86 +1,90 @@
 // import { Container } from '@mui/system';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
-    useNavigate,
-    Route,
-    Routes,
-    HashRouter as Router,
-    ReactDOM,
-} from "react-router-dom";
-import StickyBox from "react-sticky-box";
-import { useLocation } from "react-router";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
-import Home from "../Pages/Home";
-import { GRID11 } from "../Themes/StyledComponent";
+  useNavigate,
+  Route,
+  Routes,
+  HashRouter as Router,
+  ReactDOM,
+} from 'react-router-dom';
+import StickyBox from 'react-sticky-box';
+import { useLocation } from 'react-router';
+import Footer from '../Components/Footer';
+import Header from '../Components/Header';
+import Home from '../Pages/Home';
+import { GRID11 } from '../Themes/StyledComponent';
 // import "../Assets/scrollbar.scss";
 // import Stories from '../Components/Stories';
 
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../Themes/Theme";
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../Themes/Theme';
 
-import { Box, Grid, List, ListItem, ListItemButton } from "@mui/material";
-import LandingImage from "../Assets/Images/sp-muse-read-banner-04 2.png";
-import Image from "../Assets/Images/sp-musebook-design.png";
-import Image1 from "../Assets/Images/image_4.png";
+import { Box, Grid, List, ListItem, ListItemButton } from '@mui/material';
+import LandingImage from '../Assets/Images/sp-muse-read-banner-04 2.png';
+import Image from '../Assets/Images/sp-musebook-design.png';
+import Image1 from '../Assets/Images/image_4.png';
 
-import PropTypes from "prop-types";
-import Indi_Article from "../Pages/Indi_Article";
-import All_Articles from "../Pages/All_Articles";
-import PALETTE from "../Themes/Palette";
-import Authors from "../Pages/Authors";
-import database from "../db.json";
-import Share from "../Pages/Share";
-import Loader from "../Components/loader";
-import Experince from "../Pages/Experince";
+import PropTypes from 'prop-types';
+import Indi_Article from '../Pages/Indi_Article';
+import All_Articles from '../Pages/All_Articles';
+import PALETTE from '../Themes/Palette';
+import Authors from '../Pages/Authors';
+import database from '../db.json';
+import Share from '../Pages/Share';
+import Loader from '../Components/loader';
+import Experince from '../Pages/Experince';
 
 function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-    const location = useLocation();
-    // const path = location.pathname;
+  const { children, value, index, ...other } = props;
+  const location = useLocation();
+  // const path = location.pathname;
 
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`vertical-tabpanel-${index}`}
-            aria-labelledby={`vertical-tab-${index}`}
-            {...other}
-        >
-            {value === index && <Box>{children}</Box>}
-        </div>
-    );
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && <Box>{children}</Box>}
+    </div>
+  );
 }
 
 TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
 };
 const Layout = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const [value, setValue] = React.useState(0);
-    const buttonHeight = `calc(90vh/5)`;
-    const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
-    const buttonName = database.menu;
-    const [loading, setLoading] = useState(true);
-    const [data, setData] = useState();
-    const [error, setError] = useState("");
+  const [value, setValue] = React.useState(0);
+  const buttonHeight = `calc(90vh/5)`;
+  const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
+  const buttonName = database.menu;
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState();
+  const [error, setError] = useState('');
 
-    useEffect(() => {
-        fetch("https://tm.navadhiti.com/wp-json/wp/v2/posts/3059")
-            .then((response) => response.json())
-            .then((json) => {
-                setData(json);
-                setTimeout(() => {
-                  setLoading(false);
-              }, 4000);
-            })
-            .catch((e) => setError(e));
-    }, []);
+  useEffect(() => {
+    fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
+      .then((response) => response.json())
+      .then((json) => {
+        setData(json);
+        setTimeout(() => {
+          setLoading(false);
+        }, 4000);
+      })
+      .catch((e) => setError(e));
+  }, []);
 
-    return (
+  return (
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
         <>
             {loading ? (
                 <Loader />
@@ -294,6 +298,8 @@ const Layout = () => {
                 </>
             )}
         </>
-    );
+      )}
+    </>
+  );
 };
 export default Layout;

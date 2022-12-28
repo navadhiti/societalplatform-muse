@@ -1,20 +1,21 @@
 import { styled } from '@mui/system';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 
 import FONT from '../Themes/Font';
 import PALETTE from '../Themes/Palette';
 
 import Scribble from '../Assets/Images/scribble.png';
+import Scribble2 from '../Assets/Images/Vector 67.png';
 import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Art from '../Assets/Images/Artwork_3.png';
 
 export const StickyButton = styled(Button)`
   border: none;
   background: none;
+  text-transform: none;
 
   &:hover {
-    background: ${`url(${Scribble}) bottom center no-repeat`};
-    padding-bottom:5px;
+    background: ${`url(${Scribble2}) bottom center no-repeat`};
   }
 
   h2 {
@@ -24,7 +25,7 @@ export const StickyButton = styled(Button)`
     // color: ${PALETTE.BLACK};
     color: #241c15;
     // margin-bottom: -20px;
-    height:0.5rem;
+    height: 0.2rem;
   }
 `;
 
@@ -36,6 +37,33 @@ export const Title = styled(Typography)`
   span:nth-of-type(2) {
     background: ${`url(${ScribbleCircle}) center no-repeat`};
     background-size: contain;
+  }
+
+  h2 {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.MEDIUM};
+    font-size: ${FONT.SIZES[40]};
+    color: #241c15;
+  }
+
+  p {
+    font-family: ${FONT.FAMILY.ASSISTANT};
+    font-size: ${FONT.SIZES[18]};
+    color: #241c15;
+  }
+
+  p:first-of-type {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.REGULAR};
+    font-size: ${FONT.SIZES[24]};
+    color: #241c15;
+  }
+
+  blockquote {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.REGULAR};
+    font-size: ${FONT.SIZES[24]};
+    text-align: center;
   }
 `;
 export const Section = styled(Box)`

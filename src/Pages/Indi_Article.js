@@ -4,7 +4,7 @@ import {
   Grid,
   Typography,
   Breadcrumbs,
-  Link,
+  // Link,
   Stack,
   Avatar,
   Divider,
@@ -24,6 +24,8 @@ import {
   ShareOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
+import { Link, animateScroll as scroll } from 'react-scroll';
+
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -126,19 +128,20 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  
+  // const searchList = parse(extractedH2);
+  // console.log(parse(extractedH2?.map((item) => console.log(item))), 'list');
 
   // onclick button section scroll function
-  const string = extractedH2?.map((item) => parse(item));
+  const string = extractedH2?.map((item) => console.log(item));
+  console.log(string);
 
   // console.log(string?.map((title) => console.log(title.props.children)));
-  const myRef = useRef(null);
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
-    const headerOffset = 145;
-    const elementPosition = element.getBoundingClientRect().top + 100;
+    const headerOffset = 45;
+    const elementPosition = element.getBoundingClientRect().top - 500;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    console.log(offsetPosition);
+    // console.log(offsetPosition);
     element.scrollIntoView({
       top: offsetPosition,
       behavior: 'smooth',
@@ -253,7 +256,7 @@ const Indi_Article = () => {
                 disableClearable
                 freeSolo
                 id="combo-box-demo"
-                options={extractedH2}
+                // options={}
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
                 )}
@@ -291,8 +294,6 @@ const Indi_Article = () => {
                       position: 'absolute',
                       bottom: '-1.8rem',
                       '& .MuiFab-primary': {
-                        // backgroundColor: 'gold',
-                        // color: 'blue',
                         boxShadow: 'none',
                         border: '1px solid black',
                       },
@@ -318,18 +319,26 @@ const Indi_Article = () => {
           <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
-                <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                 <List>
+                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+
                   {extractedH2?.map((elem, i) => (
                     <ListItem>
                       <StickyButton onClick={() => onBtnClick(i)}>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: elem,
-                          }}
-                          // id={i}
-                          ref={myRef}
-                        />
+                        <Link
+                          activeClass="active"
+                          to={i}
+                          spy={true}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                        >
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: elem,
+                            }}
+                          />
+                        </Link>
                       </StickyButton>
                     </ListItem>
                   ))}
@@ -343,13 +352,13 @@ const Indi_Article = () => {
               sx={{ textAlign: 'left' }}
               px={{ xs: 4, md: 5 }}
             >
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: result,
-                }}
-                ref={myRef}
-              ></div>
-              {/* <div ref={myRef}>Element to scroll to</div> */}
+              <Title>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: result,
+                  }}
+                ></div>
+              </Title>
             </Grid>
           </Grid>
           <Grid container>

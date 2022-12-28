@@ -79,7 +79,7 @@ const Share_Landing = () => {
                         justifyContent="center"
                         alignItems="flex-end"
                         spacing={5}
-                        pt={15}
+                        pt={{xs:5,md:15}}
                     >
                          <Link
                             activeClass="active"
