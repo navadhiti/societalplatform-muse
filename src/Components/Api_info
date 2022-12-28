@@ -1,0 +1,18 @@
+import React from 'react';
+import axios from "axios";
+
+const FetchApiSetup = (key,type,page) => {
+return axios.get(`https://www.omdbapi.com/?apikey=eb1ef3fc&s=${key}&type=${type}&page=${page}`).then((res) =>
+{
+    return res;
+})
+}
+export default FetchApiSetup;
+
+ export const FetchDetailsFromApi = (key) => {
+    
+    return axios.get(`https://www.omdbapi.com/?apikey=eb1ef3fc&i=${key}`).then((res) =>
+{
+    return res;
+})
+ }

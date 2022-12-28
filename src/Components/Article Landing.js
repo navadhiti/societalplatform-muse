@@ -16,7 +16,10 @@ import Layer from "../Assets/Images/Layer.png";
 import Blub from "../Assets/Images/Blub.png";
 import Book from "../Assets/Images/sp-muse-read.png";
 import { Section } from "../Themes/StyledComponent";
-import ButtonIcon from "../Assets/Images/ArrowCircleDown.png";
+// import ButtonIcon from "../Assets/Images/ArrowCircleDown.png";Down_arrow.png
+import ButtonIcon from "../Assets/Images/Down_arrow.png";
+
+
 
 // const styles = {
 //     paperContainer: {
@@ -88,13 +91,13 @@ const Article_landing = () => {
                         </Grid>
                     </Grid>
                     <Stack
-                        direction="column"
+                        direction="row"
                         justifyContent="center"
-                        alignItems="center"
+                        alignItems="flex-end"
                         spacing={5}
-                        py={3}
+                        pt={15}
                     >
-                        <IconButton>
+                        <IconButton sx={{borderRadius:"50%",border:"2px solid white",width:"50px",height:"50px"}}>
                             <img src={ButtonIcon} alt="img" />
                         </IconButton>
                     </Stack>

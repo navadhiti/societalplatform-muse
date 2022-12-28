@@ -7,11 +7,15 @@ import {
     Typography,
     Container,
     ImageListItem,
+    Stack,
+    IconButton,
 } from "@mui/material";
 import { Section } from "../Themes/StyledComponent";
 import Divider from "../Assets/Images/underline-white.png";
 import Pen from "../Assets/Images/img-pen-white.png";
 import art from  "../Assets/Images/Artwork.png";
+import ButtonIcon from "../Assets/Images/Down_arrow.png";
+
 
 const Authors_Landing = () => {
     return (
@@ -72,6 +76,17 @@ const Authors_Landing = () => {
                             <img src={art} />
                         </Grid>
                     </Grid>
+                    <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="flex-end"
+                        spacing={5}
+                        pt={15}
+                    >
+                        <IconButton sx={{borderRadius:"50%",border:"2px solid white",width:"50px",height:"50px"}}>
+                            <img src={ButtonIcon} alt="img" />
+                        </IconButton>
+                    </Stack>
                 </Container>
             </Section>
         </>

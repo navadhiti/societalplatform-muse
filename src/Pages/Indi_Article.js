@@ -126,6 +126,7 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
+  
 
   // onclick button section scroll function
   const string = extractedH2?.map((item) => parse(item));
@@ -137,7 +138,7 @@ const Indi_Article = () => {
     const headerOffset = 145;
     const elementPosition = element.getBoundingClientRect().top + 100;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    console.log(offsetPosition)
+    console.log(offsetPosition);
     element.scrollIntoView({
       top: offsetPosition,
       behavior: 'smooth',
