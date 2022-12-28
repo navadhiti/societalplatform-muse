@@ -138,6 +138,7 @@ const All_Articles_card = () => {
                                 <Story_card
                                     tag={item.tag}
                                     title={item.title}
+                                    blurb={item.blurb}
                                     edition={item.date}
                                 />
                             </Grid>

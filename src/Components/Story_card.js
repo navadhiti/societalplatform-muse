@@ -45,7 +45,11 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
             <Card
                 sx={{ m: 2, p: 2, borderRadius: "25px" }}
                 key={value}
-                onClick={() => navigate("/indiviual-articles")}
+                onClick={() =>{
+                                                          
+                    navigate("/indiviual-articles");
+                    window.scrollTo(0, 0);
+                } }
             >
                 <CardActionArea sx={{ borderRadius: "25px" }}>
                     <CardMedia
