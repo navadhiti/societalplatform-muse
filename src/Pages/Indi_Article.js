@@ -126,7 +126,6 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  
 
   // onclick button section scroll function
   const string = extractedH2?.map((item) => parse(item));
@@ -135,8 +134,8 @@ const Indi_Article = () => {
   const myRef = useRef(null);
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
-    const headerOffset = 145;
-    const elementPosition = element.getBoundingClientRect().top + 100;
+    const headerOffset = 45;
+    const elementPosition = element.getBoundingClientRect().top - 500;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
     console.log(offsetPosition);
     element.scrollIntoView({
@@ -327,7 +326,6 @@ const Indi_Article = () => {
                           dangerouslySetInnerHTML={{
                             __html: elem,
                           }}
-                          // id={i}
                           ref={myRef}
                         />
                       </StickyButton>

@@ -11,10 +11,10 @@ import Art from '../Assets/Images/Artwork_3.png';
 export const StickyButton = styled(Button)`
   border: none;
   background: none;
+  text-transform: none;
 
   &:hover {
     background: ${`url(${Scribble}) bottom center no-repeat`};
-    padding-bottom:5px;
   }
 
   h2 {
@@ -24,7 +24,7 @@ export const StickyButton = styled(Button)`
     // color: ${PALETTE.BLACK};
     color: #241c15;
     // margin-bottom: -20px;
-    height:0.5rem;
+    height: 0.2rem;
   }
 `;
 
