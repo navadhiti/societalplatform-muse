@@ -1,5 +1,5 @@
 import { styled } from '@mui/system';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import { Box, Button, Container, Typography } from '@mui/material';
 
 import FONT from '../Themes/Font';
 import PALETTE from '../Themes/Palette';
@@ -37,6 +37,33 @@ export const Title = styled(Typography)`
   span:nth-of-type(2) {
     background: ${`url(${ScribbleCircle}) center no-repeat`};
     background-size: contain;
+  }
+
+  h2 {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.MEDIUM};
+    font-size: ${FONT.SIZES[40]};
+    color: #241c15;
+  }
+
+  p {
+    font-family: ${FONT.FAMILY.ASSISTANT};
+    font-size: ${FONT.SIZES[18]};
+    color: #241c15;
+  }
+
+  p:first-of-type {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.REGULAR};
+    font-size: ${FONT.SIZES[24]};
+    color: #241c15;
+  }
+
+  blockquote {
+    font-family: ${FONT.FAMILY.CAMPAIGN};
+    font-weight: ${FONT.WEIGHT.REGULAR};
+    font-size: ${FONT.SIZES[24]};
+    text-align: center;
   }
 `;
 export const Section = styled(Box)`
