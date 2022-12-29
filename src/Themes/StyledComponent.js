@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 import { Box, Button, Container, Typography } from '@mui/material';
 
 import FONT from '../Themes/Font';
-import PALETTE from '../Themes/Palette';
+// import PALETTE from '../Themes/Palette';
 
 import Scribble from '../Assets/Images/scribble.png';
 import Scribble2 from '../Assets/Images/Vector 67.png';
@@ -12,19 +12,17 @@ import Art from '../Assets/Images/Artwork_3.png';
 export const StickyButton = styled(Button)`
   border: none;
   background: none;
-  text-transform: none;
 
   &:hover {
     background: ${`url(${Scribble2}) bottom center no-repeat`};
+    background-size: contain;
   }
 
   h2 {
     font-family: ${FONT.FAMILY.ASSISTANT};
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: 18px;
-    // color: ${PALETTE.BLACK};
     color: #241c15;
-    // margin-bottom: -20px;
     height: 0.2rem;
   }
 `;
@@ -32,6 +30,7 @@ export const StickyButton = styled(Button)`
 export const Title = styled(Typography)`
   span:first-of-type {
     background: ${`url(${Scribble}) bottom no-repeat`};
+    background-size: contain;
   }
 
   span:nth-of-type(2) {
@@ -92,14 +91,14 @@ export const Section1 = styled(Box)`
     padding: 2rem 0;
     height: 500px !important;
     display: flex;
-  align-items: center;
+    align-items: center;
   }
 
   @media (max-width: 550px) : {
     padding: 2rem 0;
     height: 500px !important;
     display: flex;
-  align-items: center;
+    align-items: center;
   }
 `;
 export const AnimatedButton = styled(Button)`
