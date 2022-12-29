@@ -47,7 +47,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
     return (
         <>
             <Card
-                sx={{ m: 2, p: 2, borderRadius: "25px",minHeight:"35rem" }}
+                sx={{ m: 2, p: 2, borderRadius: "25px",minHeight:"30rem" }}
                 key={value}
                 onClick={() => {
                     navigate("/indiviual-articles");
@@ -65,20 +65,21 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                         <Chip
                             color="success"
                             label={tag}
-                            sx={{ color: "#fff", fontWeight: 800 }}
+                            sx={{ color: "#fff", fontWeight: 800 ,mb:2}}
                         ></Chip>
 
                         {/* <Chip variant="tag">HEALTH</Chip> */}
 
-                        <Typography variant="h4" sx={{ minHeight: "3rem" }}>
+                        <Typography variant="subtitle2">
                             {title}
                         </Typography>
                         {path == "/articles" ? (
                             <Typography
                                 gutterBottom
-                                variant="body"
+                                variant="body2"
                                 component="div"
-                                pt={3}
+                                sx={{ minHeight: "3rem" }}
+                                pt={1}
                             >
                                 {blurb}
                             </Typography>
@@ -94,7 +95,8 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                             {edition}
                         </Typography>
                         {/* <Button variant="outlined" endIcon={<SaveAltIcon />} sx={{borderRadius:"25px"}}>Download</Button>  */}
-                        {/* {path == "/share" ? (
+                        {path == "/share" ? (
+                            <>
                             <Button
                                 variant="outlined"
                                 endIcon={<SaveAltIcon />}
@@ -102,13 +104,48 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                             >
                                 Download
                             </Button>
+                             <Box
+                             sx={{
+                                 transform: "translateZ(0px)",
+                                 flexGrow: 1,
+                             }}
+                         >
+                             <SpeedDial
+                                 ariaLabel="SpeedDial basic example"
+                                 direction="down"
+                                 sx={{
+                                     position: "absolute",
+                                     bottom: "1rem",
+                                     right: "-1rem",
+                                     boxShadow: "none",
+                                 }}
+                                 icon={
+                                     <ShareIcon
+                                         sx={{
+                                             width: "35px",
+                                             height: "35px",
+                                             border: "1px solid black",
+                                             backgroundColor: "#fff",
+                                             borderRadius: "50%",
+                                             p: 1,
+                                             boxShadow:
+                                                 "0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)",
+                                         }}
+                                     />
+                                 }
+                             >
+                                 {actions.map((action) => (
+                                     <SpeedDialAction
+                                         key={action.name}
+                                         icon={action.icon}
+                                         tooltipTitle={action.name}
+                                     />
+                                 ))}
+                             </SpeedDial>
+                         </Box>
+                         </>
                         ) : (
-                            ""
-                        )} */}
-
-                        {/* <CardActions> */}
-
-                        <Box
+                            <Box
                             sx={{
                                 transform: "translateZ(0px)",
                                 flexGrow: 1,
@@ -119,7 +156,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                 direction="down"
                                 sx={{
                                     position: "absolute",
-                                    bottom: "7rem",
+                                    bottom: "12rem",
                                     right: "-1rem",
                                     boxShadow: "none",
                                 }}
@@ -147,6 +184,11 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                                 ))}
                             </SpeedDial>
                         </Box>
+                        )}
+
+                        {/* <CardActions> */}
+
+                     
 
                         {/* </CardActions> */}
                     </CardContent>

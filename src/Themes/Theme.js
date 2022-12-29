@@ -139,8 +139,16 @@ const theme = createTheme({
             },
         },
         subtitle2: {
-            background: ` url(${Line}) bottom no-repeat`,
+            
             fontFamily: FONT.FAMILY.CAMPAIGN,
+            fontWeight: FONT.WEIGHT.REGULAR,
+            
+            fontSize: FONT.SIZES[20],
+            color: "#241C15",
+            "@media (max-width:475px)": {
+                fontSize: FONT.SIZES[16],
+                // lineHeight: "25.2px",
+            },
         },
         overline: {
             // '&:hover': {
@@ -730,7 +738,7 @@ const theme = createTheme({
                     },
                 ],
             },
-            MuiBadge: {
+            MuiChip: {
                 variants: [
                     {
                         props: { variant: "tag" },
