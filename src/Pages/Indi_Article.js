@@ -65,12 +65,6 @@ const Indi_Article = () => {
       .catch((e) => setError(e));
   }, []);
 
-  // const filteredValue = data?.content.rendered
-  //   .match(/<h(.)>.*?<\/h\1>/gs)
-  //   .map((val, i) => {
-  //     return val.replace('<h2>', `<h2 id="${i}" key="${i}">`);
-  //   });
-
   const filteredValue = data?.content.rendered
     .match(/<h(.)>.*?<\/h\1>/gs)
     .map((x, i) => i);
@@ -123,25 +117,19 @@ const Indi_Article = () => {
   const styles = {
     LandingBackground: {
       backgroundColor: '#fff',
-      // boxShadow:' 0px 0px 30px 0px #b8c0c3;'
     },
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  // const searchList = parse(extractedH2);
-  // console.log(parse(extractedH2?.map((item) => console.log(item))), 'list');
+
+  // Search Bar
 
   // onclick button section scroll function
-  const string = extractedH2?.map((item) => console.log(item));
-  console.log(string);
-
-  // console.log(string?.map((title) => console.log(title.props.children)));
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
     const headerOffset = 45;
     const elementPosition = element.getBoundingClientRect().top - 500;
     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    // console.log(offsetPosition);
     element.scrollIntoView({
       top: offsetPosition,
       behavior: 'smooth',
@@ -256,7 +244,9 @@ const Indi_Article = () => {
                 disableClearable
                 freeSolo
                 id="combo-box-demo"
-                // options={}
+                options={extractedH2?.map((elem) =>
+                  elem.replace(/<[^>]+>/g, '')
+                )}
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
                 )}
