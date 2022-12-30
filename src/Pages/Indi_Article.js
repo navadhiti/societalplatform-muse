@@ -246,11 +246,11 @@ const Indi_Article = () => {
                 disableClearable
                 freeSolo
                 id="combo-box-demo"
-                options={extractedH2?.map((elem) =>
-                  elem.replace(/<[^>]+>/g, '')
-                )}
+                options={extractedH2?.map((elem, index) => {
+                  return { label: elem.replace(/<[^>]+>/g, ''), id: index };
+                })}
                 onChange={(e, value) => {
-                  setSelectedValue(value);
+                  onBtnClick(value.id);
                 }}
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
