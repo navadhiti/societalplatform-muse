@@ -42,7 +42,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[32],
             color: PALETTE.BLACK,
             textTransform: "capitalize",
-            lineHeight: "58px",
+            lineHeight: "48px",
             "@media (max-width:475px)": {
                 fontSize: FONT.SIZES[18],
                 lineHeight: "25.2px",
@@ -158,6 +158,7 @@ const theme = createTheme({
             fontWeight: FONT.WEIGHT.REGULAR,
             fontFamily: FONT.FAMILY.CAMPAIGN,
             fontSize: FONT.SIZES[16],
+            letterSpacing:"4px",
         },
     },
     palette: {
@@ -242,6 +243,7 @@ const theme = createTheme({
                 root: {
                     // borderBottom: '1px solid black',
                     paddingTop: "1rem",
+                    paddingBottom:"1rem",
                 },
             },
         },

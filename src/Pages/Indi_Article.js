@@ -123,6 +123,8 @@ const Indi_Article = () => {
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
 
   // Search Bar
+  const [selectedValue, setSelectedValue] = useState();
+  console.log(selectedValue);
 
   // onclick button section scroll function
   const onBtnClick = (id) => {
@@ -247,6 +249,9 @@ const Indi_Article = () => {
                 options={extractedH2?.map((elem) =>
                   elem.replace(/<[^>]+>/g, '')
                 )}
+                onChange={(e, value) => {
+                  setSelectedValue(value);
+                }}
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
                 )}
