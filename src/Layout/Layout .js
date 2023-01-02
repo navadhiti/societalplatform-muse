@@ -73,10 +73,10 @@ const Layout = () => {
       .then((response) => response.json())
       .then((json) => {
         setData(json);
-        setTimeout(() => {}, 4000);
+        setTimeout(() => {setLoading(false);}, 4000);
+        
       })
       .catch((e) => setError(e));
-    setLoading(false);
   }, []);
 
   return (
