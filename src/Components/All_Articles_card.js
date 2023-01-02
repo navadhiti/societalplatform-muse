@@ -4,110 +4,14 @@ import { Section } from "../Themes/StyledComponent";
 import Story_card from "./Story_card";
 import data from "../db.json";
 
-const All_Articles_card = () => {
+const All_Articles_card = (posts) => {
     const itemData = data.Article.Stories;
-
+console.log(posts,"post")
     return (
         <>
             <Box id="article_cards">
                 <Container>
-                    {/* <Grid
-                        container
-                        spacing={0}
-                        justifyContent="space-evenly"
-                        alignItems="center"
-                        py={5}
-                        px={5}
-                    >
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                        <Grid
-                            item
-                            xs={12}
-                            sm={12}
-                            md={4}
-                            lg={4}
-                            spacing={0}
-                        >
-                            <InputLabel
-                            id="demo-select-small"
-                            sx={{ borderRadius: "50%" }}
-                        >
-                            Age
-                        </InputLabel>
-                        <Select
-                            labelId="demo-select-small"
-                            id="demo-select-small"
-                            value={age}
-                            label="Age"
-                            onChange={handleChange}
-                            fullwidth
-                        >
-                            <MenuItem value="">
-                                <em>None</em>
-                            </MenuItem>
-                            <MenuItem value={10}>Ten</MenuItem>
-                            <MenuItem value={20}>Twenty</MenuItem>
-                            <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                        </Grid>
-                    </Grid> */}
+                    
 
                     <Typography variant="h6" sx={{ textAlign: "left" }} >
                         <b> EDITION 01</b>

@@ -78,6 +78,7 @@ const Layout = () => {
         }, 4000);
       })
       .catch((e) => setError(e));
+      setLoading(false);
   }, []);
 
   return (

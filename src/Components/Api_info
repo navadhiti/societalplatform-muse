@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from "axios";
 
-const FetchApiSetup = (key,type,page) => {
-return axios.get(`https://www.omdbapi.com/?apikey=eb1ef3fc&s=${key}&type=${type}&page=${page}`).then((res) =>
+const FetchApiSetup = () => {
+return axios.get(`https://tm.navadhiti.com/wp-json/wp/v2/posts/?per_page=3`).then((res) =>
 {
     return res;
 })

@@ -247,6 +247,8 @@ const Indi_Article = () => {
                 options={extractedH2?.map((elem) =>
                   elem.replace(/<[^>]+>/g, '')
                 )}
+                // onChange={(e, value) => console.log(e.target, value.title)}
+
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
                 )}

@@ -79,6 +79,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[18],
             fontFamily: FONT.FAMILY.ASSISTANT,
             lineHeight: "27px",
+            letterSpacing:"3px",
 
             "@media (max-width:475px)": {
                 fontSize: FONT.SIZES[12],

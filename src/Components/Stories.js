@@ -111,7 +111,7 @@ const Stories = () => {
                             <img src={Pen} alt="img" />
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={6} mt={{ xs: 1, sm: 5 }}>
+                    <Grid item xs={12} sm={6} mt={{ xs: 1, sm: 5 }} sx={{textAlign:"left"}}>
                         <Typography variant="body" textAlign="left">
                             Lorem ipsum dolor sit amet consectetur. Sollicitudin
                             vivamus eu aenean interdum in proin id ut. Sit nisi
