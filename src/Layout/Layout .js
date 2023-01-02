@@ -201,8 +201,8 @@ const Layout = () => {
                                 mt: 1,
                                 ml: -9,
                                 position: 'fixed',
-                                bottom: '2rem',
-                                left: '8rem',
+                                bottom: '1rem',
+                                left: '7rem',
                                 display: {
                                   xs: 'none',
                                   sm: 'block',

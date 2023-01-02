@@ -14,10 +14,10 @@ const Blurb = () => {
             <Section
             // pt={{ xs: 13, sm: 13, md: 18 }}
             // pb={{ xs: 2, sm: 3, md: 5 }}
-            px={{ xs: 0, sm: 8 }}
+           
             >
                 <Container>
-                    <Box pt={{xs:8,md:0}}>
+                    <Box  px={{ xs: 0, sm: 5,md:8}}>
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}
@@ -57,6 +57,7 @@ const Blurb = () => {
                         </b>{" "}
                         too.
                     </Typography>
+                    
                     </Box>
                   
                 </Container>

@@ -26,7 +26,7 @@ console.log(posts,"post")
                         alignItems="center"
                         py={5}
                         // px={{xs:2,md:5}}
-                        px={{ xs: 0, sm: 5 }}
+                        px={{ xs: 0, sm: 0 }}
                     >
                         {/* <Slider {...settings}> */}
 

@@ -18,7 +18,7 @@ import {
 } from 'react-router-dom';
 import { useLocation } from 'react-router';
 
-import React from 'react';
+import React, { useState } from 'react';
 import ShareIcon from '@mui/icons-material/Share';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import FileCopyIcon from '@mui/icons-material/FileCopyOutlined';
@@ -43,7 +43,24 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
   const location = useLocation();
   const path = location.pathname;
   // console.log(path, "currect path");
-
+  const LongText = ({ content,limit}) => {
+    const [showAll, setShowAll] = useState(false);
+  
+    const showMore = () => setShowAll(true);
+    const showLess = () => setShowAll(false);
+  
+    if (content.length <= limit) {
+      // there is nothing more to show
+      return <div>{content}</div>
+    }
+  
+    // In the final case, we show a text with ellipsis and a `Read more` button
+    const toShow = content.substring(0, limit) + "...";
+    return <div> 
+      {toShow} 
+      
+    </div>
+  }
   return (
     <>
       <Card
@@ -70,16 +87,17 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
 
             {/* <Chip variant="tag">HEALTH</Chip> */}
 
-            <Typography variant="subtitle2">{title}</Typography>
+            <Typography variant="subtitle2"> <LongText content = {title} limit = {20} /></Typography>
             {path == '/articles' ? (
               <Typography
                 gutterBottom
                 variant="body2"
                 component="div"
-                sx={{ minHeight: '3rem' }}
+                sx={{ minHeight: '2.5rem' }}
                 pt={1}
               >
-                {blurb}
+                 <LongText content = {blurb} limit = {75} />
+                
               </Typography>
             ) : (
               ''
@@ -87,13 +105,15 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
             <Typography gutterBottom variant="body1" component="div" pt={3}>
               {edition}
             </Typography>
+            
             {/* <Button variant="outlined" endIcon={<SaveAltIcon />} sx={{borderRadius:"25px"}}>Download</Button>  */}
             {path == '/share' ? (
               <>
                 <Button
                   variant="outlined"
                   endIcon={<SaveAltIcon />}
-                  sx={{ borderRadius: '25px' }}
+                  size="large"
+                  sx={{ borderRadius: '25px',color:"#000",border: '1px solid black',textAlign:"left",ml:-12 }}
                 >
                   Download
                 </Button>
@@ -105,11 +125,11 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                 >
                   <SpeedDial
                     ariaLabel="SpeedDial basic example"
-                    direction="down"
+                    direction="up"
                     sx={{
                       position: 'absolute',
-                      bottom: '1rem',
-                      right: '-1rem',
+                      bottom: '-0.5rem',
+                      right: '1rem',
                       boxShadow: 'none',
                     }}
                     icon={
@@ -121,8 +141,9 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                           backgroundColor: '#fff',
                           borderRadius: '50%',
                           p: 1,
-                          boxShadow:
-                            '0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)',
+                          // boxShadow:
+                          //   '0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)',
+                            boxShadow:"none,"
                         }}
                       />
                     }
