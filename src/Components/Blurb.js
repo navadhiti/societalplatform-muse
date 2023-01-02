@@ -12,12 +12,12 @@ const Blurb = () => {
     return (
         <>
             <Section
-            // pt={{ xs: 13, sm: 13, md: 18 }}
+           
             // pb={{ xs: 2, sm: 3, md: 5 }}
            
             >
                 <Container>
-                    <Box  px={{ xs: 0, sm: 5,md:8}}>
+                    <Box  px={{ xs: 0, sm: 5,md:8}}  pt={{ xs: 13, sm: 0 }}>
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}

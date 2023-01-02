@@ -75,9 +75,8 @@ export const Section = styled(Box)`
     padding: 2rem 0;
     height: auto !important;
   }
-
   @media (max-width: 550px) : {
-    padding: 2rem 0;
+    padding: 4rem 0;
     height: auto !important;
   }
 `;

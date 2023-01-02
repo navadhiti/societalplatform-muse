@@ -26,7 +26,7 @@ const Footer = () => {
     return (
         <>
            
-            <Box sx={{ backgroundColor: "#F8F8F8", px: 5 }}>
+            <Box sx={{ backgroundColor: "#F8F8F8",  }} px={{xs:2,md:5}} >
                 <Grid
                     container
                     direction="row"
@@ -38,7 +38,7 @@ const Footer = () => {
                         <Typography variant="h4" textAlign="left">
                             We’ll be back with more editions <br />
                             of the Muse. For updates on Societal
-                            <br /> Thinking, subscribe to our newsletter.
+                             Thinking, subscribe to our newsletter.
                         </Typography>
                         <Box sx={{pt:4,pb:9}}>
                         <FormControl
@@ -71,9 +71,9 @@ const Footer = () => {
                 <Box sx={{ pt: 5, backgroundColor: "#F8F8F8" }}>
                     <Grid
                         container
-                        direction="row"
+                        direction={{xs:"column-reverse",md:"row"}}
                         justifyContent="space-between"
-                        alignItems="center"
+                        // alignItems="center"
                     >
                         <Grid item xs={12} sm={12} md={6} lg={6}>
                             <Typography variant="body" sx={{ mb: 1 }}>
@@ -82,16 +82,15 @@ const Footer = () => {
                             <ListItem
                                 
                                 sx={{
-                                    px: 1,
+                                    px: 2,
                                     width: "90px",
-                                    backgroundColor: "#f2f0ed",
+                                    // backgroundColor: "#f2f0ed",
                                 }}
                             >
                                 {/* <ListItemIcon> */}
-                                <FacebookOutlinedIcon color="secondary" />
-                                <InstagramIcon color="secondary" />
+                               
+                                <LinkedInIcon color="secondary" px={5} />
                                 <TwitterIcon color="secondary" />
-                                <LinkedInIcon color="secondary" />
                                 
                                 {/* </ListItemIcon> */}
                             </ListItem>
