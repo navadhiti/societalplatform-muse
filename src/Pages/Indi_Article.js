@@ -123,6 +123,8 @@ const Indi_Article = () => {
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
 
   // Search Bar
+  const [selectedValue, setSelectedValue] = useState();
+  console.log(selectedValue);
 
   // onclick button section scroll function
   const onBtnClick = (id) => {
@@ -244,11 +246,12 @@ const Indi_Article = () => {
                 disableClearable
                 freeSolo
                 id="combo-box-demo"
-                options={extractedH2?.map((elem) =>
-                  elem.replace(/<[^>]+>/g, '')
-                )}
-                // onChange={(e, value) => console.log(e.target, value.title)}
-
+                options={extractedH2?.map((elem, index) => {
+                  return { label: elem.replace(/<[^>]+>/g, ''), id: index };
+                })}
+                onChange={(e, value) => {
+                  onBtnClick(value.id);
+                }}
                 renderInput={(params) => (
                   <TextField label="Search" {...params} />
                 )}

@@ -201,8 +201,8 @@ const Header = (props) => {
               alignItems="center"
               justifyContent="flex-start"
             >
-              <Grid item xs={2} sm={3} md={3} lg={3}>
-                <img src={frame} alt="img" />
+              <Grid item xs={2} sm={3} md={3} lg={3} >
+                <img src={frame} alt="img" width="40px" height="40px" />
               </Grid>
               <Grid
                 item
@@ -213,10 +213,11 @@ const Header = (props) => {
                 justifyContent="center"
                 sx={{ textAlign: 'center' }}
                 alignItems="center"
+                ml={-4}
               >
                 <img src={logo} alt="img" />
               </Grid>
-              <Grid item xs={3} sm={3} md={3} lg={3}>
+              <Grid item xs={3} sm={3} md={3} lg={3} >
                 <Box display={{ xs: 'block', md: 'none' }}>
                   {['Menu'].map((anchor) => (
                     <React.Fragment key={anchor}>
