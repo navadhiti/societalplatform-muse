@@ -46,8 +46,6 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
   const LongText = ({ content,limit}) => {
     const [showAll, setShowAll] = useState(false);
   
-    const showMore = () => setShowAll(true);
-    const showLess = () => setShowAll(false);
   
     if (content.length <= limit) {
       // there is nothing more to show
@@ -132,6 +130,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                       right: '1rem',
                       boxShadow: 'none',
                     }}
+                    style={{boxShadow:"none !important"}}
                     icon={
                       <ShareIcon
                         sx={{
@@ -145,6 +144,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                           //   '0px 0px 0px 0px rgb(0 0 0 / 20%), 0px 0px 0px 0px rgb(0 0 0 / 14%), 0px 0px 0px 0px rgb(0 0 0 / 12%)',
                             boxShadow:"none,"
                         }}
+                        style={{boxShadow:"none !important"}}
                       />
                     }
                   >

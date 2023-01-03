@@ -35,7 +35,7 @@
           "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
           "class": "values",
           "class1": "values_flip",
-          "contentclass": "card_content"
+          "contentclass": "card_content1"
       },
       {
         "id": "2",
@@ -43,7 +43,7 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values1",
         "class1": "values1_flip",
-        "contentclass": "card_content1"
+        "contentclass": "card_content2"
       },
       {
         "id": "3",
@@ -51,7 +51,7 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values2",
         "class1": "values2_flip",
-        "contentclass": "card_content2"
+        "contentclass": "card_content3"
       },
       {
         "id": "4",
@@ -59,7 +59,7 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values3",
         "class1": "values3_flip",
-        "contentclass": "card_content3"
+        "contentclass": "card_content4"
       },
       {
         "id": "5",
@@ -67,7 +67,7 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values4",
         "class1": "values4_flip",
-        "contentclass": "card_content4"
+        "contentclass": "card_content5"
       }
       ],
       "partners": [

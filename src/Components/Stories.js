@@ -44,12 +44,17 @@ const Stories = () => {
             image: card2,
         },
         {
-            id: "4",
+            id:"4",
+            title:"When society, state and <br> markets work together",
+            image: card2,
+        },
+        {
+            id: "5",
             title: "Build beyond",
             image: card,
         },
         {
-            id: "5",
+            id: "6",
             title: "The power of public goods",
             image: card1,
         },

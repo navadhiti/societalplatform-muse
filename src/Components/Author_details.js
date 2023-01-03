@@ -66,24 +66,12 @@ const Author_details = () => {
                                     sm={12}
                                     md={8}
                                     lg={8}
-                                    textAlign="left"
+                                    textAlign={{xs:"center",md:"left"}}
                                 >
                                     <Typography variant="body">
                                         {item.blurb}
                                     </Typography><br />
-                                    {/* <AnimatedButton>
-                                        <Button className="cta-btn">
-                                            <span
-                                                class="hover-frame  bounce infinite"
-                                                data-num="1"
-                                            ></span>
-                                            <span
-                                                class="hover-frame  bounce infinite"
-                                                data-num="2"
-                                            ></span>
-                                            Read Articles
-                                        </Button>
-                                    </AnimatedButton> */}
+                                
                                     <MuseButton title="Read Articles" />
                                 </Grid>
                             </Grid>

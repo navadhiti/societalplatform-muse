@@ -18,11 +18,11 @@ import Author7 from '../Assets/Images/Authors/Author7.png';
 import Author8 from '../Assets/Images/Authors/Author8.png';
 import Author9 from '../Assets/Images/Authors/Author9.png';
 import Author10 from '../Assets/Images/Authors/Author10.png';
-import backgroud from '../Assets/Images/Vector.png';
-import backgroud1 from '../Assets/Images/Vector (2).png';
+import backgroud from '../Assets/Images/Authors/Vector.png';
+import backgroud1 from '../Assets/Images/Authors/Vector (2).png';
 import { Section } from '../Themes/StyledComponent';
 
-import Divider from '../Assets/Images/Divider.png';
+import Divider from '../Assets/Images/Vector 12.png';
 import Pen from '../Assets/Images/img-pen.png';
 import { AnimatedButton } from '../Themes/StyledComponent';
 import MuseButton from './MuseButton';

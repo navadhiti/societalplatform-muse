@@ -18,7 +18,7 @@ const styles = {
     backgroundImage: `url(${Art})`,
     backgroundPosition: `bottom right`,
     backgroundRepeat: `no-repeat`,
-    height: '550px',
+    height: '500px',
   },
 };
 

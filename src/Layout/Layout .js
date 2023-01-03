@@ -36,9 +36,9 @@ import Experince from '../Pages/Experince';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
-  const location = useLocation();
-  // const path = location.pathname;
-
+  //   const location = useLocation();
+  //   const path = location.pathname;
+  //   console.log(path, 'path');
   return (
     <div
       role="tabpanel"
@@ -59,10 +59,14 @@ TabPanel.propTypes = {
 };
 const Layout = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const path = location.pathname;
+  //   console.log(path, 'path');
 
   const [value, setValue] = React.useState(0);
   const buttonHeight = `calc(90vh/5)`;
-  const padding = `calc(4.5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
+  const buttonWidth = `calc(100px)`;
+  const padding = `calc(5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
   const buttonName = database.menu;
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
@@ -118,58 +122,63 @@ const Layout = () => {
                           }}
                           className="body"
                         >
-                          <Grid
-                            container
-                            spacing={0}
-                            justifyContent="space-between"
-                            alignItems="center"
-                          >
+                          {path != 'indiviual-articles' ? (
                             <Grid
-                              item
-                              xs={1}
-                              sm={1}
-                              md={1}
-                              lg={1}
-                              sx={{
-                                position: 'fixed',
-                                marginTop: '-1.6rem',
-                                marginLeft: '5rem',
-                                zIndex: 9999,
-                                display: {
-                                  xs: 'none',
-                                  sm: 'block',
-                                },
-                              }}
+                              container
+                              spacing={0}
+                              justifyContent="space-between"
+                              alignItems="center"
                             >
-                              <img src={Image1} alt="img" width="120%" />
-                            </Grid>
-                            <Grid
-                              item
-                              xs={1}
-                              sm={1}
-                              md={1}
-                              lg={1}
-                              sx={{
-                                position: 'fixed',
-                                marginTop: '7rem',
-                                marginLeft: '79%',
-                                display: {
-                                  xs: 'none',
-                                  sm: 'block',
-                                },
-                              }}
-                            >
-                              <img
-                                src={LandingImage}
-                                alt="img"
+                              <Grid
+                                item
+                                xs={1}
+                                sm={1}
+                                md={1}
+                                lg={1}
                                 sx={{
                                   position: 'fixed',
-                                  marginTop: '3rem',
-                                  marginLeft: '90%',
+                                  marginTop: '-1.6rem',
+                                  marginLeft: '5rem',
+                                  zIndex: 9999,
+                                  display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                  },
                                 }}
-                              />
+                              >
+                                <img src={Image1} alt="img" width="120%" />
+                              </Grid>
+                              <Grid
+                                item
+                                xs={1}
+                                sm={1}
+                                md={1}
+                                lg={1}
+                                sx={{
+                                  position: 'fixed',
+                                  marginTop: '7rem',
+                                  marginLeft: '79%',
+                                  display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                  },
+                                }}
+                              >
+                                <img
+                                  src={LandingImage}
+                                  alt="img"
+                                  sx={{
+                                    position: 'fixed',
+                                    marginTop: '3rem',
+                                    marginLeft: '90%',
+                                  }}
+                                />
+                              </Grid>
                             </Grid>
-                          </Grid>
+                          ) : (
+                            ''
+                          )}
+
                           <Routes>
                             <Route path="/" element={<Home />} />
                             <Route
@@ -184,34 +193,38 @@ const Layout = () => {
                             <Route path="/share" element={<Share />} />
                             <Route path="/experince" element={<Experince />} />
                           </Routes>
-                          <Grid
-                            container
-                            spacing={0}
-                            justifyContent="space-between"
-                            alignItems="center"
-                          >
+                          {path != 'indiviual-articles' ? (
                             <Grid
-                              item
-                              xs={1}
-                              sm={1}
-                              md={1}
-                              lg={1}
-                              sx={{
-                                textAlign: 'center',
-                                mt: 1,
-                                ml: -9,
-                                position: 'fixed',
-                                bottom: '1rem',
-                                left: '7rem',
-                                display: {
-                                  xs: 'none',
-                                  sm: 'block',
-                                },
-                              }}
+                              container
+                              spacing={0}
+                              justifyContent="space-between"
+                              alignItems="center"
                             >
-                              <img src={Image} alt="img" width="100%" />
+                              <Grid
+                                item
+                                xs={1}
+                                sm={1}
+                                md={1}
+                                lg={1}
+                                sx={{
+                                  textAlign: 'center',
+                                  mt: 1,
+                                  ml: -9,
+                                  position: 'fixed',
+                                  bottom: '1rem',
+                                  left: '7rem',
+                                  display: {
+                                    xs: 'none',
+                                    sm: 'block',
+                                  },
+                                }}
+                              >
+                                <img src={Image} alt="img" width="100%" />
+                              </Grid>
                             </Grid>
-                          </Grid>
+                          ) : (
+                            ''
+                          )}
                         </TabPanel>
                       </Box>
                     </Grid>
@@ -224,10 +237,20 @@ const Layout = () => {
                         md={1}
                         lg={1}
                         display={{ xs: 'none', md: 'block' }}
+                        // sx={{ verticalAlign: 'middle' }}
                       >
-                        <List sx={{ paddingTop: 0, width: '10%' }}>
+                        <List sx={{ paddingTop: 0, width: '100%' }}>
                           {buttonName.map((item, index) => (
-                            <ListItem disablePadding key={index}>
+                            <ListItem
+                              disablePadding
+                              key={index}
+                              sx={{
+                                paddingTop: 0,
+                                width: '80px',
+                                // verticalAlign: 'middle',
+                                // textAlign: 'center',
+                              }}
+                            >
                               <ListItemButton
                                 sx={{
                                   backgroundColor: item.backgroundColor,
@@ -235,13 +258,18 @@ const Layout = () => {
                                     '0% 100% 100% 0% / 45% 50% 50% 45%;',
                                   writingMode: 'tb',
                                   color: '#FFFFFF',
+                                  fontSize: 12,
+                                  fontWeight: 600,
                                   height: buttonHeight,
-                                  padding: padding,
-                                  verticalAlign: 'middle',
+                                  disply: 'flex !important',
+                                  justifyContent: 'center !important',
+                                  alignItems: 'center !important',
+                                  verticalAlign: 'center',
+                                  //   paddingTop: '70%',
                                   '&:hover': {
                                     background: item.backgroundColor,
                                     cursor: 'pointer',
-                                    opacity: '0.6',
+                                    opacity: '0.9',
                                   },
                                 }}
                                 onClick={() => {

@@ -15,7 +15,7 @@ const Blurb_1 = () => {
                     justifyContent="start"
                     alignItems="start"
                     
-                    py={{xs:2,md:10}}
+                    py={{xs:2,md:5}}
                 >
                     <Grid
                         item
@@ -33,7 +33,7 @@ const Blurb_1 = () => {
                         <Typography variant="h1" textAlign="Left">
                         <b>
                             a small simple{" "}
-                            <img src={Blub} alt="img" width="10%" />
+                            <img src={Blub} alt="img" width="6%" />
                             idea.</b>
                         </Typography>
                     </Grid>
@@ -67,6 +67,7 @@ const Blurb_1 = () => {
                         md={6}
                         lg={6}
                         textAlign="left"
+                        pr={3}
                     >
                         <Typography variant="body">
                             Across the website you will meet many children.
@@ -92,7 +93,7 @@ const Blurb_1 = () => {
                                 lg={4}
                                 
                                 textAlign="left"
-                                py={{xs:2,md:9}}
+                                py={{xs:2,md:5}}
                             >
                                 {" "}
                                 <Typography variant="body1">

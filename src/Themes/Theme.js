@@ -252,6 +252,24 @@ const theme = createTheme({
     MuiCard: {
       variants: [
         {
+            props: { classes: 'value_card' },
+            style: {
+              border: '1px solid black',
+              fontFamily: FONT.FAMILY.INTER,
+              fontSize: FONT.SIZES[24],
+              fontWeight: FONT.WEIGHT.SEMI_BOLD,
+              minHeight: '17rem',
+              alignItems: 'center',
+              padding: '5rem 0',
+              backgroundColor: 'transparent',
+              cursor: 'pointer',
+              '@media (max-width:475px)': {
+                minHeight: '12rem',
+                marginTop: '10px',
+              },
+            },
+          },
+        {
           props: { classes: 'values' },
           style: {
             border: '1px solid black',
@@ -281,17 +299,13 @@ const theme = createTheme({
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
             borderRadius: '120px 120px 20px 20px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '1rem',
             backgroundColor: 'transparent',
             cursor: 'pointer',
             transform: 'rotate(-10deg)',
-            '@media (max-width:475px)': {
-              minHeight: '12rem',
-              transform: 'rotate(-3deg)',
-              marginTop: '10px',
-            },
+            
             // margin:'2.8rem'
           },
         },
@@ -303,7 +317,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[24],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
             borderRadius: '20px 20px 120px 120px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '5rem 0',
             backgroundColor: 'transparent',
@@ -325,7 +339,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
             borderRadius: '20px 20px 120px 120px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '1rem',
             backgroundColor: 'transparent',
@@ -347,7 +361,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[24],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
             borderRadius: '120px 120px 20px 20px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '5rem 0',
             backgroundColor: 'transparent',
@@ -369,7 +383,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
             borderRadius: '120px 120px 20px 20px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '1rem',
             backgroundColor: 'transparent',
@@ -391,7 +405,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[24],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
             borderRadius: '20px 20px 120px 120px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '5rem 0',
             backgroundColor: 'transparent',
@@ -412,7 +426,7 @@ const theme = createTheme({
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
             borderRadius: '20px 20px 120px 120px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
             padding: '1rem',
             backgroundColor: 'transparent',
@@ -433,8 +447,13 @@ const theme = createTheme({
             fontSize: FONT.SIZES[24],
             fontWeight: FONT.WEIGHT.SEMI_BOLD,
             borderRadius: '120px 120px 20px 20px',
-            minHeight: '20rem',
-            alignItems: 'center',
+            minHeight: '17rem',
+            disply: 'flex !important',
+            justifyContent: 'center !important',
+            alignItems: 'center !important',
+            verticalAlign: 'center',
+            // alignItems: 'center',
+            // verticalAlign:'middle',
             padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
@@ -453,9 +472,9 @@ const theme = createTheme({
             fontSize: FONT.SIZES[14],
             fontWeight: FONT.WEIGHT.MEDIUM,
             borderRadius: '120px 120px 20px 20px',
-            minHeight: '20rem',
+            minHeight: '17rem',
             alignItems: 'center',
-            padding: '1rem',
+            padding: '1.3rem 1rem',
             backgroundColor: 'transparent',
             cursor: 'pointer',
             // margin:'2.8rem'
@@ -470,17 +489,65 @@ const theme = createTheme({
     MuiCardContent: {
       variants: [
         {
-          props: { variant: 'card_content' },
+          props: { variant: 'card_content1' },
           style: {
-            transform: 'rotate(10deg)',
+            transform: 'rotate(9deg)',
           },
         },
         {
-          props: { variant: 'card_content1' },
+          props: { variant: 'card_content_flip1' },
           style: {
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(0deg)',
           },
         },
+        {
+            props: { variant: 'card_content2' },
+            style: {
+              transform: 'rotate(-8deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content_flip2' },
+            style: {
+              transform: 'rotate(-10deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content3' },
+            style: {
+              transform: 'rotate(-9deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content_flip3' },
+            style: {
+              transform: 'rotate(-10deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content4' },
+            style: {
+              transform: 'rotate(10deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content_flip4' },
+            style: {
+              transform: 'rotate(10deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content5' },
+            style: {
+              transform: 'rotate(0deg)',
+            },
+          },
+          {
+            props: { variant: 'card_content_flip1' },
+            style: {
+              transform: 'rotate(10deg)',
+            },
+          },
       ],
     },
     components: {

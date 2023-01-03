@@ -1,16 +1,16 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
-import { Section } from "../Themes/StyledComponent";
-import Story_card from "./Story_card";
-import data from "../db.json";
+import { Box, Container, Grid, Typography } from '@mui/material';
+import React from 'react';
+import { Section } from '../Themes/StyledComponent';
+import Story_card from './Story_card';
+import data from '../db.json';
 
 const Share_card = () => {
-    const itemData = data.Article.Stories;
+  const itemData = data.Article.Stories;
   return (
     <>
-    <Box id="share_cards">
-                <Container>
-                    {/* <Grid
+      <Box id="share_cards">
+        <Container>
+          {/* <Grid
                         container
                         spacing={0}
                         justifyContent="space-evenly"
@@ -108,45 +108,38 @@ const Share_card = () => {
                         </Grid>
                     </Grid> */}
 
-                    <Typography variant="h6" sx={{ textAlign: "left" }} >
-                        <b> EDITION 01</b>
-                    </Typography>
-                    <Typography variant="h3" textAlign="Left">
-                        Response. Responsibility. Resilience.
-                    </Typography>
-                    <Grid
-                        container
-                        spacing={0}
-                        justifyContent="space-evenly"
-                        alignItems="center"
-                        py={5}
-                        // px={{xs:2,md:5}}
-                        px={{ xs: 0, sm: 5 }}
-                    >
-                        {/* <Slider {...settings}> */}
+          <Typography variant="h6" sx={{ textAlign: 'left' }}>
+            <b> EDITION 01</b>
+          </Typography>
+          <Typography variant="h3" textAlign="Left">
+            Response. Responsibility. Resilience.
+          </Typography>
+          <Grid
+            container
+            spacing={0}
+            justifyContent="space-evenly"
+            alignItems="center"
+            py={5}
+            // px={{xs:2,md:5}}
+            px={{ xs: 0, sm: 5 }}
+          >
+            {/* <Slider {...settings}> */}
 
-                        {itemData.map((item, index) => (
-                            <Grid
-                                item
-                                xs={12}
-                                sm={12}
-                                md={4}
-                                lg={4}
-                                spacing={0}
-                            >
-                                <Story_card
-                                    tag={item.tag}
-                                    title={item.title}
-                                    edition={item.date}
-                                />
-                            </Grid>
-                        ))}
-                        {/* </Slider> */}
-                    </Grid>
-                </Container>
-            </Box>
+            {itemData.map((item, index) => (
+              <Grid item xs={12} sm={12} md={4} lg={4} spacing={0}>
+                <Story_card
+                  tag={item.tag}
+                  title={item.title}
+                  edition={item.date}
+                />
+              </Grid>
+            ))}
+            {/* </Slider> */}
+          </Grid>
+        </Container>
+      </Box>
     </>
-  )
-}
+  );
+};
 
 export default Share_card;
