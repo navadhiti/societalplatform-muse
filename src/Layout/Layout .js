@@ -137,7 +137,7 @@ const Layout = () => {
                                 md={1}
                                 lg={1}
                                 sx={{
-                                  position: 'fixed',
+                                  position: 'absolute',
                                   marginTop: '-1.6rem',
                                   marginLeft: '5rem',
                                   zIndex: 9999,
@@ -156,7 +156,7 @@ const Layout = () => {
                                 md={1}
                                 lg={1}
                                 sx={{
-                                  position: 'fixed',
+                                  position: 'absolute',
                                   marginTop: '7rem',
                                   marginLeft: '79%',
                                   display: {
@@ -211,7 +211,7 @@ const Layout = () => {
                                   textAlign: 'center',
                                   mt: 1,
                                   ml: -9,
-                                  position: 'fixed',
+                                  position: 'absolute',
                                   bottom: '1rem',
                                   left: '7rem',
                                   display: {

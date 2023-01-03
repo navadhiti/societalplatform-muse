@@ -80,6 +80,16 @@ export const Section = styled(Box)`
     height: auto !important;
   }
 `;
+export const ImgBox = styled(Box)`
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:2px solid black;
+  border-radius:5px;
+  overflow hidden;
+  padding:1px;
+`;
 export const Section1 = styled(Box)`
   padding: 4rem 0;
   height: 90vh;

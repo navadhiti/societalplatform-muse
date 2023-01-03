@@ -30,6 +30,8 @@ import backgroud9 from '../Assets/Images/Authors/bg9.png';
 import backgroud10 from '../Assets/Images/Authors/bg10.png';
 
 import { Section } from '../Themes/StyledComponent';
+import { ImgBox } from '../Themes/StyledComponent';
+
 
 import Divider from '../Assets/Images/Vector 12.png';
 import Pen from '../Assets/Images/img-pen.png';
@@ -51,7 +53,6 @@ const Collaborators = () => {
     {
       img: Author3,
       title: 'Viraaj Tyagi',
-
       subTitle: 'E.GOV',
     },
     {
@@ -82,7 +83,7 @@ const Collaborators = () => {
     {
       img: Author9,
       title: 'Donald Gips',
-      subTitle: 'SKOLL FOUNdATION',
+      subTitle: 'SKOLL FOUNDATION',
     },
     {
       img: Author10,
@@ -119,7 +120,7 @@ const Collaborators = () => {
                 </b>
               </Typography>
               <Box pt={{ xs: 2, sm: 2, md: 5 }}>
-                <Typography variant="body" >
+                <Typography variant="body">
                   Lorem ipsum dolor sit amet consectetur.
                   <br /> Vivamus eu aenean interdum in proin id ut.
                 </Typography>
@@ -140,9 +141,7 @@ const Collaborators = () => {
                 lg={2}
                 sx={{ textAlign: 'left' }}
               >
-                
                 <MuseButton title="See All" />
-
               </Grid>
               <Grid
                 item
@@ -179,62 +178,6 @@ const Collaborators = () => {
                       </ImageListItem>
                     ))}
                   </ImageList>
-                  {/* <Grid
-                                        container
-                                        // spacing={2}
-                                        rowSpacing={1}
-                                        columnSpacing={2}
-                                        justifyContent="center"
-                                        alignItems="center"
-                                        mt={{ xs: 3, md: -30 }}
-                                    >
-                                        {itemData.map((item) => (
-                                            <Grid
-                                                item
-                                                xs={6}
-                                                sm={6}
-                                                md={2}
-                                                lg={2}
-                                                sx={{ textAlign: "left" }}
-                                            >
-                                                <Box
-                                                    sx={{
-                                                        // border: "solid 1px black",
-                                                        // borderRadius: "5px",
-                                                        height: "250px",
-                                                        width: "150px",
-                                                        padding:
-                                                            "37px 10px 0px 11px",
-                                                        margin: "10px auto",
-                                                        background: ` url(${backgroud}) center no-repeat`,
-                                                        backgroundSize:
-                                                            "contain",
-                                                    }}
-                                                >
-                                                    <img
-                                                        src={item.img}
-                                                        alt="img"
-                                                        sx={{
-                                                            borderRadius: "5px",
-                                                        }}
-                                                    />
-                                                   
-                                                    <Typography
-                                                        variant="body1"
-                                                        textAlign="center"
-                                                    >
-                                                        <b>{item.title}</b>
-                                                    </Typography>
-                                                    <Typography
-                                                        variant="body2"
-                                                        textAlign="center"
-                                                    >
-                                                        {item.subTitle}
-                                                    </Typography>
-                                                </Box>
-                                            </Grid>
-                                        ))}
-                                    </Grid> */}
                 </Box>
                 <Box display={{ xs: 'none', md: 'block' }}>
                   <Grid
@@ -256,21 +199,17 @@ const Collaborators = () => {
                     >
                       <Box
                         sx={{
-                          // border: "solid 1px black",
-                          // borderRadius: "5px",
-                          height: '250px',
+                          height: '200px',
                           width: '150px',
-                          padding: '37px 10px 0px 11px',
+                          padding: '10px 10px 0px 11px',
                           margin: '10px auto',
                           background: ` url(${backgroud1}) center no-repeat`,
                           backgroundSize: 'contain',
                         }}
                       >
-                        <img
-                          src={itemData[0].img}
-                          alt="img"
-                          sx={{ borderRadius: '5px' }}
-                        />
+                       <ImgBox>
+                        <img src={itemData[0].img} alt="img" width="100%" />
+                        </ImgBox>
                         {console.log(itemData[0].img, 'author')}
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[0].title}</b>
@@ -287,39 +226,49 @@ const Collaborators = () => {
                       md={2}
                       lg={2}
                       sx={{ textAlign: 'left' }}
+                      ml={0}
+                      mr={2}
                     >
                       <Box
                         sx={{
-                          my: 1,
+                         
                           // border: "solid 1px black",
                           // borderRadius: "5px",
-                          height: '200px',
+                          height: '180px',
                           width: '150px',
                           margin: '0px auto',
                           background: ` url(${backgroud2}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '37px 10px 0px 11px',
+                          padding: '15px 10px 0px 11px',
+                          mb:2,
+                          my: 1,
                         }}
                       >
-                        <img src={itemData[1].img} alt="img" />
+                        <ImgBox>
+                          <img src={itemData[1].img} alt="img" width="100%" />
+                        </ImgBox>
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[1].title}</b>
                         </Typography>
                         <Typography variant="body2" textAlign="center">
-                          {itemData[1].title}
+                          {itemData[1].subTitle}
                         </Typography>
                       </Box>
                       <Box
                         sx={{
-                          height: '250px',
+                          height: '200px',
                           width: '150px',
                           margin: '0px auto',
                           background: ` url(${backgroud3}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '37px 10px 0px 11px',
+                          padding: '15px 10px 0px 11px',
                         }}
                       >
-                        <img src={itemData[2].img} alt="img" />
+                        <ImgBox
+                        >
+                          <img src={itemData[2].img} alt="img" width="100%" />
+                        </ImgBox>
+
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[2].title}</b>
                         </Typography>
@@ -334,22 +283,25 @@ const Collaborators = () => {
                       sm={6}
                       md={2}
                       lg={2}
-                      sx={{ textAlign: 'left' }}
+                      pl={0}
                     >
                       <Box
                         sx={{
-                          height: '230px',
+                          height: '250px',
                           width: '200px',
                           margin: '0px auto',
                           background: ` url(${backgroud4}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '20px 10px 0px 31px',
+                          padding: '17px 10px 0px 15px',
                           // my: 1,
                           marginRight: '-10px',
-                          marginLeft: '-1rem',
+                          marginLeft: '-1.5rem',
                         }}
                       >
-                        <img src={itemData[3].img} alt="img" />
+                        <ImgBox
+                        >
+                          <img src={itemData[3].img} alt="img" width="100%" />
+                        </ImgBox>
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[3].title}</b>
                         </Typography>
@@ -359,18 +311,21 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '250px',
-                          width: '170px',
+                          height: '230px',
+                          width: '200px',
                           margin: '0px auto',
                           background: ` url(${backgroud5}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '37px 10px 0px 15px',
+                          padding: '20px 10px 0px 15px',
 
                           marginRight: '1.8rem',
-                          marginLeft: '-0.5rem',
+                          marginLeft: '-1.4rem',
                         }}
                       >
-                        <img src={itemData[4].img} alt="img" />
+                        <ImgBox
+                        >
+                          <img src={itemData[4].img} alt="img" width="100%" />
+                        </ImgBox>{' '}
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[4].title}</b>
                         </Typography>
@@ -380,17 +335,20 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '230px',
-                          width: '200px',
+                          height: '220px',
+                          width: '208px',
                           margin: '0px auto',
                           background: ` url(${backgroud6}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '37px 10px 0px 30px',
+                          padding: '14px 10px 0px 10px',
                           marginRight: '-0rem',
                           marginLeft: '-1rem',
                         }}
                       >
-                        <img src={itemData[5].img} alt="img" />
+                        <ImgBox
+                        >
+                          <img src={itemData[5].img} alt="img" width="100%" />
+                        </ImgBox>{' '}
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[5].title}</b>
                         </Typography>
@@ -409,18 +367,21 @@ const Collaborators = () => {
                     >
                       <Box
                         sx={{
-                          height: '285px',
-                          width: '200px',
+                          height: '250px',
+                          width: '280px',
                           margin: '0rem auto',
                           background: ` url(${backgroud7}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '67px 10px 0px 11px',
+                          padding: '20px 10px 0px 11px',
                           marginRight: '-30px',
                           marginLeft: '2rem',
-                          marginTop: '5rem',
+                          // marginTop: '5rem',
                         }}
                       >
-                        <img src={itemData[6].img} alt="img" />
+                        <ImgBox
+                        >
+                          <img src={itemData[6].img} alt="img" width="100%" />
+                        </ImgBox>{' '}
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[6].title}</b>
                         </Typography>
@@ -430,19 +391,19 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '373px',
-                          width: '219px',
+                          height: '283px',
+                          width: '250px',
                           margin: '0px auto',
                           background: ` url(${backgroud8}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '7rem 10px 0px 2rem',
-                          marginLeft: '1rem',
-                          marginTop: '-8rem',
+                          padding: '1.5rem 10px 0px 1rem',
+                          marginLeft: '2rem',
+                          // marginTop: '-8rem',
                           marginRight: '-10px',
                         }}
-                      >
-                        <img src={itemData[7].img} alt="img" />
-                        <Typography variant="body1" textAlign="center">
+                      ><ImgBox>
+                      <img src={itemData[7].img} alt="img" width="100%" />
+                      </ImgBox> <Typography variant="body1" textAlign="center">
                           <b>{itemData[7].title}</b>
                         </Typography>
                         <Typography variant="body2" textAlign="center">
@@ -451,18 +412,20 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '300px',
-                          width: '250px',
-                          margin: '30px auto',
+                          height: '240px',
+                          width: '280px',
+                          margin: '10px auto',
                           background: ` url(${backgroud9}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '4rem 10px 0px 2rem',
+                          padding: '1rem 1rem 20px 1rem',
                           marginRight: '-30px',
-                          marginLeft: '1rem',
-                          marginTop: '-8rem',
+                          marginLeft: '2rem',
+                          // marginTop: '-8rem',
                         }}
                       >
-                        <img src={itemData[8].img} alt="img" />
+                        <ImgBox>
+                        <img src={itemData[8].img} alt="img" width="100%" />
+                        </ImgBox>
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[8].title}</b>
                         </Typography>
@@ -475,21 +438,23 @@ const Collaborators = () => {
                       <Box
                         sx={{
                           height: '250px',
-                          width: '150px',
+                          width: '200px',
                           margin: '30px auto',
                           background: ` url(${backgroud10}) center no-repeat`,
                           backgroundSize: 'contain',
-                          padding: '37px 10px 0px 11px',
-                          marginLeft: '5rem',
-                          marginTop: '3.5rem',
+                          padding: '20px 20px 0px 20px',
+                          marginLeft: '8rem',
+                          marginTop: '0.5rem',
                         }}
                       >
-                        <img src={itemData[9].img} alt="img" />
+                      <ImgBox>
+                        <img src={itemData[9].img} alt="img" width="100%" />
+                        </ImgBox>
                         <Typography variant="body1" textAlign="center">
                           <b>{itemData[9].title}</b>
                         </Typography>
                         <Typography variant="body2" textAlign="center">
-                          {itemData[9].title}
+                          {itemData[9].subTitle}
                         </Typography>
                       </Box>
                     </Grid>
