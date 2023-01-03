@@ -18,8 +18,17 @@ import Author7 from '../Assets/Images/Authors/Author7.png';
 import Author8 from '../Assets/Images/Authors/Author8.png';
 import Author9 from '../Assets/Images/Authors/Author9.png';
 import Author10 from '../Assets/Images/Authors/Author10.png';
-import backgroud from '../Assets/Images/Authors/Vector.png';
-import backgroud1 from '../Assets/Images/Authors/Vector (2).png';
+import backgroud1 from '../Assets/Images/Authors/bg1.png';
+import backgroud2 from '../Assets/Images/Authors/bg2.png';
+import backgroud3 from '../Assets/Images/Authors/bg3.png';
+import backgroud4 from '../Assets/Images/Authors/bg4.png';
+import backgroud5 from '../Assets/Images/Authors/bg5.png';
+import backgroud6 from '../Assets/Images/Authors/bg6.png';
+import backgroud7 from '../Assets/Images/Authors/bg7.png';
+import backgroud8 from '../Assets/Images/Authors/bg8.png';
+import backgroud9 from '../Assets/Images/Authors/bg9.png';
+import backgroud10 from '../Assets/Images/Authors/bg10.png';
+
 import { Section } from '../Themes/StyledComponent';
 
 import Divider from '../Assets/Images/Vector 12.png';
@@ -253,7 +262,7 @@ const Collaborators = () => {
                           width: '150px',
                           padding: '37px 10px 0px 11px',
                           margin: '10px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud1}) center no-repeat`,
                           backgroundSize: 'contain',
                         }}
                       >
@@ -287,7 +296,7 @@ const Collaborators = () => {
                           height: '200px',
                           width: '150px',
                           margin: '0px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud2}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '37px 10px 0px 11px',
                         }}
@@ -305,7 +314,7 @@ const Collaborators = () => {
                           height: '250px',
                           width: '150px',
                           margin: '0px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud3}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '37px 10px 0px 11px',
                         }}
@@ -332,7 +341,7 @@ const Collaborators = () => {
                           height: '230px',
                           width: '200px',
                           margin: '0px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud4}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '20px 10px 0px 31px',
                           // my: 1,
@@ -353,7 +362,7 @@ const Collaborators = () => {
                           height: '250px',
                           width: '170px',
                           margin: '0px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud5}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '37px 10px 0px 15px',
 
@@ -374,7 +383,7 @@ const Collaborators = () => {
                           height: '230px',
                           width: '200px',
                           margin: '0px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud6}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '37px 10px 0px 30px',
                           marginRight: '-0rem',
@@ -403,7 +412,7 @@ const Collaborators = () => {
                           height: '285px',
                           width: '200px',
                           margin: '0rem auto',
-                          background: ` url(${backgroud1}) center no-repeat`,
+                          background: ` url(${backgroud7}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '67px 10px 0px 11px',
                           marginRight: '-30px',
@@ -424,7 +433,7 @@ const Collaborators = () => {
                           height: '373px',
                           width: '219px',
                           margin: '0px auto',
-                          background: ` url(${backgroud1}) center no-repeat`,
+                          background: ` url(${backgroud8}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '7rem 10px 0px 2rem',
                           marginLeft: '1rem',
@@ -445,7 +454,7 @@ const Collaborators = () => {
                           height: '300px',
                           width: '250px',
                           margin: '30px auto',
-                          background: ` url(${backgroud1}) center no-repeat`,
+                          background: ` url(${backgroud9}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '4rem 10px 0px 2rem',
                           marginRight: '-30px',
@@ -468,7 +477,7 @@ const Collaborators = () => {
                           height: '250px',
                           width: '150px',
                           margin: '30px auto',
-                          background: ` url(${backgroud}) center no-repeat`,
+                          background: ` url(${backgroud10}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '37px 10px 0px 11px',
                           marginLeft: '5rem',

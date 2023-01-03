@@ -1,8 +1,8 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import data from "../db.json";
-import backgroud from "../Assets/Images/Vector.png";
-import backgroud1 from "../Assets/Images/Vector (2).png";
+import backgroud from "../Assets/Images/Authors/bg1.png";
+import backgroud1 from "../Assets/Images/Authors/bg2.png";
 import MuseButton from "./MuseButton";
 import { AnimatedButton, Section } from "../Themes/StyledComponent";
 import Author2 from "../Assets/Images/Authors/Author2.png";

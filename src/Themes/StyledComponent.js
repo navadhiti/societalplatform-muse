@@ -67,7 +67,7 @@ export const Title = styled(Typography)`
 `;
 export const Section = styled(Box)`
   padding: 4rem 0;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
