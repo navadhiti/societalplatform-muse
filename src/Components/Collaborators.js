@@ -147,7 +147,7 @@ const Collaborators = () => {
                 item
                 xs={12}
                 sm={12}
-                md={10}
+                md={9}
                 lg={10}
                 sx={{ textAlign: 'left' }}
               >
@@ -367,8 +367,8 @@ const Collaborators = () => {
                     >
                       <Box
                         sx={{
-                          height: '250px',
-                          width: '280px',
+                          height: '235px',
+                          width: '250px',
                           margin: '0rem auto',
                           background: ` url(${backgroud7}) center no-repeat`,
                           backgroundSize: 'contain',
@@ -391,8 +391,8 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '283px',
-                          width: '250px',
+                          height: '250px',
+                          width: '220px',
                           margin: '0px auto',
                           background: ` url(${backgroud8}) center no-repeat`,
                           backgroundSize: 'contain',
@@ -412,8 +412,8 @@ const Collaborators = () => {
                       </Box>
                       <Box
                         sx={{
-                          height: '240px',
-                          width: '280px',
+                          height: '210px',
+                          width: '250px',
                           margin: '10px auto',
                           background: ` url(${backgroud9}) center no-repeat`,
                           backgroundSize: 'contain',
@@ -443,8 +443,8 @@ const Collaborators = () => {
                           background: ` url(${backgroud10}) center no-repeat`,
                           backgroundSize: 'contain',
                           padding: '20px 20px 0px 20px',
-                          marginLeft: '8rem',
-                          marginTop: '0.5rem',
+                          marginLeft: '6rem',
+                          marginTop: '1rem',
                         }}
                       >
                       <ImgBox>

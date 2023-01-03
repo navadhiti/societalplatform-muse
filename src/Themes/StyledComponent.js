@@ -85,7 +85,7 @@ export const ImgBox = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-  border:2px solid black;
+  border:2px solid #4c4848;
   border-radius:5px;
   overflow hidden;
   padding:1px;
