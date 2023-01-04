@@ -119,11 +119,11 @@ const Layout = () => {
                           style={{
                             overflowY: 'auto',
                             borderRadius: '30px 0px 0px 30px ',
-                            height:'85vh',
+                            // height:'85vh',
                           }}
                           className="body"
                         >
-                          {path != 'indiviual-articles' ? (
+                          {path !== '/indiviual-articles' ? (
                             <Grid
                               container
                               spacing={0}
@@ -194,7 +194,7 @@ const Layout = () => {
                             <Route path="/share" element={<Share />} />
                             <Route path="/experince" element={<Experince />} />
                           </Routes>
-                          {path != 'indiviual-articles' ? (
+                          {path !== '/indiviual-articles' ? (
                             <Grid
                               container
                               spacing={0}
