@@ -119,7 +119,7 @@ const Layout = () => {
                           style={{
                             overflowY: 'auto',
                             borderRadius: '30px 0px 0px 30px ',
-                            // height:'85vh',
+                            height:'85vh',
                           }}
                           className="body"
                         >
