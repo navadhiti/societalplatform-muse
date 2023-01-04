@@ -11,6 +11,8 @@ import FONT from './Font';
 import Line from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/RightArrow.png';
 import Campgain from '../Assets/fonts/CampaignMedium.woff';
+// import Campgain from '../Assets/fonts/Campaign-Normal.ttf';
+// 
 
 const theme = createTheme({
   typography: {
