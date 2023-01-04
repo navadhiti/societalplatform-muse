@@ -9,6 +9,9 @@ const Share = () => {
             backgroundColor: "#3E418A",
             color: "#fff",
         },
+        LandingBackground1: {
+            backgroundColor: "#EDEBEA",
+        },
     };
     return (
         <>
