@@ -12,6 +12,7 @@ import Art from '../Assets/Images/Artwork_3.png';
 export const StickyButton = styled(Button)`
   border: none;
   background: none;
+  text-transform: capitalize;
 
   &:hover {
     background: ${`url(${Scribble2}) bottom center no-repeat`};

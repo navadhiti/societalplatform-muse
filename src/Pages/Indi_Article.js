@@ -25,7 +25,7 @@ import {
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
 import { Link, animateScroll as scroll } from 'react-scroll';
-
+import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -34,7 +34,6 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from 'react-share';
-import parse from 'html-react-parser';
 
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Sanjay from '../Assets/Images/sanjay.png';
@@ -45,7 +44,19 @@ import AuthorName from '../Assets/Images/musing-banner.svg';
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
 import Stories_Aritcle from '../Components/Stories_article';
-import { logDOM } from '@testing-library/react';
+
+const PDFDownload = () => {
+  return (
+    <div>
+      {console.log('called')}
+      <PDFDownloadLink document={<Document />} fileName="somename.pdf">
+        {({ blob, url, loading, error }) =>
+          loading ? 'Loading document...' : 'Download now!'
+        }
+      </PDFDownloadLink>
+    </div>
+  );
+};
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -269,7 +280,7 @@ const Indi_Article = () => {
                   <VolumeUp />
                 </Button>
                 <Box display={{ xs: 'none', md: 'block' }}>
-                  <Button variant="icon-btn">
+                  <Button variant="icon-btn" onClick={PDFDownload}>
                     <PictureAsPdfOutlined />
                   </Button>
                 </Box>
@@ -348,11 +359,15 @@ const Indi_Article = () => {
               px={{ xs: 4, md: 5 }}
             >
               <Title>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: result,
-                  }}
-                ></div>
+                <Document>
+                  <Page>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: result,
+                      }}
+                    ></div>
+                  </Page>
+                </Document>
               </Title>
             </Grid>
           </Grid>

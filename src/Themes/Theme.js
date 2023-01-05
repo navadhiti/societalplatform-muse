@@ -252,23 +252,23 @@ const theme = createTheme({
     MuiCard: {
       variants: [
         {
-            props: { classes: 'value_card' },
-            style: {
-              border: '1px solid black',
-              fontFamily: FONT.FAMILY.INTER,
-              fontSize: FONT.SIZES[24],
-              fontWeight: FONT.WEIGHT.SEMI_BOLD,
-              minHeight: '17rem',
-              alignItems: 'center',
-              padding: '5rem 0',
-              backgroundColor: 'transparent',
-              cursor: 'pointer',
-              '@media (max-width:475px)': {
-                minHeight: '12rem',
-                marginTop: '10px',
-              },
+          props: { classes: 'value_card' },
+          style: {
+            border: '1px solid black',
+            fontFamily: FONT.FAMILY.INTER,
+            fontSize: FONT.SIZES[24],
+            fontWeight: FONT.WEIGHT.SEMI_BOLD,
+            minHeight: '17rem',
+            alignItems: 'center',
+            padding: '5rem 0',
+            backgroundColor: 'transparent',
+            cursor: 'pointer',
+            '@media (max-width:475px)': {
+              minHeight: '12rem',
+              marginTop: '10px',
             },
           },
+        },
         {
           props: { classes: 'values' },
           style: {
@@ -305,7 +305,7 @@ const theme = createTheme({
             backgroundColor: 'transparent',
             cursor: 'pointer',
             transform: 'rotate(-10deg)',
-            
+
             // margin:'2.8rem'
           },
         },
@@ -501,53 +501,53 @@ const theme = createTheme({
           },
         },
         {
-            props: { variant: 'card_content2' },
-            style: {
-              transform: 'rotate(-8deg)',
-            },
+          props: { variant: 'card_content2' },
+          style: {
+            transform: 'rotate(-8deg)',
           },
-          {
-            props: { variant: 'card_content_flip2' },
-            style: {
-              transform: 'rotate(-10deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content_flip2' },
+          style: {
+            transform: 'rotate(-10deg)',
           },
-          {
-            props: { variant: 'card_content3' },
-            style: {
-              transform: 'rotate(-9deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content3' },
+          style: {
+            transform: 'rotate(-9deg)',
           },
-          {
-            props: { variant: 'card_content_flip3' },
-            style: {
-              transform: 'rotate(-10deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content_flip3' },
+          style: {
+            transform: 'rotate(-10deg)',
           },
-          {
-            props: { variant: 'card_content4' },
-            style: {
-              transform: 'rotate(10deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content4' },
+          style: {
+            transform: 'rotate(10deg)',
           },
-          {
-            props: { variant: 'card_content_flip4' },
-            style: {
-              transform: 'rotate(10deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content_flip4' },
+          style: {
+            transform: 'rotate(10deg)',
           },
-          {
-            props: { variant: 'card_content5' },
-            style: {
-              transform: 'rotate(0deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content5' },
+          style: {
+            transform: 'rotate(0deg)',
           },
-          {
-            props: { variant: 'card_content_flip1' },
-            style: {
-              transform: 'rotate(10deg)',
-            },
+        },
+        {
+          props: { variant: 'card_content_flip1' },
+          style: {
+            transform: 'rotate(10deg)',
           },
+        },
       ],
     },
     components: {
@@ -883,7 +883,6 @@ const theme = createTheme({
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
               width: '23.813rem',
-              // border: '1.5px solid #241C15',
             },
           },
         },
