@@ -1,13 +1,13 @@
-import { styled } from '@mui/system';
-import { Box, Button, Container, Typography } from '@mui/material';
+import { styled } from "@mui/system";
+import { Box, Button, Container, Typography } from "@mui/material";
 
-import FONT from '../Themes/Font';
+import FONT from "../Themes/Font";
 // import PALETTE from '../Themes/Palette';
 
-import Scribble from '../Assets/Images/scribble.png';
-import Scribble2 from '../Assets/Images/Vector 67.png';
-import ScribbleCircle from '../Assets/Images/scribble-circle.png';
-import Art from '../Assets/Images/Artwork_3.png';
+import Scribble from "../Assets/Images/scribble.png";
+import Scribble2 from "../Assets/Images/Vector 67.png";
+import ScribbleCircle from "../Assets/Images/scribble-circle.png";
+import Art from "../Assets/Images/Artwork_3.png";
 
 export const StickyButton = styled(Button)`
   border: none;
@@ -72,13 +72,29 @@ export const Section = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 768px) {
-    padding: 2rem 0;
+  border-radius: "30px 0px 0px 30px ", @media (max-width: 990px) {
+    height: auto !important;
+    padding: 2rem 0 !important;
+  }
+  @media (max-width: 550px) {
+    padding: 2rem 0 !important;
     height: auto !important;
   }
-  @media (max-width: 550px) : {
-    padding: 4rem 0;
+`;
+export const CollaboratorsSection = styled(Box)`
+  padding: 4rem 0;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: "30px 0px 0px 30px ";
+  @media (max-width: 990px) {
+    height: 111vh !important;
+    padding: 2rem 0 !important;
+  }
+  @media (max-width: 550px) {
     height: auto !important;
+    padding: 2rem 0 !important;
   }
 `;
 export const ImgBox = styled(Box)`
@@ -112,7 +128,7 @@ export const Section1 = styled(Box)`
   }
 `;
 export const AnimatedButton = styled(Button)`
-  .cta-btn:hover .hover-frame[data-num='1'] {
+  .cta-btn:hover .hover-frame[data-num="1"] {
     position: absolute;
     top: 0;
     left: 0;
@@ -124,8 +140,8 @@ export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame {
     opacity: 1;
   }
-  .cta-btn:hover .hover-frame[data-num='1']:before {
-    content: '';
+  .cta-btn:hover .hover-frame[data-num="1"]:before {
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -135,7 +151,7 @@ export const AnimatedButton = styled(Button)`
       center center no-repeat;
     background-size: 100% 100%;
   }
-  .cta-btn:hover .hover-frame[data-num='2'] {
+  .cta-btn:hover .hover-frame[data-num="2"] {
     position: absolute;
     left: 0%;
     top: 0%;
@@ -143,8 +159,8 @@ export const AnimatedButton = styled(Button)`
     width: 100%;
     height: 118%;
   }
-  .cta-btn:hover .hover-frame[data-num='2']:before {
-    content: '';
+  .cta-btn:hover .hover-frame[data-num="2"]:before {
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -160,7 +176,7 @@ export const AnimatedButton = styled(Button)`
     border-radius: 31px;
     border: 0.12em solid #08212c;
     color: #08212c;
-    font: 400 13px/1 'polysansmedian', sans-serif;
+    font: 400 13px/1 "polysansmedian", sans-serif;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     text-align: center;

@@ -46,7 +46,7 @@ const Stories = () => {
         {
             id:"4",
             title:"When society, state and <br> markets work together",
-            image: card2,
+            image: card1,
         },
         {
             id: "5",
@@ -137,7 +137,7 @@ const Stories = () => {
                         xs={12}
                         sm={6}
                         alignItems="center"
-                        display={{ xs: "none", sm: "block" }}
+                        display={{ xs: "none", md: "block" }}
                     >
                         <img
                             src={Stories[id].image}
@@ -146,7 +146,7 @@ const Stories = () => {
                             height="400px"
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} sm={12} md={6}>
                         <List pt={{ xs: 2, md: 9 }}>
                             {Stories.map((item, index) => (
                                 <ListItem
@@ -157,8 +157,10 @@ const Stories = () => {
                                 >
                                     <Typography variant="caption">
                                         <Stack spacing={2} direction="row">
-                                            {item.title}
-                                            <Box sx={{ width: "5rem" }}></Box>
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: item.title
+                                            }} />
+                                            <Box sx={{ width: "5rem" }} display={{ xs: "none", md: "block" }}></Box>
                                         </Stack>
                                     </Typography>
                                 </ListItem>
