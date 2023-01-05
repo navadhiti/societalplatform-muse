@@ -66,6 +66,26 @@ export const Title = styled(Typography)`
     text-align: center;
   }
 `;
+export const Frame = styled(Box)`
+  img{
+    width:40px;
+    height:40px;
+    @media (max-width: 550px) {
+      width:20px;
+      height:20px;
+    }
+  }
+`;
+export const Logo = styled(Box)`
+  img{
+    width:auto;
+    height:auto;
+    @media (max-width: 550px) {
+      width:100%;
+      
+    }
+  }
+`;
 export const Section = styled(Box)`
   padding: 4rem 0;
   height: 85vh;
