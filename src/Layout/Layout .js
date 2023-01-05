@@ -118,8 +118,8 @@ const Layout = () => {
                           index={0}
                           style={{
                             overflowY: 'auto',
-                            borderRadius: '30px 0px 0px 30px ',
-                            // height:'85vh',
+                            borderRadius: '30px 0px 30px 30px ',
+                            height:'85vh',
                           }}
                           className="body"
                         >
@@ -143,7 +143,7 @@ const Layout = () => {
                                   zIndex: 9999,
                                   display: {
                                     xs: 'none',
-                                    sm: 'block',
+                                    md: 'block',
                                   },
                                 }}
                               >
@@ -161,7 +161,7 @@ const Layout = () => {
                                   marginLeft: '79%',
                                   display: {
                                     xs: 'none',
-                                    sm: 'block',
+                                    md: 'block',
                                   },
                                 }}
                               >
@@ -216,7 +216,7 @@ const Layout = () => {
                                   left: '7rem',
                                   display: {
                                     xs: 'none',
-                                    sm: 'block',
+                                    md: 'block',
                                   },
                                 }}
                               >
