@@ -22,11 +22,12 @@ import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
-const Footer = () => {
+const Footer = (props) => {
+    console.log(props.color,"color")
     return (
         <>
            
-            <Box sx={{ backgroundColor: "#F8F8F8",  }} px={{xs:2,md:5}} >
+            <Box sx={{ backgroundColor: props.color,  }} px={{xs:2,md:5}} >
                 <Grid
                     container
                     direction="row"
@@ -68,7 +69,7 @@ const Footer = () => {
                     </Grid>
                 </Grid>
 
-                <Box sx={{ pt: 5, backgroundColor: "#F8F8F8" }}>
+                <Box  pt={5}>
                     <Grid
                         container
                         direction={{xs:"column-reverse",md:"row"}}

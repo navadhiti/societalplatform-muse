@@ -4,7 +4,7 @@ import {
   Grid,
   Typography,
   Breadcrumbs,
-  // Link,
+  Link as HomeLink,
   Stack,
   Avatar,
   Divider,
@@ -15,6 +15,7 @@ import {
   Button,
   SpeedDialAction,
   Autocomplete,
+  InputAdornment,
 } from '@mui/material';
 import {
   PictureAsPdfOutlined,
@@ -22,10 +23,11 @@ import {
   NavigateNext,
   VolumeUp,
   ShareOutlined,
+  SearchOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { PDFDownloadLink, Document, Page } from '@react-pdf/renderer';
+import { Document, Page } from '@react-pdf/renderer';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -44,19 +46,7 @@ import AuthorName from '../Assets/Images/musing-banner.svg';
 import { StickyButton, Title } from '../Themes/StyledComponent';
 
 import Stories_Aritcle from '../Components/Stories_article';
-
-const PDFDownload = () => {
-  return (
-    <div>
-      {console.log('called')}
-      <PDFDownloadLink document={<Document />} fileName="somename.pdf">
-        {({ blob, url, loading, error }) =>
-          loading ? 'Loading document...' : 'Download now!'
-        }
-      </PDFDownloadLink>
-    </div>
-  );
-};
+import PDFDownload from './PDFDownload';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
@@ -85,15 +75,15 @@ const Indi_Article = () => {
   });
 
   const breadcrumbs = [
-    <Link underline="none" key="1" color="inherit" href="/">
+    <HomeLink underline="none" key="1" color="inherit" href="/">
       HOME
-    </Link>,
-    <Link underline="none" key="2" color="inherit" href="#">
+    </HomeLink>,
+    <HomeLink underline="none" key="2" color="inherit" href="#">
       ISSUE 1
-    </Link>,
-    <Link underline="none" key="2" color="inherit" href="#">
+    </HomeLink>,
+    <HomeLink underline="none" key="2" color="inherit" href="#">
       SOLVE SMALL, DENT BIG
-    </Link>,
+    </HomeLink>,
   ];
 
   const shareUrl = 'http://localhost:3000/articles';
@@ -133,10 +123,6 @@ const Indi_Article = () => {
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
 
-  // Search Bar
-  const [selectedValue, setSelectedValue] = useState();
-  console.log(selectedValue);
-
   // onclick button section scroll function
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
@@ -152,8 +138,8 @@ const Indi_Article = () => {
   return (
     <>
       <div style={styles.LandingBackground}>
-        <Box elevation={1}>
-          <Stack spacing={2} mt="40px">
+        <Box elevation={1} ml="1.5625rem">
+          <Stack spacing={2} pt="2.5rem">
             <Breadcrumbs
               separator={<NavigateNext fontSize="small" />}
               aria-label="breadcrumb"
@@ -218,7 +204,7 @@ const Indi_Article = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                  <Typography>
+                  <Typography sx={{ fontStyle: 'italic' }}>
                     Kuldeep Dantewadia is sed ut perspiciatis unde omnis iste
                     natus error sit voluptatem accusantium doloremque
                     laudantium,totam rem aperiam, eaque ipsa quae ab illo
@@ -264,7 +250,15 @@ const Indi_Article = () => {
                   onBtnClick(value.id);
                 }}
                 renderInput={(params) => (
-                  <TextField label="Search" {...params} />
+                  <TextField
+                    inputProps={{
+                      endAdornment: (
+                        <InputAdornment position="end">KG</InputAdornment>
+                      ),
+                    }}
+                    placeholder="Search"
+                    {...params}
+                  />
                 )}
               />
             </Grid>
@@ -280,7 +274,8 @@ const Indi_Article = () => {
                   <VolumeUp />
                 </Button>
                 <Box display={{ xs: 'none', md: 'block' }}>
-                  <Button variant="icon-btn" onClick={PDFDownload}>
+                  <Button variant="icon-btn">
+                    {/* <PDFDownload /> */}
                     <PictureAsPdfOutlined />
                   </Button>
                 </Box>
@@ -359,15 +354,11 @@ const Indi_Article = () => {
               px={{ xs: 4, md: 5 }}
             >
               <Title>
-                <Document>
-                  <Page>
-                    <div
-                      dangerouslySetInnerHTML={{
-                        __html: result,
-                      }}
-                    ></div>
-                  </Page>
-                </Document>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: result,
+                  }}
+                ></div>
               </Title>
             </Grid>
           </Grid>

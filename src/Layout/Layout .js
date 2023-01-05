@@ -94,9 +94,14 @@ const Layout = () => {
           ) : (
             <>
               <ThemeProvider theme={theme}>
-                <Header />
+                <Header
+                  color={path !== '/indiviual-articles' ? 'inherit' : 'action'}
+                />
 
-                <Box sx={{ mt: 2, mb: 5, px: { xs: 0, sm: 0, md: 5 } }}>
+                <Box
+                  sx={{ mt: 2, pb: 5, px: { xs: 0, sm: 0, md: 5 } }}
+                  backgroundColor={path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'}
+                >
                   <Grid
                     container
                     spacing={0}
@@ -112,14 +117,14 @@ const Layout = () => {
                       lg={11}
                       sx={{ textAlign: 'center' }}
                     >
-                      <Box>
+                      <Box >
                         <TabPanel
                           value={value}
                           index={0}
                           style={{
                             overflowY: 'auto',
                             borderRadius: '30px 0px 0px 30px ',
-                            height:'85vh',
+                            height: '85vh',
                           }}
                           className="body"
                         >
@@ -287,8 +292,10 @@ const Layout = () => {
                     </StickyBox>
                   </Grid>
                 </Box>
-
-                <Footer />
+                <Footer
+                color={path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'}
+                // color="red"
+                />
               </ThemeProvider>
             </>
           )}

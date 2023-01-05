@@ -12,7 +12,7 @@ import Line from '../Assets/Images/Vector 12.png';
 import ArrowImage from '../Assets/Images/RightArrow.png';
 import Campgain from '../Assets/fonts/CampaignMedium.woff';
 // import Campgain from '../Assets/fonts/Campaign-Normal.ttf';
-// 
+//
 
 const theme = createTheme({
   typography: {
@@ -175,6 +175,9 @@ const theme = createTheme({
     },
     success: {
       main: '#935fb0',
+    },
+    action: {
+      main: '#E5E5E5',
     },
   },
   components: {
@@ -880,10 +883,11 @@ const theme = createTheme({
           props: { variant: 'outlined' },
           style: {
             '& .MuiOutlinedInput-notchedOutline': {
-              border: '1.5px solid #241C15',
+              border: 'none',
             },
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
+              border: '1.5px solid #241C15',
               width: '23.813rem',
             },
           },

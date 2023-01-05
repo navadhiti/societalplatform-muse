@@ -109,6 +109,7 @@ const styles = {
 };
 const buttonName = data.menu;
 const Header = (props) => {
+  console.log(props.color,"color")
   const navigate = useNavigate();
 
   const [state, setState] = React.useState({
@@ -193,7 +194,7 @@ const Header = (props) => {
     <>
       <React.Fragment>
         <CssBaseline />
-        <AppBar elevation={0} className="AppBorder" color="inherit" pt={3}>
+        <AppBar elevation={0} className="AppBorder" color={props.color} pt={3}>
           <Box px={{ xs: 2, md: 8 }} py={{ xs: 2, sm: 0 }}>
             <Grid
               container
