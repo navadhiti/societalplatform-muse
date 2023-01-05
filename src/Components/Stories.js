@@ -46,7 +46,7 @@ const Stories = () => {
         {
             id:"4",
             title:"When society, state and <br> markets work together",
-            image: card2,
+            image: card1,
         },
         {
             id: "5",
@@ -157,8 +157,10 @@ const Stories = () => {
                                 >
                                     <Typography variant="caption">
                                         <Stack spacing={2} direction="row">
-                                            {item.title}
-                                            <Box sx={{ width: "5rem" }}></Box>
+                                            <div dangerouslySetInnerHTML={{
+                                                __html: item.title
+                                            }} />
+                                            <Box sx={{ width: "5rem" }} display={{ xs: "none", md: "block" }}></Box>
                                         </Stack>
                                     </Typography>
                                 </ListItem>
