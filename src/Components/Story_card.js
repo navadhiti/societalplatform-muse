@@ -62,7 +62,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
   return (
     <>
       <Card
-        sx={{ m: 2, p: 2, borderRadius: '25px', minHeight: '30rem' }}
+        sx={{ m: 2, p: 2, borderRadius: '25px', minHeight: {xs:'15rem',md:"30rem"} }}
         key={value}
         onClick={() => {
           navigate('/indiviual-articles');
@@ -72,7 +72,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
         <CardActionArea sx={{ borderRadius: '25px' }}>
           <CardMedia
             component="img"
-            height="240"
+            height={{xs:100,md:120}}
             image={card1}
             alt="green iguana"
           />
@@ -170,7 +170,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                   direction="down"
                   sx={{
                     position: 'absolute',
-                    bottom: '12rem',
+                    bottom: {xs:'6rem',md:'9rem'},
                     right: '-1rem',
                     boxShadow: 'none',
                   }}

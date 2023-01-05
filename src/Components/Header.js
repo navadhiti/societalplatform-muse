@@ -248,7 +248,7 @@ const Header = (props) => {
                   ))}
                 </Box>
                 <Box display={{ xs: 'none', md: 'block' }}>
-                <Button variant="outlined" sx={{color:'#000',borderColor:'#000',borderRadius:'25px',fontWeight:600,px:5,mr:15}} mr={5}  >Contact</Button>
+                <Button variant="outlined" sx={{color:'#000',borderColor:'#000',borderRadius:'25px',fontWeight:600,px:5,mr:15,py:1}} mr={5}  >Contact</Button>
                 </Box>
               </Grid>
             </Grid>
