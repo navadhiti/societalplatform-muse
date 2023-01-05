@@ -8,10 +8,14 @@ const Authors = () => {
         LandingBackground: {
             backgroundColor: "#22534F",
             color: "#fff",
+            borderRadius: '30px 0px 30px 30px ',
+        
             // backgroundColor: `#fff`,
         },
         LandingBackground1: {
           backgroundColor: "#EDEBEA",
+          borderRadius: '30px 30px 30px 30px ',
+
       },
     };
     return (

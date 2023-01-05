@@ -23,8 +23,8 @@ const theme = createTheme({
       fontSize: FONT.SIZES[48],
       color: PALETTE.BLACK_SHADE_1,
 
-      '@media (min-width: 320px) and (max-width:375px)': {
-        fontSize: FONT.SIZES[24],
+      '@media (min-width: 320px) and (max-width:550px)': {
+        fontSize: FONT.SIZES[32],
       },
     },
     h2: {
@@ -33,7 +33,7 @@ const theme = createTheme({
       fontSize: FONT.SIZES[40],
       color: PALETTE.BLACK,
       marginBottom: '30px',
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[24],
         lineHeight: '25.2px',
       },
@@ -45,7 +45,7 @@ const theme = createTheme({
       color: PALETTE.BLACK,
       textTransform: 'capitalize',
       lineHeight: '48px',
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[18],
         lineHeight: '25.2px',
       },
@@ -57,7 +57,7 @@ const theme = createTheme({
       color: '#241C15',
       letterSpacing: '1px',
 
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[14],
         // lineHeight: "25.2px",
       },
@@ -67,7 +67,7 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.REGULAR,
       fontSize: FONT.SIZES[18],
       color: PALETTE.BLACK,
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[12],
         lineHeight: '18px',
       },
@@ -85,7 +85,7 @@ const theme = createTheme({
       lineHeight: '27px',
       letterSpacing: '1px',
 
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[12],
         lineHeight: '18px',
       },
@@ -95,7 +95,7 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.ASSISTANT,
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[10],
         lineHeight: '18px',
       },
@@ -111,7 +111,7 @@ const theme = createTheme({
       fontSize: FONT.SIZES[32],
       fontFamily: FONT.FAMILY.CAMPAIGN,
       lineHeight: '48px',
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[18],
         lineHeight: '25.2px',
       },
@@ -124,7 +124,7 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[18],
         lineHeight: '25.2px',
       },
@@ -138,7 +138,19 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
-      '@media (max-width:475px)': {
+      '@media (max-width:990px)': {
+        '&:hover': {
+          background: `none`,
+  
+          cursor: 'pointer',
+        },
+      },
+      '@media (max-width:550px)': {
+        '&:hover': {
+          background: `none`,
+  
+          cursor: 'pointer',
+        },
         fontSize: FONT.SIZES[18],
         lineHeight: '25.2px',
       },
@@ -149,7 +161,7 @@ const theme = createTheme({
 
       fontSize: FONT.SIZES[20],
       color: '#241C15',
-      '@media (max-width:475px)': {
+      '@media (max-width:550px)': {
         fontSize: FONT.SIZES[16],
         // lineHeight: "25.2px",
       },
@@ -265,7 +277,7 @@ const theme = createTheme({
               padding: '5rem 0',
               backgroundColor: 'transparent',
               cursor: 'pointer',
-              '@media (max-width:475px)': {
+              '@media (max-width:550px)': {
                 minHeight: '12rem',
                 marginTop: '10px',
               },
@@ -286,7 +298,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(-10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               transform: 'rotate(-3deg)',
               marginTop: '10px',
@@ -326,7 +338,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               transform: 'rotate(-3deg)',
               marginTop: '10px',
@@ -348,7 +360,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               transform: 'rotate(3deg)',
               marginTop: '10px',
@@ -370,7 +382,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               marginTop: '10px',
               transform: 'rotate(3deg)',
@@ -392,7 +404,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               marginTop: '10px',
               transform: 'rotate(-3deg)',
@@ -414,7 +426,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(-10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               marginTop: '10px',
             },
@@ -435,7 +447,7 @@ const theme = createTheme({
             cursor: 'pointer',
             transform: 'rotate(-10deg)',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               marginTop: '10px',
             },
@@ -460,7 +472,7 @@ const theme = createTheme({
             backgroundColor: 'transparent',
             cursor: 'pointer',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '12rem',
               marginTop: '10px',
             },
@@ -480,7 +492,7 @@ const theme = createTheme({
             backgroundColor: 'transparent',
             cursor: 'pointer',
             // margin:'2.8rem'
-            '@media (max-width:475px)': {
+            '@media (max-width:550px)': {
               minHeight: '10rem',
               marginTop: '10px',
             },

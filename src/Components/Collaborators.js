@@ -217,6 +217,91 @@ const Collaborators = () => {
                                                     {itemData[0].subTitle}
                                                 </Typography>
                                             </Author_1>
+                                            <Author_3>
+                                                <ImgBox>
+                                                    <img
+                                                        src={itemData[2].img}
+                                                        alt="img"
+                                                        width="100%"
+                                                    />
+                                                </ImgBox>
+
+                                                <Typography
+                                                    variant="body1"
+                                                    textAlign="center"
+                                                >
+                                                    <b>{itemData[2].title}</b>
+                                                </Typography>
+                                                <Typography
+                                                    variant="body2"
+                                                    textAlign="center"
+                                                >
+                                                    {itemData[2].subTitle}
+                                                </Typography>
+                                            </Author_3>
+                                            <Author_5>
+                                                <ImgBox>
+                                                    <img
+                                                        src={itemData[4].img}
+                                                        alt="img"
+                                                        width="100%"
+                                                    />
+                                                </ImgBox>{" "}
+                                                <Typography
+                                                    variant="body1"
+                                                    textAlign="center"
+                                                >
+                                                    <b>{itemData[4].title}</b>
+                                                </Typography>
+                                                <Typography
+                                                    variant="body2"
+                                                    textAlign="center"
+                                                >
+                                                    {itemData[4].subTitle}
+                                                </Typography>
+                                            </Author_5>
+                                            <Author_7>
+                                                <ImgBox>
+                                                    <img
+                                                        src={itemData[6].img}
+                                                        alt="img"
+                                                        width="100%"
+                                                    />
+                                                </ImgBox>{" "}
+                                                <Typography
+                                                    variant="body1"
+                                                    textAlign="center"
+                                                >
+                                                    <b>{itemData[6].title}</b>
+                                                </Typography>
+                                                <Typography
+                                                    variant="body2"
+                                                    textAlign="center"
+                                                >
+                                                    {itemData[6].subTitle}
+                                                </Typography>
+                                            </Author_7>
+                                            <Author_9>
+                                                <ImgBox>
+                                                    <img
+                                                        src={itemData[8].img}
+                                                        alt="img"
+                                                        width="100%"
+                                                    />
+                                                </ImgBox>
+                                                <Typography
+                                                    variant="body1"
+                                                    textAlign="center"
+                                                >
+                                                    <b>{itemData[8].title}</b>
+                                                </Typography>
+                                                <Typography
+                                                    variant="body2"
+                                                    textAlign="center"
+                                                >
+                                                    {itemData[8].subTitle}
+                                                </Typography>
+                                            </Author_9>
                                         </Grid>
                                         <Grid
                                             item
@@ -246,44 +331,6 @@ const Collaborators = () => {
                                                     {itemData[1].subTitle}
                                                 </Typography>
                                             </Author_2>
-                                            </Grid>
-                                            <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
-                                            <Author_3>
-                                                <ImgBox>
-                                                    <img
-                                                        src={itemData[2].img}
-                                                        alt="img"
-                                                        width="100%"
-                                                    />
-                                                </ImgBox>
-
-                                                <Typography
-                                                    variant="body1"
-                                                    textAlign="center"
-                                                >
-                                                    <b>{itemData[2].title}</b>
-                                                </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    textAlign="center"
-                                                >
-                                                    {itemData[2].subTitle}
-                                                </Typography>
-                                            </Author_3>
-                                        </Grid>
-                                        <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
                                             <Author_4>
                                                 <ImgBox>
                                                     <img
@@ -305,43 +352,6 @@ const Collaborators = () => {
                                                     {itemData[3].subTitle}
                                                 </Typography>
                                             </Author_4>
-                                            </Grid>
-                                            <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
-                                            <Author_5>
-                                                <ImgBox>
-                                                    <img
-                                                        src={itemData[4].img}
-                                                        alt="img"
-                                                        width="100%"
-                                                    />
-                                                </ImgBox>{" "}
-                                                <Typography
-                                                    variant="body1"
-                                                    textAlign="center"
-                                                >
-                                                    <b>{itemData[4].title}</b>
-                                                </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    textAlign="center"
-                                                >
-                                                    {itemData[4].subTitle}
-                                                </Typography>
-                                            </Author_5>
-                                            </Grid>
-                                            <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
                                             <Author_6>
                                                 <ImgBox>
                                                     <img
@@ -363,44 +373,6 @@ const Collaborators = () => {
                                                     {itemData[5].subTitle}
                                                 </Typography>
                                             </Author_6>
-                                        </Grid>
-                                        <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                            sx={{ textAlign: "left" }}
-                                        >
-                                            <Author_7>
-                                                <ImgBox>
-                                                    <img
-                                                        src={itemData[6].img}
-                                                        alt="img"
-                                                        width="100%"
-                                                    />
-                                                </ImgBox>{" "}
-                                                <Typography
-                                                    variant="body1"
-                                                    textAlign="center"
-                                                >
-                                                    <b>{itemData[6].title}</b>
-                                                </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    textAlign="center"
-                                                >
-                                                    {itemData[6].subTitle}
-                                                </Typography>
-                                            </Author_7>
-                                            </Grid>
-                                            <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
                                             <Author_8>
                                                 <ImgBox>
                                                     <img
@@ -422,37 +394,6 @@ const Collaborators = () => {
                                                     {itemData[7].subTitle}
                                                 </Typography>
                                             </Author_8>
-                                            </Grid>
-                                            <Grid
-                                            item
-                                            xs={6}
-                                            sm={6}
-                                            md={2}
-                                            lg={2}
-                                        >
-                                            <Author_9>
-                                                <ImgBox>
-                                                    <img
-                                                        src={itemData[8].img}
-                                                        alt="img"
-                                                        width="100%"
-                                                    />
-                                                </ImgBox>
-                                                <Typography
-                                                    variant="body1"
-                                                    textAlign="center"
-                                                >
-                                                    <b>{itemData[8].title}</b>
-                                                </Typography>
-                                                <Typography
-                                                    variant="body2"
-                                                    textAlign="center"
-                                                >
-                                                    {itemData[8].subTitle}
-                                                </Typography>
-                                            </Author_9>
-                                        </Grid>
-                                        <Grid item xs={6} sm={6} md={2} lg={2}>
                                             <Author_10>
                                                 <ImgBox>
                                                     <img
@@ -474,7 +415,7 @@ const Collaborators = () => {
                                                     {itemData[9].subTitle}
                                                 </Typography>
                                             </Author_10>
-                                        </Grid>
+                                            </Grid>
                                     </Grid>
                                 </Box>
                                 <Box display={{ xs: "none", md: "block" }}>

@@ -64,7 +64,7 @@ const Layout = () => {
   //   console.log(path, 'path');
 
   const [value, setValue] = React.useState(0);
-  const buttonHeight = `calc(85vh/5)`;
+  const buttonHeight = `calc(80vh/5)`;
   const buttonWidth = `calc(100px)`;
   const padding = `calc(5vh) calc(4.5vh) calc(4.5vh) calc(3.5vh)`;
   const buttonName = database.menu;
@@ -119,7 +119,7 @@ const Layout = () => {
                           style={{
                             overflowY: 'auto',
                             borderRadius: '30px 0px 0px 30px ',
-                            height:'85vh',
+                            // height:'85vh',
                           }}
                           className="body"
                         >
@@ -247,7 +247,7 @@ const Layout = () => {
                               key={index}
                               sx={{
                                 paddingTop: 0,
-                                width: '80px',
+                                width: '70px',
                                 // verticalAlign: 'middle',
                                 // textAlign: 'center',
                               }}

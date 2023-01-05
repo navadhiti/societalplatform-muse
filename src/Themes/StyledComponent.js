@@ -71,12 +71,15 @@ export const Section = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media (max-width: 768px) {
-    padding: 2rem 0;
+  border-radius: '30px 0px 0px 30px ',
+
+  @media (max-width: 990px) {
     height: auto !important;
+    padding: 2rem 0 !important;
+    
   }
-  @media (max-width: 550px) : {
-    padding: 4rem 0;
+  @media (max-width: 550px) {
+    padding: 2rem 0 !important;
     height: auto !important;
   }
 `;

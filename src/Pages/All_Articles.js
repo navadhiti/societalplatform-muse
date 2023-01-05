@@ -26,9 +26,11 @@ const All_Articles = () => {
         LandingBackground: {
             backgroundColor: "#DC8F6E",
             color: "#fff",
+            borderRadius: '30px 0px 30px 30px ',
         },
         LandingBackground1: {
             backgroundColor: "#EDEBEA",
+            borderRadius: '30px 30px 30px 30px ',
         },
     };
     // const functionCallForFetchApi = async () => {

@@ -17,7 +17,7 @@ const Blurb = () => {
            
             >
                 <Container>
-                    <Box  px={{ xs: 0, sm: 5,md:8}}  pt={{ xs: 13, sm: 0 }}>
+                    <Box  px={{ xs: 0, sm: 5,md:8}}  pt={{ xs: 5, sm: 0 }}>
                     <Typography variant="h3" textAlign="center">
                         Societal Muse is our annual publication that shows
                         stories of{" "}

@@ -8,9 +8,13 @@ const Share = () => {
         LandingBackground: {
             backgroundColor: "#3E418A",
             color: "#fff",
+            borderRadius: '30px 0px 30px 30px ',
+
         },
         LandingBackground1: {
             backgroundColor: "#EDEBEA",
+            borderRadius: '30px 30px 30px 30px ',
+
         },
     };
     return (
