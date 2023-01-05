@@ -251,12 +251,12 @@ const Indi_Article = () => {
                 }}
                 renderInput={(params) => (
                   <TextField
-                    inputProps={{
-                      endAdornment: (
-                        <InputAdornment position="end">KG</InputAdornment>
+                    InputProps={{
+                      placeholder: 'Search',
+                      startAdornment: (
+                        <InputAdornment position="start">KG</InputAdornment>
                       ),
                     }}
-                    placeholder="Search"
                     {...params}
                   />
                 )}
