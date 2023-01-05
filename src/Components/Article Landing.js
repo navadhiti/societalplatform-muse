@@ -15,7 +15,7 @@ import Logo from "../Assets/Images/sm_logo.png";
 import Layer from "../Assets/Images/Layer.png";
 import Blub from "../Assets/Images/Blub.png";
 import Book from "../Assets/Images/sp-muse-read.png";
-import { Section } from "../Themes/StyledComponent";
+import { LandingImage, Section } from "../Themes/StyledComponent";
 // import ButtonIcon from "../Assets/Images/ArrowCircleDown.png";Down_arrow.png
 import ButtonIcon from "../Assets/Images/Down_arrow.png";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -30,7 +30,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const Article_landing = () => {
     return (
         <>
-            <Section py={{ xs: 4, sm: 4, md: 5 }}>
+            <Section pt={{ xs: 4, sm: 14, md: 13 }}>
                 <Container>
                     <Grid
                         container
@@ -86,7 +86,9 @@ const Article_landing = () => {
                             lg={5}
                             textAlign="left"
                         >
+                            <LandingImage>
                             <img src={Book} alt="img" width="100%" />
+                            </LandingImage>
                         </Grid>
                     </Grid>
                     <Stack

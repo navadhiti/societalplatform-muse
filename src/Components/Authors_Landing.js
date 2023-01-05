@@ -10,7 +10,7 @@ import {
     Stack,
     IconButton,
 } from "@mui/material";
-import { Section } from "../Themes/StyledComponent";
+import { LandingImage, Section } from "../Themes/StyledComponent";
 import Divider from "../Assets/Images/underline-white.png";
 import Pen from "../Assets/Images/img-pen-white.png";
 import art from  "../Assets/Images/Artwork.png";
@@ -22,7 +22,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const Authors_Landing = () => {
     return (
         <>
-            <Section pt={{ xs: 4, sm: 4, md: 13 }}>
+            <Section pt={{ xs: 4, sm: 14, md: 13 }}>
                 <Container>
                     <Grid
                         container
@@ -30,6 +30,7 @@ const Authors_Landing = () => {
                         justifyContent="start"
                         alignItems="start"
                         py={{ xs: 4, sm: 4, md: 5 }}
+                        // pt={{xs:1,sm:15,md:0}}
                     >
                         <Grid
                             item
@@ -75,7 +76,9 @@ const Authors_Landing = () => {
                             lg={6}
                             sx={{ textAlign: "left" }}
                         >
-                            <img src={art} />
+                            <LandingImage>
+                            <img src={art} width="100%" />
+                            </LandingImage>
                         </Grid>
                     </Grid>
                     <Stack

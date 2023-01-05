@@ -30,6 +30,9 @@ import PropTypes from 'prop-types';
 import logo from '../Assets/Images/sp_muse_logo.png';
 import frame from '../Assets/Images/Frame.png';
 import data from "../db.json";
+import MenuIcon from '@mui/icons-material/Menu';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { Frame, Logo } from '../Themes/StyledComponent';
 
 
 function ScrollTop(props) {
@@ -202,31 +205,37 @@ const Header = (props) => {
               alignItems="center"
               justifyContent="flex-start"
             >
-              <Grid item xs={3} sm={3} md={3} lg={3} >
-                <img src={frame} alt="img" width="40px" height="40px" />
+              <Grid item xs={2} sm={3} md={3} lg={3} >
+                <Frame>
+                {/* <KeyboardArrowLeftIcon /> */}
+                <img src={frame} alt="img" />
+                </Frame>
               </Grid>
               <Grid
                 item
-                xs={6}
+                xs={7}
                 sm={6}
                 md={6}
                 lg={6}
                 justifyContent="center"
                 sx={{ textAlign: 'center' }}
                 alignItems="center"
-                ml={-4}
+                
               >
+                <Logo>
+
                 <img src={logo} alt="img" />
+                </Logo>
               </Grid>
               <Grid item xs={3} sm={3} md={3} lg={3} textAlign="end">
-                <Box display={{ xs: 'block', md: 'none' }}>
+                <Box display={{ xs: 'block', md: 'none' }} textAlign="end">
                   {['Menu'].map((anchor) => (
                     <React.Fragment key={anchor}>
                       <Button
                         onClick={toggleDrawer(anchor, true)}
                         variant="Menu-btn"
                       >
-                        {anchor}
+                        <MenuIcon/>
                       </Button>
                       <Drawer
                         anchor={anchor}
@@ -237,6 +246,9 @@ const Header = (props) => {
                       </Drawer>
                     </React.Fragment>
                   ))}
+                </Box>
+                <Box display={{ xs: 'none', md: 'block' }}>
+                <Button variant="outlined" sx={{color:'#000',borderColor:'#000',borderRadius:'25px',fontWeight:600,px:5,mr:15,py:1}} mr={5}  >Contact</Button>
                 </Box>
               </Grid>
             </Grid>

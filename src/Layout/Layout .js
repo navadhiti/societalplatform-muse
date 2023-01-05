@@ -33,6 +33,7 @@ import database from '../db.json';
 import Share from '../Pages/Share';
 import Loader from '../Components/loader';
 import Experince from '../Pages/Experince';
+import Contact from '../Pages/Contact';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -198,6 +199,8 @@ const Layout = () => {
                             <Route path="/author" element={<Authors />} />
                             <Route path="/share" element={<Share />} />
                             <Route path="/experince" element={<Experince />} />
+                            <Route path="/contact" element={<Contact />} />
+
                           </Routes>
                           {path !== '/indiviual-articles' ? (
                             <Grid
