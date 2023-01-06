@@ -68,7 +68,7 @@ const Contact = () => {
                     {/* </ListItemIcon> */}
                   </ListItem>
                 </Box>
-                <LandingImage mt={-5}>
+                <LandingImage mt={-20}>
                   <img src={art} width="100%" />
                 </LandingImage>
               </Grid>
