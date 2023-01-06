@@ -25,7 +25,7 @@ export const StickyButton = styled(Button)`
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: 18px;
     color: #241c15;
-    height: 0.2rem;
+    line-height: 20px;
   }
 `;
 
@@ -87,10 +87,10 @@ export const Logo = styled(Box)`
   }
 `;
 export const LandingImage = styled(Box)`
-text-align:end;
-  img{
-    width:100%;
-    height:auto;
+  text-align: end;
+  img {
+    width: 100%;
+    height: auto;
     @media (max-width: 990px) {
       width: 50%;
       text-align: end;

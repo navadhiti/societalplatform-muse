@@ -242,24 +242,40 @@ const Indi_Article = () => {
             alignItems="center"
             mt={5}
           >
-            <Grid item xs={4} md={8} sx={{ textAlign: 'start' }}>
-              <TextField
-                id="outlined-basic"
-                placeholder="Search"
-                variant="outlined"
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <SearchOutlined />
-                    </InputAdornment>
-                  ),
+            <Grid item xs={4} md={3} sx={{ textAlign: 'start' }}>
+              <Autocomplete
+                freeSolo
+                id="free-solo-2-demo"
+                disableClearable
+                options={extractedH2?.map((elem, index) => {
+                  return { label: elem.replace(/<[^>]+>/g, ''), id: index };
+                })}
+                onChange={(e, value) => {
+                  onBtnClick(value.id);
+                }}
+                renderInput={(params) => {
+                  return (
+                    <TextField
+                      {...params}
+                      placeholder="Search"
+                      variant="outlined"
+                      InputProps={{
+                        ...params.InputProps,
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <SearchOutlined />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                  );
                 }}
               />
             </Grid>
-            <Grid item xs={6} md={4}>
+            <Grid item xs={6} md={9}>
               <Stack
                 direction="row"
-                justifyContent="center"
+                justifyContent="flex-end"
                 alignItems="center"
                 spacing={2}
               >
@@ -269,7 +285,6 @@ const Indi_Article = () => {
                 </Button>
                 <Box display={{ xs: 'none', md: 'block' }}>
                   <Button variant="icon-btn">
-                    {/* <PDFDownload /> */}
                     <PictureAsPdfOutlined />
                   </Button>
                 </Box>
@@ -291,6 +306,8 @@ const Indi_Article = () => {
                       '& .MuiFab-primary': {
                         boxShadow: 'none',
                         border: '1px solid black',
+                        height: '3.5rem',
+                        width: '3.5rem',
                       },
                     }}
                     icon={<ShareOutlined />}

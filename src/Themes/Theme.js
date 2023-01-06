@@ -249,8 +249,8 @@ const theme = createTheme({
           style: {
             border: '1.5px solid #241C15',
             borderRadius: '50%',
-            width: '60px',
-            height: '60px',
+            width: '3.7rem',
+            height: '3.7rem',
           },
         },
       ],
