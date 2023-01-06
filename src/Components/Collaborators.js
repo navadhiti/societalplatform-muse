@@ -104,7 +104,7 @@ const Collaborators = () => {
     {
       img: Author10,
       title: "Rohini Nilekani",
-      subTitle: "citymart",
+      subTitle: "CITYMART",
     },
   ];
   return (

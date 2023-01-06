@@ -25,7 +25,8 @@ export const StickyButton = styled(Button)`
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: 18px;
     color: #241c15;
-    height: 0.2rem;
+    // height: 0.2rem;
+    line-height:20px;
   }
 `;
 
