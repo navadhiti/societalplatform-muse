@@ -122,6 +122,7 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
+  console.log(extractedH2, 'hello');
 
   // onclick button section scroll function
   const onBtnClick = (id) => {
@@ -252,11 +253,14 @@ const Indi_Article = () => {
                 renderInput={(params) => (
                   <TextField
                     InputProps={{
-                      placeholder: 'Search',
-                      startAdornment: (
-                        <InputAdornment position="start">KG</InputAdornment>
+                      ...params.InputProps,
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <SearchOutlined />
+                        </InputAdornment>
                       ),
                     }}
+                    placeholder="Search"
                     {...params}
                   />
                 )}
@@ -322,7 +326,6 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <List>
                   <Typography variant="h5"> ARTICLE OUTLINE</Typography>
-
                   {extractedH2?.map((elem, i) => (
                     <ListItem>
                       <StickyButton onClick={() => onBtnClick(i)}>
