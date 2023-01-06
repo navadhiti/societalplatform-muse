@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/societalplatform-muse/static/css/main.76b6b9ee.css",
-    "main.js": "/societalplatform-muse/static/js/main.4a282c5a.js",
+    "main.js": "/societalplatform-muse/static/js/main.2fd6b4df.js",
     "static/js/787.cdbcac7a.chunk.js": "/societalplatform-muse/static/js/787.cdbcac7a.chunk.js",
     "static/media/articleImage.png": "/societalplatform-muse/static/media/articleImage.f48fd7efe37f2efef1af.png",
     "static/media/image 50.png": "/societalplatform-muse/static/media/image 50.19265be7dec732fcb549.png",
@@ -32,11 +32,11 @@
     "static/media/musing-banner.svg": "/societalplatform-muse/static/media/musing-banner.746f1d2675bbc8fb6bc3699a02806c68.svg",
     "static/media/Api_info": "/societalplatform-muse/static/media/Api_info.70293505bb03d15bfc22",
     "main.76b6b9ee.css.map": "/societalplatform-muse/static/css/main.76b6b9ee.css.map",
-    "main.4a282c5a.js.map": "/societalplatform-muse/static/js/main.4a282c5a.js.map",
+    "main.2fd6b4df.js.map": "/societalplatform-muse/static/js/main.2fd6b4df.js.map",
     "787.cdbcac7a.chunk.js.map": "/societalplatform-muse/static/js/787.cdbcac7a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.76b6b9ee.css",
-    "static/js/main.4a282c5a.js"
+    "static/js/main.2fd6b4df.js"
   ]
 }
