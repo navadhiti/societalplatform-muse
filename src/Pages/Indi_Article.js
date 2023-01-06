@@ -122,7 +122,7 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  console.log(extractedH2, 'hello');
+  // console.log(extractedH2, 'hello');
 
   // onclick button section scroll function
   const onBtnClick = (id) => {
@@ -231,7 +231,10 @@ const Indi_Article = () => {
               </Box>
             </Grid>
           </Grid>
-          <Divider sx={{ borderStyle: 'dotted' }} />
+          <Divider
+            variant="middle"
+            sx={{ borderStyle: 'dotted', borderColor: 'black' }}
+          />
           <Grid
             container
             direction="row"
@@ -240,30 +243,17 @@ const Indi_Article = () => {
             mt={5}
           >
             <Grid item xs={4} md={8} sx={{ textAlign: 'start' }}>
-              <Autocomplete
-                disableClearable
-                freeSolo
-                id="combo-box-demo"
-                options={extractedH2?.map((elem, index) => {
-                  return { label: elem.replace(/<[^>]+>/g, ''), id: index };
-                })}
-                onChange={(e, value) => {
-                  onBtnClick(value.id);
+              <TextField
+                id="outlined-basic"
+                placeholder="Search"
+                variant="outlined"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <SearchOutlined />
+                    </InputAdornment>
+                  ),
                 }}
-                renderInput={(params) => (
-                  <TextField
-                    InputProps={{
-                      ...params.InputProps,
-                      endAdornment: (
-                        <InputAdornment position="end">
-                          <SearchOutlined />
-                        </InputAdornment>
-                      ),
-                    }}
-                    placeholder="Search"
-                    {...params}
-                  />
-                )}
               />
             </Grid>
             <Grid item xs={6} md={4}>

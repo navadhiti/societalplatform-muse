@@ -238,8 +238,8 @@ const theme = createTheme({
             fontFamily: FONT.FAMILY.ASSISTANT,
             fontWeight: 600,
             fontSize: FONT.SIZES[16],
-            width: '148px',
-            height: '60px',
+            width: '9.25rem',
+            height: '3rem',
             border: '1.5px solid #241C15',
             borderRadius: '100px',
           },
@@ -901,6 +901,7 @@ const theme = createTheme({
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
               border: '1.5px solid #241C15',
+              height: '3rem',
               width: '23.813rem',
             },
           },

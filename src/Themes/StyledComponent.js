@@ -87,10 +87,10 @@ export const Logo = styled(Box)`
   }
 `;
 export const LandingImage = styled(Box)`
-  text-align: end;
-  img {
-    width: auto;
-    height: auto;
+text-align:end;
+  img{
+    width:100%;
+    height:auto;
     @media (max-width: 990px) {
       width: 50%;
       text-align: end;

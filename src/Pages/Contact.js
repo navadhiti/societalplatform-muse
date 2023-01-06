@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Container,
   Grid,
   ListItem,
@@ -67,7 +68,7 @@ const Contact = () => {
                     {/* </ListItemIcon> */}
                   </ListItem>
                 </Box>
-                <LandingImage mt={-5}>
+                <LandingImage mt={-20}>
                   <img src={art} width="100%" />
                 </LandingImage>
               </Grid>
@@ -90,6 +91,7 @@ const Contact = () => {
                     variant="filled"
                     fullWidth
                     margin="normal"
+                    py={4}
                   />
                   <TextField
                     id="filled-basic"
@@ -109,6 +111,9 @@ const Contact = () => {
                     // defaultValue="Go ahead, We are listening..."
                     variant="filled"
                   />
+                    <Button variant="outlined" size="large"  sx={{color:'#000',borderColor:'#000',borderRadius:'25px',fontWeight:600,px:5,width:"100%",mr:15,py:2,mt:2}} fullwidth>
+                    Submit form
+        </Button>
                 </Box>
               </Grid>
             </Grid>
