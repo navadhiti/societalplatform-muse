@@ -78,10 +78,10 @@ const Layout = () => {
       .then((response) => response.json())
       .then((json) => {
         setData(json);
-        setTimeout(() => {}, 4000);
+        setTimeout(() => {setLoading(false);}, 4000);
       })
       .catch((e) => setError(e));
-    setLoading(false);
+    
   }, []);
 
   return (
@@ -126,7 +126,10 @@ const Layout = () => {
                             overflowY: 'auto',
                             borderRadius: '30px 0px 30px 30px ',
                             height:'85vh',
+                            boxShadow: '0px 1px 15px 0px rgb(0 0 0 / 14%)',
+
                           }}
+                          elevation={3}
                           className="body"
                         >
                           {path !== '/indiviual-articles' ? (
@@ -272,7 +275,7 @@ const Layout = () => {
                                   height: buttonHeight,
                                   disply: 'flex !important',
                                   justifyContent: 'center !important',
-                                  alignItems: 'center !important',
+                                  alignItems: 'end !important',
                                   verticalAlign: 'center',
                                   //   paddingTop: '70%',
                                   '&:hover': {

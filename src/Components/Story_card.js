@@ -62,7 +62,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
   return (
     <>
       <Card
-        sx={{ m: 2, p: 2, borderRadius: '25px', minHeight: {xs:'15rem',md:"30rem"} }}
+        sx={{ m: 2, p: 2, borderRadius: '25px', minHeight: {xs:'15rem',md:"25rem"} }}
         key={value}
         onClick={() => {
           navigate('/indiviual-articles');
