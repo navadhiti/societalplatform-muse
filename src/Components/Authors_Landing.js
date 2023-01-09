@@ -29,6 +29,7 @@ const Authors_Landing = () => {
                         spacing={0}
                         justifyContent="start"
                         alignItems="start"
+                        direction={{xs:"column-reverse",sm:"row"}}
                         py={{ xs: 4, sm: 4, md: 5 }}
                         // pt={{xs:1,sm:15,md:0}}
                     >

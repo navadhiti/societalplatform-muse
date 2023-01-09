@@ -139,7 +139,6 @@ const Indi_Article = () => {
 
   // scroll progressBar
 
-  const [progress, setProgress] = React.useState(0);
   const [containerHeight, setContainerHeight] = useState(0);
   const [scrollHeight, setScrollHeight] = useState(0);
   const [scrollTop, setScrollTop] = useState(0);
@@ -151,13 +150,13 @@ const Indi_Article = () => {
     let progressBarHandler = () => {
       setContainerHeight(ref.current.clientHeight);
       setScrollHeight(ref.current.scrollHeight);
-      setScroll(ref.current.scrollTop);
+      setScrollTop(ref.current.scrollTop);
       const windowHeight = scrollHeight - containerHeight;
       const scroll = `${scrollTop / windowHeight}`;
       setScroll(scroll);
     };
-    // progressBarHandler();
-  }, []);
+    progressBarHandler();
+  });
 
   console.log(scroll, 'scroll');
 
@@ -173,7 +172,7 @@ const Indi_Article = () => {
       setReadTime(time);
     }
     readingTime();
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -371,14 +370,14 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Typography>
                   <span id="time" style={{ fontSize: '40px' }}>
-                    {readTime}
+                    {readTime && readTime}
                   </span>
                   <br /> min read
                 </Typography>
                 <CircularProgress
                   thickness={2}
                   variant="determinate"
-                  value={progress}
+                  value={scroll}
                 />
                 <List>
                   <Typography

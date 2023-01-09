@@ -101,11 +101,14 @@ export const LandingImage = styled(Box)`
     width: 100%;
     height: auto;
     @media (max-width: 990px) {
-      width: 50%;
+      width: 40%;
       text-align: end;
     }
-    @media (max-width: 550px) {
-      width: 100%;
+  }
+  @media (max-width: 550px) {
+    text-align: center;
+    img{
+    width: 80%;
     }
   }
 `;

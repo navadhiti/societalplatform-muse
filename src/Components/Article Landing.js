@@ -30,14 +30,15 @@ import { Link, animateScroll as scroll } from "react-scroll";
 const Article_landing = () => {
     return (
         <>
-            <Section pt={{ xs: 4, sm: 14, md: 13 }}>
+            <Section pt={{ xs: 10, sm: 14, md: 13 }}>
                 <Container>
                     <Grid
                         container
                         spacing={0}
+                        direction={{xs:"column-reverse",sm:"row"}}
                         justifyContent="space-between"
                         alignItems="center"
-                        pt={0}
+                        pt={{ xs: 10, sm: 0, md: 0 }}
                     >
                         <Grid
                             item

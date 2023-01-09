@@ -92,23 +92,27 @@ const Stories_article = () => {
         >
           {/* <Slider {...settings}> */}
 
-          {itemData.map((item, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={12}
-              md={3}
-              lg={3}
+          {itemData.map((item, index) => {
+            return (
+              index <= 2 && (
+                <Grid
+                  item
+                  xs={12}
+                  sm={12}
+                  md={3}
+                  lg={3}
 
-              // px={4}
-            >
-              <Story_card
-                tag={item.tag}
-                title={item.title}
-                edition={item.date}
-              />
-            </Grid>
-          ))}
+                  // px={4}
+                >
+                  <Story_card
+                    tag={item.tag}
+                    title={item.title}
+                    edition={item.date}
+                  />
+                </Grid>
+              )
+            );
+          })}
           {/* </Slider> */}
         </Grid>
         <AnimatedButton>

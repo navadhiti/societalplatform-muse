@@ -157,7 +157,9 @@ const Layout = () => {
                                   },
                                 }}
                               >
+                                {path === '/' ? (
                                 <img src={Image1} alt="img" width="120%" />
+                                ):("")}
                               </Grid>
                               <Grid
                                 item

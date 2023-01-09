@@ -33,6 +33,8 @@ import data from '../db.json';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { Frame, Logo } from '../Themes/StyledComponent';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import CloseIcon from '@mui/icons-material/Close';
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -111,7 +113,7 @@ const styles = {
 };
 const buttonName = data.menu;
 const Header = (props) => {
-  console.log(props.color, 'color');
+  // console.log(props.color, "color");
   const navigate = useNavigate();
 
   const [state, setState] = React.useState({
@@ -136,6 +138,8 @@ const Header = (props) => {
         height: '100vh',
         paddingRight: '10px',
         mt: 5,
+
+        backgroundColor: '#EDEBEA',
       }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -146,45 +150,89 @@ const Header = (props) => {
         justifyContent="space-between"
         //   alignItems="center"
         spacing={2}
+        sx={{ backgroungColor: '#EDEBEA' }}
       >
-        <List>
-          {buttonName.map((item, index) => (
-            <ListItem disablePadding key={index}>
-              <ListItemButton
-                sx={{
-                  backgroundColor: item.backgroundColor,
-                  borderRadius: '0 50px 50px 0',
-                  color: '#FFFFFF',
-                  fontWeight: '800',
-                  textAlign: 'center',
-                  height: 100,
-                  justifyContent: 'center',
-                }}
-                onClick={() => navigate(item.link)}
-              >
-                {item.name}
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-        <Box py={3} px={3}>
-          <Typography variant="h5">info@societalplatform.org</Typography>
-          <ListItem
-            disablePadding
-            sx={{
-              px: 1,
-              width: '90px',
-              backgroundColor: '#f2f0ed',
-            }}
+        <Box px={{ xs: 2, md: 8 }} py={{ xs: 2, sm: 0 }}>
+          <Grid
+            container
+            spacing={0}
+            alignItems="center"
+            justifyContent="flex-start"
           >
-            {/* <ListItemIcon> */}
-            <FacebookOutlinedIcon color="secondary" />
-            <InstagramIcon color="secondary" />
-            <TwitterIcon color="secondary" />
-            <LinkedInIcon color="secondary" />
+            <Grid item xs={2} sm={3} md={3} lg={3}>
+              <Frame>
+                {/* <KeyboardArrowLeftIcon /> */}
+                <KeyboardBackspaceIcon />
+                {/* <img src={frame} alt="img" /> */}
+              </Frame>
+            </Grid>
+            <Grid
+              item
+              xs={7}
+              sm={6}
+              md={6}
+              lg={6}
+              justifyContent="center"
+              sx={{ textAlign: 'center' }}
+              alignItems="center"
+            >
+              <Logo>
+                <img src={logo} alt="img" />
+              </Logo>
+            </Grid>
+            <Grid item xs={3} sm={3} md={3} lg={3} textAlign="end">
+              <CloseIcon />
+            </Grid>
+          </Grid>
+        </Box>
+        <Box
+          sx={{
+            backgroundColor: '#fff',
+            mx: 2,
+            borderRadius: '12px',
+            pt: 2,
+            pr: 2,
+          }}
+          style={{ marginLeft: '1rem' }}
+        >
+          <List>
+            {buttonName.map((item, index) => (
+              <ListItem disablePadding key={index}>
+                <ListItemButton
+                  sx={{
+                    backgroundColor: item.backgroundColor,
+                    borderRadius: '0 50px 50px 0',
+                    color: '#FFFFFF',
+                    fontWeight: '800',
+                    textAlign: 'center',
+                    height: 100,
+                    justifyContent: 'center',
+                    paddingRight: '1rem',
+                  }}
+                  onClick={() => navigate(item.link)}
+                >
+                  {item.name}
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+          <Box py={5} px={3}>
+            <Typography variant="h5">info@societalplatform.org</Typography>
+            <ListItem
+              disablePadding
+              sx={{
+                px: 1,
+                width: '90px',
+                backgroundColor: '#f2f0ed',
+              }}
+            >
+              {/* <ListItemIcon> */}
+              <LinkedInIcon color="secondary" />
+              <TwitterIcon color="secondary" />
 
-            {/* </ListItemIcon> */}
-          </ListItem>
+              {/* </ListItemIcon> */}
+            </ListItem>
+          </Box>
         </Box>
       </Stack>
     </Box>
@@ -264,18 +312,7 @@ const Header = (props) => {
           </Box>
         </AppBar>
         <Toolbar id="back-to-top-anchor" />
-        <Box>
-          {/* <Box sx={{ my: 2 }}>
-                        {[...new Array(120)]
-                            .map(
-                                () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-                            )
-                            .join("\n")}
-                    </Box> */}
-        </Box>
+        <Box></Box>
         <ScrollTop {...props}>
           <Fab size="small" aria-label="scroll back to top">
             <KeyboardArrowUpIcon />

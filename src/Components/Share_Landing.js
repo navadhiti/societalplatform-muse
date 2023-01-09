@@ -24,6 +24,7 @@ const Share_Landing = () => {
                         justifyContent="start"
                         alignItems="start"
                         py={{ xs: 4, sm: 4, md: 5 }}
+                        direction={{xs:"column-reverse",sm:"row"}}
                         // pt={{xs:1,sm:0,md:0}}
                     >
                         <Grid
