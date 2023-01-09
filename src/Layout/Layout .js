@@ -78,7 +78,7 @@ const Layout = () => {
       .then((response) => response.json())
       .then((json) => {
         setData(json);
-        setTimeout(() => {setLoading(false);}, 4000);
+        setTimeout(() => {setLoading(false);}, 5000);
       })
       .catch((e) => setError(e));
     

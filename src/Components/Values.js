@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography, Box } from "@mui/material";
+import { Card, CardContent, Grid, Typography, Box, Stack } from "@mui/material";
 
 import React, { useState } from "react";
 import ReactCardFlip from "react-card-flip";
@@ -79,39 +79,46 @@ const Values = () => {
               container
               spacing={2}
               justifyContent="center"
-              alignItems="center"
+              // alignItems="center"
               sx={{ py: 5 }}
             >
               {itemData.map((item, index) => (
-                <Grid item xs={11} sm={6} md={2} lg={2} key={index} mt={-15}>
-                  <ReactCardFlip
-                    isFlipped={id === item.id && flipCard}
-                    flipDirection="horizontal"
-                    id={item.id}
+                <Grid item xs={11} sm={6} md={2} lg={2} key={index} >
+                  <Stack
+                    direction="row"
+                    justifyContent="center"
+                    alignItems={`${item.contentAlign}`}
+                    sx={{height:"22rem"}}
                   >
-                    <Card
-                      classes={`${item.class}`}
-                      onMouseEnter={() => {
-                        setId(item.id);
-                        setFlipCard(true);
-                      }}
+                    <ReactCardFlip
+                      isFlipped={id === item.id && flipCard}
+                      flipDirection="horizontal"
+                      id={item.id}
                     >
-                      <CardContent variant={item.contentclass}>
-                        <Typography variant="h4">{item.title}</Typography>
-                      </CardContent>
-                    </Card>
-                    <Card
-                      classes={`${item.class1}`}
-                      onMouseOut={() => {
-                        setId(null);
-                        setFlipCard(false);
-                      }}
-                    >
-                      <CardContent variant={item.contentclass}>
-                        <Typography>{item.blurb}</Typography>
-                      </CardContent>
-                    </Card>
-                  </ReactCardFlip>
+                      <Card
+                        classes={`${item.class}`}
+                        onMouseEnter={() => {
+                          setId(item.id);
+                          setFlipCard(true);
+                        }}
+                      >
+                        <CardContent variant={item.contentclass}>
+                          <Typography variant="h4">{item.title}</Typography>
+                        </CardContent>
+                      </Card>
+                      <Card
+                        classes={`${item.class1}`}
+                        onMouseOut={() => {
+                          setId(null);
+                          setFlipCard(false);
+                        }}
+                      >
+                        <CardContent variant={item.contentclass}>
+                          <Typography>{item.blurb}</Typography>
+                        </CardContent>
+                      </Card>
+                    </ReactCardFlip>
+                  </Stack>
                 </Grid>
               ))}
             </Grid>

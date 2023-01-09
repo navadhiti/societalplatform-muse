@@ -299,10 +299,14 @@ const Header = (props) => {
                       borderRadius: '25px',
                       fontWeight: 600,
                       px: 5,
-                      mr: 15,
+                      mr: 12,
                       py: 1,
                     }}
                     mr={5}
+                    onClick={() => {
+                      navigate("/contact");
+                      window.scrollTo(0, 0);
+                    }}
                   >
                     Contact
                   </Button>
