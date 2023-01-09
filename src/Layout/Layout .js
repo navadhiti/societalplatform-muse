@@ -78,10 +78,11 @@ const Layout = () => {
       .then((response) => response.json())
       .then((json) => {
         setData(json);
-        setTimeout(() => {setLoading(false);}, 5000);
+        setTimeout(() => {
+          setLoading(false);
+        }, 5000);
       })
       .catch((e) => setError(e));
-    
   }, []);
 
   return (
@@ -102,7 +103,9 @@ const Layout = () => {
 
                 <Box
                   sx={{ mt: 2, pb: 5, px: { xs: 0, sm: 0, md: 5 } }}
-                  backgroundColor={path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'}
+                  backgroundColor={
+                    path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'
+                  }
                 >
                   <Grid
                     container
@@ -119,16 +122,15 @@ const Layout = () => {
                       lg={11}
                       sx={{ textAlign: 'center' }}
                     >
-                      <Box >
+                      <Box>
                         <TabPanel
                           value={value}
                           index={0}
                           style={{
                             overflowY: 'auto',
                             borderRadius: '30px 0px 30px 30px ',
-                            height:'85vh',
+                            height: '85vh',
                             boxShadow: '0px 1px 15px 0px rgb(0 0 0 / 14%)',
-
                           }}
                           elevation={3}
                           className="body"
@@ -158,8 +160,10 @@ const Layout = () => {
                                 }}
                               >
                                 {path === '/' ? (
-                                <img src={Image1} alt="img" width="120%" />
-                                ):("")}
+                                  <img src={Image1} alt="img" width="120%" />
+                                ) : (
+                                  ''
+                                )}
                               </Grid>
                               <Grid
                                 item
@@ -206,7 +210,6 @@ const Layout = () => {
                             <Route path="/share" element={<Share />} />
                             <Route path="/experince" element={<Experince />} />
                             <Route path="/contact" element={<Contact />} />
-
                           </Routes>
                           {path !== '/indiviual-articles' ? (
                             <Grid
@@ -302,8 +305,8 @@ const Layout = () => {
                   </Grid>
                 </Box>
                 <Footer
-                color={path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'}
-                // color="red"
+                  color={path !== '/indiviual-articles' ? 'inherit' : '#E5E5E5'}
+                  // color="red"
                 />
               </ThemeProvider>
             </>
