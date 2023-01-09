@@ -96,13 +96,8 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.ASSISTANT,
-<<<<<<< HEAD
       color: "#000",
       "@media (max-width:550px)": {
-=======
-      color: '#000',
-      '@media (max-width:550px)': {
->>>>>>> b1f982b48f5722c85f7b7eaadf8e11090717d612
         fontSize: FONT.SIZES[10],
         lineHeight: "18px",
       },
