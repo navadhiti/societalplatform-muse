@@ -83,7 +83,7 @@ const Values = () => {
               sx={{ py: 5 }}
             >
               {itemData.map((item, index) => (
-                <Grid item xs={11} sm={6} md={2} lg={2} key={index}>
+                <Grid item xs={11} sm={6} md={2} lg={2} key={index} mt={-15}>
                   <ReactCardFlip
                     isFlipped={id === item.id && flipCard}
                     flipDirection="horizontal"

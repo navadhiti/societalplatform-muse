@@ -272,7 +272,7 @@ const theme = createTheme({
         root: {
           // borderBottom: '1px solid black',
           paddingTop: "1rem",
-          paddingBottom: "1rem",
+          paddingBottom: "1.1rem",
         },
       },
     },
@@ -310,7 +310,7 @@ const theme = createTheme({
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(-4deg)",
+            transform: "rotate(-7deg)",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -351,7 +351,7 @@ const theme = createTheme({
             backgroundColor: "transparent",
             cursor: "pointer",
             transform: "rotate(2deg)",
-            // marginTop: "12rem",
+            marginTop: "12rem",
 
             // margin:'2.8rem'
             "@media (max-width:550px)": {
@@ -375,7 +375,7 @@ const theme = createTheme({
             backgroundColor: "transparent",
             cursor: "pointer",
             transform: "rotate(10deg)",
-            // marginTop: "12rem",
+            marginTop: "12rem",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -443,7 +443,7 @@ const theme = createTheme({
             backgroundColor: "transparent",
             cursor: "pointer",
             transform: "rotate(-4deg)",
-            // marginTop: "10rem",
+            marginTop: "10rem",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -465,6 +465,8 @@ const theme = createTheme({
             backgroundColor: "transparent",
             cursor: "pointer",
             transform: "rotate(-4deg)",
+            marginTop: "12rem",
+
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
