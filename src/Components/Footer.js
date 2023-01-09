@@ -97,17 +97,18 @@ const Footer = (props) => {
                             </ListItem>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6}>
-                            <Typography variant="body2" textAlign="left">
+                            <Typography variant="body1" textAlign="left">
                                 Copyright © 2018 EkStep Foundation. All content
-                                here is licensed under <br></br>a Creative
+                                here is licensed under a <br></br><u>Creative
                                 Commons Attribution-ShareAlike 4.0 International
-                                License unless otherwise noted.
+                                License</u> unless otherwise noted.
                             </Typography>
                             <List sx={{ py: 2, textAlign: "left" }}>
-                                <Typography variant="body2">
-                                    {" "}
+                                <Typography variant="body1">
+                                    {" "}<u>
                                     Public Goods Licensing . Code of Sharing .
                                     Privacy Policy
+                                    </u>
                                 </Typography>
                             </List>
                         </Grid>

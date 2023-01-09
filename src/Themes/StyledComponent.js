@@ -11,9 +11,9 @@ import Art from '../Assets/Images/Artwork_3.png';
 
 export const StickyButton = styled(Button)`
   border: none;
+  height: 1.5rem;
   background: none;
   text-transform: capitalize;
-  height: 1.5rem;
 
   &:hover {
     background: ${`url(${Scribble2}) bottom  no-repeat`};
@@ -26,6 +26,10 @@ export const StickyButton = styled(Button)`
     font-size: 18px;
     color: #241c15;
     line-height: 20px;
+
+    :hover {
+      color: #865ba0;
+    }
   }
 `;
 

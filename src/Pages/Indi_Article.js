@@ -139,27 +139,44 @@ const Indi_Article = () => {
 
   // scroll progressBar
 
-  // const windowHeight =
-  //   document.documentElement.scrollHeight -
-  //   document.documentElement.clientHeight;
-  // console.log(windowHeight,'window');
-  const [progress, setProgress] = React.useState(0);
+  // const [progress, setProgress] = React.useState(0);
+  const [scroll, setScroll] = useState(0);
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
-      );
-    }, 800);
+  const containerHeight =
+    document.getElementsByClassName('contentContain').clientHeight;
+  console.log('tester', containerHeight);
+  useEffect(() => {
+    let progressBarHandler = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      // console.log(totalScroll, 'scroll');
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
 
-    return () => {
-      clearInterval(timer);
+      setScroll(scroll);
     };
+
+    // window.addEventListener("scroll", progressBarHandler);
+
+    return () => clearInterval('scroll', progressBarHandler);
   }, []);
+
+  // React.useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setProgress((prevProgress) =>
+  //       prevProgress >= 100 ? 0 : prevProgress + 10
+  //     );
+  //   }, 800);
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
   return (
     <>
       <div style={styles.LandingBackground}>
-        <Box elevation={1} ml="1.5625rem">
+        <Box elevation={1} ml="3.5rem">
           <Stack spacing={2} pt="2.5rem">
             <Breadcrumbs
               separator={<NavigateNext fontSize="small" />}
@@ -220,7 +237,9 @@ const Indi_Article = () => {
                           Gautam Prakash
                         </b>
                       </Typography>
-                      <Typography>Co-founders, Reap Benefit</Typography>
+                      <Typography sx={{ color: '#885CA1' }}>
+                        Co-founders, Reap Benefit
+                      </Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -251,10 +270,7 @@ const Indi_Article = () => {
               </Box>
             </Grid>
           </Grid>
-          <Divider
-            variant="middle"
-            sx={{ borderStyle: 'dotted', borderColor: 'black' }}
-          />
+          <Divider variant="middle" />
           <Grid
             container
             direction="row"
@@ -348,16 +364,22 @@ const Indi_Article = () => {
               </Stack>
             </Grid>
           </Grid>
-          <Grid container mt={10} spacing={2}>
+          <Grid container mt={10} spacing={2} className="contentContain">
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <CircularProgress
                   thickness={2}
                   variant="determinate"
-                  value={progress}
+                  value={scroll}
                 />
                 <List>
-                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: '#241C1599', fontWeight: '600' }}
+                  >
+                    {' '}
+                    ARTICLE OUTLINE
+                  </Typography>
                   {extractedH2?.map((elem, i) => (
                     <ListItem>
                       <StickyButton onClick={() => onBtnClick(i)}>
@@ -430,8 +452,8 @@ const Indi_Article = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Stories_Aritcle />
         </Box>
+        <Stories_Aritcle />
       </div>
     </>
   );

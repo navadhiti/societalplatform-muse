@@ -104,7 +104,7 @@ const Collaborators = () => {
     {
       img: Author10,
       title: "Rohini Nilekani",
-      subTitle: "citymart",
+      subTitle: "CITYMART",
     },
   ];
   return (
@@ -147,10 +147,10 @@ const Collaborators = () => {
               container
               spacing={0}
               justifyContent={{
-                xs: "column-reverse",
+                xs: "flex-end",
                 md: "flex-end",
               }}
-              alignItems=""
+              alignItems="center"
               py={{ xs: 2, sm: 2, md: 5 }}
             >
               <Grid
@@ -159,6 +159,8 @@ const Collaborators = () => {
                 sm={12}
                 md={2}
                 lg={2}
+              alignItems="felx-end"
+
                 sx={{ textAlign: "left" }}
               >
                 <MuseButton title="See All" />
@@ -445,7 +447,8 @@ const Collaborators = () => {
                       sm={6}
                       md={2}
                       lg={2}
-                      sx={{ textAlign: "left" }}
+                      sx={{ textAlign: "left" ,pl:4}}
+                      pl={4}
                     >
                       <Author_1>
                         <ImgBox>
@@ -466,7 +469,7 @@ const Collaborators = () => {
                       sm={6}
                       md={2}
                       lg={2}
-                      sx={{ textAlign: "left" }}
+                      sx={{ textAlign: "left" ,paddingLeft:"4rem"}}
                       ml={0}
                       mr={2}
                     >
@@ -494,7 +497,7 @@ const Collaborators = () => {
                         </Typography>
                       </Author_3>
                     </Grid>
-                    <Grid item xs={6} sm={6} md={2} lg={2} pl={0}>
+                    <Grid item xs={6} sm={6} md={2} lg={2} pl={0} sx={{paddingLeft:"4rem"}}>
                       <Author_4>
                         <ImgBox>
                           <img src={itemData[3].img} alt="img" width="100%" />
@@ -571,7 +574,7 @@ const Collaborators = () => {
                         </Typography>
                       </Author_9>
                     </Grid>
-                    <Grid item xs={6} sm={6} md={2} lg={2}>
+                    <Grid item xs={6} sm={6} md={2} lg={2} sx={{paddingLeft:"4rem"}}>
                       <Author_10>
                         <ImgBox>
                           <img src={itemData[9].img} alt="img" width="100%" />

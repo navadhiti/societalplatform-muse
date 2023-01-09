@@ -153,7 +153,7 @@ const Stories = () => {
                                     key={index}
                                     id={item.id}
                                     onMouseEnter={() => setId(item.id)}
-                                    //   onMouseOut={() => setId(0)}
+                                    // onMouseOut={() => setId(0)}
                                 >
                                     <Typography variant="caption">
                                         <Stack spacing={2} direction="row">

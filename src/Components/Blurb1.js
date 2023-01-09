@@ -100,7 +100,7 @@ const Blurb_1 = () => {
                                    <b> Sanjay Purohit</b>
                                 </Typography>
                                 <Typography variant="body2">
-                                    Chief Curator
+                                    CHIEF CURATOR
                                 </Typography>
                             </Grid>
                             <Grid

@@ -95,6 +95,7 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.ASSISTANT,
+      color: '#000',
       '@media (max-width:550px)': {
         fontSize: FONT.SIZES[10],
         lineHeight: '18px',
@@ -104,7 +105,6 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[12],
       fontFamily: FONT.FAMILY.ASSISTANT,
-      // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     link: {
       background: ` url(${Line}) bottom no-repeat`,
@@ -132,12 +132,13 @@ const theme = createTheme({
     caption: {
       '&:hover': {
         background: ` url(${ArrowImage}) bottom right no-repeat,url(${Line}) bottom no-repeat`,
-
+        opacity: 1,
         cursor: 'pointer',
       },
       fontWeight: FONT.WEIGHT.REGULAR,
       fontFamily: FONT.FAMILY.CAMPAIGN,
       fontSize: FONT.SIZES[24],
+      opacity: 0.2,
       '@media (max-width:990px)': {
         '&:hover': {
           background: `none`,
@@ -300,7 +301,7 @@ const theme = createTheme({
             padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(-4deg)',
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -322,7 +323,7 @@ const theme = createTheme({
             padding: '1rem',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(-7deg)',
 
             // margin:'2.8rem'
           },
@@ -340,7 +341,9 @@ const theme = createTheme({
             padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(10deg)',
+            transform: 'rotate(2deg)',
+            marginTop: '12rem',
+
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -363,6 +366,7 @@ const theme = createTheme({
             backgroundColor: 'transparent',
             cursor: 'pointer',
             transform: 'rotate(10deg)',
+            marginTop: '12rem',
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -384,7 +388,8 @@ const theme = createTheme({
             padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(10deg)',
+            transform: 'rotate(6deg)',
+
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -406,7 +411,7 @@ const theme = createTheme({
             padding: '1rem',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(10deg)',
+            transform: 'rotate(6deg)',
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -428,7 +433,8 @@ const theme = createTheme({
             padding: '5rem 0',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(-4deg)',
+            marginTop: '10rem',
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -449,7 +455,7 @@ const theme = createTheme({
             padding: '1rem',
             backgroundColor: 'transparent',
             cursor: 'pointer',
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(-4deg)',
             // margin:'2.8rem'
             '@media (max-width:550px)': {
               minHeight: '12rem',
@@ -509,7 +515,7 @@ const theme = createTheme({
         {
           props: { variant: 'card_content1' },
           style: {
-            transform: 'rotate(9deg)',
+            transform: 'rotate(3deg)',
           },
         },
         {
@@ -521,19 +527,19 @@ const theme = createTheme({
         {
           props: { variant: 'card_content2' },
           style: {
-            transform: 'rotate(-8deg)',
+            transform: 'rotate(-1deg)',
           },
         },
         {
           props: { variant: 'card_content_flip2' },
           style: {
-            transform: 'rotate(-10deg)',
+            transform: 'rotate(-1deg)',
           },
         },
         {
           props: { variant: 'card_content3' },
           style: {
-            transform: 'rotate(-9deg)',
+            transform: 'rotate(-4deg)',
           },
         },
         {
@@ -551,7 +557,7 @@ const theme = createTheme({
         {
           props: { variant: 'card_content_flip4' },
           style: {
-            transform: 'rotate(10deg)',
+            transform: 'rotate(4deg)',
           },
         },
         {
@@ -904,6 +910,19 @@ const theme = createTheme({
               height: '3rem',
               width: '23.813rem',
             },
+          },
+        },
+      ],
+    },
+    MuiDivider: {
+      variants: [
+        {
+          props: { variant: 'middle' },
+          style: {
+            marginLeft: '0px',
+            marginRight: '60px',
+            borderStyle: 'dotted',
+            borderColor: 'black',
           },
         },
       ],

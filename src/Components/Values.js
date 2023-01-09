@@ -26,7 +26,7 @@ const Values = () => {
   }
   return (
     <>
-      <Section>
+      <Section sx={{overflow:"hidden"}}>
         <Box>
           <Grid
             container
