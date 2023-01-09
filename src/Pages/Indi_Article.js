@@ -188,11 +188,11 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction={{ xs: 'column-reverse', md: 'row' }}
+            direction={{ xs: 'column-reverse', sm: 'row' }}
             justifyContent="center"
             alignItems="center"
           >
-            <Grid item xs={12} md={7} sx={{ textAlign: 'left' }}>
+            <Grid item xs={12} sm={7} md={7} sx={{ textAlign: 'left' }}>
               <Title>
                 <Typography
                   variant="h1"
@@ -254,7 +254,7 @@ const Indi_Article = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} sm={5} md={5}>
               <Box display={{ xs: 'none', md: 'block' }}>
                 <img
                   style={{ width: '606px', height: '630px' }}
