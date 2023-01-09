@@ -60,13 +60,18 @@ export const Title = styled(Typography)`
     color: #241c15;
   }
 
-  blockquote {
+  blockquote p {
     font-family: ${FONT.FAMILY.CAMPAIGN};
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: ${FONT.SIZES[24]};
     text-align: center;
   }
+
+  blockquote:nth-of-type(2) {
+    color: 'red';
+  }
 `;
+
 export const Frame = styled(Box)`
   img {
     width: 40px;

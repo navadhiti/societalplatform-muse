@@ -16,6 +16,7 @@ import {
   SpeedDialAction,
   Autocomplete,
   InputAdornment,
+  CircularProgress,
 } from '@mui/material';
 import {
   PictureAsPdfOutlined,
@@ -122,9 +123,9 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  // console.log(extractedH2, 'hello');
 
   // onclick button section scroll function
+
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
     const headerOffset = 45;
@@ -136,6 +137,25 @@ const Indi_Article = () => {
     });
   };
 
+  // scroll progressBar
+
+  // const windowHeight =
+  //   document.documentElement.scrollHeight -
+  //   document.documentElement.clientHeight;
+  // console.log(windowHeight,'window');
+  const [progress, setProgress] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
+    }, 800);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -161,7 +181,7 @@ const Indi_Article = () => {
                   dangerouslySetInnerHTML={{
                     __html: data?.title.rendered,
                   }}
-                ></Typography>
+                />
               </Title>
               <Grid
                 container
@@ -238,7 +258,7 @@ const Indi_Article = () => {
           <Grid
             container
             direction="row"
-            justifyContent={{ xs: 'flex-start', md: 'space-between' }}
+            justifyContent={{ xs: 'flex-start', md: 'flex-start' }}
             alignItems="center"
             mt={5}
           >
@@ -257,7 +277,7 @@ const Indi_Article = () => {
                   return (
                     <TextField
                       {...params}
-                      placeholder="Search"
+                      placeholder="SEARCH"
                       variant="outlined"
                       InputProps={{
                         ...params.InputProps,
@@ -272,7 +292,7 @@ const Indi_Article = () => {
                 }}
               />
             </Grid>
-            <Grid item xs={6} md={9}>
+            <Grid item xs={6} md={8}>
               <Stack
                 direction="row"
                 justifyContent="flex-end"
@@ -331,6 +351,11 @@ const Indi_Article = () => {
           <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
+                <CircularProgress
+                  thickness={2}
+                  variant="determinate"
+                  value={progress}
+                />
                 <List>
                   <Typography variant="h5"> ARTICLE OUTLINE</Typography>
                   {extractedH2?.map((elem, i) => (
@@ -383,9 +408,7 @@ const Indi_Article = () => {
                   mb: 3,
                 }}
               >
-                <Typography variant="h4" sx={{}}>
-                  Sanjay Purohit
-                </Typography>
+                <Typography variant="h4">Sanjay Purohit</Typography>
               </Box>
               <Typography
                 variant="body"
