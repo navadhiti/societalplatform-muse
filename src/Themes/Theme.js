@@ -96,8 +96,13 @@ const theme = createTheme({
       // fontWeight: FONT.WEIGHT.DEMI_BOLD,
       fontSize: FONT.SIZES[14],
       fontFamily: FONT.FAMILY.ASSISTANT,
+<<<<<<< HEAD
       color: "#000",
       "@media (max-width:550px)": {
+=======
+      color: '#000',
+      '@media (max-width:550px)': {
+>>>>>>> b1f982b48f5722c85f7b7eaadf8e11090717d612
         fontSize: FONT.SIZES[10],
         lineHeight: "18px",
       },
@@ -106,8 +111,6 @@ const theme = createTheme({
       fontWeight: FONT.WEIGHT.MEDIUM,
       fontSize: FONT.SIZES[12],
       fontFamily: FONT.FAMILY.ASSISTANT,
-      // textTransform: 'uppercase',
-      // background:` url(${Divider}) bottom no-repeat`,paddingBottom:'20px',backgroundSize: 'contain',
     },
     link: {
       background: ` url(${Line}) bottom no-repeat`,
@@ -259,10 +262,10 @@ const theme = createTheme({
         {
           props: { variant: "icon-btn" },
           style: {
-            border: "1.5px solid #241C15",
-            borderRadius: "50%",
-            width: "60px",
-            height: "60px",
+            border: '1.5px solid #241C15',
+            borderRadius: '50%',
+            width: '3.7rem',
+            height: '3.7rem',
           },
         },
       ],
@@ -921,6 +924,19 @@ const theme = createTheme({
               height: "3rem",
               width: "23.813rem",
             },
+          },
+        },
+      ],
+    },
+    MuiDivider: {
+      variants: [
+        {
+          props: { variant: 'middle' },
+          style: {
+            marginLeft: '0px',
+            marginRight: '60px',
+            borderStyle: 'dotted',
+            borderColor: 'black',
           },
         },
       ],

@@ -16,6 +16,7 @@ import {
   SpeedDialAction,
   Autocomplete,
   InputAdornment,
+  CircularProgress,
 } from '@mui/material';
 import {
   PictureAsPdfOutlined,
@@ -122,9 +123,9 @@ const Indi_Article = () => {
   };
 
   const extractedH2 = data?.content.rendered.match(/<h(.)>.*?<\/h\1>/gs);
-  // console.log(extractedH2, 'hello');
 
   // onclick button section scroll function
+
   const onBtnClick = (id) => {
     const element = document.getElementById(id);
     const headerOffset = 45;
@@ -136,10 +137,46 @@ const Indi_Article = () => {
     });
   };
 
+  // scroll progressBar
+
+  // const [progress, setProgress] = React.useState(0);
+  const [scroll, setScroll] = useState(0);
+
+  const containerHeight =
+    document.getElementsByClassName('contentContain').clientHeight;
+  console.log('tester', containerHeight);
+  useEffect(() => {
+    let progressBarHandler = () => {
+      const totalScroll = document.documentElement.scrollTop;
+      // console.log(totalScroll, 'scroll');
+      const windowHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      const scroll = `${totalScroll / windowHeight}`;
+
+      setScroll(scroll);
+    };
+
+    // window.addEventListener("scroll", progressBarHandler);
+
+    return () => clearInterval('scroll', progressBarHandler);
+  }, []);
+
+  // React.useEffect(() => {
+  //   const timer = setInterval(() => {
+  //     setProgress((prevProgress) =>
+  //       prevProgress >= 100 ? 0 : prevProgress + 10
+  //     );
+  //   }, 800);
+
+  //   return () => {
+  //     clearInterval(timer);
+  //   };
+  // }, []);
   return (
     <>
       <div style={styles.LandingBackground}>
-        <Box elevation={1} ml="1.5625rem">
+        <Box elevation={1} ml="3.5rem">
           <Stack spacing={2} pt="2.5rem">
             <Breadcrumbs
               separator={<NavigateNext fontSize="small" />}
@@ -161,7 +198,7 @@ const Indi_Article = () => {
                   dangerouslySetInnerHTML={{
                     __html: data?.title.rendered,
                   }}
-                ></Typography>
+                />
               </Title>
               <Grid
                 container
@@ -200,7 +237,9 @@ const Indi_Article = () => {
                           Gautam Prakash
                         </b>
                       </Typography>
-                      <Typography>Co-founders, Reap Benefit</Typography>
+                      <Typography sx={{ color: '#885CA1' }}>
+                        Co-founders, Reap Benefit
+                      </Typography>
                     </Grid>
                   </Grid>
                 </Grid>
@@ -231,35 +270,48 @@ const Indi_Article = () => {
               </Box>
             </Grid>
           </Grid>
-          <Divider
-            variant="middle"
-            sx={{ borderStyle: 'dotted', borderColor: 'black' }}
-          />
+          <Divider variant="middle" />
           <Grid
             container
             direction="row"
-            justifyContent={{ xs: 'flex-start', md: 'space-between' }}
+            justifyContent={{ xs: 'flex-start', md: 'flex-start' }}
             alignItems="center"
             mt={5}
           >
-            <Grid item xs={4} md={8} sx={{ textAlign: 'start' }}>
-              <TextField
-                id="outlined-basic"
-                placeholder="Search"
-                variant="outlined"
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <SearchOutlined />
-                    </InputAdornment>
-                  ),
+            <Grid item xs={4} md={3} sx={{ textAlign: 'start' }}>
+              <Autocomplete
+                freeSolo
+                id="free-solo-2-demo"
+                disableClearable
+                options={extractedH2?.map((elem, index) => {
+                  return { label: elem.replace(/<[^>]+>/g, ''), id: index };
+                })}
+                onChange={(e, value) => {
+                  onBtnClick(value.id);
+                }}
+                renderInput={(params) => {
+                  return (
+                    <TextField
+                      {...params}
+                      placeholder="SEARCH"
+                      variant="outlined"
+                      InputProps={{
+                        ...params.InputProps,
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <SearchOutlined />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                  );
                 }}
               />
             </Grid>
-            <Grid item xs={6} md={4}>
+            <Grid item xs={6} md={8}>
               <Stack
                 direction="row"
-                justifyContent="center"
+                justifyContent="flex-end"
                 alignItems="center"
                 spacing={2}
               >
@@ -269,7 +321,6 @@ const Indi_Article = () => {
                 </Button>
                 <Box display={{ xs: 'none', md: 'block' }}>
                   <Button variant="icon-btn">
-                    {/* <PDFDownload /> */}
                     <PictureAsPdfOutlined />
                   </Button>
                 </Box>
@@ -291,6 +342,8 @@ const Indi_Article = () => {
                       '& .MuiFab-primary': {
                         boxShadow: 'none',
                         border: '1px solid black',
+                        height: '3.5rem',
+                        width: '3.5rem',
                       },
                     }}
                     icon={<ShareOutlined />}
@@ -311,11 +364,22 @@ const Indi_Article = () => {
               </Stack>
             </Grid>
           </Grid>
-          <Grid container mt={10} spacing={2}>
+          <Grid container mt={10} spacing={2} className="contentContain">
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
+                <CircularProgress
+                  thickness={2}
+                  variant="determinate"
+                  value={scroll}
+                />
                 <List>
-                  <Typography variant="h5"> ARTICLE OUTLINE</Typography>
+                  <Typography
+                    variant="h5"
+                    sx={{ color: '#241C1599', fontWeight: '600' }}
+                  >
+                    {' '}
+                    ARTICLE OUTLINE
+                  </Typography>
                   {extractedH2?.map((elem, i) => (
                     <ListItem>
                       <StickyButton onClick={() => onBtnClick(i)}>
@@ -366,9 +430,7 @@ const Indi_Article = () => {
                   mb: 3,
                 }}
               >
-                <Typography variant="h4" sx={{}}>
-                  Sanjay Purohit
-                </Typography>
+                <Typography variant="h4">Sanjay Purohit</Typography>
               </Box>
               <Typography
                 variant="body"
@@ -390,8 +452,8 @@ const Indi_Article = () => {
               </Typography>
             </Grid>
           </Grid>
-          <Stories_Aritcle />
         </Box>
+        <Stories_Aritcle />
       </div>
     </>
   );

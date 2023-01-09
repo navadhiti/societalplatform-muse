@@ -11,9 +11,9 @@ import Art from '../Assets/Images/Artwork_3.png';
 
 export const StickyButton = styled(Button)`
   border: none;
+  height: 1.5rem;
   background: none;
   text-transform: capitalize;
-  height: 1.5rem;
 
   &:hover {
     background: ${`url(${Scribble2}) bottom  no-repeat`};
@@ -25,8 +25,11 @@ export const StickyButton = styled(Button)`
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: 18px;
     color: #241c15;
-    // height: 0.2rem;
-    line-height:20px;
+    line-height: 20px;
+
+    :hover {
+      color: #865ba0;
+    }
   }
 `;
 
@@ -61,13 +64,18 @@ export const Title = styled(Typography)`
     color: #241c15;
   }
 
-  blockquote {
+  blockquote p {
     font-family: ${FONT.FAMILY.CAMPAIGN};
     font-weight: ${FONT.WEIGHT.REGULAR};
     font-size: ${FONT.SIZES[24]};
     text-align: center;
   }
+
+  blockquote:nth-of-type(2) {
+    color: 'red';
+  }
 `;
+
 export const Frame = styled(Box)`
   img {
     width: 40px;
@@ -88,10 +96,10 @@ export const Logo = styled(Box)`
   }
 `;
 export const LandingImage = styled(Box)`
-text-align:end;
-  img{
-    width:100%;
-    height:auto;
+  text-align: end;
+  img {
+    width: 100%;
+    height: auto;
     @media (max-width: 990px) {
       width: 40%;
       text-align: end;
