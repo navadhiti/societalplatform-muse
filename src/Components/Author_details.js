@@ -1,8 +1,10 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import data from "../db.json";
 import backgroud from "../Assets/Images/Authors/bg1.png";
 import backgroud1 from "../Assets/Images/Authors/bg2.png";
+import Verticleline from "../Assets/Images/varticleLine.png";
+
 import MuseButton from "./MuseButton";
 import { AnimatedButton, Section } from "../Themes/StyledComponent";
 import Author2 from "../Assets/Images/Authors/Author2.png";
@@ -31,7 +33,7 @@ const Author_details = () => {
                                     borderRadius: "15px",
                                 }}
                             >
-                                <Grid item xs={12} sm={12} md={4} lg={4}>
+                                <Grid item xs={12} sm={12} md={3} lg={3} >
                                     <Box
                                         sx={{
                                             // border: "solid 1px black",
@@ -44,7 +46,10 @@ const Author_details = () => {
                                             backgroundSize: "contain",
                                         }}
                                     >
+                                        <Box sx={{border:"2px solid black",borderRadius:""}}>
+
                                         <img src={Author2} />
+                                        </Box>
 
                                         <Typography
                                             variant="body1"
@@ -62,17 +67,32 @@ const Author_details = () => {
                                 </Grid>
                                 <Grid
                                     item
+                                    xs={1}
+                                    sm={1}
+                                    md={1}
+                                    lg={1}
+                                    textAlign={{xs:"center",md:"left"}}
+                                    // sx={{borderLeft:"1px solid black"}}
+                                >
+                                {/* <Divider orientation="vertical" flexItem ></Divider> */}
+            <img src={Verticleline} />
+
+                                </Grid>
+
+                                <Grid
+                                    item
                                     xs={12}
                                     sm={12}
                                     md={8}
                                     lg={8}
                                     textAlign={{xs:"center",md:"left"}}
                                 >
+                                {/* <Divider orientation="vertical" flexItem ></Divider> */}
                                     <Typography variant="body">
                                         {item.blurb}
                                     </Typography><br />
                                 
-                                    <MuseButton title="Read Articles" />
+                                    <MuseButton title="Read Article" />
                                 </Grid>
                             </Grid>
                         ))}

@@ -49,7 +49,7 @@ import {
 
 // import { ImgBox } from '../Themes/StyledComponent';
 
-import Divider from "../Assets/Images/Vector 12.png";
+import Divider from "../Assets/Images/stroke-scribble.png";
 import Pen from "../Assets/Images/img-pen.png";
 import { AnimatedButton } from "../Themes/StyledComponent";
 import MuseButton from "./MuseButton";
@@ -151,6 +151,7 @@ const Collaborators = () => {
                 md: "flex-end",
               }}
               alignItems="center"
+              direction={{xs:"column-reverse",md:"row"}}
               py={{ xs: 2, sm: 2, md: 5 }}
             >
               <Grid
@@ -440,6 +441,7 @@ const Collaborators = () => {
                     justifyContent="center"
                     alignItems="center"
                     mt={{ xs: 3, md: -30 }}
+                    pl={5}
                   >
                     <Grid
                       item
@@ -448,7 +450,7 @@ const Collaborators = () => {
                       md={2}
                       lg={2}
                       sx={{ textAlign: "left" ,pl:4}}
-                      pl={4}
+                      pl={15}
                     >
                       <Author_1>
                         <ImgBox>

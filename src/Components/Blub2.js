@@ -29,7 +29,7 @@ const Blub2 = () => {
         <Container style={styles.paperContainer}>
           <Grid container spacing={0} justifyContent="start" alignItems="start">
             <Grid item xs={12} sm={12} md={8} lg={8} textAlign="left">
-              <Typography variant="h3" textAlign="Left">
+              <Typography variant="h3" textAlign="Left" pr={{xs:0,md:9}}>
                 What if you could apply Societal Thinking to problems and
                 understand the difference you could make?
               </Typography>
