@@ -310,7 +310,7 @@ const theme = createTheme({
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(-7deg)",
+            transform: "rotate(-4deg)",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -332,7 +332,7 @@ const theme = createTheme({
             padding: "1rem",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(-7deg)",
+            transform: "rotate(-4deg)",
 
             // margin:'2.8rem'
           },
@@ -350,10 +350,8 @@ const theme = createTheme({
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(2deg)",
-            marginTop: "12rem",
-
-            // margin:'2.8rem'
+            transform: "rotate(7deg)",
+            
             "@media (max-width:550px)": {
               minHeight: "12rem",
               transform: "rotate(-3deg)",
@@ -374,11 +372,9 @@ const theme = createTheme({
             padding: "1rem",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(10deg)",
-            marginTop: "12rem",
-            // margin:'2.8rem'
+            transform: "rotate(7deg)",
             "@media (max-width:550px)": {
-              minHeight: "12rem",
+              // minHeight: "12rem",
               transform: "rotate(3deg)",
               marginTop: "10px",
             },
@@ -397,7 +393,7 @@ const theme = createTheme({
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(6deg)",
+            transform: "rotate(4deg)",
 
             // margin:'2.8rem'
             "@media (max-width:550px)": {
@@ -420,7 +416,7 @@ const theme = createTheme({
             padding: "1rem",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(6deg)",
+            transform: "rotate(4deg)",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -442,8 +438,8 @@ const theme = createTheme({
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(-4deg)",
-            marginTop: "10rem",
+            transform: "rotate(-6deg)",
+            // marginTop: "10rem",
             // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
@@ -464,8 +460,8 @@ const theme = createTheme({
             padding: "1rem",
             backgroundColor: "transparent",
             cursor: "pointer",
-            transform: "rotate(-4deg)",
-            marginTop: "12rem",
+            transform: "rotate(-6deg)",
+            // marginTop: "12rem",
 
             // margin:'2.8rem'
             "@media (max-width:550px)": {
@@ -487,12 +483,9 @@ const theme = createTheme({
             justifyContent: "center !important",
             alignItems: "center !important",
             verticalAlign: "center",
-            // alignItems: 'center',
-            // verticalAlign:'middle',
             padding: "5rem 0",
             backgroundColor: "transparent",
             cursor: "pointer",
-            // margin:'2.8rem'
             "@media (max-width:550px)": {
               minHeight: "12rem",
               marginTop: "10px",
@@ -538,13 +531,13 @@ const theme = createTheme({
         {
           props: { variant: "card_content2" },
           style: {
-            transform: "rotate(-1deg)",
+            transform: "rotate(-5deg)",
           },
         },
         {
           props: { variant: "card_content_flip2" },
           style: {
-            transform: "rotate(-1deg)",
+            transform: "rotate(-5deg)",
           },
         },
         {
@@ -562,13 +555,13 @@ const theme = createTheme({
         {
           props: { variant: "card_content4" },
           style: {
-            transform: "rotate(10deg)",
+            transform: "rotate(5deg)",
           },
         },
         {
           props: { variant: "card_content_flip4" },
           style: {
-            transform: "rotate(4deg)",
+            transform: "rotate(5deg)",
           },
         },
         {
@@ -913,14 +906,28 @@ const theme = createTheme({
           props: { variant: "outlined" },
           style: {
             "& .MuiOutlinedInput-notchedOutline": {
-              border: "none",
+              // border: "none",
             },
             ".MuiOutlinedInput-root": {
-              borderRadius: "100px !important",
-              border: "1.5px solid #241C15",
-              height: "3rem",
-              width: "23.813rem",
+              // borderRadius: "100px !important",
+              // border: "1.5px solid #241C15",
+              // height: "3rem",
+              // width: "23.813rem",
             },
+          },
+        },
+      ],
+      variants: [
+        {
+          props: { variant: "filled" },
+          style: {
+            
+              borderRadius: "10px !important",
+              // border: "1.5px solid #241C15",
+              // height: "3rem",
+
+              // width: "23.813rem",
+            
           },
         },
       ],

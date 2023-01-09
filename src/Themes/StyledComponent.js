@@ -77,6 +77,7 @@ export const Title = styled(Typography)`
 `;
 
 export const Frame = styled(Box)`
+margin-left: 1rem;
   img {
     width: 40px;
     height: 40px;

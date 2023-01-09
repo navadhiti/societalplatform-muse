@@ -35,7 +35,8 @@
           "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
           "class": "values",
           "class1": "values_flip",
-          "contentclass": "card_content1"
+          "contentclass": "card_content1",
+          "contentAlign":"flex-start"
       },
       {
         "id": "2",
@@ -43,7 +44,8 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values1",
         "class1": "values1_flip",
-        "contentclass": "card_content2"
+        "contentclass": "card_content2",
+        "contentAlign":"flex-end"
       },
       {
         "id": "3",
@@ -51,7 +53,8 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values2",
         "class1": "values2_flip",
-        "contentclass": "card_content3"
+        "contentclass": "card_content3",
+        "contentAlign":"flex-start"
       },
       {
         "id": "4",
@@ -59,7 +62,8 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values3",
         "class1": "values3_flip",
-        "contentclass": "card_content4"
+        "contentclass": "card_content4",
+        "contentAlign":"flex-end"
       },
       {
         "id": "5",
@@ -67,7 +71,8 @@
         "blurb": "Energize co-creation by leveraging technology and orchestrating ecosystems where assets are accessible and shared, allowing for inclusive problem-solving",
         "class": "values4",
         "class1": "values4_flip",
-        "contentclass": "card_content5"
+        "contentclass": "card_content5",
+        "contentAlign":"flex-start"
       }
       ],
       "partners": [
@@ -201,14 +206,14 @@
               "title": "Reimagining disaster resilience",
               "tag":"Health",
               "blurb": "Innovation in education takes years to enter schools ",
-              "date":"01,2022"
+              "date":"Edition 01 • 2022 "
           },
           {
               "id": "02",
               "title": "All teach, all learn",
               "tag":"Health",
               "blurb": "Every child has a strong foundation to Think",
-              "date":"01,2022"
+              "date":"Edition 01 • 2022"
               
           },
           {
@@ -216,7 +221,7 @@
               "title": "Solve small, dent big",
               "tag":"Health",
               "blurb": "Create a movement of empowered educators to innovate",
-              "date":"01,2022"
+              "date":"Edition 01 • 2022"
 
           },
           {
@@ -224,7 +229,7 @@
             "title": "Striking collaboration gold",
             "tag":"Health",
             "blurb": "Create a movement of empowered educators to innovate",
-            "date":"01,2022"
+            "date":"Edition 01 • 2022"
 
         },
         {
@@ -232,7 +237,7 @@
             "title": "When society, state and markets work together",
             "tag":"Health",
             "blurb": "Create a movement of empowered educators to innovate",
-            "date":"01,2022"
+            "date":"Edition 01 • 2022"
 
         },
         {
@@ -240,7 +245,7 @@
             "title": "Build beyond",
             "tag":"Health",
             "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
-            "date":"01,2022"
+            "date":"Edition 01 • 2022"
 
         },
         {
@@ -248,7 +253,7 @@
             "title": "The power of public goods",
             "tag":"Health",
             "blurb": "Create a movement of empowered educators to innovate and meaningfully make education better for children, now!!!",
-            "date":"01,2022"
+            "date":"Edition 01 • 2022"
 
         }
 
