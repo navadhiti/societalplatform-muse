@@ -97,6 +97,7 @@ const Layout = () => {
               <ThemeProvider theme={theme}>
                 <Header
                   color={path !== '/indiviual-articles' ? 'inherit' : 'action'}
+                  pb={2}
                 />
 
                 <Box

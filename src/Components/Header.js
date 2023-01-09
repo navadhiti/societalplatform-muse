@@ -17,7 +17,7 @@ import {
   ListItemButton,
   Drawer,
 } from '@mui/material';
-import { useNavigate,} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -29,11 +29,10 @@ import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import PropTypes from 'prop-types';
 import logo from '../Assets/Images/sp_muse_logo.png';
 import frame from '../Assets/Images/Frame.png';
-import data from "../db.json";
+import data from '../db.json';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { Frame, Logo } from '../Themes/StyledComponent';
-
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -112,7 +111,7 @@ const styles = {
 };
 const buttonName = data.menu;
 const Header = (props) => {
-  console.log(props.color,"color")
+  console.log(props.color, 'color');
   const navigate = useNavigate();
 
   const [state, setState] = React.useState({
@@ -134,7 +133,7 @@ const Header = (props) => {
     <Box
       sx={{
         width: 400,
-        height:'100vh',
+        height: '100vh',
         paddingRight: '10px',
         mt: 5,
       }}
@@ -149,8 +148,8 @@ const Header = (props) => {
         spacing={2}
       >
         <List>
-          {buttonName.map((item,index) => (
-            <ListItem disablePadding  key={index}>
+          {buttonName.map((item, index) => (
+            <ListItem disablePadding key={index}>
               <ListItemButton
                 sx={{
                   backgroundColor: item.backgroundColor,
@@ -161,9 +160,7 @@ const Header = (props) => {
                   height: 100,
                   justifyContent: 'center',
                 }}
-                onClick={()=>
-                  navigate(item.link)
-                }
+                onClick={() => navigate(item.link)}
               >
                 {item.name}
               </ListItemButton>
@@ -205,10 +202,10 @@ const Header = (props) => {
               alignItems="center"
               justifyContent="flex-start"
             >
-              <Grid item xs={2} sm={3} md={3} lg={3} >
+              <Grid item xs={2} sm={3} md={3} lg={3}>
                 <Frame>
-                {/* <KeyboardArrowLeftIcon /> */}
-                <img src={frame} alt="img" />
+                  {/* <KeyboardArrowLeftIcon /> */}
+                  <img src={frame} alt="img" />
                 </Frame>
               </Grid>
               <Grid
@@ -220,11 +217,9 @@ const Header = (props) => {
                 justifyContent="center"
                 sx={{ textAlign: 'center' }}
                 alignItems="center"
-                
               >
                 <Logo>
-
-                <img src={logo} alt="img" />
+                  <img src={logo} alt="img" />
                 </Logo>
               </Grid>
               <Grid item xs={3} sm={3} md={3} lg={3} textAlign="end">
@@ -235,7 +230,7 @@ const Header = (props) => {
                         onClick={toggleDrawer(anchor, true)}
                         variant="Menu-btn"
                       >
-                        <MenuIcon/>
+                        <MenuIcon />
                       </Button>
                       <Drawer
                         anchor={anchor}
@@ -248,7 +243,21 @@ const Header = (props) => {
                   ))}
                 </Box>
                 <Box display={{ xs: 'none', md: 'block' }}>
-                <Button variant="outlined" sx={{color:'#000',borderColor:'#000',borderRadius:'25px',fontWeight:600,px:5,mr:15,py:1}} mr={5}  >Contact</Button>
+                  <Button
+                    variant="outlined"
+                    sx={{
+                      color: '#000',
+                      borderColor: '#000',
+                      borderRadius: '25px',
+                      fontWeight: 600,
+                      px: 5,
+                      mr: 15,
+                      py: 1,
+                    }}
+                    mr={5}
+                  >
+                    Contact
+                  </Button>
                 </Box>
               </Grid>
             </Grid>

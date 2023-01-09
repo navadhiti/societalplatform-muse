@@ -139,40 +139,42 @@ const Indi_Article = () => {
 
   // scroll progressBar
 
-  // const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = React.useState(0);
+  const [containerHeight, setContainerHeight] = useState(0);
+  const [scrollHeight, setScrollHeight] = useState(0);
+  const [scrollTop, setScrollTop] = useState(0);
   const [scroll, setScroll] = useState(0);
 
-  const containerHeight =
-    document.getElementsByClassName('contentContain').clientHeight;
-  console.log('tester', containerHeight);
+  const ref = useRef(null);
+
   useEffect(() => {
     let progressBarHandler = () => {
-      const totalScroll = document.documentElement.scrollTop;
-      // console.log(totalScroll, 'scroll');
-      const windowHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const scroll = `${totalScroll / windowHeight}`;
-
+      setContainerHeight(ref.current.clientHeight);
+      setScrollHeight(ref.current.scrollHeight);
+      setScroll(ref.current.scrollTop);
+      const windowHeight = scrollHeight - containerHeight;
+      const scroll = `${scrollTop / windowHeight}`;
       setScroll(scroll);
     };
-
-    // window.addEventListener("scroll", progressBarHandler);
-
-    return () => clearInterval('scroll', progressBarHandler);
+    // progressBarHandler();
   }, []);
 
-  // React.useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setProgress((prevProgress) =>
-  //       prevProgress >= 100 ? 0 : prevProgress + 10
-  //     );
-  //   }, 800);
+  console.log(scroll, 'scroll');
 
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
+  // Content reading time caculate
+
+  const [readTime, setReadTime] = useState();
+  useEffect(() => {
+    function readingTime() {
+      const text = document.getElementById('article').innerText;
+      const wpm = 238;
+      const words = text.trim().split(/\s+/).length;
+      const time = Math.ceil(words / wpm);
+      setReadTime(time);
+    }
+    readingTime();
+  }, []);
+
   return (
     <>
       <div style={styles.LandingBackground}>
@@ -364,13 +366,19 @@ const Indi_Article = () => {
               </Stack>
             </Grid>
           </Grid>
-          <Grid container mt={10} spacing={2} className="contentContain">
+          <Grid ref={ref} container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
+                <Typography>
+                  <span id="time" style={{ fontSize: '40px' }}>
+                    {readTime}
+                  </span>
+                  <br /> min read
+                </Typography>
                 <CircularProgress
                   thickness={2}
                   variant="determinate"
-                  value={scroll}
+                  value={progress}
                 />
                 <List>
                   <Typography
@@ -411,11 +419,13 @@ const Indi_Article = () => {
               px={{ xs: 4, md: 5 }}
             >
               <Title>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: result,
-                  }}
-                ></div>
+                <div id="article">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: result,
+                    }}
+                  />
+                </div>
               </Title>
             </Grid>
           </Grid>
@@ -438,12 +448,7 @@ const Indi_Article = () => {
                   __html: author?.description,
                 }}
               ></Typography>
-              {/* <Typography
-                  variant="h4"
-                  dangerouslySetInnerHTML={{
-                    __html: author?.name,
-                  }}
-                ></Typography> */}
+
               <Typography variant="h4" sx={{ pt: 5 }}>
                 Sanjay Purohit
               </Typography>
