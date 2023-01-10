@@ -12,10 +12,11 @@ import {
 import React from "react";
 
 import { SelectChangeEvent } from "@mui/material/Select";
-import { Section } from "../Themes/StyledComponent";
+import { ArticleDescriptionSection, ArticleFilterSection, DescriptionSection, Section } from "../Themes/StyledComponent";
 import dividerline from "../Assets/Images/Line 7.png";
 import Story_card from "./Story_card";
 import data from "../db.json";
+import { ArticleLanding } from "../Themes/StyledComponent";
 
 const All_Articles_card = (posts) => {
   const itemData = data.Article.Stories;
@@ -25,32 +26,39 @@ const All_Articles_card = (posts) => {
   const handleChange = (event: SelectChangeEvent) => {
     setAge(event.target.value);
   };
-  const styles = {
-    LandingBackground: {
-      backgroundColor: "#EDEBEA",
-      color: "#fff",
-      borderRadius: "30px 30px 0px 0px ",
-    },
-    LandingBackground1: {
-      backgroundColor: "#EDEBEA",
-      borderRadius: "0px 0px 30px 30px ",
-    },
-  };
+  // const styles = {
+  //   LandingBackground: {
+  //     backgroundColor: "#EDEBEA",
+  //     // color: "#fff",
+  //     borderRadius: "30px 30px 0px 0px ",
+  //     '@media (max-width: 550px)': {
+  //       backgroundColor: "#ffffff !important",
+  //     borderRadius: "30px 30px 0px 0px ",
+
+  //     },
+  //   },
+  //   LandingBackground1: {
+  //     backgroundColor: "#EDEBEA",
+  //     borderRadius: "0px 0px 30px 30px ",
+  //   },
+  // };
   return (
     <>
       <Box id="article_cards">
         <Container>
-          <Box style={styles.LandingBackground}>
+          <ArticleFilterSection>
             <Grid
               container
               spacing={0}
               justifyContent="flex-start"
               alignItems="center"
-              pt={5}
+              pt={{xs:2,sm:3,md:5}}
+              pb={{xs:2,sm:0}}
               // px={{xs:2,md:5}}
               px={{ xs: 0, sm: 0 }}
             >
-              <Grid item xs={12} sm={12} md={4} lg={4} spacing={0}>
+              <Grid item xs={12} sm={12} md={4} lg={4} spacing={0} p={{xs:2,sm:0
+              }}>
                 <Stack
                   direction="row"
                   justifyContent="center"
@@ -136,9 +144,11 @@ const All_Articles_card = (posts) => {
                 </Stack>
               </Grid>
             </Grid>
-          </Box>
-          <Box style={styles.LandingBackground1}>
+          </ArticleFilterSection>
+          <ArticleDescriptionSection>
+            <Box display={{xs:"none",sm:"block"}}>
             <img src={dividerline} width="100%" />
+            </Box>
             <Box pt={5}>
               <Typography variant="h6" sx={{ textAlign: "left" }}>
                 <b> EDITION 01</b>
@@ -170,7 +180,7 @@ const All_Articles_card = (posts) => {
               ))}
               {/* </Slider> */}
             </Grid>
-          </Box>
+          </ArticleDescriptionSection>
         </Container>
       </Box>
     </>

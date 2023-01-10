@@ -26,7 +26,7 @@ const Blub2 = () => {
   return (
     <>
       <Section>
-        <Container style={styles.paperContainer}>
+        <StyledContainer >
           <Grid container spacing={0} justifyContent="start" alignItems="start">
             <Grid item xs={12} sm={12} md={8} lg={8} textAlign="left">
               <Typography variant="h3" textAlign="Left" pr={{xs:0,md:9}}>
@@ -45,7 +45,7 @@ const Blub2 = () => {
               </Box>
             </Grid>
           </Grid>
-        </Container>
+        </StyledContainer>
       </Section>
     </>
   );

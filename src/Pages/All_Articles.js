@@ -10,6 +10,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import All_Articles_card from "../Components/All_Articles_card";
 import FetchApiSetup from "../Components/Api_info";
+import { ArticleLanding,DescriptionSection } from "../Themes/StyledComponent";
 
 const All_Articles = () => {
     const [age, setAge] = React.useState("");
@@ -22,18 +23,18 @@ const All_Articles = () => {
     };
     const itemData = data.Article.Stories;
 
-    const styles = {
-        LandingBackground: {
-            backgroundColor: "#DC8F6E",
-            color: "#fff",
-            borderRadius: '30px 0px 30px 30px ',
-        },
-        LandingBackground1: {
-            backgroundColor: "#EDEBEA",
-            borderRadius: '30px 30px 30px 30px ',
-            
-        },
-    };
+    // const styles = {
+    //     LandingBackground: {
+    //         backgroundColor: "#DC8F6E",
+    //         color: "#fff",
+    //         borderRadius: '30px 0px 30px 30px ',
+    //     },
+    //     LandingBackground1: {
+    //         backgroundColor: "#EDEBEA",
+    //         borderRadius: '30px 30px 30px 30px ',
+
+    //     },
+    // };
     // const functionCallForFetchApi = async () => {
     //     await FetchApiSetup(
     //         console.log("result")
@@ -58,12 +59,12 @@ const All_Articles = () => {
     console.log(post,"post")
     return (
         <>
-            <Box style={styles.LandingBackground}>
+            <ArticleLanding>
                 <Article_landing />
-            </Box>
-            <Box style={styles.LandingBackground1} py={5}>
+            </ArticleLanding>
+            <DescriptionSection py={{xs:1,sm:3,md:5}}>
                 <All_Articles_card posts= {post} />
-            </Box>
+            </DescriptionSection>
         </>
     );
 };
