@@ -90,6 +90,21 @@ export const Title = styled(Typography)`
     }
   }
 `;
+export const MenuNav =styled(Box)`
+height: 100vh;
+width: 425px;
+padding-right: 10px;
+background-color: #EDEBEA;
+@media (max-width: 550px) {
+  width: 425px;
+}
+@media (max-width: 380px) {
+  width: 375px;
+}
+@media (max-width: 325px) {
+  width: 320px;
+}
+`;
 
 export const Frame = styled(Box)`
   margin-left: 1rem;
@@ -206,8 +221,8 @@ color: #fff;
 border-radius: 30px 0px 30px 30px;
 `;
 export const ExpernceLanding = styled(Box)`
-background-color: #DC8F6E;
-color: #fff;
+background-color: #C4BCB9;
+// color: #fff;
 border-radius: 30px 0px 30px 30px;
 `;
 export const DescriptionSection = styled(Box)`

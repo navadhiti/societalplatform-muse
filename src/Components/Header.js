@@ -34,7 +34,7 @@ import frame from '../Assets/Images/Frame.png';
 import data from '../db.json';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import { Frame, Logo } from '../Themes/StyledComponent';
+import { Frame, Logo, MenuNav } from '../Themes/StyledComponent';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -136,15 +136,8 @@ const Header = (props) => {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{
-        width: 400,
-        height: '100vh',
-        paddingRight: '10px',
-        mt: 5,
-
-        backgroundColor: '#EDEBEA',
-      }}
+    <MenuNav
+    
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -156,7 +149,7 @@ const Header = (props) => {
         spacing={2}
         sx={{ backgroungColor: '#EDEBEA' }}
       >
-        <Box px={{ xs: 2, md: 8 }} py={{ xs: 2, sm: 0 }}>
+        <Box >
           <Grid
             container
             spacing={0}
@@ -180,7 +173,7 @@ const Header = (props) => {
               sx={{ textAlign: 'center' }}
               alignItems="center"
             >
-              <Logo>
+              <Logo pt={1}>
                 <img src={logo} alt="img" />
               </Logo>
             </Grid>
@@ -220,14 +213,14 @@ const Header = (props) => {
               </ListItem>
             ))}
           </List>
-          <Box py={5} px={3}>
+          <Box pt={15} px={3}>
             <Typography variant="h5">info@societalplatform.org</Typography>
             <ListItem
               disablePadding
               sx={{
                 px: 1,
                 width: '90px',
-                backgroundColor: '#f2f0ed',
+                // backgroundColor: '#f2f0ed',
               }}
             >
               {/* <ListItemIcon> */}
@@ -239,7 +232,7 @@ const Header = (props) => {
           </Box>
         </Box>
       </Stack>
-    </Box>
+    </MenuNav>
   );
 
   return (

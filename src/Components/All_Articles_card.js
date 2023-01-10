@@ -12,7 +12,12 @@ import {
 import React from "react";
 
 import { SelectChangeEvent } from "@mui/material/Select";
-import { ArticleDescriptionSection, ArticleFilterSection, DescriptionSection, Section } from "../Themes/StyledComponent";
+import {
+  ArticleDescriptionSection,
+  ArticleFilterSection,
+  DescriptionSection,
+  Section,
+} from "../Themes/StyledComponent";
 import dividerline from "../Assets/Images/Line 7.png";
 import Story_card from "./Story_card";
 import data from "../db.json";
@@ -52,13 +57,20 @@ const All_Articles_card = (posts) => {
               spacing={0}
               justifyContent="flex-start"
               alignItems="center"
-              pt={{xs:2,sm:3,md:5}}
-              pb={{xs:2,sm:0}}
+              pt={{ xs: 2, sm: 3, md: 5 }}
+              pb={{ xs: 2, sm: 0 }}
               // px={{xs:2,md:5}}
               px={{ xs: 0, sm: 0 }}
             >
-              <Grid item xs={12} sm={12} md={4} lg={4} spacing={0} p={{xs:2,sm:0
-              }}>
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={4}
+                lg={4}
+                spacing={0}
+                p={{ xs: 2, sm: 0 }}
+              >
                 <Stack
                   direction="row"
                   justifyContent="center"
@@ -146,16 +158,17 @@ const All_Articles_card = (posts) => {
             </Grid>
           </ArticleFilterSection>
           <ArticleDescriptionSection>
-            <Box display={{xs:"none",sm:"block"}}>
-            <img src={dividerline} width="100%" />
-            </Box>
-            <Box pt={5}>
-              <Typography variant="h6" sx={{ textAlign: "left" }}>
-                <b> EDITION 01</b>
-              </Typography>
-              <Typography variant="h3" textAlign="Left">
-                Response. Responsibility. Resilience.
-              </Typography>
+            <Box display={{ xs: "none", sm: "block" }}>
+              <img src={dividerline} width="100%" />
+
+              <Box pt={5}>
+                <Typography variant="h6" sx={{ textAlign: "left" }}>
+                  <b> EDITION 01</b>
+                </Typography>
+                <Typography variant="h3" textAlign="Left">
+                  Response. Responsibility. Resilience.
+                </Typography>
+              </Box>
             </Box>
             <Grid
               container
