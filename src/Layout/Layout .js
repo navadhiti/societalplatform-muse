@@ -80,14 +80,13 @@ const Layout = () => {
     //     setData(json);
     //     setTimeout(() => {
     //   setLoading(false);
-          
+
     //     }, 5000);
     //   })
     //   .catch((e) => setError(e));
     setTimeout(() => {
       setLoading(false);
-          
-        }, 5000);
+    }, 5000);
   }, []);
 
   return (

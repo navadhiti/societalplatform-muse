@@ -124,7 +124,8 @@ const Indi_Article = () => {
     const element = document.getElementById(id);
     const headerOffset = 45;
     const elementPosition = element.getBoundingClientRect().top - 500;
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const offsetPosition =
+      elementPosition + ref.current.offsetTop - headerOffset;
     element.scrollIntoView({
       top: offsetPosition,
       behavior: 'smooth',
@@ -134,12 +135,19 @@ const Indi_Article = () => {
   // scroll progressBar
 
   const [scroll, setScroll] = useState(0);
-
-  const ref = useRef(null);
-
-  // console.log(ref);
+  const ref = useRef();
 
   useEffect(() => {
+    let scrollTop = ref.current.scrollTop;
+    let docHeight = document.body.offsetHeight;
+    let winHeight = ref.current.clientHeight;
+    let scrollPercent = scrollTop / (docHeight - winHeight);
+    // let scrollPercentRounded = Math.round(scrollPercent * 100);
+    let degrees = scrollPercent * 360;
+
+
+    console.log(degrees, 'window');
+    // console.log(ref);
     const timer = setInterval(() => {
       setScroll((prevProgress) =>
         prevProgress >= 100 ? 0 : prevProgress + 10
@@ -148,7 +156,7 @@ const Indi_Article = () => {
     return () => {
       clearInterval(timer);
     };
-  });
+  }, []);
 
   // Content reading time caculate
 
@@ -355,7 +363,7 @@ const Indi_Article = () => {
               </Stack>
             </Grid>
           </Grid>
-          <Grid ref={ref} container mt={10} spacing={2}>
+          <Grid container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Box sx={{ position: 'relative', display: 'inline-flex' }}>
@@ -422,9 +430,10 @@ const Indi_Article = () => {
               md={7}
               sx={{ textAlign: 'left' }}
               px={{ xs: 4, md: 5 }}
+              ref={ref}
             >
               <Title>
-                <div id="article" ref={ref}>
+                <div id="article">
                   <div
                     dangerouslySetInnerHTML={{
                       __html: result,
