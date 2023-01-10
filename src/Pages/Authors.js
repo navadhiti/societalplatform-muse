@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import React from "react";
 import Authors_Landing from "../Components/Authors_Landing";
 import Author_details from "../Components/Author_details";
-import { AuthorLanding, DescriptionSection } from "../Themes/StyledComponent";
+import { ArticleDescriptionSection, AuthorLanding } from "../Themes/StyledComponent";
 
 const Authors = () => {
     const styles = {
@@ -24,9 +24,9 @@ const Authors = () => {
             <AuthorLanding>
                 <Authors_Landing />
             </AuthorLanding>
-            <DescriptionSection>
+            <ArticleDescriptionSection>
                 <Author_details />
-            </DescriptionSection>
+            </ArticleDescriptionSection>
         </>
     );
 };

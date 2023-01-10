@@ -141,7 +141,7 @@ const Header = (props) => {
         width: 400,
         height: '100vh',
         paddingRight: '10px',
-        mt: 5,
+        
 
         backgroundColor: '#EDEBEA',
       }}
@@ -156,7 +156,7 @@ const Header = (props) => {
         spacing={2}
         sx={{ backgroungColor: '#EDEBEA' }}
       >
-        <Box px={{ xs: 2, md: 8 }} py={{ xs: 2, sm: 0 }}>
+        <Box >
           <Grid
             container
             spacing={0}
@@ -180,7 +180,7 @@ const Header = (props) => {
               sx={{ textAlign: 'center' }}
               alignItems="center"
             >
-              <Logo>
+              <Logo pt={1}>
                 <img src={logo} alt="img" />
               </Logo>
             </Grid>
@@ -220,7 +220,7 @@ const Header = (props) => {
               </ListItem>
             ))}
           </List>
-          <Box py={5} px={3}>
+          <Box pt={15} px={3}>
             <Typography variant="h5">info@societalplatform.org</Typography>
             <ListItem
               disablePadding
