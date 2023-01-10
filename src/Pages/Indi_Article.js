@@ -139,23 +139,22 @@ const Indi_Article = () => {
 
   // scroll progressBar
 
-  const [containerHeight, setContainerHeight] = useState(0);
-  const [scrollHeight, setScrollHeight] = useState(0);
-  const [scrollTop, setScrollTop] = useState(0);
+  // const [containerHeight, setContainerHeight] = useState(0);
+  // const [scrollHeight, setScrollHeight] = useState(0);
+  // const [scrollTop, setScrollTop] = useState(0);
   const [scroll, setScroll] = useState(0);
 
   const ref = useRef(null);
 
   useEffect(() => {
-    let progressBarHandler = () => {
-      setContainerHeight(ref.current.clientHeight);
-      setScrollHeight(ref.current.scrollHeight);
-      setScrollTop(ref.current.scrollTop);
-      const windowHeight = scrollHeight - containerHeight;
-      const scroll = `${scrollTop / windowHeight}`;
-      setScroll(scroll);
+    const timer = setInterval(() => {
+      setScroll((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
+    }, 800);
+    return () => {
+      clearInterval(timer);
     };
-    progressBarHandler();
   });
 
   console.log(scroll, 'scroll');
@@ -188,7 +187,7 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction={{ xs: 'column-reverse', sm: 'row' }}
+            direction={{ xs: 'row-reverse', sm: 'row' }}
             justifyContent="center"
             alignItems="center"
           >
@@ -368,17 +367,36 @@ const Indi_Article = () => {
           <Grid ref={ref} container mt={10} spacing={2}>
             <Grid item xs={12} md={4} sx={{ textAlign: 'left' }}>
               <StickyBox offsetTop={20} offsetBottom={20}>
-                <Typography>
-                  <span id="time" style={{ fontSize: '40px' }}>
-                    {readTime && readTime}
-                  </span>
-                  <br /> min read
-                </Typography>
-                <CircularProgress
-                  thickness={2}
-                  variant="determinate"
-                  value={scroll}
-                />
+                <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+                  <CircularProgress
+                    thickness={1}
+                    variant="determinate"
+                    value={scroll}
+                  />
+                  <Box
+                    sx={{
+                      top: 0,
+                      left: 0,
+                      bottom: 0,
+                      right: 0,
+                      position: 'absolute',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Typography>
+                      <span
+                        id="time"
+                        style={{ fontSize: '40px', textAlign: 'center' }}
+                      >
+                        {readTime}
+                      </span>
+                      <br /> min read
+                    </Typography>
+                  </Box>
+                </Box>
+
                 <List>
                   <Typography
                     variant="h5"
