@@ -6,7 +6,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import data from "../db.json";
 import backgroud from "../Assets/Images/Authors/bg1.png";
 import backgroud1 from "../Assets/Images/Authors/bg2.png";
@@ -20,6 +20,31 @@ console.log(data.home.Authors, "authors");
 const author = data.home.Authors;
 
 const Author_details = () => {
+  const LongText = ({ content,limit}) => {
+  const [showAll, setShowAll] = useState(false);
+
+  const showMore = () => setShowAll(true);
+  const showLess = () => setShowAll(false);
+
+  if (content.length <= limit) {
+    // there is nothing more to show
+    return <div>{content}</div>
+  }
+  if (showAll) {
+    // We show the extended text and a link to reduce it
+    return <div> 
+      {content} <br></br>
+      <a onClick={showLess}><b><u>See less</u></b></a> 
+    </div>
+  }
+  // In the final case, we show a text with ellipsis and a `Read more` button
+  const toShow = content.substring(0, limit) + "...";
+  return <div> 
+    {toShow} 
+    <a onClick={showMore}><b><u>See more</u></b></a>
+  </div>
+}
+
   return (
     <>
       <Box>
@@ -87,7 +112,13 @@ const Author_details = () => {
                   textAlign={{ xs: "center", md: "left" }}
                 >
                   {/* <Divider orientation="vertical" flexItem ></Divider> */}
+                  
+                  <Box display={{xs:"block",sm:"none"}}>
+                  <Typography variant="body"><LongText content = {item.blurb} limit = {80} /></Typography>
+                  </Box>
+                  <Box display={{xs:"none",sm:"block"}}>
                   <Typography variant="body">{item.blurb}</Typography>
+                  </Box>
                   <br />
 
                   <MuseButton title="Read Article" />
