@@ -31,6 +31,7 @@ const All_Articles = () => {
         LandingBackground1: {
             backgroundColor: "#EDEBEA",
             borderRadius: '30px 30px 30px 30px ',
+            
         },
     };
     // const functionCallForFetchApi = async () => {
