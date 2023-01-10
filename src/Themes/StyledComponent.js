@@ -206,8 +206,8 @@ color: #fff;
 border-radius: 30px 0px 30px 30px;
 `;
 export const ExpernceLanding = styled(Box)`
-background-color: #DC8F6E;
-color: #fff;
+background-color: #C4BCB9;
+// color: #fff;
 border-radius: 30px 0px 30px 30px;
 `;
 export const DescriptionSection = styled(Box)`

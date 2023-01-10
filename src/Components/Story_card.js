@@ -38,7 +38,7 @@ const actions = [
   { icon: <ShareIcon />, name: 'Share' },
 ];
 
-const Story_card = ({ value, image, tag, title, blurb, edition }) => {
+const Story_card = ({ value, image, tag, title, blurb, edition,Number }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const path = location.pathname;
@@ -77,15 +77,22 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
             alt="green iguana"
           />
           <CardContent>
+          {path != '/experince' ? (
             <Chip
               color="success"
               label={tag}
               sx={{ color: '#fff', fontWeight: 800, mb: 2 }}
-            ></Chip>
+            ></Chip>):""}
 
             {/* <Chip variant="tag">HEALTH</Chip> */}
-
-            <Typography variant="subtitle2"> <LongText content = {title} limit = {20} /></Typography>
+            {path == '/experince' ? (
+            <Box>
+              <Typography variant="h5" textAlign="left"> {Number}</Typography>
+            <Typography variant="h4" textAlign="left">{title}</Typography>
+            </Box>
+            )
+            :<Typography variant="subtitle2"> <LongText content = {title} limit = {20} /></Typography>}
+            
             {path == '/articles' ? (
               <Typography
                 gutterBottom
@@ -159,7 +166,8 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                 </Box>
               </>
             ) : (
-              <Box
+             path != '/experince'?
+             <Box
                 sx={{
                   transform: 'translateZ(0px)',
                   flexGrow: 1,
@@ -197,7 +205,7 @@ const Story_card = ({ value, image, tag, title, blurb, edition }) => {
                     />
                   ))}
                 </SpeedDial>
-              </Box>
+              </Box>:""
             )}
 
             {/* <CardActions> */}
