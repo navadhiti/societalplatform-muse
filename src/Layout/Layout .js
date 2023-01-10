@@ -79,10 +79,12 @@ const Layout = () => {
       .then((json) => {
         setData(json);
         setTimeout(() => {
-          setLoading(false);
+          // setLoading(false);
         }, 5000);
       })
       .catch((e) => setError(e));
+      setLoading(false);
+
   }, []);
 
   return (

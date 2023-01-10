@@ -72,12 +72,27 @@ export const Title = styled(Typography)`
   }
 
   blockquote:nth-of-type(2) {
-    color: 'red';
+    border-left: 2px solid blue;
+    margin: 70px 0px;
+    p {
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+
+  blockquote:nth-of-type(3) {
+    border-left: 2px solid #3f418a;
+    margin: 70px 0px;
+    p {
+      text-align: left;
+      // line-height: 10px;
+      margin-left: 20px;
+    }
   }
 `;
 
 export const Frame = styled(Box)`
-margin-left: 1rem;
+  margin-left: 1rem;
   img {
     width: 40px;
     height: 40px;
@@ -108,8 +123,8 @@ export const LandingImage = styled(Box)`
   }
   @media (max-width: 550px) {
     text-align: center;
-    img{
-    width: 80%;
+    img {
+      width: 80%;
     }
   }
 `;

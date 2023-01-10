@@ -27,8 +27,7 @@ import {
   SearchOutlined,
 } from '@mui/icons-material';
 import StickyBox from 'react-sticky-box';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import { Document, Page } from '@react-pdf/renderer';
+import { Link } from 'react-scroll';
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -37,35 +36,30 @@ import {
   LinkedinIcon,
   TwitterIcon,
 } from 'react-share';
-
 import ArticleImage from '../Assets/Images/articleImage.png';
 import Sanjay from '../Assets/Images/sanjay.png';
-
 import Author from '../Assets/Images/Authors/Author7.png';
 import AuthorName from '../Assets/Images/musing-banner.svg';
-
 import { StickyButton, Title } from '../Themes/StyledComponent';
-
 import Stories_Aritcle from '../Components/Stories_article';
-import PDFDownload from './PDFDownload';
+import blogData from '../blogdb.json';
 
 const Indi_Article = () => {
   const [data, setData] = useState();
   const [author, setAuthor] = useState();
-  // const [id, setId] = useState();
 
-  const [error, setError] = useState('');
-
+  // const [error, setError] = useState('');
   useEffect(() => {
-    fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((e) => setError(e));
-    fetch('https://tm.navadhiti.com/wp-json/wp/v2/users/2')
-      .then((response) => response.json())
-      .then((json) => setAuthor(json))
-      .catch((e) => setError(e));
-  }, []);
+    // fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
+    //   .then((response) => response.json())
+    //   .then((json) => setData(json))
+    //   .catch((e) => setError(e));
+    // fetch('https://tm.navadhiti.com/wp-json/wp/v2/users/2')
+    //   .then((response) => response.json())
+    //   .then((json) => setAuthor(json))
+    //   .catch((e) => setError(e));
+    setData(blogData);
+  }, [data]);
 
   const filteredValue = data?.content.rendered
     .match(/<h(.)>.*?<\/h\1>/gs)
@@ -139,12 +133,11 @@ const Indi_Article = () => {
 
   // scroll progressBar
 
-  // const [containerHeight, setContainerHeight] = useState(0);
-  // const [scrollHeight, setScrollHeight] = useState(0);
-  // const [scrollTop, setScrollTop] = useState(0);
   const [scroll, setScroll] = useState(0);
 
   const ref = useRef(null);
+
+  // console.log(ref);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -156,8 +149,6 @@ const Indi_Article = () => {
       clearInterval(timer);
     };
   });
-
-  console.log(scroll, 'scroll');
 
   // Content reading time caculate
 
@@ -433,7 +424,7 @@ const Indi_Article = () => {
               px={{ xs: 4, md: 5 }}
             >
               <Title>
-                <div id="article">
+                <div id="article" ref={ref}>
                   <div
                     dangerouslySetInnerHTML={{
                       __html: result,

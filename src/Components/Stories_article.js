@@ -1,5 +1,4 @@
 import {
-  Chip,
   Box,
   Button,
   Card,
@@ -16,6 +15,7 @@ import card1 from '../Assets/Images/Card.png';
 
 import Pen from '../Assets/Images/pen.png';
 import Divider from '../Assets/Images/Vector 42.png';
+import { useLocation } from 'react-router';
 
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -60,6 +60,9 @@ const styles = {
   },
 };
 const Stories_article = () => {
+  const location = useLocation();
+
+  const path = location.pathname;
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -115,13 +118,17 @@ const Stories_article = () => {
           })}
           {/* </Slider> */}
         </Grid>
-        <AnimatedButton>
-          <Button className="cta-btn">
-            <span class="hover-frame  bounce infinite" data-num="1"></span>
-            <span class="hover-frame  bounce infinite" data-num="2"></span>
-            Read All
-          </Button>
-        </AnimatedButton>
+        {path !== '/indiviual-articles' ? (
+          <AnimatedButton>
+            <Button className="cta-btn">
+              <span class="hover-frame  bounce infinite" data-num="1"></span>
+              <span class="hover-frame  bounce infinite" data-num="2"></span>
+              Read All
+            </Button>
+          </AnimatedButton>
+        ) : (
+          ''
+        )}
 
         {/* </Container> */}
       </Box>
