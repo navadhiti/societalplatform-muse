@@ -385,11 +385,8 @@ const Indi_Article = () => {
                       justifyContent: 'center',
                     }}
                   >
-                    <Typography>
-                      <span
-                        id="time"
-                        style={{ fontSize: '40px', textAlign: 'center' }}
-                      >
+                    <Typography sx={{ textAlign: 'center' }}>
+                      <span id="time" style={{ fontSize: '40px' }}>
                         {readTime}
                       </span>
                       <br /> min read
