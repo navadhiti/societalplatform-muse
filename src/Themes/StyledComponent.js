@@ -190,6 +190,44 @@ export const Section1 = styled(Box)`
     align-items: center;
   }
 `;
+export const ArticleLanding = styled(Box)`
+background-color: #DC8F6E;
+color: #fff;
+border-radius: 30px 0px 30px 30px;
+`;
+export const AuthorLanding = styled(Box)`
+background-color: #22534F;
+color: #fff;
+border-radius: 30px 0px 30px 30px;
+`;
+export const ShareLanding = styled(Box)`
+background-color: #3E418A;
+color: #fff;
+border-radius: 30px 0px 30px 30px;
+`;
+export const ExpernceLanding = styled(Box)`
+background-color: #DC8F6E;
+color: #fff;
+border-radius: 30px 0px 30px 30px;
+`;
+export const DescriptionSection = styled(Box)`
+background-color: #EDEBEA;
+border-radius: 30px 30px 30px 30px;
+@media (max-width: 550px) {
+  background-color: #fff;
+}
+`;
+export const ArticleFilterSection = styled(Box)`
+background-color: #EDEBEA;
+border-radius: 30px 30px 30px 30px;
+@media (max-width: 550px) {
+  background-color: #fff;
+}
+`;
+export const ArticleDescriptionSection = styled(Box)`
+background-color: #EDEBEA;
+border-radius: 30px 30px 30px 30px;
+`;
 export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame[data-num='1'] {
     position: absolute;
@@ -280,10 +318,10 @@ export const AnimatedButton = styled(Button)`
 
 export const StyledContainer = styled(Container)`
 background: ${`url(${Art}) bottom right no-repeat`};
-
-height:'700px',
-"@media (max-width:550px)": {
-    height:'700px',
-    backgroundSize: "contain",
-},
+height:500px;
+@media (max-width: 550px) {
+  
+  height:450px;
+  background-size: contain;
+}
 `;

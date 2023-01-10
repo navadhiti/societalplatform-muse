@@ -2,29 +2,18 @@ import { Box } from "@mui/material";
 import React from "react";
 import Share_card from "../Components/Share_card";
 import Share_Landing from "../Components/Share_Landing";
+import { DescriptionSection, ShareLanding } from "../Themes/StyledComponent";
 
 const Share = () => {
-    const styles = {
-        LandingBackground: {
-            backgroundColor: "#3E418A",
-            color: "#fff",
-            borderRadius: '30px 0px 30px 30px ',
 
-        },
-        LandingBackground1: {
-            backgroundColor: "#EDEBEA",
-            borderRadius: '30px 30px 30px 30px ',
-
-        },
-    };
     return (
         <>
-            <Box style={styles.LandingBackground}>
+            <ShareLanding>
                 <Share_Landing />
-            </Box>
-            <Box style={styles.LandingBackground1} py={5}>
+            </ShareLanding>
+            <DescriptionSection>
                 <Share_card />
-            </Box>
+            </DescriptionSection>
         </>
     );
 };

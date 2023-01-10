@@ -1,6 +1,6 @@
 import { Box, Container, FormControl, Grid, InputLabel, MenuItem, Stack, Typography } from '@mui/material';
 import React from 'react';
-import { Section } from '../Themes/StyledComponent';
+import { ArticleDescriptionSection, ArticleFilterSection, Section } from '../Themes/StyledComponent';
 import Story_card from './Story_card';
 import data from '../db.json';
 import dividerline from "../Assets/Images/Line 7.png";
@@ -21,13 +21,14 @@ const Share_card = () => {
       <Box id="share_cards">
         <Container>
          
-
+    <ArticleFilterSection>
         <Grid
             container
             spacing={0}
             justifyContent="flex-start"
             alignItems="center"
-            pt={5}
+            pt={{xs:2,sm:3,md:5}}
+              pb={{xs:2,sm:0}}
             // px={{xs:2,md:5}}
             px={{ xs: 0, sm: 0 }}
           >
@@ -98,7 +99,11 @@ const Share_card = () => {
               </Stack>
             </Grid>
           </Grid>
-            <img src={dividerline} width="100%"/>
+          </ArticleFilterSection>
+          <Box display={{xs:"none",sm:"block"}}>
+            <img src={dividerline} width="100%" />
+            </Box>
+              <ArticleDescriptionSection>
             <Box pt={5}>
           <Typography variant="h6" sx={{ textAlign: "left" }}>
             <b> EDITION 01</b>
@@ -129,6 +134,7 @@ const Share_card = () => {
             ))}
             {/* </Slider> */}
           </Grid>
+          </ArticleDescriptionSection>
         </Container>
       </Box>
     </>

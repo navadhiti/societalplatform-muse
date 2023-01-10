@@ -74,17 +74,20 @@ const Layout = () => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);
-        setTimeout(() => {
-          // setLoading(false);
-        }, 5000);
-      })
-      .catch((e) => setError(e));
+    // fetch('https://tm.navadhiti.com/wp-json/wp/v2/posts/3059')
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     setData(json);
+    //     setTimeout(() => {
+    //   setLoading(false);
+          
+    //     }, 5000);
+    //   })
+    //   .catch((e) => setError(e));
+    setTimeout(() => {
       setLoading(false);
-
+          
+        }, 5000);
   }, []);
 
   return (
