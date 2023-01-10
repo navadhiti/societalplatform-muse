@@ -12,7 +12,7 @@ const ExperinceIntro = () => {
 
   return (
     <>
-      <Section id="Experince_intro">
+      <Section id="Experince_intro" >
       <Container>
           
           {/* <ArticleDescriptionSection> */}

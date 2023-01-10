@@ -34,7 +34,7 @@ import frame from '../Assets/Images/Frame.png';
 import data from '../db.json';
 import MenuIcon from '@mui/icons-material/Menu';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
-import { Frame, Logo } from '../Themes/StyledComponent';
+import { Frame, Logo, MenuNav } from '../Themes/StyledComponent';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -136,15 +136,8 @@ const Header = (props) => {
   };
 
   const list = (anchor) => (
-    <Box
-      sx={{
-        width: 400,
-        height: '100vh',
-        paddingRight: '10px',
-        
-
-        backgroundColor: '#EDEBEA',
-      }}
+    <MenuNav
+    
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
@@ -227,7 +220,7 @@ const Header = (props) => {
               sx={{
                 px: 1,
                 width: '90px',
-                backgroundColor: '#f2f0ed',
+                // backgroundColor: '#f2f0ed',
               }}
             >
               {/* <ListItemIcon> */}
@@ -239,7 +232,7 @@ const Header = (props) => {
           </Box>
         </Box>
       </Stack>
-    </Box>
+    </MenuNav>
   );
 
   return (
