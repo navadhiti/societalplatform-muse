@@ -18,6 +18,8 @@ import {
   Drawer,
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router';
+
 
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -113,6 +115,8 @@ const styles = {
 };
 const buttonName = data.menu;
 const Header = (props) => {
+  const location = useLocation();
+    const path = location.pathname;
   // console.log(props.color, "color");
   const navigate = useNavigate();
 
@@ -290,7 +294,7 @@ const Header = (props) => {
                     </React.Fragment>
                   ))}
                 </Box>
-                <Box display={{ xs: 'none', md: 'block' }}>
+                {path !== '/contact' ? (  <Box display={{ xs: 'none', md: 'block' }}>
                   <Button
                     variant="outlined"
                     sx={{
@@ -310,7 +314,8 @@ const Header = (props) => {
                   >
                     Contact
                   </Button>
-                </Box>
+                </Box>) : ''}
+              
               </Grid>
             </Grid>
           </Box>
