@@ -177,7 +177,7 @@ const Indi_Article = () => {
     <>
       <div style={styles.LandingBackground}>
         <Box elevation={1} ml="3.5rem">
-          <Stack spacing={2} pt="2.5rem">
+          <Stack spacing={2} pt="2.5rem" display={{xs:"none",sm:"block"}}>
             <Breadcrumbs
               separator={<NavigateNext fontSize="small" />}
               aria-label="breadcrumb"
@@ -187,9 +187,10 @@ const Indi_Article = () => {
           </Stack>
           <Grid
             container
-            direction={{ xs: 'row-reverse', sm: 'row' }}
+            direction={{ xs: 'column-reverse', sm: 'row' ,md:'row'}}
             justifyContent="center"
             alignItems="center"
+            pt={{xs:10,sm:2}}
           >
             <Grid item xs={12} sm={7} md={7} sx={{ textAlign: 'left' }}>
               <Title>
@@ -211,7 +212,7 @@ const Indi_Article = () => {
                   <Grid
                     container
                     direction="row"
-                    justifyContent="flex-start"
+                    // justifyContent="flex-start"
                     alignItems="center"
                     // mt={6}
                   >
@@ -242,6 +243,17 @@ const Indi_Article = () => {
                       </Typography>
                     </Grid>
                   </Grid>
+                  {/* <Stack>
+                  <Avatar
+                        alt="Remy Sharp"
+                        src={Author}
+                        sx={{
+                          width: 70,
+                          height: 70,
+                          border: '1px solid black',
+                        }}
+                      />
+                    </Stack> */}
                 </Grid>
                 <Grid item xs={12} md={6}>
                   <Typography sx={{ fontStyle: 'italic' }}>

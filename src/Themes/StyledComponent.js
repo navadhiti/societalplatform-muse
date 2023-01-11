@@ -8,6 +8,8 @@ import Scribble from '../Assets/Images/scribble.png';
 import Scribble2 from '../Assets/Images/Vector 67.png';
 import ScribbleCircle from '../Assets/Images/scribble-circle.png';
 import Art from '../Assets/Images/Artwork_3.png';
+import UnderLine from '../Assets/Images/Vector 12.png';
+import ArrowImage from '../Assets/Images/RightArrow.png';
 
 export const StickyButton = styled(Button)`
   border: none;
@@ -31,6 +33,20 @@ export const StickyButton = styled(Button)`
       color: #865ba0;
     }
   }
+`;
+export const Caption = styled(Typography)`
+.ActiveClass{
+  background: ${` url(${ArrowImage}) bottom right no-repeat`};
+  opacity: 1;
+  cursor: pointer';
+}
+&:hover {
+span{
+  background: ${` url(${UnderLine}) bottom center no-repeat`};
+  opacity: 1;
+  cursor: pointer;
+}
+}
 `;
 
 export const Title = styled(Typography)`
@@ -91,11 +107,11 @@ export const Title = styled(Typography)`
 `;
 export const MenuNav = styled(Box)`
   height: 100vh;
-  width: 425px;
+  width: 410px;
   padding-right: 10px;
   background-color: #edebea;
   @media (max-width: 550px) {
-    width: 425px;
+    width: 410px;
   }
   @media (max-width: 380px) {
     width: 375px;

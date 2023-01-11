@@ -14,7 +14,7 @@ import Divider from "../Assets/Images/Vector 42.png";
 import StoryImg from "../Assets/Images/image 50.png";
 import LinkUnderline from "../Assets/Images/Vector 12.png";
 import ArrowImage from "../Assets/Images/RightArrow.png";
-import { Section } from "../Themes/StyledComponent";
+import { Caption, Section } from "../Themes/StyledComponent";
 import card from "../Assets/Images/Card.png";
 import articleImage from "../Assets/Images/articleImage.png";
 import card1 from "../Assets/Images/Card1.png";
@@ -25,37 +25,37 @@ const Stories = () => {
   const Stories = [
     {
       id: "0",
-      title: "Reimagining disaster resilience",
+      title: "<span className='link'>Reimagining</span> disaster resilience",
       image: StoryImg,
     },
     {
       id: "1",
-      title: "All teach, all learn",
+      title: "All <span className='link'>teach,</span> all learn",
       image: articleImage,
     },
     {
       id: "2",
-      title: "Solve small, dent big",
+      title: "<span className='link'>Solve small,</span> dent big",
       image: card1,
     },
     {
       id: "3",
-      title: "Striking collaboration gold",
+      title: "Striking <span className='link'>collaboration</span> gold",
       image: card2,
     },
     {
       id: "4",
-      title: "When society, state and <br> markets work together",
+      title: "When society, state and <br> markets <span className='link'> work together</span>",
       image: card1,
     },
     {
       id: "5",
-      title: "Build beyond",
+      title: "Build <span className='link'>beyond</span>",
       image: card,
     },
     {
       id: "6",
-      title: "The power of public goods",
+      title: "The power of <span className='link'>public goods</span>",
       image: card1,
     },
   ];
@@ -164,10 +164,10 @@ const Stories = () => {
                   onMouseEnter={() => setId(item.id)}
                   // onMouseOut={() => setId(0)}
                 >
-                  <Typography
+                  <Caption
                     variant="caption"
                     onMouseEnter={() => setHoveredItem(index)}
-                    className={hoveredItem === index && "ActiveClass"}
+                    className={hoveredItem === index && "ActiveClass Link"}
                     active
                   >
                     <Stack spacing={2} direction="row">
@@ -181,7 +181,7 @@ const Stories = () => {
                         display={{ xs: "none", md: "block" }}
                       ></Box>
                     </Stack>
-                  </Typography>
+                  </Caption>
                 </ListItem>
               ))}
             </List>

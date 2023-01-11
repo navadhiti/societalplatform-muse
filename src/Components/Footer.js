@@ -48,7 +48,7 @@ const Footer = (props) => {
                             fullWidth
                         >
                             <InputLabel htmlFor="outlined-adornment-password">
-                            Your email Address
+                            YOUR EMAIL ADDRESS
                             </InputLabel>
                             <OutlinedInput
                                 id="outlined-adornment-Address"

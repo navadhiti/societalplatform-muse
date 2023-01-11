@@ -4,6 +4,8 @@ import {
   Container,
   Divider,
   Grid,
+  ListItem,
+  Stack,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -15,35 +17,51 @@ import Verticleline from "../Assets/Images/varticleLine.png";
 import MuseButton from "./MuseButton";
 import { AnimatedButton, Section } from "../Themes/StyledComponent";
 import Author2 from "../Assets/Images/Authors/Author2.png";
+// import { LinkedinIcon, TwitterIcon } from "react-share";
+
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 console.log(data.home.Authors, "authors");
 const author = data.home.Authors;
 
 const Author_details = () => {
-  const LongText = ({ content,limit}) => {
-  const [showAll, setShowAll] = useState(false);
+  const LongText = ({ content, limit }) => {
+    const [showAll, setShowAll] = useState(false);
 
-  const showMore = () => setShowAll(true);
-  const showLess = () => setShowAll(false);
+    const showMore = () => setShowAll(true);
+    const showLess = () => setShowAll(false);
 
-  if (content.length <= limit) {
-    // there is nothing more to show
-    return <div>{content}</div>
-  }
-  if (showAll) {
-    // We show the extended text and a link to reduce it
-    return <div> 
-      {content} <br></br>
-      <a onClick={showLess}><b><u>See less</u></b></a> 
-    </div>
-  }
-  // In the final case, we show a text with ellipsis and a `Read more` button
-  const toShow = content.substring(0, limit) + "...";
-  return <div> 
-    {toShow} 
-    <a onClick={showMore}><b><u>See more</u></b></a>
-  </div>
-}
+    if (content.length <= limit) {
+      // there is nothing more to show
+      return <div>{content}</div>;
+    }
+    if (showAll) {
+      // We show the extended text and a link to reduce it
+      return (
+        <div>
+          {content} <br></br>
+          <a onClick={showLess}>
+            <b>
+              <u>See less</u>
+            </b>
+          </a>
+        </div>
+      );
+    }
+    // In the final case, we show a text with ellipsis and a `Read more` button
+    const toShow = content.substring(0, limit) + "...";
+    return (
+      <div>
+        {toShow}
+        <a onClick={showMore}>
+          <b>
+            <u>See more</u>
+          </b>
+        </a>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -97,7 +115,7 @@ const Author_details = () => {
                   lg={1}
                   textAlign={{ xs: "center", md: "left" }}
                   // sx={{borderLeft:"1px solid black"}}\
-                  display={{xs:"none",sm:"block"}}
+                  display={{ xs: "none", sm: "block" }}
                 >
                   <Box></Box>
                   <img src={Verticleline} />
@@ -112,16 +130,44 @@ const Author_details = () => {
                   textAlign={{ xs: "center", md: "left" }}
                 >
                   {/* <Divider orientation="vertical" flexItem ></Divider> */}
-                  
-                  <Box display={{xs:"block",sm:"none"}}>
-                  <Typography variant="body"><LongText content = {item.blurb} limit = {80} /></Typography>
+
+                  <Box display={{ xs: "block", sm: "none" }}>
+                    <Typography variant="body">
+                      <LongText content={item.blurb} limit={80} />
+                    </Typography>
                   </Box>
-                  <Box display={{xs:"none",sm:"block"}}>
-                  <Typography variant="body">{item.blurb}</Typography>
+                  <Box display={{ xs: "none", sm: "block" }}>
+                    <Typography variant="body">{item.blurb}</Typography>
                   </Box>
                   <br />
+                  <Stack
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                    spacing={2}
+                  >
+                    <MuseButton title="Read Article" />
+                    <ListItem
+                      disablePadding
+                      sx={{
+                        px: 1,
+                        width: "90px",
+                        // backgroundColor: '#f2f0ed',
+                      }}
+                    >
+                      {/* <ListItemIcon> */}
+                      <LinkedInIcon color="secondary" sx={{
+                        borderRadius:'50%',
+                        border:'1px solid black',px: 1,
+                        width: "40px",height:"40px" ,mr:1}}/>
+                      <InstagramIcon color="secondary"  sx={{
+                        borderRadius:'50%',
+                        border:'1px solid black',px: 1,
+                        width: "40px",height:"40px"}}/>
 
-                  <MuseButton title="Read Article" />
+                      {/* </ListItemIcon> */}
+                    </ListItem>
+                  </Stack>
                 </Grid>
               </Grid>
             ))}

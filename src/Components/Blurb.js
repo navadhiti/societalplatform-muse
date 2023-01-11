@@ -27,11 +27,12 @@ const Blurb = () => {
                         </b>{" "}
                         in action. These are stories of{" "}
                         <b>
-                            big bold bets,
+                            big bold bets
                             <img src={Image2} alt="img" width="2%" />
                             <img src={Image2} alt="img" width="1.5%" />
+                            , {''}
                         </b>
-                        of reimagination , of perseverance, of coming together,
+                        of reimagination, of perseverance, of coming together,
                         of{" "}
                         <Typography variant="link">
                             <b>building agency</b>
@@ -44,7 +45,7 @@ const Blurb = () => {
                     </Typography>
                     <br />
                     <Typography variant="h3">
-                        Societal Muse Offers{" "}
+                        Societal Muse offers{" "}
                         <b>
                             new answers
                             <img src={Image4} alt="img" width="4%" />

@@ -137,7 +137,12 @@ const theme = createTheme({
     },
     caption: {
       '&.ActiveClass': {
-        background: ` url(${ArrowImage}) bottom right no-repeat,url(${UnderLine}) bottom no-repeat`,
+        background: ` url(${ArrowImage}) bottom right no-repeat`,
+        opacity: 1,
+        cursor: 'pointer',
+      },
+      '&.link': {
+        background: ` url(${UnderLine}) bottom no-repeat`,
         opacity: 1,
         cursor: 'pointer',
       },
@@ -907,12 +912,15 @@ const theme = createTheme({
           style: {
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none',
+              textTransform:'uppercase',
+
             },
             '.MuiOutlinedInput-root': {
               borderRadius: '100px !important',
               border: '1.5px solid #241C15',
               height: '3rem',
               width: '23.813rem',
+              textTransform:'uppercase',
             },
           },
         },

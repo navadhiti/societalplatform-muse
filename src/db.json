@@ -203,7 +203,7 @@
       "Stories": [
           {
               "id": "01",
-              "title": "Reimagining disaster resilience",
+              "title": "<span className='link'>Reimagining </span>disaster resilience",
               "tag":"Health",
               "blurb": "Innovation in education takes years to enter schools ",
               "date":"Edition 01 • 2022 "

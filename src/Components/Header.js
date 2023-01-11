@@ -205,6 +205,10 @@ const Header = (props) => {
                     height: 100,
                     justifyContent: 'center',
                     paddingRight: '1rem',
+                    '&:hover': {
+                      backgroundColor: item.backgroundColor,
+                      opacity:0.9,
+                    },
                   }}
                   onClick={() => navigate(item.link)}
                 >
@@ -212,6 +216,28 @@ const Header = (props) => {
                 </ListItemButton>
               </ListItem>
             ))}
+            <ListItem disablePadding >
+                <ListItemButton
+                  sx={{
+                    backgroundColor: "#fff",
+                    borderRadius: '0 50px 50px 0',
+                    border:'1px solid Black',
+                    color: '#000',
+                    fontWeight: '800',
+                    textAlign: 'center',
+                    height: 100,
+                    justifyContent: 'center',
+                    paddingRight: '1rem',
+                    '&:hover': {
+                      backgroundColor: '#fff',
+                      opacity:0.9,
+                    },
+                  }}
+                  onClick={() => navigate('/contact')}
+                >
+                  Contact
+                </ListItemButton>
+              </ListItem>
           </List>
           <Box pt={15} px={3}>
             <Typography variant="h5">info@societalplatform.org</Typography>
