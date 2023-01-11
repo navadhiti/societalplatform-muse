@@ -23,10 +23,9 @@ const Experince = () => {
             <ExpernceLanding>
                 <Experice_landing />
             </ExpernceLanding>
-            <ArticleDescriptionSection py={{xs:1,sm:3,md:5}} sx={{borderRadius:'30px 30px 30px 30px'}}>
+            {/* <ArticleDescriptionSection py={{xs:1,sm:3,md:5}} sx={{borderRadius:'30px 30px 30px 30px'}}>
                 <ExperinceIntro />
-                {/* <All_Articles_card posts= {post} /> */}
-            </ArticleDescriptionSection>
+            </ArticleDescriptionSection> */}
         </>
     );
 };
