@@ -72,7 +72,7 @@ export const Title = styled(Typography)`
   }
 
   blockquote:nth-of-type(2) {
-    border-left: 2px solid blue;
+    border-left: 3px solid blue;
     margin: 70px 0px;
     p {
       text-align: left;
@@ -85,25 +85,24 @@ export const Title = styled(Typography)`
     margin: 70px 0px;
     p {
       text-align: left;
-      // line-height: 10px;
       margin-left: 20px;
     }
   }
 `;
-export const MenuNav =styled(Box)`
-height: 100vh;
-width: 425px;
-padding-right: 10px;
-background-color: #EDEBEA;
-@media (max-width: 550px) {
+export const MenuNav = styled(Box)`
+  height: 100vh;
   width: 425px;
-}
-@media (max-width: 380px) {
-  width: 375px;
-}
-@media (max-width: 325px) {
-  width: 320px;
-}
+  padding-right: 10px;
+  background-color: #edebea;
+  @media (max-width: 550px) {
+    width: 425px;
+  }
+  @media (max-width: 380px) {
+    width: 375px;
+  }
+  @media (max-width: 325px) {
+    width: 320px;
+  }
 `;
 
 export const Frame = styled(Box)`
@@ -206,42 +205,42 @@ export const Section1 = styled(Box)`
   }
 `;
 export const ArticleLanding = styled(Box)`
-background-color: #DC8F6E;
-color: #fff;
-border-radius: 30px 0px 30px 30px;
+  background-color: #dc8f6e;
+  color: #fff;
+  border-radius: 30px 0px 30px 30px;
 `;
 export const AuthorLanding = styled(Box)`
-background-color: #22534F;
-color: #fff;
-border-radius: 30px 0px 30px 30px;
+  background-color: #22534f;
+  color: #fff;
+  border-radius: 30px 0px 30px 30px;
 `;
 export const ShareLanding = styled(Box)`
-background-color: #3E418A;
-color: #fff;
-border-radius: 30px 0px 30px 30px;
+  background-color: #3e418a;
+  color: #fff;
+  border-radius: 30px 0px 30px 30px;
 `;
 export const ExpernceLanding = styled(Box)`
-background-color: #C4BCB9;
-// color: #fff;
-border-radius: 30px 0px 30px 30px;
+  background-color: #c4bcb9;
+  // color: #fff;
+  border-radius: 30px 0px 30px 30px;
 `;
 export const DescriptionSection = styled(Box)`
-background-color: #EDEBEA;
-border-radius: 30px 30px 30px 30px;
-@media (max-width: 550px) {
-  background-color: #fff;
-}
+  background-color: #edebea;
+  border-radius: 30px 30px 30px 30px;
+  @media (max-width: 550px) {
+    background-color: #fff;
+  }
 `;
 export const ArticleFilterSection = styled(Box)`
-background-color: #EDEBEA;
-border-radius: 30px 30px 30px 30px;
-@media (max-width: 550px) {
-  background-color: #fff;
-}
+  background-color: #edebea;
+  border-radius: 30px 30px 30px 30px;
+  @media (max-width: 550px) {
+    background-color: #fff;
+  }
 `;
 export const ArticleDescriptionSection = styled(Box)`
-background-color: #EDEBEA;
-border-radius: 30px 30px 30px 30px;
+  background-color: #edebea;
+  border-radius: 30px 30px 30px 30px;
 `;
 export const AnimatedButton = styled(Button)`
   .cta-btn:hover .hover-frame[data-num='1'] {
@@ -332,11 +331,10 @@ export const AnimatedButton = styled(Button)`
 `;
 
 export const StyledContainer = styled(Container)`
-background: ${`url(${Art}) bottom right no-repeat`};
-height:500px;
-@media (max-width: 550px) {
-  
-  height:450px;
-  background-size: contain;
-}
+  background: ${`url(${Art}) bottom right no-repeat`};
+  height: 500px;
+  @media (max-width: 550px) {
+    height: 450px;
+    background-size: contain;
+  }
 `;

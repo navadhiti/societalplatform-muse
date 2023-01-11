@@ -937,8 +937,8 @@ const theme = createTheme({
           props: { variant: 'determinate' },
           style: {
             '&.MuiCircularProgress-root': {
-              width: '6.8rem !important',
-              height: '6.8rem !important',
+              width: '7.5rem !important',
+              height: '7.5rem !important',
             },
             '&.MuiCircularProgress-colorPrimary': {
               color: 'blue !important',

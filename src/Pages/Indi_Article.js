@@ -139,15 +139,16 @@ const Indi_Article = () => {
 
   useEffect(() => {
     let scrollTop = ref.current.scrollTop;
-    let docHeight = document.body.offsetHeight;
+    let docHeight = ref.current.scrollHeight;
     let winHeight = ref.current.clientHeight;
-    let scrollPercent = scrollTop / (docHeight - winHeight);
+    // let scrollPercent = scrollTop / (docHeight - winHeight);
     // let scrollPercentRounded = Math.round(scrollPercent * 100);
-    let degrees = scrollPercent * 360;
+    // let degrees = scrollPercent * 360;
 
+    console.log(winHeight, 'winHeight');
+    console.log(scrollTop, 'scrollTop');
+    console.log(docHeight, 'docHeight');
 
-    console.log(degrees, 'window');
-    // console.log(ref);
     const timer = setInterval(() => {
       setScroll((prevProgress) =>
         prevProgress >= 100 ? 0 : prevProgress + 10
@@ -368,7 +369,7 @@ const Indi_Article = () => {
               <StickyBox offsetTop={20} offsetBottom={20}>
                 <Box sx={{ position: 'relative', display: 'inline-flex' }}>
                   <CircularProgress
-                    thickness={1}
+                    thickness={2}
                     variant="determinate"
                     value={scroll}
                   />
