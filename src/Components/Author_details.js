@@ -76,7 +76,7 @@ const Author_details = () => {
                 alignItems="center"
                 my={5}
                 py={5}
-                px={5}
+                px={{xs:1,sm:3,md:5}}
                 sx={{
                   backgroundColor: "#fff",
                   borderRadius: "15px",
@@ -93,10 +93,14 @@ const Author_details = () => {
                       margin: "10px auto",
                       background: ` url(${backgroud}) center no-repeat`,
                       backgroundSize: "contain",
+                      "@media (max-width:550px)": {
+                      height: "200px",
+                        background:"none",
+                      },
                     }}
                   >
-                    <Box sx={{ border: "2px solid black", borderRadius: "" }}>
-                      <img src={Author2} />
+                    <Box sx={{ border: "2px solid black", borderRadius: "", }}>
+                      <img src={Author2} width="100%" sx={{ border: "2px solid black", borderRadius: "", }} />
                     </Box>
 
                     <Typography variant="body1" textAlign="center">
@@ -142,19 +146,12 @@ const Author_details = () => {
                   <br />
                   <Stack
                     direction="row"
-                    justifyContent="center"
+                    justifyContent="flex-start"
                     alignItems="center"
-                    spacing={2}
+                    spacing={1}
                   >
                     <MuseButton title="Read Article" />
-                    <ListItem
-                      disablePadding
-                      sx={{
-                        px: 1,
-                        width: "90px",
-                        // backgroundColor: '#f2f0ed',
-                      }}
-                    >
+                   
                       {/* <ListItemIcon> */}
                       <LinkedInIcon color="secondary" sx={{
                         borderRadius:'50%',
@@ -166,7 +163,7 @@ const Author_details = () => {
                         width: "40px",height:"40px"}}/>
 
                       {/* </ListItemIcon> */}
-                    </ListItem>
+                    {/* </Box> */}
                   </Stack>
                 </Grid>
               </Grid>

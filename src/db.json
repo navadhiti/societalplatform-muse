@@ -7,22 +7,22 @@
     },
     {
       "name": "ARTICLES",
-      "backgroundColor": "#DC8F6E",
+      "backgroundColor": "#C4BCB9",
       "link": "/articles"
     },
     {
       "name": "EXPERIENCE",
-      "backgroundColor": "#C4BCB9",
+      "backgroundColor": "#D98D6D",
       "link": "/experince"
     },
     {
       "name": "AUTHORS",
-      "backgroundColor": "#22534F",
+      "backgroundColor": "#3E418A",
       "link": "/author"
     },
     {
       "name": "SHARE",
-      "backgroundColor": "#3E418A",
+      "backgroundColor": "#22534F",
       "link": "/share"
     }    
   ],
@@ -203,7 +203,7 @@
       "Stories": [
           {
               "id": "01",
-              "title": "<span className='link'>Reimagining </span>disaster resilience",
+              "title": "Reimagining disaster resilience",
               "tag":"Health",
               "blurb": "Innovation in education takes years to enter schools ",
               "date":"Edition 01 • 2022 "

@@ -20,42 +20,53 @@ import articleImage from "../Assets/Images/articleImage.png";
 import card1 from "../Assets/Images/Card1.png";
 
 import card2 from "../Assets/Images/Card2.png";
+import Filter1Icon from "@mui/icons-material/Filter1";
+import Filter2Icon from "@mui/icons-material/Filter2";
+import Filter3Icon from "@mui/icons-material/Filter3";
+import Filter4Icon from "@mui/icons-material/Filter4";
+import Filter5Icon from "@mui/icons-material/Filter5";
+import Filter6Icon from "@mui/icons-material/Filter6";
+import Filter7Icon from "@mui/icons-material/Filter7";
+import Filter8Icon from "@mui/icons-material/Filter8";
+import Filter9Icon from "@mui/icons-material/Filter9";
+
 
 const Stories = () => {
   const Stories = [
     {
       id: "0",
-      title: "<span className='link'>Reimagining</span> disaster resilience",
+      title: "<span class='link'>Reimagining</span> disaster resilience",
       image: StoryImg,
     },
     {
       id: "1",
-      title: "All <span className='link'>teach,</span> all learn",
+      title: "All <span class='link'>teach,</span> all learn",
       image: articleImage,
     },
     {
       id: "2",
-      title: "<span className='link'>Solve small,</span> dent big",
+      title: "<span class='link'>Solve small,</span> dent big",
       image: card1,
     },
     {
       id: "3",
-      title: "Striking <span className='link'>collaboration</span> gold",
+      title: "Striking <span class='link'>collaboration</span> gold",
       image: card2,
     },
     {
       id: "4",
-      title: "When society, state and <br> markets <span className='link'> work together</span>",
+      title:
+        "When society, state and <br> markets <span class='link'> work together</span>",
       image: card1,
     },
     {
       id: "5",
-      title: "Build <span className='link'>beyond</span>",
+      title: "Build <span class='link'>beyond</span>",
       image: card,
     },
     {
       id: "6",
-      title: "The power of <span className='link'>public goods</span>",
+      title: "The power of <span class='link'>public goods</span>",
       image: card1,
     },
   ];
@@ -158,19 +169,27 @@ const Stories = () => {
           <Grid item xs={12} sm={12} md={6}>
             <List pt={{ xs: 2, md: 9 }}>
               {Stories.map((item, index) => (
+                <>
+                
                 <ListItem
                   key={index}
                   id={item.id}
                   onMouseEnter={() => setId(item.id)}
                   // onMouseOut={() => setId(0)}
                 >
-                  <Caption
+                  <Typography
                     variant="caption"
                     onMouseEnter={() => setHoveredItem(index)}
-                    className={hoveredItem === index && "ActiveClass Link"}
+                    className={hoveredItem === index && "ActiveClass"}
                     active
                   >
-                    <Stack spacing={2} direction="row">
+                    <Stack
+                      spacing={2}
+                      direction="row"
+                      justifyContent="center"
+                      alignItems="center"
+                    >
+                      <Typography variant="h4">{item.id}</Typography>
                       <div
                         dangerouslySetInnerHTML={{
                           __html: item.title,
@@ -181,8 +200,9 @@ const Stories = () => {
                         display={{ xs: "none", md: "block" }}
                       ></Box>
                     </Stack>
-                  </Caption>
+                  </Typography>
                 </ListItem>
+                </>
               ))}
             </List>
           </Grid>

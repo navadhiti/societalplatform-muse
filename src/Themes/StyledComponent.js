@@ -39,13 +39,14 @@ export const Caption = styled(Typography)`
   background: ${` url(${ArrowImage}) bottom right no-repeat`};
   opacity: 1;
   cursor: pointer';
+  &:hover {
+    span{
+      background: ${` url(${UnderLine}) bottom center no-repeat`};
+      opacity: 1;
+      cursor: pointer;
+    }
 }
-&:hover {
-span{
-  background: ${` url(${UnderLine}) bottom center no-repeat`};
-  opacity: 1;
-  cursor: pointer;
-}
+
 }
 `;
 
@@ -221,22 +222,22 @@ export const Section1 = styled(Box)`
   }
 `;
 export const ArticleLanding = styled(Box)`
-  background-color: #dc8f6e;
-  color: #fff;
+  background-color: #C4BCB9;
+  color: #000;
   border-radius: 30px 0px 30px 30px;
 `;
 export const AuthorLanding = styled(Box)`
-  background-color: #22534f;
-  color: #fff;
-  border-radius: 30px 0px 30px 30px;
-`;
-export const ShareLanding = styled(Box)`
   background-color: #3e418a;
   color: #fff;
   border-radius: 30px 0px 30px 30px;
 `;
+export const ShareLanding = styled(Box)`
+  background-color: #22534f;
+  color: #fff;
+  border-radius: 30px 0px 30px 30px;
+`;
 export const ExpernceLanding = styled(Box)`
-  background-color: #c4bcb9;
+  background-color: #D98D6D;
   // color: #fff;
   border-radius: 30px 0px 30px 30px;
 `;
@@ -312,6 +313,9 @@ export const AnimatedButton = styled(Button)`
     text-transform: uppercase;
     text-align: center;
     position: relative;
+    @media (max-width: 550px) {
+      padding: 10px 10px;
+    }
   }
   .bounce {
     -webkit-transition: all 0.35s ease;

@@ -235,7 +235,7 @@ const Header = (props) => {
                   }}
                   onClick={() => navigate('/contact')}
                 >
-                  Contact
+                  CONTACT
                 </ListItemButton>
               </ListItem>
           </List>
@@ -274,10 +274,12 @@ const Header = (props) => {
               justifyContent="flex-start"
             >
               <Grid item xs={2} sm={3} md={3} lg={3}>
+                <a href="https://societalplatform.org/">
                 <Frame>
                   {/* <KeyboardArrowLeftIcon /> */}
                   <img src={frame} alt="img" />
                 </Frame>
+                </a>
               </Grid>
               <Grid
                 item
@@ -289,7 +291,10 @@ const Header = (props) => {
                 sx={{ textAlign: 'center' }}
                 alignItems="center"
               >
-                <Logo>
+                <Logo onClick={() => {
+                      navigate("/");
+                      window.scrollTo(0, 0);
+                    }}>
                   <img src={logo} alt="img" />
                 </Logo>
               </Grid>
@@ -331,7 +336,7 @@ const Header = (props) => {
                       window.scrollTo(0, 0);
                     }}
                   >
-                    Contact
+                    CONTACT
                   </Button>
                 </Box>) : ''}
               

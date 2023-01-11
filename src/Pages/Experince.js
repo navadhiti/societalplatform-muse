@@ -6,7 +6,7 @@ import ExperinceIntro from "../Components/ExperinceIntro";
 import Stories_article from "../Components/Stories_article";
 import Story_card from "../Components/Story_card";
 import data from "../db.json";
-import { ArticleLanding, DescriptionSection, ExpernceLanding, Section } from "../Themes/StyledComponent";
+import { ArticleDescriptionSection, ArticleLanding, DescriptionSection, ExpernceLanding, Section } from "../Themes/StyledComponent";
 
 const Experince = () => {
     const itemData = data.Article.Stories;
@@ -23,10 +23,10 @@ const Experince = () => {
             <ExpernceLanding>
                 <Experice_landing />
             </ExpernceLanding>
-            <ExpernceLanding py={{xs:1,sm:3,md:5}} sx={{borderRadius:'30px 30px 30px 30px'}}>
+            <ArticleDescriptionSection py={{xs:1,sm:3,md:5}} sx={{borderRadius:'30px 30px 30px 30px'}}>
                 <ExperinceIntro />
                 {/* <All_Articles_card posts= {post} /> */}
-            </ExpernceLanding>
+            </ArticleDescriptionSection>
         </>
     );
 };

@@ -39,7 +39,7 @@ const Contact = () => {
                   Reach Out
                 </Typography>
                 <Typography variant="body">
-                  <b>Ekstep Foundation</b>
+                  Ekstep Foundation
                   <br />
                   Quorum, No. 85, 7th Cross, 4th Block
                   <br />
@@ -68,7 +68,7 @@ const Contact = () => {
                     {/* </ListItemIcon> */}
                   </ListItem>
                 </Box>
-                <LandingImage mt={-20}>
+                <LandingImage mt={{xs:-5,sm:-20}}>
                   <img src={art} width="100%" />
                 </LandingImage>
               </Grid>
@@ -78,7 +78,7 @@ const Contact = () => {
                 >
                   <TextField
                     id="filled-basic"
-                    label="Enter your name"
+                    placeholder="ENTER YOUR NAME"
                     variant="filled"
                     fullWidth
                     margin="dense"
@@ -87,7 +87,7 @@ const Contact = () => {
                   <br />
                   <TextField
                     id="filled-basic"
-                    label="Enter your email address"
+                    placeholder="ENTER YOUR EMAIL ADDRESS"
                     variant="filled"
                     fullWidth
                     margin="normal"
@@ -95,7 +95,7 @@ const Contact = () => {
                   />
                   <TextField
                     id="filled-basic"
-                    label="which social sector do you work in?"
+                    placeholder="WHICH SOCIAL SECTOR DO YOU WORK IN?"
                     variant="filled"
                     fullWidth
                     margin="normal"
@@ -103,7 +103,7 @@ const Contact = () => {
 
                   <TextField
                     id="filled-multiline-static"
-                    label="Go ahead, We are listening..."
+                    placeholder="GO AHEAD,WE ARE LISTENING..."
                     multiline
                     fullWidth
                     margin="normal"
