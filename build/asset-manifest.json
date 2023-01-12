@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/societalplatform-muse/static/css/main.76b6b9ee.css",
+    "main.js": "/societalplatform-muse/static/js/main.892694bc.js",
+    "static/js/787.cdbcac7a.chunk.js": "/societalplatform-muse/static/js/787.cdbcac7a.chunk.js",
+    "static/media/articleImage.png": "/societalplatform-muse/static/media/articleImage.f48fd7efe37f2efef1af.png",
+    "static/media/image 50.png": "/societalplatform-muse/static/media/image 50.19265be7dec732fcb549.png",
+    "static/media/sp-muse-read.png": "/societalplatform-muse/static/media/sp-muse-read.9d7c2035df4ba300de52.png",
+    "static/media/sanjay.png": "/societalplatform-muse/static/media/sanjay.009eb5530937ed3e6d46.png",
+    "static/media/Artwork_3.png": "/societalplatform-muse/static/media/Artwork_3.385dd54d0ef553b0efcd.png",
+    "static/media/Artwork.png": "/societalplatform-muse/static/media/Artwork.3b96e3afd09e69841929.png",
+    "static/media/Layer.png": "/societalplatform-muse/static/media/Layer.326f259f8c045dd050f6.png",
+    "static/media/Societal Platform - Landing Video.gif": "/societalplatform-muse/static/media/Societal Platform - Landing Video.554bd5bf789ff658af56.gif",
+    "static/media/Card.png": "/societalplatform-muse/static/media/Card.2de53de6859e3c2f9471.png",
+    "static/media/Card2.png": "/societalplatform-muse/static/media/Card2.057aa35a0bf1b315ba86.png",
+    "static/media/CampaignMedium.eot": "/societalplatform-muse/static/media/CampaignMedium.f9b50eda54738d8e3957.eot",
+    "static/media/Card1.png": "/societalplatform-muse/static/media/Card1.4cfaaa18091a437e243c.png",
+    "static/media/sm_logo.png": "/societalplatform-muse/static/media/sm_logo.5ea91c5769a9dfab6b96.png",
+    "static/media/CampaignMedium.woff": "/societalplatform-muse/static/media/CampaignMedium.1bec48ad8c2c8ad924cc.woff",
+    "static/media/Author7.png": "/societalplatform-muse/static/media/Author7.d636247402d377a21991.png",
+    "static/media/Author10.png": "/societalplatform-muse/static/media/Author10.31605831530f45e7c5c3.png",
+    "static/media/Author5.png": "/societalplatform-muse/static/media/Author5.81a33bab82702e5a2ebf.png",
+    "static/media/Author1.png": "/societalplatform-muse/static/media/Author1.2ba28e72eeb3ce20e532.png",
+    "static/media/Author4.png": "/societalplatform-muse/static/media/Author4.1421f444e38768f7714f.png",
+    "static/media/Author9.png": "/societalplatform-muse/static/media/Author9.5bfc65253c8486a0d8cf.png",
+    "static/media/Author6.png": "/societalplatform-muse/static/media/Author6.774fdcc829ccdf158e49.png",
+    "static/media/sp-musebook-design.png": "/societalplatform-muse/static/media/sp-musebook-design.ae816ba23521e1ac4be7.png",
+    "static/media/Author8.png": "/societalplatform-muse/static/media/Author8.795cfcd4c5ba48164be6.png",
+    "static/media/Author3.png": "/societalplatform-muse/static/media/Author3.dcb218d3a7d2a29c58fe.png",
+    "static/media/Author2.png": "/societalplatform-muse/static/media/Author2.3af11175a2c15383988c.png",
+    "index.html": "/societalplatform-muse/index.html",
+    "static/media/musing-banner.svg": "/societalplatform-muse/static/media/musing-banner.746f1d2675bbc8fb6bc3699a02806c68.svg",
+    "static/media/Api_info": "/societalplatform-muse/static/media/Api_info.70293505bb03d15bfc22",
+    "main.76b6b9ee.css.map": "/societalplatform-muse/static/css/main.76b6b9ee.css.map",
+    "main.892694bc.js.map": "/societalplatform-muse/static/js/main.892694bc.js.map",
+    "787.cdbcac7a.chunk.js.map": "/societalplatform-muse/static/js/787.cdbcac7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76b6b9ee.css",
+    "static/js/main.892694bc.js"
+  ]
+}

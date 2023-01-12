@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "CampaignMedium";   /*Can be any text*/
+    src: local("CampaignMedium"),
+      url("../src/Assets/fonts/CampaignMedium.eot") format("truetype");
+  }
+  @font-face {
+    font-family: "CampaignMedium1";   /*Can be any text*/
+    src: local("CampaignMedium"),
+      url("../src/Assets/fonts/CampaignMedium.woff") format("truetype");
+  }

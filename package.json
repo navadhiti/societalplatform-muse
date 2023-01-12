@@ -1,0 +1,65 @@
+{
+  "name": "societal-muse",
+  "version": "0.1.0",
+  "homepage": "https://navadhiti.github.io/societalplatform-muse",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@fontsource/montserrat": "^4.5.13",
+    "@fontsource/montserrat-alternates": "^4.5.11",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.11.3",
+    "@mui/styled-engine-sc": "^5.10.16",
+    "@mui/styles": "^5.11.2",
+    "@react-pdf/renderer": "^3.0.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.1",
+    "html-react-parser": "^3.0.6",
+    "react": "^18.2.0",
+    "react-adobe-fonts": "^0.1.0",
+    "react-card-flip": "^1.2.0",
+    "react-dom": "^18.2.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "react-scroll": "^1.8.9",
+    "react-share": "^4.4.1",
+    "react-speech-kit": "^3.0.1",
+    "react-sticky-box": "^1.0.2",
+    "styled-components": "^5.3.6",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
