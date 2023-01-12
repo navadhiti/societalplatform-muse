@@ -80,7 +80,14 @@ const All_Articles_card = (posts) => {
                   <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                     <InputLabel
                       id="demo-select-small"
-                      sx={{ color: "#000", fontWeight: "600" }}
+                      sx={{
+                        m: 1,
+                        minWidth: 120,
+                        borderRadius: "25px",
+                        "@media (max-width:550px)": {
+                          minWidth: 90,
+                        },
+                      }}
                     >
                       2022
                     </InputLabel>
@@ -105,7 +112,14 @@ const All_Articles_card = (posts) => {
                     </Select>
                   </FormControl>
                   <FormControl
-                    sx={{ m: 1, minWidth: 120, borderRadius: "25px" }}
+                    sx={{
+                      m: 1,
+                      minWidth: 120,
+                      borderRadius: "25px",
+                      "@media (max-width:550px)": {
+                        minWidth: 90,
+                      },
+                    }}
                     size="small"
                   >
                     <InputLabel
@@ -133,7 +147,14 @@ const All_Articles_card = (posts) => {
                   <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                     <InputLabel
                       id="demo-select-small"
-                      sx={{ color: "#000", fontWeight: "600" }}
+                      sx={{
+                        m: 1,
+                        minWidth: 120,
+                        borderRadius: "25px",
+                        "@media (max-width:550px)": {
+                          minWidth: 90,
+                        },
+                      }}
                     >
                       VALUES
                     </InputLabel>

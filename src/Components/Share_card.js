@@ -49,7 +49,16 @@ const Share_card = () => {
                   alignItems="center"
                   spacing={2}
                 >
-                  <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                  <FormControl
+                    sx={{
+                      m: 1,
+                      minWidth: 120,
+                      "@media (max-width:550px)": {
+                        minWidth: 90,
+                      },
+                    }}
+                    size="small"
+                  >
                     <InputLabel
                       id="demo-select-small"
                       sx={{ color: "#000", fontWeight: "600" }}
@@ -77,7 +86,14 @@ const Share_card = () => {
                     </Select>
                   </FormControl>
                   <FormControl
-                    sx={{ m: 1, minWidth: 120, borderRadius: "25px" }}
+                    sx={{
+                      m: 1,
+                      minWidth: 120,
+                      borderRadius: "25px",
+                      "@media (max-width:550px)": {
+                        minWidth: 90,
+                      },
+                    }}
                     size="small"
                   >
                     <InputLabel
@@ -102,7 +118,17 @@ const Share_card = () => {
                       <MenuItem value={30}>Thirty</MenuItem>
                     </Select>
                   </FormControl>
-                  <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
+                  <FormControl
+                    sx={{
+                      m: 1,
+                      minWidth: 120,
+                      borderRadius: "25px",
+                      "@media (max-width:550px)": {
+                        minWidth: 90,
+                      },
+                    }}
+                    size="small"
+                  >
                     <InputLabel
                       id="demo-select-small"
                       sx={{ color: "#000", fontWeight: "600" }}
