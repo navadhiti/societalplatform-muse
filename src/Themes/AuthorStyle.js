@@ -41,6 +41,7 @@ export const Author_2 = styled(Box)`
 height: 180px;
 width: 150px;
 margin: 0px auto;
+margin-left: 8rem;
 background:  ${`url(${background2}) center no-repeat`};
 
 background-size: contain;
@@ -329,7 +330,7 @@ background:  ${`url(${background10}) center no-repeat`};
 
 background-size: contain;
 padding:20px 20px 0px 20px;
-margin-left: 6rem;
+margin-left: 8rem;
 margin-top: 1rem;
 @media (max-width: 990px)  {
   margin-right: 0px;

@@ -20,7 +20,9 @@ import Author2 from "../Assets/Images/Authors/Author2.png";
 // import { LinkedinIcon, TwitterIcon } from "react-share";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from "@mui/icons-material/Instagram";
+
 
 console.log(data.home.Authors, "authors");
 const author = data.home.Authors;
@@ -157,7 +159,7 @@ const Author_details = () => {
                         borderRadius:'50%',
                         border:'1px solid black',px: 1,
                         width: "40px",height:"40px" ,mr:1}}/>
-                      <InstagramIcon color="secondary"  sx={{
+                      <FacebookOutlinedIcon color="secondary"  sx={{
                         borderRadius:'50%',
                         border:'1px solid black',px: 1,
                         width: "40px",height:"40px"}}/>

@@ -452,6 +452,29 @@ const Collaborators = () => {
                       sx={{ textAlign: "left" ,pl:4}}
                       pl={15}
                     >
+                      {/* <Author_1>
+                        <ImgBox>
+                          <img src={itemData[0].img} alt="img" width="100%" />
+                        </ImgBox>
+                        {console.log(itemData[0].img, "author")}
+                        <Typography variant="body1" textAlign="center">
+                          <b>{itemData[0].title}</b>
+                        </Typography>
+                        <Typography variant="body2" textAlign="center">
+                          {itemData[0].subTitle}
+                        </Typography>
+                      </Author_1> */}
+                    </Grid>
+                    <Grid
+                      item
+                      xs={6}
+                      sm={6}
+                      md={2}
+                      lg={2}
+                      sx={{ textAlign: "left" ,paddingLeft:"4rem"}}
+                      ml={0}
+                      mr={2}
+                    >
                       <Author_1>
                         <ImgBox>
                           <img src={itemData[0].img} alt="img" width="100%" />
@@ -464,28 +487,7 @@ const Collaborators = () => {
                           {itemData[0].subTitle}
                         </Typography>
                       </Author_1>
-                    </Grid>
-                    <Grid
-                      item
-                      xs={6}
-                      sm={6}
-                      md={2}
-                      lg={2}
-                      sx={{ textAlign: "left" ,paddingLeft:"4rem"}}
-                      ml={0}
-                      mr={2}
-                    >
-                      <Author_2 mb={2} my={1}>
-                        <ImgBox>
-                          <img src={itemData[1].img} alt="img" width="100%" />
-                        </ImgBox>
-                        <Typography variant="body1" textAlign="center">
-                          <b>{itemData[1].title}</b>
-                        </Typography>
-                        <Typography variant="body2" textAlign="center">
-                          {itemData[1].subTitle}
-                        </Typography>
-                      </Author_2>
+                     
                       <Author_3>
                         <ImgBox>
                           <img src={itemData[2].img} alt="img" width="100%" />
@@ -577,6 +579,17 @@ const Collaborators = () => {
                       </Author_9>
                     </Grid>
                     <Grid item xs={6} sm={6} md={2} lg={2} sx={{paddingLeft:"4rem"}}>
+                    <Author_2 mb={2} my={1}>
+                        <ImgBox>
+                          <img src={itemData[1].img} alt="img" width="100%" />
+                        </ImgBox>
+                        <Typography variant="body1" textAlign="center">
+                          <b>{itemData[1].title}</b>
+                        </Typography>
+                        <Typography variant="body2" textAlign="center">
+                          {itemData[1].subTitle}
+                        </Typography>
+                      </Author_2>
                       <Author_10>
                         <ImgBox>
                           <img src={itemData[9].img} alt="img" width="100%" />

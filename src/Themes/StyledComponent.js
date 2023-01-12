@@ -34,21 +34,21 @@ export const StickyButton = styled(Button)`
     }
   }
 `;
-export const Caption = styled(Typography)`
-.ActiveClass{
-  background: ${` url(${ArrowImage}) bottom right no-repeat`};
-  opacity: 1;
-  cursor: pointer';
-  &:hover {
-    span{
-      background: ${` url(${UnderLine}) bottom center no-repeat`};
-      opacity: 1;
-      cursor: pointer;
-    }
-}
+// export const Caption = styled(Typography)`
+// .ActiveClass{
+//   background: ${` url(${ArrowImage}) bottom right no-repeat`};
+//   opacity: 1;
+//   cursor: pointer';
+//   &:hover {
+//     span{
+//       background: ${` url(${UnderLine}) bottom center no-repeat`};
+//       opacity: 1;
+//       cursor: pointer;
+//     }
+// }
 
-}
-`;
+// }
+// `;
 
 export const Title = styled(Typography)`
   span:first-of-type {
@@ -108,14 +108,14 @@ export const Title = styled(Typography)`
 `;
 export const MenuNav = styled(Box)`
   height: 100vh;
-  width: 410px;
+  width: 475px;
   padding-right: 10px;
   background-color: #edebea;
   @media (max-width: 550px) {
-    width: 410px;
+    width: 470px;
   }
   @media (max-width: 380px) {
-    width: 375px;
+    width: 370px;
   }
   @media (max-width: 325px) {
     width: 320px;
